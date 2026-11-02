@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Next.js
+apps/web/.next/
+apps/web/out/
+
+# NestJS
+apps/api/dist/
+
+# Types package build
+packages/types/dist/
+
+# Env (secrets)
+.env
+.env.local
+.env.*.local
+!.env.local.example
+!.env.example
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Logs
+*.log
+npm-debug.log*
+
+# Test / cache
+.turbo/
+coverage/
+
+# Vendor clones are large; re-clone via docs/LINKAGE.md
+_vendor/

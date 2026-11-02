@@ -1,0 +1,90 @@
+{
+  "description": "Machine-readable map of GitHub clones (_vendor) to shipped paths. Used by scripts/verify-vendor-linkage.mjs.",
+  "clones": [
+    { "repo": "pickrack/pickrack", "path": "apps/web", "mode": "app-root" },
+    { "repo": "magicuidesign/app-template", "path": "_vendor/app-template", "mode": "reference" },
+    { "repo": "Ali-Sanati/awwwards-adidas", "path": "_vendor/awwwards-adidas", "mode": "reference" },
+    { "repo": "rr3s1/portfolio-v2", "path": "_vendor/portfolio-v2", "mode": "reference" },
+    { "repo": "piyush-gambhir/pdf-everything", "path": "_vendor/pdf-everything", "mode": "wired" },
+    { "repo": "batkotron/safe-calculator", "path": "_vendor/safe-calculator", "mode": "wired" },
+    { "repo": "batkotron/cap-table", "path": "_vendor/cap-table", "mode": "wired" },
+    { "repo": "fozankhana/startup-runway-calculator", "path": "_vendor/startup-runway-calculator", "mode": "wired" },
+    { "repo": "tasnimultas67/toolstrek", "path": "_vendor/toolstrek", "mode": "reference" },
+    { "repo": "kalabaru-apps/gawe", "path": "_vendor/gawe", "mode": "reference" },
+    { "repo": "AtotheY/saas-landingpage", "path": "_vendor/saas-landingpage", "mode": "wired" },
+    { "repo": "gonzalochale/saas-landing-template", "path": "_vendor/saas-landing-template", "mode": "wired" }
+  ],
+  "filePairs": [
+    {
+      "vendor": "_vendor/safe-calculator/lib/safe-math.ts",
+      "dest": "apps/web/lib/finance/safe-math.ts",
+      "requireHashMatch": true
+    },
+    {
+      "vendor": "_vendor/cap-table/lib/cap-table.ts",
+      "dest": "apps/web/lib/finance/cap-table.ts",
+      "requireHashMatch": true
+    }
+  ],
+  "dirMirrors": [
+    {
+      "vendorRoot": "_vendor/pdf-everything/backend/src",
+      "destRoot": "apps/api/src",
+      "label": "pdf-everything backend → apps/api"
+    },
+    {
+      "vendorRoot": "_vendor/pdf-everything/types/src",
+      "destRoot": "packages/types/src",
+      "label": "pdf-everything types → packages/types"
+    }
+  ],
+  "runwayLib": {
+    "vendorGlob": "_vendor/startup-runway-calculator/src/lib/*.ts",
+    "destDir": "apps/web/lib/finance/runway",
+    "extraDestFiles": ["types.ts"],
+    "vendorTypes": "_vendor/startup-runway-calculator/src/types/index.ts"
+  },
+  "runwayUi": {
+    "vendorDir": "_vendor/startup-runway-calculator/src/components",
+    "destDir": "apps/web/components/tools/runway"
+  },
+  "landingWired": {
+    "vendorNote": "saas-landing-template + saas-landingpage",
+    "components": [
+      "apps/web/components/landing/MarketingHero3D.tsx",
+      "apps/web/components/landing/LandingQuickFeatures.tsx",
+      "apps/web/components/landing/LandingTemplateSections.tsx",
+      "apps/web/components/landing/LandingStats.tsx",
+      "apps/web/components/landing/LandingTiers.tsx",
+      "apps/web/components/landing/LandingTestimonials.tsx",
+      "apps/web/components/landing/LandingFaq.tsx",
+      "apps/web/components/landing/LandingOpenSourceStack.tsx"
+    ],
+    "homeImport": "apps/web/app/page.tsx"
+  },
+  "financeRoutes": [
+    {
+      "slug": "runway-calculator",
+      "page": "apps/web/app/tools/finance/runway-calculator/page.tsx",
+      "componentImport": "FinanceRunwayTool"
+    },
+    {
+      "slug": "safe-calculator",
+      "page": "apps/web/app/tools/finance/safe-calculator/page.tsx",
+      "componentImport": "FinanceSafeTool"
+    },
+    {
+      "slug": "cap-table-lite",
+      "page": "apps/web/app/tools/finance/cap-table-lite/page.tsx",
+      "componentImport": "FinanceCapTableTool"
+    }
+  ],
+  "workspacePackages": [
+    {
+      "package": "@pdf-everything/types",
+      "path": "packages/types",
+      "consumer": "apps/api",
+      "buildOutput": "packages/types/dist/index.js"
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowRight, Shield, Zap, Lock } from "lucide-react";
+import PostCard from "@/components/PostCard";
+import ToolSearchBar from "@/components/ToolSearchBar";
+import PopularTools from "@/components/PopularTools";
+import SocialProof from "@/components/SocialProof";
+import ComparisonTable from "@/components/ComparisonTable";
+import LandingTemplateSections from "@/components/landing/LandingTemplateSections";
+import NewsletterSignup from "@/components/NewsletterSignup";
+import { getAllPosts } from "@/lib/posts";
+import { TOOLS } from "@/lib/tools";
+import { listCategories } from "@/lib/categories";
+import { getToolsByCategory } from "@/lib/tools";
+import { SITE_URL, SITE_NAME, SITE_DESCRIPTION } from "@/lib/site-config";
+import MarketingHero3D from "@/components/landing/MarketingHero3D";
+import { CategoryIcon } from "@/components/ToolIcon";
+
+export const metadata: Metadata = {
+  alternates: { canonical: `${SITE_URL}/` },
+};
+
+export default function HomePage() {
+  const posts = getAllPosts().slice(0, 4);
+  const totalTools = TOOLS.filter((t) => t.available).length;
+  const categories = listCategories();
+
+  // CollectionPage + ItemList JSON-LD for entire site catalog
+  const catalogJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: `${SITE_NAME} — Free Online Tools`,
+    description: SITE_DESCRIPTION,
+    url: `${SITE_URL}/`,
+    isPartOf: {
+      "@type": "WebSite",
+      name: SITE_NAME,
+      url: `${SITE_URL}/`,
+    },
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: totalTools,
+      itemListElement: categories.map((cat, idx) => ({
+        "@type": "ListItem",
+        position: idx + 1,
+        item: {
+          "@type": "CollectionPage",
+          name: cat.name,
+          description: cat.tagline,
+          url: `${SITE_URL}/tools/${cat.slug}/`,
+        },
+      })),
+    },
+  };
+
+  return (
+    <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(catalogJsonLd) }} />
+
+      {/* Hero — startup hub + 3D backdrop (patterns from app-template / awwwards-adidas vendors) */}
+      <MarketingHero3D totalTools={totalTools} />
+
+      <section className="py-8 text-center border-b border-gray-100">
+        <p className="text-sm text-gray-500 max-w-2xl mx-auto">
+          Wired from open source: Pickrack tools platform, Magic UI landing patterns, batkotron finance tools, pdf-everything API skeleton.
+        </p>
+      </section>
+
+      <SocialProof />
+
+      <LandingTemplateSections totalTools={totalTools} />
+
+      <PopularTools />
+
+      {/* Category cards */}
+      <section className="py-12 border-t" style={{ borderColor: "var(--color-border)" }}>
+        <div className="text-center max-w-3xl mx-auto mb-10">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Pick your toolkit</h2>
+          <p className="mt-3 text-gray-600">Finance, PDF, image, AI, developer, text, and calculator tools—fast, privacy-respecting, no signup.</p>
+        </div>
+
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {categories.map((cat) => {
+            const tools = getToolsByCategory(cat.id);
+            const count = tools.length;
+            return (
+              <Link
+                key={cat.id}
+                href={`/tools/${cat.slug}/`}
+                className="group block rounded-2xl border bg-white p-6 transition hover:border-emerald-400 hover:shadow-md"
+                style={{ borderColor: "var(--color-border)" }}
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <div className={`inline-flex h-12 w-12 items-center justify-center rounded-xl ${cat.bgColor} ${cat.iconColor}`}>
+                    <CategoryIcon category={cat.id} className="w-6 h-6" />
+                  </div>
+                  <span className="text-xs font-medium text-gray-500 bg-gray-100 rounded-full px-2.5 py-1">
+                    {count} tool{count === 1 ? "" : "s"}
+                  </span>
+                </div>
+                <h3 className="font-bold text-lg mb-2 group-hover:text-emerald-600 transition">{cat.name}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed mb-2">{cat.tagline}</p>
+                <p className="text-xs text-gray-500 line-clamp-2">{cat.description}</p>
+                {tools.length > 0 && (
+                  <div className="mt-4 pt-4 border-t flex flex-wrap gap-1.5" style={{ borderColor: "var(--color-border)" }}>
+                    {tools.slice(0, 4).map((t) => (
+                      <span key={t.slug} className="text-xs text-gray-500 bg-gray-50 rounded-md px-2 py-0.5">
+                        {t.name}
+                      </span>
+                    ))}
+                    {tools.length > 4 && (
+                      <span className="text-xs text-emerald-600 font-medium px-2 py-0.5">
+                        +{tools.length - 4} more
+                      </span>
+                    )}
+                  </div>
+                )}
+              </Link>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Why Pickrack */}
+      <section className="py-12 border-t" style={{ borderColor: "var(--color-border)" }}>
+        <div className="grid gap-8 md:grid-cols-3">
+          <div>
+            <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 mb-4">
+              <Lock className="w-5 h-5" />
+            </div>
+            <h3 className="font-bold text-lg mb-2">Privacy by design</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Most tools run entirely in your browser. Your files, JSON tokens, passwords, and text never upload to a server. Server-side tools (PDF compression, AI) are explicitly labeled and delete inputs immediately.
+            </p>
+          </div>
+          <div>
+            <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 mb-4">
+              <Zap className="w-5 h-5" />
+            </div>
+            <h3 className="font-bold text-lg mb-2">No quota, no signup</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Smallpdf limits free users to 2 tasks/day. Sejda allows 3 per hour. Pickrack has no daily limit, no task counter, no signup wall — use as much as you need.
+            </p>
+          </div>
+          <div>
+            <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 mb-4">
+              <Shield className="w-5 h-5" />
+            </div>
+            <h3 className="font-bold text-lg mb-2">Open-source where it matters</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Browser-side tools are auditable. Underlying engines (pdf-lib, qpdf, Ghostscript, LibreOffice, Calibre, Tesseract) are all open-source so the code is verifiable.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <ComparisonTable />
+
+      <NewsletterSignup />
+
+      {/* Latest articles */}
+      {posts.length > 0 && (
+        <section className="py-16 border-t" style={{ borderColor: "var(--color-border)" }}>
+          <div className="flex items-end justify-between mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">Latest guides</h2>
+            <Link href="/blog" className="text-sm font-medium text-emerald-600 hover:text-emerald-700">
+              All articles →
+            </Link>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-2">
+            {posts.map((p) => (
+              <PostCard key={p.slug} post={p} />
+            ))}
+          </div>
+        </section>
+      )}
+    </div>
+  );
+}

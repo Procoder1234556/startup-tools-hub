@@ -1,0 +1,14 @@
+{
+  "name": "startup-tools-hub",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --prefix apps/web",
+    "dev:web": "npm run dev --prefix apps/web",
+    "dev:api": "pnpm --filter @pdf-everything/backend dev",
+    "build": "npm run build --prefix apps/web",
+    "build:api": "pnpm --filter @pdf-everything/types build && pnpm --filter @pdf-everything/backend build",
+    "build:types": "pnpm --filter @pdf-everything/types build",
+    "verify:linkage": "node scripts/verify-vendor-linkage.mjs",
+    "postinstall": "pnpm --filter @pdf-everything/types build"
+  }
+}
