@@ -9,5 +9,5 @@ export const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "";
 
 export const SOCIAL = {
   twitter: "",
-  github: "https://github.com/pickrack/pickrack",
+  github: "https://github.com/Procoder1234556/startup-tools-hub",
 };
