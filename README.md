@@ -6,6 +6,8 @@ Free tools for founders—**runway, SAFE, cap table**, PDF, dev utilities, and m
 |-----|---------|
 | **[docs/navigation.md](docs/navigation.md)** | **Start here (agents):** site map, code map, edit workflows |
 | [docs/prd.md](docs/prd.md) | Product requirements, phases, tiers |
+| [docs/research-inventory.md](docs/research-inventory.md) | OSS discovery for integration |
+| [docs/MASTER-DELIVERY-REPORT.md](docs/MASTER-DELIVERY-REPORT.md) | Platform status & runbook |
 | [docs/LINKAGE.md](docs/LINKAGE.md) | Upstream GitHub repos and file lineage |
 | [docs/WIRING.md](docs/WIRING.md) | How Pickrack + vendors were merged |
 | [AGENTS.md](AGENTS.md) | AI agent read order and rules |

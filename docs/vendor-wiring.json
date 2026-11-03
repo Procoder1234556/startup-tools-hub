@@ -12,7 +12,15 @@
     { "repo": "tasnimultas67/toolstrek", "path": "_vendor/toolstrek", "mode": "reference" },
     { "repo": "kalabaru-apps/gawe", "path": "_vendor/gawe", "mode": "reference" },
     { "repo": "AtotheY/saas-landingpage", "path": "_vendor/saas-landingpage", "mode": "wired" },
-    { "repo": "gonzalochale/saas-landing-template", "path": "_vendor/saas-landing-template", "mode": "wired" }
+    { "repo": "gonzalochale/saas-landing-template", "path": "_vendor/saas-landing-template", "mode": "wired" },
+    { "repo": "1984vc/cap-table", "path": "_vendor/1984vc-cap-table", "mode": "reference" },
+    { "repo": "qbzenker/startupequitycalculator", "path": "_vendor/startup-equity-calculator", "mode": "reference" },
+    { "repo": "iib0011/omni-tools", "path": "_vendor/omni-tools", "mode": "reference" },
+    { "repo": "fl0wo/safe-cap-table-simulator", "path": "_vendor/safe-cap-table-simulator", "mode": "reference" },
+    { "repo": "sg-open/devyantra-ui", "path": "_vendor/devyantra-ui", "mode": "reference" },
+    { "repo": "AndonyEmmanuelVelazquez/bytefork-tools", "path": "_vendor/bytefork-tools", "mode": "reference" },
+    { "repo": "aghyad97/browserytools", "path": "_vendor/browserytools", "mode": "reference" },
+    { "repo": "SopKit/sopkit.github.io", "path": "_vendor/sopkit", "mode": "reference" }
   ],
   "filePairs": [
     {
@@ -77,6 +85,54 @@
       "slug": "cap-table-lite",
       "page": "apps/web/app/tools/finance/cap-table-lite/page.tsx",
       "componentImport": "FinanceCapTableTool"
+    },
+    {
+      "slug": "employee-equity-calculator",
+      "page": "apps/web/app/tools/finance/employee-equity-calculator/page.tsx",
+      "componentImport": "FinanceEquityTool",
+      "vendor": "_vendor/startup-equity-calculator"
+    },
+    {
+      "slug": "safe-dilution-simulator",
+      "page": "apps/web/app/tools/finance/safe-dilution-simulator/page.tsx",
+      "componentImport": "FinanceSafeDilutionTool",
+      "vendor": "_vendor/safe-cap-table-simulator"
+    },
+    {
+      "slug": "cap-table-pro",
+      "page": "apps/web/app/tools/finance/cap-table-pro/page.tsx",
+      "componentImport": "FinanceCapTableProTool",
+      "vendor": "_vendor/1984vc-cap-table"
+    },
+    {
+      "slug": "savings-calculator",
+      "page": "apps/web/app/tools/calc/savings-calculator/page.tsx",
+      "componentImport": "FinanceSavingsTool",
+      "vendor": "_vendor/toolstrek"
+    },
+    {
+      "slug": "discount-calculator",
+      "page": "apps/web/app/tools/calc/discount-calculator/page.tsx",
+      "componentImport": "CalcDiscountTool",
+      "vendor": "_vendor/toolstrek"
+    },
+    {
+      "slug": "vat-gst-calculator",
+      "page": "apps/web/app/tools/calc/vat-gst-calculator/page.tsx",
+      "componentImport": "CalcVatTool",
+      "vendor": "_vendor/toolstrek"
+    },
+    {
+      "slug": "box-shadow-generator",
+      "page": "apps/web/app/tools/dev/box-shadow-generator/page.tsx",
+      "componentImport": "DevBoxShadowTool",
+      "vendor": "_vendor/toolstrek"
+    },
+    {
+      "slug": "ab-test-calculator",
+      "page": "apps/web/app/tools/calc/ab-test-calculator/page.tsx",
+      "componentImport": "CalcAbTestTool",
+      "vendor": "_vendor/bytefork-tools"
     }
   ],
   "workspacePackages": [

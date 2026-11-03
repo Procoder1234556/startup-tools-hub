@@ -28,6 +28,14 @@ This monorepo **composes** several open-source projects. Use this table to trace
 | [kalabaru-apps/gawe](https://github.com/kalabaru-apps/gawe) | `_vendor/gawe/` | MIT | Future PWA + `tools.ts` registry patterns |
 | [AtotheY/saas-landingpage](https://github.com/AtotheY/saas-landingpage) | `_vendor/saas-landingpage/` | MIT | Feature sections → [LandingQuickFeatures](../apps/web/components/landing/LandingQuickFeatures.tsx) |
 | [gonzalochale/saas-landing-template](https://github.com/gonzalochale/saas-landing-template) | `_vendor/saas-landing-template/` | MIT | shadcn landing blocks → [LandingTemplateSections](../apps/web/components/landing/LandingTemplateSections.tsx) |
+| [1984vc/cap-table](https://github.com/1984vc/cap-table) | `_vendor/1984vc-cap-table/` | MIT | CLI/lib for stacked SAFE + priced rounds — **Phase 2 port** |
+| [qbzenker/startupequitycalculator](https://github.com/qbzenker/startupequitycalculator) | `_vendor/startup-equity-calculator/` | MIT | Employee equity UI — **Phase 2 port** |
+| [iib0011/omni-tools](https://github.com/iib0011/omni-tools) | `_vendor/omni-tools/` | MIT | Cherry-pick Vite tools (dedupe Pickrack) |
+| [fl0wo/safe-cap-table-simulator](https://github.com/fl0wo/safe-cap-table-simulator) | `_vendor/safe-cap-table-simulator/` | Apache-2.0 | Dilution visualizations |
+| [sg-open/devyantra-ui](https://github.com/sg-open/devyantra-ui) | `_vendor/devyantra-ui/` | MIT | Vue dev utilities — port to `dev/` |
+| [AndonyEmmanuelVelazquez/bytefork-tools](https://github.com/AndonyEmmanuelVelazquez/bytefork-tools) | `_vendor/bytefork-tools/` | MIT | Astro dev/data tools |
+| [aghyad97/browserytools](https://github.com/aghyad97/browserytools) | `_vendor/browserytools/` | **AGPL-3.0** | Reference only — no combined derivative |
+| [SopKit/sopkit.github.io](https://github.com/SopKit/sopkit.github.io) | `_vendor/sopkit/` | **Non-commercial** | IA/SEO reference — rewrite logic from MIT sources |
 
 ## File lineage (Startup Hub additions)
 
@@ -58,6 +66,9 @@ git clone --depth 1 https://github.com/tasnimultas67/toolstrek.git _vendor/tools
 git clone --depth 1 https://github.com/kalabaru-apps/gawe.git _vendor/gawe
 git clone --depth 1 https://github.com/AtotheY/saas-landingpage.git _vendor/saas-landingpage
 git clone --depth 1 https://github.com/gonzalochale/saas-landing-template.git _vendor/saas-landing-template
+
+# Phase 1 research batch (see docs/phase1-clones.json)
+node scripts/clone-phase1-vendors.mjs
 ```
 
 Verify wired paths (clone present, finance/API mirrors, routes):

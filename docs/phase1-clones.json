@@ -1,0 +1,70 @@
+{
+  "description": "Phase 1 deep-research batch — shallow clones under _vendor/. Run: node scripts/clone-phase1-vendors.mjs",
+  "lastCloned": "2026-11-03",
+  "repos": [
+    {
+      "repo": "1984vc/cap-table",
+      "path": "_vendor/1984vc-cap-table",
+      "mode": "reference",
+      "license": "MIT",
+      "integration": "Port @1984vc/cap-table lib or CLI JSON into finance/ pro cap table (upgrade from batkotron lite)"
+    },
+    {
+      "repo": "qbzenker/startupequitycalculator",
+      "path": "_vendor/startup-equity-calculator",
+      "mode": "reference",
+      "license": "MIT",
+      "integration": "Port Next 16 employee equity UI → apps/web/tools/finance/"
+    },
+    {
+      "repo": "iib0011/omni-tools",
+      "path": "_vendor/omni-tools",
+      "mode": "reference",
+      "license": "MIT",
+      "integration": "Cherry-pick Vite tool modules; skip slugs already in Pickrack pdf/dev/image"
+    },
+    {
+      "repo": "fl0wo/safe-cap-table-simulator",
+      "path": "_vendor/safe-cap-table-simulator",
+      "mode": "reference",
+      "license": "Apache-2.0",
+      "integration": "Visual dilution charts alongside SAFE calculator"
+    },
+    {
+      "repo": "sg-open/devyantra-ui",
+      "path": "_vendor/devyantra-ui",
+      "mode": "reference",
+      "license": "MIT",
+      "integration": "Vue dev tools — port logic to Pickrack dev/ where no duplicate"
+    },
+    {
+      "repo": "AndonyEmmanuelVelazquez/bytefork-tools",
+      "path": "_vendor/bytefork-tools",
+      "mode": "reference",
+      "license": "MIT",
+      "integration": "Astro static tools — port pages into apps/web dev/ and data/"
+    },
+    {
+      "repo": "aghyad97/browserytools",
+      "path": "_vendor/browserytools",
+      "mode": "reference",
+      "license": "AGPL-3.0",
+      "licenseNote": "Do not ship combined derivative without legal review; pattern reference only",
+      "integration": "Registry and on-device AI patterns only"
+    },
+    {
+      "repo": "SopKit/sopkit.github.io",
+      "path": "_vendor/sopkit",
+      "mode": "reference",
+      "license": "SopKit Non-Commercial",
+      "licenseNote": "Non-commercial — do not redistribute in commercial product without permission",
+      "integration": "Study tool registry + SEO page structure; rewrite logic from Pickrack/OmniTools MIT sources"
+    }
+  ],
+  "failedClones": [
+    {
+      "repo": "SH20RAJ/30tools",
+      "reason": "git clone returned 'Repository not found' (2026-11-03); use sopkit sibling or toolstrek instead"
+    }
+  ]
+}

@@ -118,9 +118,9 @@ export const CATEGORIES: Record<CategoryId, Category> = {
     slug: "finance",
     name: "Startup Finance",
     shortLabel: "Finance",
-    tagline: "Runway, SAFE, cap table, and founder math.",
+    tagline: "Runway, SAFE, cap table, market size, and unit economics.",
     description:
-      "Free finance tools for early-stage founders: model runway and burn, convert stacked SAFE notes at a priced round, and explore a simple cap table with dilution. Logic ported from open-source batkotron projects; runs in your browser.",
+      "Free finance tools for early-stage founders: runway and burn, SAFE conversion, cap table lite, TAM/SAM/SOM, LTV/CAC, and break-even. Core cap table and SAFE logic from open-source batkotron projects; other tools are browser-only worksheets.",
     iconColor: "text-cyan-700",
     bgColor: "bg-cyan-50",
     borderColor: "border-cyan-200",

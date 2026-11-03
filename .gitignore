@@ -36,3 +36,5 @@ coverage/
 
 # Vendor clones are large; re-clone via docs/LINKAGE.md
 _vendor/
+.vercel
+.env*

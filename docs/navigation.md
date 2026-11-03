@@ -41,15 +41,15 @@ Use this document to move through the **Startup Tools Hub** codebase and the **l
 
 | ID | Slug | Hub URL | Tool count (registry) |
 |----|------|---------|------------------------|
-| finance | finance | `/tools/finance/` | 3 (Hub-native) |
+| finance | finance | `/tools/finance/` | 9 (Hub-native + OSS ports) |
 | pdf | pdf | `/tools/pdf/` | 17 |
 | image | image | `/tools/image/` | 12 |
 | ai | ai | `/tools/ai/` | 9 |
-| dev | dev | `/tools/dev/` | 13 |
+| dev | dev | `/tools/dev/` | 14 |
 | text | text | `/tools/text/` | 10 |
-| calc | calc | `/tools/calc/` | 12 |
+| calc | calc | `/tools/calc/` | 16 |
 
-**Registry total:** ~79 entries in [apps/web/lib/tools.ts](../apps/web/lib/tools.ts) (includes finance additions).
+**Registry total:** ~90 entries in [apps/web/lib/tools.ts](../apps/web/lib/tools.ts) (includes finance + OSS ports).
 
 ### Finance tools (first-class Startup Hub)
 
@@ -58,6 +58,12 @@ Use this document to move through the **Startup Tools Hub** codebase and the **l
 | runway-calculator | `/tools/finance/runway-calculator/` | [FinanceRunwayTool.tsx](../apps/web/components/tools/FinanceRunwayTool.tsx) | (inline sim; see runway vendor) |
 | safe-calculator | `/tools/finance/safe-calculator/` | [FinanceSafeTool.tsx](../apps/web/components/tools/FinanceSafeTool.tsx) | [safe-math.ts](../apps/web/lib/finance/safe-math.ts) |
 | cap-table-lite | `/tools/finance/cap-table-lite/` | [FinanceCapTableTool.tsx](../apps/web/components/tools/FinanceCapTableTool.tsx) | [cap-table.ts](../apps/web/lib/finance/cap-table.ts) |
+| tam-sam-som-calculator | `/tools/finance/tam-sam-som-calculator/` | [FinanceTamSamSomTool.tsx](../apps/web/components/tools/FinanceTamSamSomTool.tsx) | [tam-sam-som.ts](../apps/web/lib/finance/tam-sam-som.ts) |
+| ltv-cac-calculator | `/tools/finance/ltv-cac-calculator/` | [FinanceLtvCacTool.tsx](../apps/web/components/tools/FinanceLtvCacTool.tsx) | [unit-economics.ts](../apps/web/lib/finance/unit-economics.ts) |
+| break-even-calculator | `/tools/finance/break-even-calculator/` | [FinanceBreakEvenTool.tsx](../apps/web/components/tools/FinanceBreakEvenTool.tsx) | [break-even.ts](../apps/web/lib/finance/break-even.ts) |
+| employee-equity-calculator | `/tools/finance/employee-equity-calculator/` | [FinanceEquityTool.tsx](../apps/web/components/tools/FinanceEquityTool.tsx) | [lib/finance/equity/](../apps/web/lib/finance/equity/) ← `_vendor/startup-equity-calculator` |
+| safe-dilution-simulator | `/tools/finance/safe-dilution-simulator/` | [FinanceSafeDilutionTool.tsx](../apps/web/components/tools/FinanceSafeDilutionTool.tsx) | [safe-simulator/](../apps/web/lib/finance/safe-simulator/) ← `_vendor/safe-cap-table-simulator` |
+| cap-table-pro | `/tools/finance/cap-table-pro/` | [FinanceCapTableProTool.tsx](../apps/web/components/tools/FinanceCapTableProTool.tsx) | [cap-table-pro.ts](../apps/web/lib/finance/cap-table-pro.ts) + `@1984vc/cap-table` |
 
 ---
 
@@ -125,8 +131,17 @@ Future consolidation: [apps/api](../apps/api/) (pdf-everything NestJS) via `NEXT
 |------|----------------|
 | [_vendor/app-template](../_vendor/app-template/) | Copy landing sections / Magic UI |
 | [_vendor/awwwards-adidas](../_vendor/awwwards-adidas/) | GSAP + R3F patterns |
-| [_vendor/toolstrek](../_vendor/toolstrek/) | Port calculators |
+| [_vendor/startup-equity-calculator](../_vendor/startup-equity-calculator/) | Employee equity UI + lib (shipped) |
+| [_vendor/toolstrek](../_vendor/toolstrek/) | Port calculators (e.g. savings) |
 | [_vendor/gawe](../_vendor/gawe/) | PWA, `config/tools.ts` |
+| [_vendor/1984vc-cap-table](../_vendor/1984vc-cap-table/) | Pro cap table / SAFE stack math |
+| [_vendor/startup-equity-calculator](../_vendor/startup-equity-calculator/) | Employee equity UI port |
+| [_vendor/omni-tools](../_vendor/omni-tools/) | Vite tool modules (dedupe Pickrack) |
+| [_vendor/bytefork-tools](../_vendor/bytefork-tools/) | Astro dev/data utilities |
+| [_vendor/devyantra-ui](../_vendor/devyantra-ui/) | Vue dev tools → port to `dev/` |
+| [_vendor/safe-cap-table-simulator](../_vendor/safe-cap-table-simulator/) | Dilution charts |
+| [_vendor/browserytools](../_vendor/browserytools/) | AGPL — UX reference only |
+| [_vendor/sopkit](../_vendor/sopkit/) | Non-commercial — registry/SEO reference |
 | [_vendor/safe-calculator](../_vendor/safe-calculator/) | Diff SAFE math |
 | [_vendor/cap-table](../_vendor/cap-table/) | Diff cap table UI |
 
@@ -186,6 +201,7 @@ npm run dev          # http://localhost:3001
 cd "E:\startup tools"
 npm run dev          # delegates to apps/web
 node scripts/verify-vendor-linkage.mjs   # clone → wired path audit
+node scripts/clone-phase1-vendors.mjs    # shallow-clone Phase 1 batch
 pnpm install         # links apps/api ↔ packages/types
 pnpm run build:types
 ```
