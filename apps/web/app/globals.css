@@ -3,38 +3,46 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --color-brand: #10b981;
-  --color-brand-dark: #059669;
-  --color-bg: #ffffff;
-  --color-fg: #0c0e16;
-  --color-muted: #6b7280;
-  --color-surface: #f9fafb;
-  --color-border: #e5e7eb;
+  --color-brand: #d8ff42;
+  --color-brand-dark: #111111;
+  --color-bg: #e8e7eb;
+  --color-fg: #111111;
+  --color-muted: #57565b;
+  --color-surface: #ffffff;
+  --color-border: #d7d5da;
 
-  /* shadcn tokens (gonzalochale/saas-landing-template wiring) */
   --color-background: var(--color-bg);
   --color-foreground: var(--color-fg);
   --color-card: #ffffff;
   --color-card-foreground: var(--color-fg);
-  --color-primary: #059669;
+  --color-primary: #111111;
   --color-primary-foreground: #ffffff;
-  --color-secondary: var(--color-surface);
+  --color-secondary: #fafafa;
   --color-secondary-foreground: var(--color-fg);
-  --color-muted-foreground: var(--color-muted);
-  --color-accent: var(--color-surface);
-  --color-accent-foreground: var(--color-fg);
+  --color-muted-foreground: #89878e;
+  --color-accent: #d8ff42;
+  --color-accent-foreground: #111111;
   --color-destructive: #dc2626;
   --color-input: var(--color-border);
-  --color-ring: #10b981;
+  --color-ring: #111111;
 
-  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
 html, body {
   background: var(--color-bg);
   color: var(--color-fg);
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 a {
@@ -42,21 +50,17 @@ a {
 }
 
 ::selection {
-  background: var(--color-brand);
-  color: white;
+  background: #d8ff42;
+  color: #111111;
 }
 
 .prose :where(a):not(:where([class~="not-prose"] *)) {
-  color: var(--color-brand-dark);
+  color: #111111;
   font-weight: 500;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
-.prose :where(a):hover {
-  color: var(--color-brand);
-}
-
 .prose :where(h2):not(:where([class~="not-prose"] *)) {
-  scroll-margin-top: 5rem;
+  scroll-margin-top: 6rem;
 }

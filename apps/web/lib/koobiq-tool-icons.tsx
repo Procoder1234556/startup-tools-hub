@@ -139,6 +139,16 @@ const TOOL_ICONS: Record<string, KoobiqIconComponent> = {
   "runway-calculator": IconChartLine24,
   "safe-calculator": IconShieldCheck24,
   "cap-table-lite": IconTable24,
+  "page-numbers": IconHashtag24,
+  "organize-pdf": IconArrowsRotate24,
+  "metadata-editor": IconFileTextO24,
+  "sign-pdf": IconShieldCheck24,
+  "stirling-suite": IconWorkflow24,
+  "cron-generator": IconClock24,
+  "chmod-calculator": IconKey24,
+  "hmac-generator": IconShieldCheck24,
+  "docker-run-to-compose": IconCode24,
+  "cyberchef": IconWorkflow24,
 };
 
 export function getToolKoobiqIcon(slug: string, category: CategoryId): KoobiqIconComponent {

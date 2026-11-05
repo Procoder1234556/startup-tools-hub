@@ -1,0 +1,21 @@
+/** Slugs reserved by hand-built tool pages — micro-tools must not collide. */
+export const CORE_TOOL_SLUGS = new Set<string>([
+  "merge-pdf",
+  "rotate-pdf",
+  "jpg-to-pdf",
+  "split-pdf",
+  "compress-pdf",
+  "pdf-to-jpg",
+  "watermark-pdf",
+  "unlock-pdf",
+  "protect-pdf",
+  "pdf-to-word",
+  "word-to-pdf",
+  "pdf-to-pptx",
+  "pptx-to-pdf",
+  "pdf-to-epub",
+  "epub-to-pdf",
+  "screenshot-to-pdf",
+  "json-formatter",
+  "base64-encoder",
+]);

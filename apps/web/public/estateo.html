@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estateo — Discover High-Growth Property Investments</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- GSAP & ScrollTrigger CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+          },
+          colors: {
+            brand: {
+              charcoal: '#141518',
+              blue: '#2563EB',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #F4F6F9;
+      color: #121316;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      overflow-x: hidden;
+    }
+    .serif-italic {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-weight: 400;
+    }
+    #hero-3d-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      z-index: 1;
+    }
+    .perspective-card {
+      transform-style: preserve-3d;
+      perspective: 1000px;
+    }
+    .card-3d-content {
+      transition: transform 0.15s ease-out;
+      transform-style: preserve-3d;
+    }
+    /* Remotion Video Scanline overlay */
+    .remotion-scanlines {
+      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.04), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.04));
+      background-size: 100% 3px, 6px 100%;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-blue-600 selection:text-white">
+
+  <div class="max-w-[1340px] mx-auto px-3 sm:px-6 py-4 sm:py-6 space-y-16 sm:space-y-24">
+
+    <!-- =========================================================================
+         FULL 3D HERO SECTION (IMMERSIVE INTERACTIVE THREE.JS ARCHITECTURAL VILLA)
+    ========================================================================= -->
+    <section id="hero-container" class="relative w-full rounded-[36px] sm:rounded-[48px] overflow-hidden min-h-[90vh] lg:min-h-[94vh] flex flex-col justify-between p-6 sm:p-12 shadow-[0_20px_60px_rgba(15,23,42,0.18)] border border-black/5 bg-[#7CA1BA]">
+      
+      <!-- Real-time 3D WebGL Canvas (Occupies 100% of the Hero Section) -->
+      <canvas id="hero-3d-canvas"></canvas>
+
+      <!-- Atmospheric Subtle Top Vignette -->
+      <div class="pointer-events-none absolute inset-0 z-10 bg-gradient-to-b from-[#3B6682]/60 via-transparent to-[#1E293B]/25"></div>
+
+      <!-- Top Floating Pill Navigation Bar (GSAP animated) -->
+      <div class="relative z-20 flex justify-center w-full">
+        <header id="nav-bar" class="inline-flex items-center gap-5 sm:gap-7 px-6 sm:px-8 py-2.5 rounded-full bg-white/80 backdrop-blur-md border border-white/70 shadow-[0_8px_30px_rgba(0,0,0,0.08)] text-xs sm:text-[13px] font-medium text-[#1E242B] transition-all hover:bg-white/95">
+          <a href="#home" class="hover:text-black transition">Home</a>
+          <span class="w-1 h-1 rounded-full bg-[#1E242B]/40"></span>
+          <a href="#features" class="hover:text-black transition">Features</a>
+          
+          <!-- Center House Glyph Mark -->
+          <div class="flex items-center justify-center w-7 h-7 rounded-xl bg-white text-[#2563EB] shadow-sm border border-white">
+            <svg viewBox="0 0 24 24" class="w-4 h-4 fill-none stroke-current stroke-[2.2] stroke-linecap-round stroke-linejoin-round">
+              <path d="M3 10.5 12 3l9 7.5" />
+              <path d="M5 9v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9" />
+              <path d="M9 21V12h6v9" />
+            </svg>
+          </div>
+
+          <a href="#about" class="hover:text-black transition">About</a>
+          <span class="w-1 h-1 rounded-full bg-[#1E242B]/40"></span>
+          <a href="#contact" class="hover:text-black transition">Contact</a>
+        </header>
+      </div>
+
+      <!-- Hero Heading & Primary CTA (Floating Over 3D Scene with GSAP stagger) -->
+      <div class="relative z-20 max-w-3xl mx-auto text-center mt-6 sm:mt-8 space-y-5 pointer-events-none">
+        <h1 id="hero-heading" class="text-3xl sm:text-5xl md:text-[60px] font-medium text-white tracking-tight leading-[1.1] drop-shadow-[0_4px_16px_rgba(0,0,0,0.25)]">
+          <span class="inline-block hero-line">Discover high-growth</span> <br />
+          <span class="inline-block hero-line serif-italic font-normal text-white">property investments</span>
+        </h1>
+
+        <div id="hero-cta" class="pointer-events-auto">
+          <button class="px-7 py-3 rounded-full bg-[#0F1115] hover:bg-black text-white text-xs sm:text-sm font-medium tracking-wide shadow-[0_10px_25px_rgba(0,0,0,0.3)] transition-transform hover:scale-105 active:scale-95 inline-flex items-center gap-2">
+            Start investing now
+          </button>
+        </div>
+
+        <!-- 3D Hint Badge -->
+        <div id="hero-badge" class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-[10px] text-white/90">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          Interactive 3D Villa • Move cursor or drag to orbit • GSAP & Remotion Active
+        </div>
+      </div>
+
+      <!-- Floating Glassmorphic Widgets with GSAP Levitation Physics -->
+      <div class="relative z-20 grid grid-cols-1 sm:grid-cols-2 gap-4 mt-auto pt-12 sm:pt-20 items-end">
+        
+        <!-- Left Glassmorphic Card: Occupancy Rate Donut Chart -->
+        <div id="hero-widget-left" class="justify-self-start bg-white/90 backdrop-blur-md rounded-2xl p-4 sm:p-5 shadow-[0_12px_40px_rgba(0,0,0,0.18)] border border-white/80 w-full max-w-[280px] cursor-pointer">
+          <div class="text-[11px] font-medium text-gray-500 mb-3 flex items-center justify-between">
+            <span>Occupancy Rate</span>
+            <span class="px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-700 text-[9px] font-bold">Live</span>
+          </div>
+          
+          <div class="flex items-center gap-4">
+            <!-- SVG Donut Chart with GSAP stroke animation -->
+            <div class="relative w-20 h-20 shrink-0">
+              <svg viewBox="0 0 36 36" class="w-full h-full -rotate-90">
+                <circle cx="18" cy="18" r="14.3" fill="none" stroke="#E2E8F0" stroke-width="3.2" />
+                <circle id="donut-green" cx="18" cy="18" r="14.3" fill="none" stroke="#10B981" stroke-width="3.5" stroke-dasharray="56 100" stroke-dashoffset="0" stroke-linecap="round" />
+                <circle id="donut-orange" cx="18" cy="18" r="14.3" fill="none" stroke="#F59E0B" stroke-width="3.5" stroke-dasharray="22 100" stroke-dashoffset="-58" stroke-linecap="round" />
+                <circle id="donut-blue" cx="18" cy="18" r="14.3" fill="none" stroke="#818CF8" stroke-width="3.5" stroke-dasharray="12 100" stroke-dashoffset="-82" stroke-linecap="round" />
+              </svg>
+              <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+                <span id="occupancy-number" class="text-sm font-bold text-gray-900 leading-none">74</span>
+                <span class="text-[8px] font-medium text-gray-400 mt-0.5">Houses</span>
+              </div>
+            </div>
+
+            <!-- Donut Legend -->
+            <div class="space-y-1.5 text-[10px] text-gray-600">
+              <div class="flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-[#10B981]"></span>
+                <span><strong class="text-gray-900 font-semibold">62%</strong> Rented</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-[#F59E0B]"></span>
+                <span><strong class="text-gray-900 font-semibold">25%</strong> Maintenance</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-[#818CF8]"></span>
+                <span><strong class="text-gray-900 font-semibold">13%</strong> Vacant</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Glassmorphic Card: Bruce Walker Matrix -->
+        <div id="hero-widget-right" class="justify-self-end bg-white/90 backdrop-blur-md rounded-2xl p-4 sm:p-5 shadow-[0_12px_40px_rgba(0,0,0,0.18)] border border-white/80 w-full max-w-[320px] cursor-pointer">
+          <div class="flex items-center justify-between gap-3 mb-2.5">
+            <div class="flex items-center gap-2">
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80"
+                alt="Bruce Walker"
+                class="w-7 h-7 rounded-full object-cover ring-1 ring-white"
+              />
+              <span class="text-xs font-semibold text-gray-900">Bruce Walker</span>
+            </div>
+            <span id="bruce-amount" class="text-xs font-bold text-gray-900 tracking-tight">$242,491</span>
+          </div>
+
+          <!-- Segmented Pill Matrix with sequential GSAP pulse -->
+          <div id="bruce-pills" class="flex items-center gap-[3px] py-1">
+            <span class="bruce-pill h-3 w-2.5 rounded-xs bg-[#3B82F6]"></span>
+            <span class="bruce-pill h-3 w-2.5 rounded-xs bg-[#3B82F6]"></span>
+            <span class="bruce-pill h-3 w-2.5 rounded-xs bg-[#3B82F6]"></span>
+            <span class="bruce-pill h-3 w-2.5 rounded-xs bg-[#3B82F6]"></span>
+            <span class="bruce-pill h-3 w-2.5 rounded-xs bg-[#3B82F6]"></span>
+            <span class="bruce-pill h-3 w-2.5 rounded-xs bg-[#3B82F6]"></span>
+            <span class="bruce-pill h-3 w-2.5 rounded-xs bg-[#3B82F6]"></span>
+            <span class="bruce-pill h-3 w-2.5 rounded-xs bg-[#3B82F6]"></span>
+            <span class="bruce-pill h-3 w-2.5 rounded-xs bg-[#3B82F6]"></span>
+            <span class="bruce-pill h-3 w-2.5 rounded-xs bg-[#3B82F6]"></span>
+            <span class="bruce-pill h-3 w-2.5 rounded-xs bg-[#3B82F6]"></span>
+            <span class="bruce-pill h-3 w-2.5 rounded-xs bg-[#3B82F6]"></span>
+            <span class="bruce-pill h-3 w-2.5 rounded-xs bg-gray-200"></span>
+            <span class="bruce-pill h-3 w-2.5 rounded-xs bg-gray-200"></span>
+            <span class="bruce-pill h-3 w-2.5 rounded-xs bg-gray-200"></span>
+            <span class="bruce-pill h-3 w-2.5 rounded-xs bg-gray-200"></span>
+            <span class="bruce-pill h-3 w-2.5 rounded-xs bg-gray-200"></span>
+            <span class="bruce-pill h-3 w-2.5 rounded-xs bg-gray-200"></span>
+          </div>
+
+          <div class="flex items-center justify-between text-[10px] text-gray-500 mt-2">
+            <div class="flex items-center gap-3">
+              <span class="flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#3B82F6]"></span> Closed
+              </span>
+              <span class="flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-gray-300"></span> Projected
+              </span>
+            </div>
+            <div class="flex items-center gap-2 font-medium text-gray-600">
+              <span>🛡️ 7</span>
+              <span>⌂ 15</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         PART 1 (IMAGE 0) - SECTION 2: DATA-DRIVEN PROPERTY INSIGHTS (GSAP SCROLLTRIGGER)
+    ========================================================================= -->
+    <section id="section-insights" class="space-y-8 sm:space-y-12 pt-4">
+      
+      <div>
+        <div class="flex items-center gap-2 mb-3">
+          <span class="px-3 py-1 rounded-full bg-[#DCFCE7] text-[#15803D] text-[10px] font-bold tracking-wider uppercase">
+            Investments
+          </span>
+          <span class="px-3 py-1 rounded-full bg-[#FCE7F3] text-[#BE185D] text-[10px] font-bold tracking-wider uppercase">
+            Exclusive
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-end">
+          <div>
+            <h2 class="text-3xl sm:text-4xl md:text-[44px] font-semibold tracking-tight text-[#111317] leading-[1.15]">
+              Data-driven <br />
+              <span class="serif-italic font-normal">property insights</span>
+            </h2>
+          </div>
+          <div>
+            <p class="text-xs sm:text-sm text-gray-500 leading-relaxed max-w-lg">
+              Our platform leverages smart analytics and market trends to help you find high-potential investments. We combine real-time data with intuitive visual dashboards so you can pinpoint properties poised for growth.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        
+        <!-- Left Features List with GSAP Stagger Entrance -->
+        <div id="insights-list" class="space-y-4">
+          <div class="insight-item p-5 rounded-2xl hover:bg-white/60 transition cursor-pointer">
+            <h3 class="text-sm font-semibold text-gray-900 tracking-tight">
+              <span class="text-gray-400 font-normal mr-2">01</span> Market Analytics
+            </h3>
+            <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">
+              Analyze neighborhood trends, price histories, and economic indicators to identify areas with rising property values. Track economic shifts to pinpoint high-growth zones before the competition.
+            </p>
+          </div>
+
+          <div class="insight-item bg-[#141518] text-white p-5 sm:p-6 rounded-2xl shadow-xl border border-gray-800 cursor-pointer">
+            <div class="w-8 h-8 rounded-lg bg-gray-800 flex items-center justify-center text-gray-300 mb-3">
+              <svg viewBox="0 0 24 24" class="w-4 h-4 text-[#818CF8] fill-none stroke-current stroke-2">
+                <line x1="18" y1="20" x2="18" y2="10" />
+                <line x1="12" y1="20" x2="12" y2="4" />
+                <line x1="6" y1="20" x2="6" y2="14" />
+              </svg>
+            </div>
+            <h3 class="text-sm sm:text-base font-semibold text-white tracking-tight">
+              Predictive Insights
+            </h3>
+            <p class="text-xs text-gray-400 mt-2 leading-relaxed">
+              Use AI-driven forecasting to spot properties that match your growth goals and investment criteria. Leverage AI-driven modeling to identify off-market gems and assets aligned with your long-term capital goals.
+            </p>
+          </div>
+
+          <div class="insight-item p-5 rounded-2xl hover:bg-white/60 transition cursor-pointer">
+            <h3 class="text-sm font-semibold text-gray-900 tracking-tight">
+              <span class="text-gray-400 font-normal mr-2">03</span> Actionable Recommendations
+            </h3>
+            <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">
+              Receive clear, data-backed suggestions on properties likely to deliver strong capital gains. Access data-backed investment roadmaps designed to maximize your portfolio's appreciation and yield.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Revenue Card with Live GSAP Dynamic Counter & Growing Bars -->
+        <div id="revenue-aura" class="relative rounded-3xl p-6 sm:p-12 flex items-center justify-center overflow-hidden bg-gradient-to-tr from-[#E9D5FF]/60 via-[#FCE7F3]/50 to-[#CFFAFE]/60">
+          
+          <div id="revenue-card" class="relative z-10 bg-white rounded-2xl p-6 shadow-2xl border border-white/80 w-full max-w-[340px]">
+            <div class="flex items-center justify-between text-gray-400">
+              <span class="text-xs font-medium text-gray-500">Revenue</span>
+              <span class="text-gray-400">•••</span>
+            </div>
+
+            <div class="mt-2">
+              <!-- Live Counter Target for GSAP -->
+              <div id="revenue-counter" class="text-3xl font-extrabold text-gray-900 tracking-tight">
+                $96,437
+              </div>
+              <div class="flex items-center gap-1 text-[11px] font-semibold text-emerald-600 mt-1">
+                <span>↑ 18.4%</span>
+                <span class="text-gray-400 font-normal">vs last week</span>
+              </div>
+            </div>
+
+            <!-- Bar Chart with Friday +20% & Animated Dotted Curve -->
+            <div class="mt-8 relative pt-6">
+              <!-- Animated SVG Dotted Curve -->
+              <svg viewBox="0 0 280 80" class="absolute top-0 left-0 w-full h-20 pointer-events-none z-10">
+                <path
+                  id="trendline-path"
+                  d="M 10 50 Q 50 55 90 40 T 170 30 T 210 15 T 270 45"
+                  fill="none"
+                  stroke="#EF4444"
+                  stroke-width="2"
+                  stroke-dasharray="4 4"
+                />
+              </svg>
+
+              <!-- Columns Animated with GSAP scaleY -->
+              <div id="chart-bars" class="flex items-end justify-between gap-2 h-28 pt-4">
+                <div class="flex flex-col items-center gap-2 flex-1">
+                  <div class="chart-bar w-full max-w-[24px] h-14 rounded-t-lg bg-[#E0E7FF] origin-bottom"></div>
+                  <span class="text-[10px] text-gray-400 font-medium">Mon</span>
+                </div>
+                <div class="flex flex-col items-center gap-2 flex-1">
+                  <div class="chart-bar w-full max-w-[24px] h-10 rounded-t-lg bg-[#E0E7FF] origin-bottom"></div>
+                  <span class="text-[10px] text-gray-400 font-medium">Tue</span>
+                </div>
+                <div class="flex flex-col items-center gap-2 flex-1">
+                  <div class="chart-bar w-full max-w-[24px] h-18 rounded-t-lg bg-[#E0E7FF] origin-bottom"></div>
+                  <span class="text-[10px] text-gray-400 font-medium">Wed</span>
+                </div>
+                <div class="flex flex-col items-center gap-2 flex-1">
+                  <div class="chart-bar w-full max-w-[24px] h-16 rounded-t-lg bg-[#E0E7FF] origin-bottom"></div>
+                  <span class="text-[10px] text-gray-400 font-medium">Thu</span>
+                </div>
+                <div class="flex flex-col items-center gap-2 flex-1">
+                  <div class="relative w-full flex justify-center items-end">
+                    <span id="fri-badge" class="absolute -top-6 px-1.5 py-0.5 rounded bg-[#2563EB] text-white text-[9px] font-bold shadow-md">
+                      +20%
+                    </span>
+                    <div class="chart-bar w-full max-w-[24px] h-24 rounded-t-lg bg-[#3B82F6] origin-bottom"></div>
+                  </div>
+                  <span class="text-[10px] text-gray-400 font-medium">Fri</span>
+                </div>
+                <div class="flex flex-col items-center gap-2 flex-1">
+                  <div class="chart-bar w-full max-w-[24px] h-12 rounded-t-lg bg-[#E0E7FF] origin-bottom"></div>
+                  <span class="text-[10px] text-gray-400 font-medium">Sat</span>
+                </div>
+                <div class="flex flex-col items-center gap-2 flex-1">
+                  <div class="chart-bar w-full max-w-[24px] h-16 rounded-t-lg bg-[#E0E7FF] origin-bottom"></div>
+                  <span class="text-[10px] text-gray-400 font-medium">Sun</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         PART 1 (IMAGE 0) - SECTION 3: FEATURED PROPERTIES WITH 3D MAGNETIC TILT
+    ========================================================================= -->
+    <section id="section-properties" class="space-y-8 pt-4">
+      <div class="text-center space-y-2 max-w-xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-[#111317]">
+          Featured <span class="serif-italic font-normal">investment properties</span>
+        </h2>
+        <p class="text-xs sm:text-sm text-gray-500">
+          Each property below represents a prime opportunity for strong capital gains and steady income.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Brooklyn with 3D Tilt -->
+        <div class="perspective-card group">
+          <div class="card-3d-content bg-white rounded-3xl p-3 shadow-md border border-gray-100 flex flex-col justify-between transition-all duration-300">
+            <div class="relative w-full h-52 sm:h-56 rounded-2xl overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1000&q=85"
+                alt="Edge, Brooklyn, NY"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div class="p-3">
+              <h3 class="text-base font-semibold text-gray-900 tracking-tight">Edge, Brooklyn, NY</h3>
+              <p class="text-xs text-gray-500 mt-0.5">Near transit and tech hubs</p>
+              <div class="flex items-center justify-between mt-4 pt-2">
+                <span class="text-base sm:text-lg font-bold text-gray-900">$3,800/month</span>
+                <button class="inline-flex items-center gap-1 px-4 py-2 rounded-full bg-[#141518] hover:bg-black text-white text-xs font-medium transition">
+                  Explore ↗
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Malibu (Under Offer) with 3D Tilt -->
+        <div class="perspective-card group">
+          <div class="card-3d-content bg-white rounded-3xl p-3 shadow-md border border-gray-100 flex flex-col justify-between transition-all duration-300">
+            <div class="relative w-full h-52 sm:h-56 rounded-2xl overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1000&q=85"
+                alt="Villa Redwood, Malibu, CA"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-[11px] font-semibold backdrop-blur-md shadow-sm bg-[#FED7AA] text-[#C2410C]">
+                Under Offer
+              </span>
+            </div>
+            <div class="p-3">
+              <h3 class="text-base font-semibold text-gray-900 tracking-tight">Villa Redwood, Malibu, CA</h3>
+              <p class="text-xs text-gray-500 mt-0.5">Luxury coastal estate with high demand</p>
+              <div class="flex items-center justify-between mt-4 pt-2">
+                <span class="text-base sm:text-lg font-bold text-gray-900">$4,800/month</span>
+                <button class="inline-flex items-center gap-1 px-4 py-2 rounded-full bg-[#141518] hover:bg-black text-white text-xs font-medium transition">
+                  Explore ↗
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Aspen (Rented) with 3D Tilt -->
+        <div class="perspective-card group">
+          <div class="card-3d-content bg-white rounded-3xl p-3 shadow-md border border-gray-100 flex flex-col justify-between transition-all duration-300">
+            <div class="relative w-full h-52 sm:h-56 rounded-2xl overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=85"
+                alt="The Cedar Pavilion, Aspen"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-[11px] font-semibold backdrop-blur-md shadow-sm bg-[#BBF7D0] text-[#15803D]">
+                Rented
+              </span>
+            </div>
+            <div class="p-3">
+              <h3 class="text-base font-semibold text-gray-900 tracking-tight">The Cedar Pavilion, Aspen</h3>
+              <p class="text-xs text-gray-500 mt-0.5">Mountain resort home in a grow...</p>
+              <div class="flex items-center justify-between mt-4 pt-2">
+                <span class="text-base sm:text-lg font-bold text-gray-900">$3,200/month</span>
+                <button class="inline-flex items-center gap-1 px-4 py-2 rounded-full bg-[#141518] hover:bg-black text-white text-xs font-medium transition">
+                  Explore ↗
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="flex items-center justify-center gap-3 pt-2">
+        <button class="w-9 h-9 rounded-full border border-gray-200 bg-white hover:bg-gray-50 text-gray-600 flex items-center justify-center transition shadow-sm">
+          ‹
+        </button>
+        <button class="w-9 h-9 rounded-full border border-gray-200 bg-white hover:bg-gray-50 text-gray-600 flex items-center justify-center transition shadow-sm">
+          ›
+        </button>
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         REMOTION CINEMATIC MOTION PLAYER (PROGRAMMATIC 60FPS PROPERTY TOUR)
+    ========================================================================= -->
+    <section class="rounded-[36px] bg-[#141518] text-white p-6 sm:p-10 shadow-2xl border border-gray-800 space-y-6">
+      
+      <!-- Remotion Engine Header -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gray-800 pb-5">
+        <div class="space-y-1">
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded-full bg-blue-500/20 text-blue-400 text-[10px] font-bold tracking-wider uppercase border border-blue-500/30">
+              Remotion Engine
+            </span>
+            <span class="text-xs text-gray-400">Programmatic 60 FPS Video Tour</span>
+          </div>
+          <h3 class="text-lg sm:text-xl font-bold tracking-tight text-white">
+            Automated Dynamic Property Showcase
+          </h3>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <!-- Play / Pause Button -->
+          <button id="remotion-play-btn" class="px-4 py-2 rounded-full bg-[#2563EB] hover:bg-blue-600 text-white text-xs font-semibold flex items-center gap-1.5 transition shadow-lg">
+            <span id="remotion-icon">▶</span> <span id="remotion-play-text">Play Tour</span>
+          </button>
+          <!-- Frame Scrubber Indicator -->
+          <span id="remotion-frame-badge" class="px-3 py-1.5 rounded-lg bg-gray-800 border border-gray-700 text-[11px] font-mono text-gray-300">
+            Frame: 0 / 180 (3.0s)
+          </span>
+        </div>
+      </div>
+
+      <!-- Remotion Composition Viewport Canvas -->
+      <div id="remotion-viewport" class="relative w-full h-72 sm:h-96 rounded-2xl overflow-hidden bg-black flex items-center justify-center border border-gray-800 select-none">
+        
+        <!-- Background Imagery with Keyframed Ken Burns Zoom / Pan -->
+        <img
+          id="remotion-bg"
+          src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=85"
+          alt="Remotion Tour Frame"
+          class="absolute inset-0 w-full h-full object-cover transition-transform duration-75"
+        />
+
+        <!-- Scanline subtle film texture -->
+        <div class="absolute inset-0 remotion-scanlines pointer-events-none opacity-40"></div>
+
+        <!-- Remotion Watermark & Timecode -->
+        <div class="absolute top-4 left-4 z-20 flex items-center gap-2">
+          <span class="px-2 py-0.5 rounded bg-black/70 backdrop-blur-md text-[10px] font-mono text-emerald-400 border border-white/10">
+            ● REC [60.00 FPS]
+          </span>
+          <span id="remotion-timecode" class="text-[10px] font-mono text-gray-300 bg-black/60 px-2 py-0.5 rounded">
+            00:00:00
+          </span>
+        </div>
+
+        <!-- Dynamic Lower Third Animated Overlay (Remotion Title Card) -->
+        <div id="remotion-lower-third" class="absolute bottom-6 left-6 right-6 z-20 flex flex-col sm:flex-row sm:items-end justify-between gap-4 p-4 rounded-xl bg-black/75 backdrop-blur-md border border-white/15">
+          <div class="space-y-1">
+            <span class="text-[10px] uppercase tracking-wider text-blue-400 font-bold">Featured Listing</span>
+            <h4 class="text-base sm:text-lg font-bold text-white tracking-tight">Villa Redwood, Malibu, CA</h4>
+            <p class="text-xs text-gray-300">Luxury coastal estate with oceanview infinity terrace</p>
+          </div>
+          <div class="flex items-center gap-4 text-right">
+            <div>
+              <span class="text-[10px] text-gray-400 block">Rental Yield</span>
+              <span class="text-sm font-bold text-emerald-400">14.8% Cap</span>
+            </div>
+            <div>
+              <span class="text-[10px] text-gray-400 block">Monthly Rate</span>
+              <span class="text-sm font-bold text-white">$4,800/mo</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Scrubber Slider -->
+      <div class="space-y-2">
+        <input
+          id="remotion-scrubber"
+          type="range"
+          min="0"
+          max="180"
+          value="0"
+          class="w-full accent-blue-500 cursor-pointer h-1.5 bg-gray-700 rounded-lg"
+        />
+        <div class="flex items-center justify-between text-[11px] text-gray-400 font-mono">
+          <span>0.00s</span>
+          <span class="text-gray-500">Scrub timeline to preview frame-accurate motion</span>
+          <span>3.00s</span>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================================
+         PART 2 (IMAGE 1) - SECTION 4: INVEST TODAY IN A DREAM HOUSE
+    ========================================================================= -->
+    <section id="section-dreamhouse" class="relative rounded-[36px] sm:rounded-[44px] bg-[#EBF0F6] p-6 sm:p-12 overflow-hidden border border-gray-200/60 shadow-lg">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <h2 class="text-3xl sm:text-5xl md:text-[54px] font-medium tracking-tight text-[#111317] leading-tight">
+          Invest Today in <br />
+          <span class="serif-italic font-normal text-[#2563EB]">a Dream</span>{" "}
+          <span class="font-bold">House</span>
+        </h2>
+      </div>
+
+      <div class="relative w-full max-w-2xl mx-auto h-64 sm:h-96 my-6 rounded-2xl overflow-hidden shadow-xl">
+        <img
+          id="dream-house-img"
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85"
+          alt="Architectural Dream Villa"
+          class="w-full h-full object-cover object-center transition-transform duration-700"
+        />
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4">
+        <div class="dream-card bg-white/95 backdrop-blur-sm rounded-2xl p-5 shadow-sm border border-white hover:shadow-md transition">
+          <h3 class="text-sm font-semibold text-gray-900">Smart Property</h3>
+          <p class="text-xs text-gray-500 mt-2 leading-relaxed">
+            AI-powered analysis identifies properties with the highest capital growth potential based on market trends and long-term value drivers.
+          </p>
+          <a href="#smart" class="inline-flex items-center gap-1 text-xs font-semibold text-gray-800 hover:text-blue-600 mt-4 transition">
+            Find more ›
+          </a>
+        </div>
+
+        <div class="dream-card bg-white/95 backdrop-blur-sm rounded-2xl p-5 shadow-sm border border-white hover:shadow-md transition">
+          <h3 class="text-sm font-semibold text-gray-900">Growth Forecasting</h3>
+          <p class="text-xs text-gray-500 mt-2 leading-relaxed">
+            Predict future property value appreciation using data-driven forecasts, historical performance, and real-time market indicators.
+          </p>
+          <a href="#forecasting" class="inline-flex items-center gap-1 text-xs font-semibold text-gray-800 hover:text-blue-600 mt-4 transition">
+            Find more ›
+          </a>
+        </div>
+
+        <div class="dream-card bg-white/95 backdrop-blur-sm rounded-2xl p-5 shadow-sm border border-white hover:shadow-md transition">
+          <h3 class="text-sm font-semibold text-gray-900">Portfolio Optimization</h3>
+          <p class="text-xs text-gray-500 mt-2 leading-relaxed">
+            Build and balance a real estate portfolio designed to maximize long-term asset growth while managing risk across locations.
+          </p>
+          <a href="#portfolio" class="inline-flex items-center gap-1 text-xs font-semibold text-gray-800 hover:text-blue-600 mt-4 transition">
+            Find more ›
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         PART 2 (IMAGE 1) - SECTION 5: OMNI-CHANNEL BENTO GRID (GSAP ROTATING GLOBE & PULSES)
+    ========================================================================= -->
+    <section id="section-bento" class="space-y-8 pt-4">
+      
+      <div class="text-center max-w-xl mx-auto space-y-3">
+        <span class="px-3.5 py-1 rounded-full bg-[#FCE7F3] text-[#BE185D] text-[10px] font-bold tracking-wider uppercase inline-block">
+          Portfolio Tools
+        </span>
+        <h2 class="text-3xl sm:text-4xl md:text-[42px] font-semibold tracking-tight text-[#111317] leading-tight">
+          Omni-channel, any task, <br />
+          <span class="serif-italic font-normal">multi-language</span>
+        </h2>
+        <p class="text-xs sm:text-sm text-gray-500 leading-relaxed">
+          Assistant offers a human-like service that effortlessly blends in your process, completing nearly any tasks and collaborating with your team within the platform.
+        </p>
+      </div>
+
+      <!-- Bento Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        
+        <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <!-- Unified dashboard -->
+          <div class="bg-white rounded-3xl p-6 shadow-sm border border-gray-100 flex flex-col justify-between hover:shadow-md transition">
+            <div>
+              <h3 class="text-base font-bold text-gray-900">Unified dashboard</h3>
+              <p class="text-xs text-gray-500 mt-1 leading-relaxed">
+                Track all your properties, income, and growth metrics in one intuitive interface.
+              </p>
+            </div>
+
+            <div class="mt-6 p-4 rounded-2xl bg-gray-50 border border-gray-100 space-y-3">
+              <div class="flex items-center justify-between text-xs">
+                <span class="font-semibold text-gray-700">Market Trends</span>
+                <span class="font-bold text-gray-900">$300k</span>
+              </div>
+              <div class="h-16 w-full relative flex items-center">
+                <svg viewBox="0 0 200 60" class="w-full h-full">
+                  <defs>
+                    <linearGradient id="pinkGrad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#F43F5E" stop-opacity="0.3" />
+                      <stop offset="100%" stop-color="#F43F5E" stop-opacity="0.0" />
+                    </linearGradient>
+                  </defs>
+                  <path d="M 0 45 Q 40 10 90 35 T 150 15 T 200 25 L 200 60 L 0 60 Z" fill="url(#pinkGrad)" />
+                  <path id="bento-pink-curve" d="M 0 45 Q 40 10 90 35 T 150 15 T 200 25" fill="none" stroke="#F43F5E" stroke-width="2.5" />
+                </svg>
+              </div>
+              <div class="flex items-center justify-between text-[10px] text-gray-400 pt-1 border-t border-gray-200">
+                <span>Weekly schedule</span>
+                <div class="flex items-center gap-1.5 font-semibold text-gray-600">
+                  <span class="px-1.5 py-0.5 rounded bg-gray-200">15</span>
+                  <span class="px-1.5 py-0.5 rounded bg-[#2563EB] text-white animate-pulse">16</span>
+                  <span class="px-1.5 py-0.5 rounded bg-gray-200">17</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Collaborative (Dark Wireframe with GSAP Continuous Spin) -->
+          <div class="bg-[#141518] rounded-3xl p-6 text-white shadow-xl border border-gray-800 relative overflow-hidden flex flex-col justify-between">
+            <div>
+              <h3 class="text-base font-bold text-white">Collaborative</h3>
+              <p class="text-xs text-gray-400 mt-1 leading-relaxed">
+                Sub-agents work together seamlessly to handle complex scenarios, achieving superior results.
+              </p>
+            </div>
+
+            <div class="relative w-full h-44 my-2 flex items-center justify-center">
+              <svg id="bento-wireframe-globe" viewBox="0 0 160 160" class="w-36 h-36 opacity-85">
+                <circle cx="80" cy="80" r="64" fill="none" stroke="#6366F1" stroke-width="1" stroke-dasharray="3 3" />
+                <ellipse cx="80" cy="80" rx="64" ry="24" fill="none" stroke="#818CF8" stroke-width="1" />
+                <ellipse cx="80" cy="80" rx="64" ry="46" fill="none" stroke="#A855F7" stroke-width="1" />
+                <ellipse cx="80" cy="80" rx="24" ry="64" fill="none" stroke="#6366F1" stroke-width="1" />
+                <ellipse cx="80" cy="80" rx="46" ry="64" fill="none" stroke="#A855F7" stroke-width="1" />
+              </svg>
+
+              <!-- Floating Agent Badges with GSAP Independent Levitation -->
+              <div id="agent-robert" class="absolute top-4 right-2 px-2.5 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[10px] text-white flex items-center gap-1.5 shadow-lg">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                Robert Wilson
+              </div>
+
+              <div id="agent-jennifer" class="absolute bottom-10 left-2 px-2.5 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[10px] text-white flex items-center gap-1.5 shadow-lg">
+                <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+                Jennifer Davis
+              </div>
+
+              <div id="agent-elizabeth" class="absolute bottom-2 right-6 px-2.5 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[10px] text-white flex items-center gap-1.5 shadow-lg">
+                <span class="w-2 h-2 rounded-full bg-fuchsia-400"></span>
+                Elizabeth Taylor
+              </div>
+            </div>
+          </div>
+
+          <!-- Rental Empire -->
+          <div class="bg-[#FFFBF0] rounded-3xl p-6 border border-amber-100 flex flex-col justify-between hover:shadow-md transition">
+            <div>
+              <h3 class="text-base sm:text-lg font-bold text-gray-900 leading-snug">
+                From single assets <br />
+                to a rental empire
+              </h3>
+              <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                Our coordinated sub-agents handle the complexities of property management, leaving you with nothing but consistent monthly returns.
+              </p>
+            </div>
+
+            <div class="pt-4">
+              <button class="px-5 py-2.5 rounded-full bg-[#141518] hover:bg-black text-white text-xs font-semibold shadow-md transition hover:scale-105 active:scale-95">
+                Start investing
+              </button>
+            </div>
+          </div>
+
+          <!-- Lead Performing Agents -->
+          <div class="bg-gradient-to-tr from-[#FCE7F3]/80 via-[#EDE9FE]/70 to-[#FEF3C7]/70 rounded-3xl p-6 border border-pink-100/60 shadow-sm flex flex-col justify-between">
+            <div class="text-xs font-bold text-gray-800 tracking-tight mb-3">
+              Lead Performing Agents
+            </div>
+
+            <div class="space-y-4">
+              <div class="bg-white/80 backdrop-blur-sm rounded-xl p-3 border border-white/60 shadow-sm space-y-1.5">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <img
+                      src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80"
+                      alt="Emily Gray"
+                      class="w-6 h-6 rounded-full object-cover ring-1 ring-white"
+                    />
+                    <span class="text-xs font-semibold text-gray-900">Emily Gray</span>
+                    <span class="px-1.5 py-0.5 rounded bg-amber-100 text-amber-800 text-[9px] font-bold">
+                      ⭐ Top
+                    </span>
+                  </div>
+                  <span class="text-xs font-bold text-gray-900">$421,376</span>
+                </div>
+                <div class="emily-pills flex items-center gap-[2px]">
+                  <span class="h-2.5 w-2 rounded-xs bg-emerald-500"></span>
+                  <span class="h-2.5 w-2 rounded-xs bg-emerald-500"></span>
+                  <span class="h-2.5 w-2 rounded-xs bg-emerald-500"></span>
+                  <span class="h-2.5 w-2 rounded-xs bg-emerald-500"></span>
+                  <span class="h-2.5 w-2 rounded-xs bg-emerald-500"></span>
+                  <span class="h-2.5 w-2 rounded-xs bg-emerald-500"></span>
+                  <span class="h-2.5 w-2 rounded-xs bg-emerald-500"></span>
+                  <span class="h-2.5 w-2 rounded-xs bg-emerald-500"></span>
+                  <span class="h-2.5 w-2 rounded-xs bg-emerald-500"></span>
+                  <span class="h-2.5 w-2 rounded-xs bg-emerald-500"></span>
+                  <span class="h-2.5 w-2 rounded-xs bg-emerald-500"></span>
+                  <span class="h-2.5 w-2 rounded-xs bg-emerald-500"></span>
+                  <span class="h-2.5 w-2 rounded-xs bg-gray-200"></span>
+                  <span class="h-2.5 w-2 rounded-xs bg-gray-200"></span>
+                  <span class="h-2.5 w-2 rounded-xs bg-gray-200"></span>
+                  <span class="h-2.5 w-2 rounded-xs bg-gray-200"></span>
+                </div>
+                <div class="flex items-center justify-between text-[9px] text-gray-500">
+                  <span>• Closed • Projected</span>
+                  <span>12 • 16</span>
+                </div>
+              </div>
+
+              <div class="bg-white/80 backdrop-blur-sm rounded-xl p-3 border border-white/60 shadow-sm space-y-1.5">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <img
+                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80"
+                      alt="Bruce Walker"
+                      class="w-6 h-6 rounded-full object-cover ring-1 ring-white"
+                    />
+                    <span class="text-xs font-semibold text-gray-900">Bruce Walker</span>
+                  </div>
+                  <span class="text-xs font-bold text-gray-900">$242,491</span>
+                </div>
+                <div class="bruce-bento-pills flex items-center gap-[2px]">
+                  <span class="h-2.5 w-2 rounded-xs bg-blue-500"></span>
+                  <span class="h-2.5 w-2 rounded-xs bg-blue-500"></span>
+                  <span class="h-2.5 w-2 rounded-xs bg-blue-500"></span>
+                  <span class="h-2.5 w-2 rounded-xs bg-blue-500"></span>
+                  <span class="h-2.5 w-2 rounded-xs bg-blue-500"></span>
+                  <span class="h-2.5 w-2 rounded-xs bg-blue-500"></span>
+                  <span class="h-2.5 w-2 rounded-xs bg-blue-500"></span>
+                  <span class="h-2.5 w-2 rounded-xs bg-blue-500"></span>
+                  <span class="h-2.5 w-2 rounded-xs bg-gray-200"></span>
+                  <span class="h-2.5 w-2 rounded-xs bg-gray-200"></span>
+                  <span class="h-2.5 w-2 rounded-xs bg-gray-200"></span>
+                  <span class="h-2.5 w-2 rounded-xs bg-gray-200"></span>
+                  <span class="h-2.5 w-2 rounded-xs bg-gray-200"></span>
+                  <span class="h-2.5 w-2 rounded-xs bg-gray-200"></span>
+                  <span class="h-2.5 w-2 rounded-xs bg-gray-200"></span>
+                  <span class="h-2.5 w-2 rounded-xs bg-gray-200"></span>
+                </div>
+                <div class="flex items-center justify-between text-[9px] text-gray-500">
+                  <span>• Closed • Projected</span>
+                  <span>8 • 16</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Tall Card: Smart homes with GSAP Floating Price Pills -->
+        <div class="bg-white rounded-3xl p-6 shadow-sm border border-gray-100 flex flex-col justify-between hover:shadow-md transition">
+          <div>
+            <span class="px-3 py-1 rounded-full bg-gray-100 text-gray-600 text-[10px] font-bold tracking-wider uppercase inline-block mb-3">
+              Sustainable
+            </span>
+            <h3 class="text-xl font-bold text-gray-900 tracking-tight leading-snug">
+              Smart homes. <br />
+              Smarter investments
+            </h3>
+            <p class="text-xs text-gray-500 mt-2 leading-relaxed">
+              Data-driven insights to help you secure the best eco-homes for the short-term rental market. High demand. High returns.
+            </p>
+          </div>
+
+          <div class="relative w-full h-80 sm:h-96 mt-6 rounded-2xl overflow-hidden shadow-inner">
+            <img
+              src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=85"
+              alt="Sustainable Eco-Villas with Solar"
+              class="w-full h-full object-cover object-center"
+            />
+            
+            <div id="price-tag-1" class="absolute top-12 left-6 px-3 py-1 rounded-full bg-white/95 backdrop-blur-sm text-gray-900 font-bold text-xs shadow-lg border border-white cursor-pointer hover:scale-110 transition">
+              $920,000
+            </div>
+
+            <div id="price-tag-2" class="absolute top-20 right-6 px-3 py-1 rounded-full bg-white/95 backdrop-blur-sm text-gray-900 font-bold text-xs shadow-lg border border-white cursor-pointer hover:scale-110 transition">
+              $832,500
+            </div>
+
+            <div id="price-tag-3" class="absolute bottom-16 left-8 px-3 py-1 rounded-full bg-white/95 backdrop-blur-sm text-gray-900 font-bold text-xs shadow-lg border border-white cursor-pointer hover:scale-110 transition">
+              $959,000
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         PART 2 (IMAGE 1) - SECTION 6: COMPLETE REAL STARTUP FOOTER
+    ========================================================================= -->
+    <footer class="pt-12 sm:pt-16 pb-10 border-t border-gray-200/80 space-y-12">
+      
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+        
+        <div class="md:col-span-2 space-y-4">
+          <div class="flex items-center gap-2">
+            <div class="flex items-center justify-center w-7 h-7 rounded-lg bg-[#2563EB] text-white shadow-sm">
+              <svg viewBox="0 0 24 24" class="w-4 h-4 fill-none stroke-current stroke-[2.2] stroke-linecap-round stroke-linejoin-round">
+                <path d="M3 10.5 12 3l9 7.5" />
+                <path d="M5 9v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9" />
+                <path d="M9 21V12h6v9" />
+              </svg>
+            </div>
+            <span class="text-xl font-bold tracking-tight text-gray-900 lowercase">estateo</span>
+          </div>
+
+          <p class="text-xs text-gray-500 max-w-xs leading-relaxed">
+            From property search to portfolio growth.
+          </p>
+
+          <div class="flex items-center gap-2 pt-2">
+            <a href="#twitter" class="social-icon w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:text-black hover:border-black transition">
+              <span class="text-xs font-bold">𝕏</span>
+            </a>
+            <a href="#instagram" class="social-icon w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:text-black hover:border-black transition">
+              <span class="text-xs font-bold">IG</span>
+            </a>
+            <a href="#facebook" class="social-icon w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:text-black hover:border-black transition">
+              <span class="text-xs font-bold">f</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold text-gray-900 tracking-wider">Products</h4>
+          <ul class="space-y-2 text-xs text-gray-500">
+            <li><a href="#finder" class="hover:text-black transition">Investment Finder</a></li>
+            <li><a href="#yield" class="hover:text-black transition">Rental Yield Calculator</a></li>
+            <li><a href="#manager" class="hover:text-black transition">Portfolio Manager</a></li>
+            <li><a href="#heatmaps" class="hover:text-black transition">Market Heatmaps</a></li>
+            <li><a href="#tax" class="hover:text-black transition">Tax Optimization</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold text-gray-900 tracking-wider">Customers</h4>
+          <ul class="space-y-2 text-xs text-gray-500">
+            <li><a href="#stories" class="hover:text-black transition">Investor Success Stories</a></li>
+            <li><a href="#guide" class="hover:text-black transition">Property Management Guide</a></li>
+            <li><a href="#reports" class="hover:text-black transition">Market Reports</a></li>
+            <li><a href="#webinars" class="hover:text-black transition">Webinars</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold text-gray-900 tracking-wider">Company</h4>
+          <ul class="space-y-2 text-xs text-gray-500">
+            <li><a href="#about" class="hover:text-black transition">About Us</a></li>
+            <li><a href="#partnership" class="hover:text-black transition">Partnership Program</a></li>
+            <li><a href="#legal" class="hover:text-black transition">Legal Compliance</a></li>
+            <li><a href="#careers" class="hover:text-black transition">Careers</a></li>
+            <li><a href="#contact" class="hover:text-black transition">Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-gray-200/60 text-[11px] text-gray-400">
+        <div class="flex items-center gap-6">
+          <a href="#terms" class="hover:text-gray-600 transition">Terms of Use</a>
+          <a href="#privacy" class="hover:text-gray-600 transition">Privacy Policy</a>
+        </div>
+        <div>
+          © 2026 Estateo. All Rights Reserved.
+        </div>
+      </div>
+
+    </footer>
+
+  </div>
+
+  <!-- =========================================================================
+       1. THREE.JS 3D VILLA ENGINE (INTERACTIVE WEBGL WITH MOUSE ORBIT)
+  ========================================================================= -->
+  <script>
+    (function init3DHero() {
+      const container = document.getElementById('hero-container');
+      const canvas = document.getElementById('hero-3d-canvas');
+      if (!container || !canvas || typeof THREE === 'undefined') return;
+
+      const scene = new THREE.Scene();
+      scene.background = new THREE.Color(0x658ca3);
+      scene.fog = new THREE.FogExp2(0x658ca3, 0.018);
+
+      const camera = new THREE.PerspectiveCamera(40, container.clientWidth / container.clientHeight, 0.1, 1000);
+      camera.position.set(0, 4.2, 22);
+
+      const renderer = new THREE.WebGLRenderer({
+        canvas: canvas,
+        antialias: true,
+        alpha: false,
+        powerPreference: "high-performance"
+      });
+      renderer.setSize(container.clientWidth, container.clientHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.shadowMap.enabled = true;
+      renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+      renderer.toneMapping = THREE.ACESFilmicToneMapping;
+      renderer.toneMappingExposure = 1.15;
+
+      const ambientLight = new THREE.AmbientLight(0xdbeafe, 0.85);
+      scene.add(ambientLight);
+
+      const sunLight = new THREE.DirectionalLight(0xfff7ed, 1.4);
+      sunLight.position.set(15, 24, 18);
+      sunLight.castShadow = true;
+      sunLight.shadow.mapSize.width = 2048;
+      sunLight.shadow.mapSize.height = 2048;
+      scene.add(sunLight);
+
+      const interiorLight1 = new THREE.PointLight(0xffedd5, 2.2, 14);
+      interiorLight1.position.set(0, 2.5, 0);
+      scene.add(interiorLight1);
+
+      const interiorLight2 = new THREE.PointLight(0xfef08a, 1.8, 12);
+      interiorLight2.position.set(-3.5, 4.8, 1);
+      scene.add(interiorLight2);
+
+      const poolLight = new THREE.PointLight(0x38bdf8, 2.0, 10);
+      poolLight.position.set(0, 0.2, 5.5);
+      scene.add(poolLight);
+
+      const concreteWhiteMat = new THREE.MeshStandardMaterial({ color: 0xededed, roughness: 0.35, metalness: 0.05 });
+      const concreteDarkMat = new THREE.MeshStandardMaterial({ color: 0x334155, roughness: 0.45, metalness: 0.1 });
+      const woodLouversMat = new THREE.MeshStandardMaterial({ color: 0xb45309, roughness: 0.55 });
+      const glassMat = new THREE.MeshPhysicalMaterial({
+        color: 0xe0f2fe,
+        transparent: true,
+        opacity: 0.35,
+        roughness: 0.05,
+        metalness: 0.1,
+        transmission: 0.85,
+        ior: 1.5,
+        reflectivity: 0.9
+      });
+      const poolTileMat = new THREE.MeshStandardMaterial({ color: 0x0284c7, roughness: 0.2, metalness: 0.2 });
+
+      const villaGroup = new THREE.Group();
+      scene.add(villaGroup);
+
+      const terrace = new THREE.Mesh(new THREE.BoxGeometry(32, 0.8, 26), concreteWhiteMat);
+      terrace.position.set(0, -0.4, 3);
+      terrace.receiveShadow = true;
+      villaGroup.add(terrace);
+
+      const poolBasin = new THREE.Mesh(new THREE.BoxGeometry(15.2, 0.9, 7.2), poolTileMat);
+      poolBasin.position.set(0, -0.42, 6.5);
+      villaGroup.add(poolBasin);
+
+      const waterGeo = new THREE.PlaneGeometry(14.8, 6.8, 36, 36);
+      const waterMat = new THREE.MeshPhysicalMaterial({
+        color: 0x0ea5e9,
+        transparent: true,
+        opacity: 0.82,
+        roughness: 0.1,
+        metalness: 0.3,
+        reflectivity: 0.95,
+        clearcoat: 1.0,
+      });
+      const water = new THREE.Mesh(waterGeo, waterMat);
+      water.rotation.x = -Math.PI / 2;
+      water.position.set(0, 0.02, 6.5);
+      villaGroup.add(water);
+
+      const pos = waterGeo.attributes.position;
+      const initialZ = new Float32Array(pos.count);
+      for (let i = 0; i < pos.count; i++) initialZ[i] = pos.getZ(i);
+
+      const groundFloor = new THREE.Mesh(new THREE.BoxGeometry(17, 3.4, 9), concreteWhiteMat);
+      groundFloor.position.set(0, 1.7, 0);
+      groundFloor.castShadow = true;
+      groundFloor.receiveShadow = true;
+      villaGroup.add(groundFloor);
+
+      const glassWall = new THREE.Mesh(new THREE.BoxGeometry(14, 2.9, 0.15), glassMat);
+      glassWall.position.set(0, 1.6, 4.52);
+      villaGroup.add(glassWall);
+
+      const interiorBack = new THREE.Mesh(new THREE.BoxGeometry(13.6, 2.7, 0.2), new THREE.MeshBasicMaterial({ color: 0xffedd5 }));
+      interiorBack.position.set(0, 1.6, 2.0);
+      villaGroup.add(interiorBack);
+
+      const secondFloor = new THREE.Mesh(new THREE.BoxGeometry(12, 3.0, 7.5), concreteDarkMat);
+      secondFloor.position.set(-1.8, 4.8, 0.8);
+      secondFloor.castShadow = true;
+      secondFloor.receiveShadow = true;
+      villaGroup.add(secondFloor);
+
+      const balconyDeck = new THREE.Mesh(new THREE.BoxGeometry(11.8, 0.25, 3.2), concreteWhiteMat);
+      balconyDeck.position.set(-1.8, 3.45, 4.2);
+      balconyDeck.castShadow = true;
+      villaGroup.add(balconyDeck);
+
+      const balconyGlass = new THREE.Mesh(new THREE.BoxGeometry(11.6, 0.9, 0.08), glassMat);
+      balconyGlass.position.set(-1.8, 4.0, 5.75);
+      villaGroup.add(balconyGlass);
+
+      for (let i = 0; i < 7; i++) {
+        const slat = new THREE.Mesh(new THREE.BoxGeometry(0.18, 2.8, 0.35), woodLouversMat);
+        slat.position.set(2.8 + i * 0.45, 4.8, 4.6);
+        slat.castShadow = true;
+        villaGroup.add(slat);
+      }
+
+      const roofSlab = new THREE.Mesh(new THREE.BoxGeometry(13.6, 0.35, 9.2), concreteWhiteMat);
+      roofSlab.position.set(-1.8, 6.45, 0.8);
+      roofSlab.castShadow = true;
+      villaGroup.add(roofSlab);
+
+      function createCypress(x, z, s) {
+        const tree = new THREE.Group();
+        const trunk = new THREE.Mesh(new THREE.CylinderGeometry(0.15, 0.25, 2.0, 8), new THREE.MeshStandardMaterial({ color: 0x473c35 }));
+        trunk.position.y = 1.0;
+        tree.add(trunk);
+        const foliageMat = new THREE.MeshStandardMaterial({ color: 0x1b4332 });
+        for (let j = 0; j < 3; j++) {
+          const cone = new THREE.Mesh(new THREE.ConeGeometry(1.6 - j * 0.3, 3.2, 8), foliageMat);
+          cone.position.y = 2.4 + j * 1.6;
+          tree.add(cone);
+        }
+        tree.position.set(x, 0, z);
+        tree.scale.set(s, s, s);
+        return tree;
+      }
+      villaGroup.add(createCypress(-12, -2, 1.3));
+      villaGroup.add(createCypress(-13.5, 2, 1.1));
+      villaGroup.add(createCypress(12.5, -1, 1.4));
+      villaGroup.add(createCypress(13.8, 3, 1.0));
+
+      let targetRotX = 0.05, targetRotY = 0;
+      let isDragging = false;
+      let prevMouseX = 0, prevMouseY = 0;
+
+      container.addEventListener('mousemove', (e) => {
+        const rect = container.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+        const y = -(((e.clientY - rect.top) / rect.height) * 2 - 1);
+        if (!isDragging) {
+          targetRotY = x * 0.28;
+          targetRotX = 0.05 + (-y * 0.12);
+        } else {
+          targetRotY += (e.clientX - prevMouseX) * 0.005;
+          targetRotX += (e.clientY - prevMouseY) * 0.005;
+          prevMouseX = e.clientX;
+          prevMouseY = e.clientY;
+        }
+      });
+
+      container.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        prevMouseX = e.clientX;
+        prevMouseY = e.clientY;
+      });
+
+      window.addEventListener('mouseup', () => { isDragging = false; });
+
+      window.addEventListener('resize', () => {
+        const w = container.clientWidth;
+        const h = container.clientHeight;
+        camera.aspect = w / h;
+        camera.updateProjectionMatrix();
+        renderer.setSize(w, h);
+      });
+
+      const clock = new THREE.Clock();
+      function animate() {
+        requestAnimationFrame(animate);
+        const elapsed = clock.getElapsedTime();
+
+        for (let i = 0; i < pos.count; i++) {
+          const u = pos.getX(i);
+          const v = pos.getY(i);
+          const z = Math.sin(u * 1.8 + elapsed * 2.8) * 0.04 + Math.cos(v * 2.2 + elapsed * 2.2) * 0.04;
+          pos.setZ(i, initialZ[i] + z);
+        }
+        pos.needsUpdate = true;
+
+        villaGroup.rotation.y += (targetRotY - villaGroup.rotation.y) * 0.05;
+        villaGroup.rotation.x += (targetRotX - villaGroup.rotation.x) * 0.05;
+        villaGroup.position.y = Math.sin(elapsed * 0.8) * 0.08;
+
+        renderer.render(scene, camera);
+      }
+      animate();
+    })();
+  </script>
+
+  <!-- =========================================================================
+       2. GSAP MOTION & SCROLLTRIGGER ORCHESTRATION ENGINE
+  ========================================================================= -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (typeof gsap === "undefined") return;
+
+      if (typeof ScrollTrigger !== "undefined") {
+        gsap.registerPlugin(ScrollTrigger);
+      }
+
+      // --- A. Hero Entrance Motion Timeline ---
+      const heroTl = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+      heroTl
+        .fromTo("#nav-bar", { y: -30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9 })
+        .fromTo(".hero-line", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 1.0, stagger: 0.15 }, "-=0.5")
+        .fromTo("#hero-cta", { scale: 0.85, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.6, ease: "back.out(2)" }, "-=0.4")
+        .fromTo("#hero-badge", { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6 }, "-=0.3")
+        .fromTo("#hero-widget-left", { x: -50, opacity: 0 }, { x: 0, opacity: 1, duration: 0.9, ease: "power4.out" }, "-=0.5")
+        .fromTo("#hero-widget-right", { x: 50, opacity: 0 }, { x: 0, opacity: 1, duration: 0.9, ease: "power4.out" }, "-=0.8");
+
+      // Continuous Floating Levitation on Hero Glass Cards
+      gsap.to("#hero-widget-left", {
+        y: "-=10",
+        duration: 3.2,
+        yoyo: true,
+        repeat: -1,
+        ease: "sine.inOut"
+      });
+      gsap.to("#hero-widget-right", {
+        y: "+=12",
+        duration: 3.8,
+        yoyo: true,
+        repeat: -1,
+        ease: "sine.inOut",
+        delay: 0.4
+      });
+
+      // --- B. Section 2: Data Insights ScrollTrigger & Dynamic Counter ---
+      if (typeof ScrollTrigger !== "undefined") {
+        gsap.from(".insight-item", {
+          scrollTrigger: {
+            trigger: "#insights-list",
+            start: "top 80%",
+          },
+          x: -35,
+          opacity: 0,
+          duration: 0.8,
+          stagger: 0.15,
+          ease: "power3.out"
+        });
+
+        // Revenue Number Ticker & Growing Bars
+        ScrollTrigger.create({
+          trigger: "#revenue-card",
+          start: "top 75%",
+          onEnter: () => {
+            // Animate number $0 -> $96,437
+            const obj = { val: 0 };
+            gsap.to(obj, {
+              val: 96437,
+              duration: 1.8,
+              ease: "power2.out",
+              onUpdate: () => {
+                document.getElementById("revenue-counter").innerText = "$" + Math.floor(obj.val).toLocaleString();
+              }
+            });
+
+            // Animate Bar Chart Heights
+            gsap.fromTo(".chart-bar", 
+              { scaleY: 0 },
+              { scaleY: 1, duration: 1.2, stagger: 0.08, ease: "elastic.out(1, 0.75)" }
+            );
+
+            // Pop Friday Badge
+            gsap.fromTo("#fri-badge",
+              { scale: 0, opacity: 0 },
+              { scale: 1, opacity: 1, duration: 0.6, delay: 0.5, ease: "back.out(2.5)" }
+            );
+
+            // Draw Red Trendline
+            const path = document.getElementById("trendline-path");
+            if (path) {
+              const len = path.getTotalLength ? path.getTotalLength() : 300;
+              gsap.fromTo(path,
+                { strokeDashoffset: len, strokeDasharray: len },
+                { strokeDashoffset: 0, duration: 1.5, ease: "power2.inOut" }
+              );
+            }
+          }
+        });
+
+        // Dream House Parallax Zoom
+        gsap.fromTo("#dream-house-img",
+          { scale: 1.15 },
+          {
+            scale: 1.0,
+            scrollTrigger: {
+              trigger: "#section-dreamhouse",
+              start: "top 85%",
+              end: "bottom 40%",
+              scrub: 1.5
+            }
+          }
+        );
+
+        // Dream House Cards Stagger
+        gsap.from(".dream-card", {
+          scrollTrigger: {
+            trigger: "#section-dreamhouse",
+            start: "top 70%",
+          },
+          y: 30,
+          opacity: 0,
+          duration: 0.8,
+          stagger: 0.15,
+          ease: "power3.out"
+        });
+
+        // Bento Grid Elements
+        gsap.from("#section-bento h2", {
+          scrollTrigger: { trigger: "#section-bento", start: "top 80%" },
+          y: 25,
+          opacity: 0,
+          duration: 0.8
+        });
+      }
+
+      // Continuous 3D Wireframe Globe Rotation in Bento Grid
+      const globe = document.getElementById("bento-wireframe-globe");
+      if (globe) {
+        gsap.to(globe, {
+          rotation: 360,
+          duration: 35,
+          repeat: -1,
+          ease: "none",
+          transformOrigin: "center center"
+        });
+      }
+
+      // Floating Agent Tags Levitation
+      gsap.to("#agent-robert", { y: "-=8", duration: 2.6, yoyo: true, repeat: -1, ease: "sine.inOut" });
+      gsap.to("#agent-jennifer", { y: "+=10", duration: 3.1, yoyo: true, repeat: -1, ease: "sine.inOut", delay: 0.5 });
+      gsap.to("#agent-elizabeth", { y: "-=9", duration: 2.9, yoyo: true, repeat: -1, ease: "sine.inOut", delay: 1.0 });
+
+      // Floating Price Tags Hover Pulse
+      gsap.to("#price-tag-1", { y: "-=7", duration: 2.7, yoyo: true, repeat: -1, ease: "sine.inOut" });
+      gsap.to("#price-tag-2", { y: "+=9", duration: 3.3, yoyo: true, repeat: -1, ease: "sine.inOut", delay: 0.3 });
+      gsap.to("#price-tag-3", { y: "-=8", duration: 3.0, yoyo: true, repeat: -1, ease: "sine.inOut", delay: 0.7 });
+
+      // --- C. 3D Magnetic Perspective Tilt on Property Cards ---
+      const cards = document.querySelectorAll(".perspective-card");
+      cards.forEach((card) => {
+        const content = card.querySelector(".card-3d-content");
+        card.addEventListener("mousemove", (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left - rect.width / 2;
+          const y = e.clientY - rect.top - rect.height / 2;
+          const rotX = -(y / (rect.height / 2)) * 10;
+          const rotY = (x / (rect.width / 2)) * 10;
+          gsap.to(content, {
+            rotationX: rotX,
+            rotationY: rotY,
+            scale: 1.025,
+            duration: 0.3,
+            ease: "power1.out"
+          });
+        });
+        card.addEventListener("mouseleave", () => {
+          gsap.to(content, {
+            rotationX: 0,
+            rotationY: 0,
+            scale: 1,
+            duration: 0.6,
+            ease: "elastic.out(1, 0.6)"
+          });
+        });
+      });
+    });
+  </script>
+
+  <!-- =========================================================================
+       3. REMOTION PROGRAMMATIC 60 FPS VIDEO TOUR ENGINE (FRAME-DRIVEN DYNAMICS)
+  ========================================================================= -->
+  <script>
+    (function initRemotionEngine() {
+      const TOTAL_FRAMES = 180; // 3 seconds @ 60 FPS
+      const FPS = 60;
+      let currentFrame = 0;
+      let isPlaying = false;
+      let animInterval = null;
+
+      const scrubber = document.getElementById("remotion-scrubber");
+      const playBtn = document.getElementById("remotion-play-btn");
+      const playText = document.getElementById("remotion-play-text");
+      const playIcon = document.getElementById("remotion-icon");
+      const frameBadge = document.getElementById("remotion-frame-badge");
+      const timecode = document.getElementById("remotion-timecode");
+      const bgImg = document.getElementById("remotion-bg");
+      const lowerThird = document.getElementById("remotion-lower-third");
+
+      // Remotion-style scenes
+      const scenes = [
+        {
+          start: 0,
+          end: 60,
+          title: "Villa Redwood, Malibu, CA",
+          desc: "Phase 1: Cantilever Architectural Overview",
+          img: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1600&q=85",
+          rate: "$4,800/mo",
+          yield: "14.8% Cap"
+        },
+        {
+          start: 61,
+          end: 120,
+          title: "The Cedar Pavilion, Aspen, CO",
+          desc: "Phase 2: Luxury Mountain Chalet & Heated Pool",
+          img: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1600&q=85",
+          rate: "$3,200/mo",
+          yield: "11.2% Cap"
+        },
+        {
+          start: 121,
+          end: 180,
+          title: "Edge Pavilion, Brooklyn, NY",
+          desc: "Phase 3: Prime High-Growth Transit Hub",
+          img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=85",
+          rate: "$3,800/mo",
+          yield: "16.4% Cap"
+        }
+      ];
+
+      function renderFrame(frame) {
+        currentFrame = frame;
+        if (scrubber) scrubber.value = frame;
+
+        // Seconds & Timecode
+        const sec = (frame / FPS).toFixed(2);
+        if (frameBadge) frameBadge.innerText = `Frame: ${frame} / ${TOTAL_FRAMES} (${sec}s)`;
+        
+        const pad = (n) => String(n).padStart(2, "0");
+        const minutes = Math.floor(frame / (FPS * 60));
+        const seconds = Math.floor((frame / FPS) % 60);
+        const subFrames = frame % FPS;
+        if (timecode) timecode.innerText = `00:${pad(minutes)}:${pad(seconds)}:${pad(subFrames)}`;
+
+        // Active scene selection
+        const activeScene = scenes.find(s => frame >= s.start && frame <= s.end) || scenes[0];
+        
+        if (bgImg && bgImg.src !== activeScene.img) {
+          bgImg.src = activeScene.img;
+        }
+
+        // Remotion Interpolation: Ken Burns Pan & Zoom (Spring dynamics)
+        const sceneProgress = (frame - activeScene.start) / (activeScene.end - activeScene.start);
+        const scale = 1.0 + (sceneProgress * 0.12);
+        const translateY = (sceneProgress * -15);
+        if (bgImg) {
+          bgImg.style.transform = `scale(${scale}) translateY(${translateY}px)`;
+        }
+
+        // Lower-third animation (slide in at start of each scene)
+        if (lowerThird) {
+          const introProgress = Math.min(1, (frame - activeScene.start) / 10);
+          lowerThird.style.opacity = introProgress;
+          lowerThird.style.transform = `translateY(${(1 - introProgress) * 20}px)`;
+
+          const titleEl = lowerThird.querySelector("h4");
+          const descEl = lowerThird.querySelector("p");
+          if (titleEl) titleEl.innerText = activeScene.title;
+          if (descEl) descEl.innerText = activeScene.desc;
+        }
+      }
+
+      function togglePlay() {
+        isPlaying = !isPlaying;
+        if (isPlaying) {
+          if (playText) playText.innerText = "Pause Tour";
+          if (playIcon) playIcon.innerText = "⏸";
+          animInterval = setInterval(() => {
+            currentFrame = (currentFrame + 1) % (TOTAL_FRAMES + 1);
+            renderFrame(currentFrame);
+          }, 1000 / FPS);
+        } else {
+          if (playText) playText.innerText = "Play Tour";
+          if (playIcon) playIcon.innerText = "▶";
+          clearInterval(animInterval);
+        }
+      }
+
+      if (playBtn) playBtn.addEventListener("click", togglePlay);
+
+      if (scrubber) {
+        scrubber.addEventListener("input", (e) => {
+          if (isPlaying) togglePlay();
+          renderFrame(parseInt(e.target.value, 10));
+        });
+      }
+
+      // Initial frame render
+      renderFrame(0);
+    })();
+  </script>
+
+</body>
+</html>

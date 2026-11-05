@@ -7,7 +7,8 @@ import { TOOLS } from "@/lib/tools";
 import { getCategory } from "@/lib/categories";
 import { ToolIcon } from "@/components/ToolIcon";
 
-export default function ToolSearchBar() {
+export default function ToolSearchBar({ totalTools }: { totalTools?: number }) {
+  const countLabel = totalTools ? `${totalTools}+` : "500+";
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
 
@@ -25,14 +26,14 @@ export default function ToolSearchBar() {
         <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
         <input
           type="text"
-          placeholder="Search 76+ tools..."
+          placeholder={`Search ${countLabel} tools…`}
           value={query}
           onChange={(e) => {
             setQuery(e.target.value);
             setOpen(true);
           }}
           onFocus={() => setOpen(true)}
-          className="w-full pl-10 pr-4 py-3 rounded-full border bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+          className="w-full pl-10 pr-4 py-3 rounded-full border bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-[#111111]/20 focus:border-[#111111]"
           style={{ borderColor: "var(--color-border)" }}
         />
         {query && (
@@ -78,7 +79,7 @@ export default function ToolSearchBar() {
             </div>
           ) : query.trim() ? (
             <div className="px-4 py-8 text-center text-sm text-gray-500">
-              No tools found. Try a different search or <Link href="/tools/" className="text-emerald-600 hover:underline">browse all tools</Link>.
+              No tools found. Try a different search or <Link href="/tools/" className="text-[#111111] underline underline-offset-2">browse all tools</Link>.
             </div>
           ) : null}
         </div>

@@ -37,4 +37,8 @@ coverage/
 # Vendor clones are large; re-clone via docs/LINKAGE.md
 _vendor/
 .vercel
-.env*
+
+# Local screenshots and scratch artifacts
+screenshot_*.png
+slice0.png
+scratch_*.html

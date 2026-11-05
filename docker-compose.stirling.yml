@@ -1,0 +1,21 @@
+services:
+  stirling-pdf:
+    image: frooodle/s-pdf:latest
+    container_name: stirling-pdf
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data/stirling/trainingData:/usr/share/tessdata # OCR training data
+      - ./data/stirling/extraConfigs:/configs
+      - ./data/stirling/customFiles:/customFiles/
+      - ./data/stirling/logs:/logs/
+    environment:
+      - DOCKER_ENABLE_SECURITY=false
+      - INSTALL_BOOK_AND_ADVANCED_HTML_OPS=false
+      - LANGS=en_GB
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8080/api/v1/info/status || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3

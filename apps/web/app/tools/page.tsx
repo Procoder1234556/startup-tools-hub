@@ -3,6 +3,7 @@ import Link from "next/link";
 import { TOOLS } from "@/lib/tools";
 import { listCategories } from "@/lib/categories";
 import { SITE_URL, SITE_NAME } from "@/lib/site-config";
+import ToolsCatalogFilter from "@/components/ToolsCatalogFilter";
 import { CategoryIcon, ToolIcon } from "@/components/ToolIcon";
 
 export const metadata: Metadata = {
@@ -20,8 +21,8 @@ export default function AllToolsPage() {
   const itemListJsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: `All Pickrack Tools`,
-    description: "Free online tools for PDF, image, AI, developer, text, and calculator tasks.",
+    name: `All ${SITE_NAME} tools`,
+    description: "Free online tools for PDF, image, AI, developer, text, calculators, and startup finance.",
     url: `${SITE_URL}/tools/`,
     isPartOf: {
       "@type": "WebSite",
@@ -66,9 +67,11 @@ export default function AllToolsPage() {
           All free online tools — {availableTools.length} and growing
         </h1>
         <p className="mt-4 text-lg text-gray-600 leading-relaxed">
-          Every Pickrack tool in one catalog. PDF converters, image utilities, AI workflows, developer helpers, text utilities, and everyday calculators. All free, no signup, no daily limit, no watermark.
+          Every tool in one catalog — PDF, image, AI, developer utilities, text, math, converters, and startup finance. Free, no signup, no daily limit.
         </p>
       </header>
+
+      <ToolsCatalogFilter />
 
       {/* By-category sections */}
       {categories.map((cat) => {

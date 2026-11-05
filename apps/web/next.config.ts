@@ -2,6 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   trailingSlash: true,
+  images: {
+    remotePatterns: [{ protocol: "https", hostname: "images.unsplash.com", pathname: "/**" }],
+  },
   async headers() {
     const csp = [
       "default-src 'self'",

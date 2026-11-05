@@ -16,7 +16,7 @@ export default function Header() {
     <header className="border-b sticky top-0 z-50 backdrop-blur bg-white/80" style={{ borderColor: "var(--color-border)" }}>
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-600 text-white group-hover:bg-emerald-700 transition">
+          <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-orange-600 text-white group-hover:bg-orange-700 transition">
             <Mark className="w-5 h-5" aria-hidden />
           </span>
           <span className="font-bold text-lg tracking-tight">{SITE_NAME}</span>
@@ -27,19 +27,19 @@ export default function Header() {
             <Link
               key={cat.id}
               href={`/tools/${cat.slug}/`}
-              className="text-gray-700 hover:text-emerald-600 transition"
+              className="text-gray-700 hover:text-orange-600 transition"
             >
               {cat.shortLabel}
             </Link>
           ))}
-          <Link href="/blog" className="text-gray-700 hover:text-emerald-600 transition">Blog</Link>
-          <Link href="/about" className="text-gray-700 hover:text-emerald-600 transition">About</Link>
+          <Link href="/blog" className="text-gray-700 hover:text-orange-600 transition">Blog</Link>
+          <Link href="/about" className="text-gray-700 hover:text-orange-600 transition">About</Link>
         </nav>
 
         <button
           type="button"
           onClick={() => setMobileOpen((v) => !v)}
-          className="md:hidden text-sm font-medium text-emerald-600 hover:text-emerald-700"
+          className="md:hidden text-sm font-medium text-orange-600 hover:text-orange-700"
           aria-expanded={mobileOpen}
         >
           {mobileOpen ? "Close" : "Menu"}
