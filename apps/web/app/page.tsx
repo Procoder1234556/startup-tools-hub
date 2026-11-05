@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import { TOOLS } from "@/lib/tools";
 import { listCategories } from "@/lib/categories";
 import { SITE_URL, SITE_NAME, SITE_DESCRIPTION } from "@/lib/site-config";
-import LandingPagePipeline from "@/components/landing/pipeline/LandingPagePipeline";
+import AppsmithLandingPage from "@/components/landing/appsmith/AppsmithLandingPage";
 
 export const metadata: Metadata = {
   alternates: { canonical: `${SITE_URL}/` },
-  title: "The Startup Tools Pipeline — 100+ Free Tools for Founders & AI Agents",
+  title: "Startup Tools Hub — Precision Utilities for Founders & Architects",
   description:
-    "The exact blueprint and tools founders use to build, launch, and scale. Runway calculators, SAFE notes, PDF engines, and dev utilities. 100% client-side privacy.",
+    "Curated technical utilities inspired by tactile engineering design. Runway calculators, SAFE notes, PDF engines, and dev utilities with 100% client-side privacy.",
 };
 
 export default function HomePage() {
@@ -48,7 +48,7 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(catalogJsonLd) }}
       />
-      <LandingPagePipeline />
+      <AppsmithLandingPage />
     </>
   );
 }
