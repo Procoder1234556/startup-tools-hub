@@ -42,3 +42,5 @@ _vendor/
 screenshot_*.png
 slice0.png
 scratch_*.html
+
+scratch/

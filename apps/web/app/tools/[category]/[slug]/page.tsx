@@ -9,7 +9,6 @@ import { SITE_NAME, SITE_URL } from "@/lib/site-config";
 type PageProps = { params: Promise<{ category: string; slug: string }> };
 
 export function generateStaticParams() {
-  // Pre-render a sample; remaining tools render on demand (dynamicParams).
   return generateMicroStaticParams().slice(0, 24);
 }
 

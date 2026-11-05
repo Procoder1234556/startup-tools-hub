@@ -1,1 +1,2 @@
-export { default, generateMetadata, dynamicParams } from "../../[category]/[slug]/page";
+export { default, generateMetadata } from "../../[category]/[slug]/page";
+export const dynamicParams = true;

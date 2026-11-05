@@ -9,6 +9,6 @@
     "build:api": "pnpm --filter @pdf-everything/types build && pnpm --filter @pdf-everything/backend build",
     "build:types": "pnpm --filter @pdf-everything/types build",
     "verify:linkage": "node scripts/verify-vendor-linkage.mjs",
-    "postinstall": "pnpm --filter @pdf-everything/types build"
+    "postinstall": "pnpm --filter @pdf-everything/types build || exit 0"
   }
 }
