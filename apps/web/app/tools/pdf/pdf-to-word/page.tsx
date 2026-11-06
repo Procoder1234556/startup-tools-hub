@@ -16,6 +16,7 @@ export default function PDFtoWordPage() {
   const [error, setError] = useState<string | null>(null);
   const [canServerFallback, setCanServerFallback] = useState(false);
   const [pageCount, setPageCount] = useState<number | null>(null);
+  const [progress, setProgress] = useState<{ current: number; total: number } | null>(null);
 
   // Revoke object URL to avoid client memory leaks
   useEffect(() => {
@@ -35,6 +36,7 @@ export default function PDFtoWordPage() {
     setError(null);
     setCanServerFallback(false);
     setPageCount(null);
+    setProgress(null);
   }, []);
 
   const convertClientSide = async () => {
@@ -45,6 +47,7 @@ export default function PDFtoWordPage() {
     setProcessing(true);
     setError(null);
     setCanServerFallback(false);
+    setProgress(null);
     setDownloadUrl((prev) => {
       if (prev) URL.revokeObjectURL(prev);
       return null;
@@ -54,8 +57,10 @@ export default function PDFtoWordPage() {
     const targetName = f.name.replace(/\.pdf$/i, ".docx") || "converted.docx";
 
     try {
-      // 1. In-browser client conversion (100% private, zero server uploads)
-      const res = await convertPdfToDocx(f);
+      // 1. In-browser client conversion with real-time page progress
+      const res = await convertPdfToDocx(f, undefined, (current, total) => {
+        setProgress({ current, total });
+      });
       const url = URL.createObjectURL(res.blob);
       setDownloadUrl(url);
       setDownloadName(res.filename || targetName);
@@ -139,6 +144,23 @@ export default function PDFtoWordPage() {
             <span>{(files[0].file.size / 1024).toFixed(1)} KB</span>
           </div>
 
+          {processing && progress && progress.total > 0 && (
+            <div className="space-y-1.5 pt-1 pb-1">
+              <div className="flex justify-between text-xs text-slate-600 font-mono">
+                <span>Extracting & Formatting Document…</span>
+                <span>
+                  Page {progress.current} of {progress.total}
+                </span>
+              </div>
+              <div className="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
+                <div
+                  className="h-full bg-emerald-500 transition-all duration-150"
+                  style={{ width: `${Math.round((progress.current / progress.total) * 100)}%` }}
+                />
+              </div>
+            </div>
+          )}
+
           <button
             onClick={convertClientSide}
             disabled={processing || serverProcessing}
@@ -147,7 +169,9 @@ export default function PDFtoWordPage() {
             {processing ? (
               <>
                 <Loader2 className="w-4 h-4 animate-spin text-emerald-400" />
-                Converting to Word on your device…
+                {progress && progress.total > 0
+                  ? `Processing page ${progress.current} of ${progress.total}…`
+                  : "Converting to Word on your device…"}
               </>
             ) : (
               <>

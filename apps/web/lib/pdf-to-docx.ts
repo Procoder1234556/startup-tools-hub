@@ -4,6 +4,23 @@
 
 import JSZip from "jszip";
 
+export interface TextRun {
+  text: string;
+  isBold?: boolean;
+  isItalic?: boolean;
+}
+
+export interface TextLine {
+  runs: TextRun[];
+  isHeading?: boolean;
+}
+
+export interface PageContent {
+  lines: TextLine[];
+}
+
+export type ConversionProgressCallback = (current: number, total: number) => void;
+
 function escapeXml(str: string): string {
   return str
     // Strip XML 1.0 illegal control characters (\x00-\x08, \x0B-\x0C, \x0E-\x1F, \x7F-\x84, \x86-\x9F)
@@ -16,10 +33,20 @@ function escapeXml(str: string): string {
     .replace(/'/g, "&apos;");
 }
 
+function isBoldFont(fontName?: string): boolean {
+  if (!fontName) return false;
+  return /bold|black|heavy|semibold|medium-bold/i.test(fontName);
+}
+
+function isItalicFont(fontName?: string): boolean {
+  if (!fontName) return false;
+  return /italic|oblique/i.test(fontName);
+}
+
 /**
- * Builds a standard Microsoft Word OpenXML (.docx) ZIP container
+ * Builds a standard Microsoft Word OpenXML (.docx) ZIP container with bold/italic styling
  */
-export async function buildDocxFromTextPages(pages: string[][]): Promise<Blob> {
+export async function buildDocxFromFormattedPages(pages: PageContent[]): Promise<Blob> {
   const zip = new JSZip();
 
   // 1. [Content_Types].xml
@@ -91,25 +118,34 @@ export async function buildDocxFromTextPages(pages: string[][]): Promise<Blob> {
   // 5. word/document.xml
   let bodyXml = "";
 
-  pages.forEach((pageLines, pageIdx) => {
+  pages.forEach((page, pageIdx) => {
     if (pageIdx > 0) {
       // Formally insert page break between document pages
       bodyXml += `<w:p><w:r><w:br w:type="page"/></w:r></w:p>`;
     }
 
-    pageLines.forEach((line) => {
-      const clean = line.trim();
-      if (!clean) return;
+    page.lines.forEach((line) => {
+      const fullText = line.runs.map((r) => r.text).join("").trim();
+      if (!fullText) return;
 
-      const isHeading =
-        clean.length < 60 &&
-        (clean === clean.toUpperCase() || /^[A-Z][A-Za-z0-9\s:,-]{3,50}$/.test(clean));
-
-      if (isHeading) {
-        bodyXml += `<w:p><w:pPr><w:pStyle w:val="Heading1"/></w:pPr><w:r><w:t xml:space="preserve">${escapeXml(clean)}</w:t></w:r></w:p>`;
-      } else {
-        bodyXml += `<w:p><w:pPr><w:spacing w:after="140" w:line="260" w:lineRule="auto"/></w:pPr><w:r><w:t xml:space="preserve">${escapeXml(clean)}</w:t></w:r></w:p>`;
+      let pPr = `<w:pPr><w:spacing w:after="140" w:line="260" w:lineRule="auto"/></w:pPr>`;
+      if (line.isHeading) {
+        pPr = `<w:pPr><w:pStyle w:val="Heading1"/></w:pPr>`;
       }
+
+      let runsXml = "";
+      line.runs.forEach((run) => {
+        const clean = run.text;
+        if (!clean) return;
+
+        let rPr = "";
+        if (run.isBold || run.isItalic) {
+          rPr = `<w:rPr>${run.isBold ? "<w:b/>" : ""}${run.isItalic ? "<w:i/>" : ""}</w:rPr>`;
+        }
+        runsXml += `<w:r>${rPr}<w:t xml:space="preserve">${escapeXml(clean)}</w:t></w:r>`;
+      });
+
+      bodyXml += `<w:p>${pPr}${runsXml}</w:p>`;
     });
   });
 
@@ -136,9 +172,31 @@ export async function buildDocxFromTextPages(pages: string[][]): Promise<Blob> {
 }
 
 /**
- * Extracts structured text lines per page from PDF ArrayBuffer via pdfjs-dist
+ * Legacy adapter for plain string pages
  */
-export async function extractTextFromPdf(buf: ArrayBuffer): Promise<string[][]> {
+export async function buildDocxFromTextPages(pages: string[][]): Promise<Blob> {
+  const formatted: PageContent[] = pages.map((pageLines) => ({
+    lines: pageLines.map((line) => {
+      const clean = line.trim();
+      const isHeading =
+        clean.length < 60 &&
+        (clean === clean.toUpperCase() || /^[A-Z][A-Za-z0-9\s:,-]{3,50}$/.test(clean));
+      return {
+        runs: [{ text: clean }],
+        isHeading,
+      };
+    }),
+  }));
+  return buildDocxFromFormattedPages(formatted);
+}
+
+/**
+ * Extracts structured text lines with font formatting and progress notifications
+ */
+export async function extractFormattedPagesFromPdf(
+  buf: ArrayBuffer,
+  onProgress?: ConversionProgressCallback
+): Promise<PageContent[]> {
   const pdfjs = await import("pdfjs-dist");
   if (typeof window !== "undefined" && !pdfjs.GlobalWorkerOptions.workerSrc) {
     // Same-origin local worker avoids cross-origin CORS security blocks and unpkg dynamic import failures
@@ -147,38 +205,83 @@ export async function extractTextFromPdf(buf: ArrayBuffer): Promise<string[][]> 
 
   const loadingTask = pdfjs.getDocument({ data: new Uint8Array(buf) });
   const pdf = await loadingTask.promise;
-  const pages: string[][] = [];
+  const pages: PageContent[] = [];
 
   for (let i = 1; i <= pdf.numPages; i++) {
+    onProgress?.(i, pdf.numPages);
+
     const page = await pdf.getPage(i);
     const content = await page.getTextContent();
-    const lines: string[] = [];
-    let currentLine = "";
+    const lines: TextLine[] = [];
+    let currentLineRuns: TextRun[] = [];
     let lastY: number | null = null;
 
     for (const item of content.items) {
       if ("str" in item) {
+        const text = item.str;
+        if (!text) continue;
+
         const y = item.transform[5];
+        const isBold = isBoldFont(item.fontName);
+        const isItalic = isItalicFont(item.fontName);
+
         if (lastY !== null && Math.abs(y - lastY) > 6) {
-          if (currentLine.trim()) lines.push(currentLine.trim());
-          currentLine = item.str;
+          if (currentLineRuns.length > 0) {
+            const lineText = currentLineRuns.map((r) => r.text).join("").trim();
+            const isHeading =
+              lineText.length < 60 &&
+              (currentLineRuns.every((r) => r.isBold) ||
+                lineText === lineText.toUpperCase() ||
+                /^[A-Z][A-Za-z0-9\s:,-]{3,50}$/.test(lineText));
+
+            lines.push({ runs: currentLineRuns, isHeading });
+            currentLineRuns = [];
+          }
+        }
+
+        const prev = currentLineRuns[currentLineRuns.length - 1];
+        if (prev && prev.isBold === isBold && prev.isItalic === isItalic) {
+          prev.text += (prev.text.endsWith(" ") || text.startsWith(" ") ? "" : " ") + text;
         } else {
-          currentLine += (currentLine ? " " : "") + item.str;
+          currentLineRuns.push({
+            text: currentLineRuns.length > 0 && !text.startsWith(" ") ? " " + text : text,
+            isBold,
+            isItalic,
+          });
         }
         lastY = y;
       }
     }
-    if (currentLine.trim()) lines.push(currentLine.trim());
 
-    // If page had no extractable text, record notice
-    if (lines.length === 0) {
-      lines.push(`[Page ${i} - Scanned or image-only page]`);
+    if (currentLineRuns.length > 0) {
+      const lineText = currentLineRuns.map((r) => r.text).join("").trim();
+      const isHeading =
+        lineText.length < 60 &&
+        (currentLineRuns.every((r) => r.isBold) ||
+          lineText === lineText.toUpperCase() ||
+          /^[A-Z][A-Za-z0-9\s:,-]{3,50}$/.test(lineText));
+      lines.push({ runs: currentLineRuns, isHeading });
     }
 
-    pages.push(lines);
+    // If page had no extractable text, record fallback notice
+    if (lines.length === 0) {
+      lines.push({
+        runs: [{ text: `[Page ${i} - Scanned or image-only page]`, isItalic: true }],
+      });
+    }
+
+    pages.push({ lines });
   }
 
   return pages;
+}
+
+/**
+ * Extracts raw string lines per page (legacy compatibility)
+ */
+export async function extractTextFromPdf(buf: ArrayBuffer): Promise<string[][]> {
+  const formatted = await extractFormattedPagesFromPdf(buf);
+  return formatted.map((p) => p.lines.map((l) => l.runs.map((r) => r.text).join("").trim()));
 }
 
 /**
@@ -186,14 +289,15 @@ export async function extractTextFromPdf(buf: ArrayBuffer): Promise<string[][]> 
  */
 export async function convertPdfToDocx(
   file: File | ArrayBuffer,
-  originalFilename?: string
+  originalFilename?: string,
+  onProgress?: ConversionProgressCallback
 ): Promise<{ blob: Blob; filename: string; pageCount: number }> {
   const buf = file instanceof File ? await file.arrayBuffer() : file;
   const name = file instanceof File ? file.name : originalFilename || "document.pdf";
   const baseName = name.replace(/\.[^/.]+$/, "");
 
-  const pages = await extractTextFromPdf(buf);
-  const blob = await buildDocxFromTextPages(pages);
+  const pages = await extractFormattedPagesFromPdf(buf, onProgress);
+  const blob = await buildDocxFromFormattedPages(pages);
 
   return {
     blob,
