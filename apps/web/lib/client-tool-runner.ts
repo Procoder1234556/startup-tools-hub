@@ -60,6 +60,19 @@ export async function processPdfTool(
     };
   }
 
+  // 0b. PDF to Markdown (.md)
+  if (slug === "pdf-to-markdown" || slug.includes("to-markdown") || slug.includes("pdf-to-md")) {
+    const { convertPdfToMarkdown } = await import("@/lib/pdf-to-markdown");
+    const mdResult = await convertPdfToMarkdown(file);
+    const mdBlob = new Blob([mdResult.markdown], { type: "text/markdown;charset=utf-8" });
+    return {
+      blob: mdBlob,
+      filename: `${baseName}.md`,
+      mimeType: "text/markdown",
+      stats: { pagesConverted: mdResult.pageCount, format: "Markdown (.md)" },
+    };
+  }
+
   // 1. PDF N-Up (Pages per Sheet)
   if (slug === "pdf-n-up" || slug.includes("n-up")) {
     const n = options.nUp || 4; // default 4-up

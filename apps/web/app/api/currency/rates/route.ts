@@ -79,6 +79,10 @@ export async function GET(req: NextRequest) {
   } catch (e) {
     if (cached) return NextResponse.json(cached.data);
     const msg = e instanceof Error ? e.message : String(e);
-    return NextResponse.json({ error: `Could not fetch rates: ${msg.slice(0, 150)}` }, { status: 502 });
+    console.error("[currency-rates] Upstream fetch error:", msg);
+    return NextResponse.json(
+      { error: "Could not fetch exchange rates from upstream provider." },
+      { status: 502 }
+    );
   }
 }

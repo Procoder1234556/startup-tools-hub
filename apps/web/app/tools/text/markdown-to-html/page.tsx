@@ -144,10 +144,13 @@ export default function MarkdownToHtmlPage() {
           </div>
 
           {view === "preview" ? (
-            <div
-              className="w-full rounded-2xl border bg-white p-5 text-sm leading-relaxed h-[500px] overflow-y-auto prose prose-sm max-w-none prose-headings:font-semibold prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-code:before:content-none prose-code:after:content-none"
+            /* ponytail: Sandboxed iframe isolates rendered HTML from parent DOM and cookies, blocking script execution without heavy dependencies */
+            <iframe
+              srcDoc={`<!DOCTYPE html><html><head><style>body{font-family:system-ui,-apple-system,sans-serif;margin:1.25rem;color:#1f2937;line-height:1.625;font-size:14px;}pre{background:#111827;color:#f3f4f6;padding:0.75rem;border-radius:0.5rem;overflow:auto;}code{font-family:monospace;background:#f3f4f6;padding:0.125rem 0.25rem;border-radius:0.25rem;}pre code{background:transparent;padding:0;}</style></head><body>${html}</body></html>`}
+              sandbox=""
+              title="Markdown HTML Preview"
+              className="w-full rounded-2xl border bg-white h-[500px]"
               style={{ borderColor: "var(--color-border)" }}
-              dangerouslySetInnerHTML={{ __html: html }}
             />
           ) : (
             <pre

@@ -201,7 +201,12 @@ export default function SvgOptimizerPage() {
           />
           {input && (
             <div className="mt-2 rounded-lg border p-3 flex items-center justify-center bg-white" style={{ borderColor: "var(--color-border)", minHeight: 80 }}>
-              <div dangerouslySetInnerHTML={{ __html: input }} className="max-h-64 [&_svg]:max-h-64 [&_svg]:max-w-full" />
+              {/* ponytail: Render SVG via <img> to isolate scripts/DOM, preventing XSS without heavy sanitizers */}
+              <img
+                src={`data:image/svg+xml;utf8,${encodeURIComponent(input)}`}
+                alt="Input SVG Preview"
+                className="max-h-64 max-w-full object-contain"
+              />
             </div>
           )}
         </div>
@@ -231,7 +236,12 @@ export default function SvgOptimizerPage() {
           />
           {output && (
             <div className="mt-2 rounded-lg border p-3 flex items-center justify-center bg-white" style={{ borderColor: "var(--color-border)", minHeight: 80 }}>
-              <div dangerouslySetInnerHTML={{ __html: output }} className="max-h-64 [&_svg]:max-h-64 [&_svg]:max-w-full" />
+              {/* ponytail: Render SVG via <img> to isolate scripts/DOM, preventing XSS without heavy sanitizers */}
+              <img
+                src={`data:image/svg+xml;utf8,${encodeURIComponent(output)}`}
+                alt="Optimized SVG Preview"
+                className="max-h-64 max-w-full object-contain"
+              />
             </div>
           )}
         </div>

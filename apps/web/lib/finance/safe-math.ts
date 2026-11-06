@@ -89,19 +89,18 @@ export function convertSafes(inputs: ConversionInputs): ConversionResult {
   // Iterate to convergence
   for (let i = 0; i < 50; i++) {
     // Step 1: compute conversion price for each SAFE
+    // ponytail: Precompute non-MFN prices once per iteration in O(N) rather than O(N^2)
+    const nonMfnPrices = safes
+      .filter((s) => s.type !== 'mfn')
+      .map((s) => safeConversionPrice(s, pricePerShare, postMoneyShares));
+    const bestNonMfnPrice = nonMfnPrices.length ? Math.min(...nonMfnPrices) : pricePerShare;
+
     let safeShares = 0;
     const safeResults = safes.map((safe) => {
-      // MFN matches the lowest conversion price of any other SAFE
-      let conversionPrice: number;
-      if (safe.type === 'mfn') {
-        // Find the best (lowest) price among other SAFEs
-        const otherPrices = safes
-          .filter((s) => s.id !== safe.id && s.type !== 'mfn')
-          .map((s) => safeConversionPrice(s, pricePerShare, postMoneyShares));
-        conversionPrice = otherPrices.length ? Math.min(...otherPrices) : pricePerShare;
-      } else {
-        conversionPrice = safeConversionPrice(safe, pricePerShare, postMoneyShares);
-      }
+      const conversionPrice =
+        safe.type === 'mfn'
+          ? bestNonMfnPrice
+          : safeConversionPrice(safe, pricePerShare, postMoneyShares);
       const shares = safeNewShares(safe, conversionPrice);
       safeShares += shares;
       return { safe, shares, conversionPrice };

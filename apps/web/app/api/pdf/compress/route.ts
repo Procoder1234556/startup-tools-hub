@@ -37,6 +37,7 @@ async function ghostscriptCompress(inputBuf: Buffer, preset: string): Promise<Bu
       const proc = spawn(
         "gs",
         [
+          "-dSAFER",
           "-sDEVICE=pdfwrite",
           "-dCompatibilityLevel=1.4",
           `-dPDFSETTINGS=${preset}`,
