@@ -28,7 +28,7 @@ export default function PDFtoJPGPage() {
       try {
         const pdfjs = await import("pdfjs-dist");
         if (cancelled) return;
-        pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+        pdfjs.GlobalWorkerOptions.workerSrc = "/lib/pdf.worker.min.mjs";
         setPdfjsReady(true);
       } catch (e) {
         if (!cancelled) setError(e instanceof Error ? `Failed to load PDF reader: ${e.message}` : "Failed to load PDF reader.");
