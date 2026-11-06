@@ -48,6 +48,18 @@ export async function processPdfTool(
   const totalPages = srcDoc.getPageCount();
   const baseName = file.name.replace(/\.[^/.]+$/, "");
 
+  // 0. PDF to Word (.docx)
+  if (slug === "pdf-to-word" || slug.includes("to-word") || slug.includes("pdf-to-docx")) {
+    const { convertPdfToDocx } = await import("@/lib/pdf-to-docx");
+    const docxResult = await convertPdfToDocx(file);
+    return {
+      blob: docxResult.blob,
+      filename: docxResult.filename,
+      mimeType: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      stats: { pagesConverted: docxResult.pageCount, format: "Microsoft Word OpenXML (.docx)" },
+    };
+  }
+
   // 1. PDF N-Up (Pages per Sheet)
   if (slug === "pdf-n-up" || slug.includes("n-up")) {
     const n = options.nUp || 4; // default 4-up
