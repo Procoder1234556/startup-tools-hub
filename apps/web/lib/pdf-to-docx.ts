@@ -190,6 +190,144 @@ export async function buildDocxFromTextPages(pages: string[][]): Promise<Blob> {
   return buildDocxFromFormattedPages(formatted);
 }
 
+interface ExtractedItem {
+  text: string;
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+  isBold: boolean;
+  isItalic: boolean;
+}
+
+function processItemsIntoLines(items: ExtractedItem[]): TextLine[] {
+  if (items.length === 0) return [];
+
+  // Sort items primarily by Y descending (top-to-bottom in PDF coordinates), then X ascending (left-to-right)
+  items.sort((a, b) => {
+    const yDiff = b.y - a.y;
+    if (Math.abs(yDiff) > 4) {
+      return yDiff;
+    }
+    return a.x - b.x;
+  });
+
+  const lines: TextLine[] = [];
+  let currentRuns: TextRun[] = [];
+  let currentLineY: number | null = null;
+  let lastX = 0;
+  let lastWidth = 0;
+
+  for (const item of items) {
+    if (currentLineY === null || Math.abs(item.y - currentLineY) > 5) {
+      if (currentRuns.length > 0) {
+        const fullText = currentRuns.map((r) => r.text).join("").trim();
+        const isHeading =
+          fullText.length > 0 &&
+          fullText.length < 60 &&
+          (currentRuns.every((r) => r.isBold) ||
+            fullText === fullText.toUpperCase() ||
+            /^[A-Z][A-Za-z0-9\s:,-]{3,50}$/.test(fullText));
+        lines.push({ runs: currentRuns, isHeading });
+        currentRuns = [];
+      }
+      currentLineY = item.y;
+      lastX = item.x;
+      lastWidth = item.width;
+      currentRuns.push({
+        text: item.text,
+        isBold: item.isBold,
+        isItalic: item.isItalic,
+      });
+    } else {
+      const prev = currentRuns[currentRuns.length - 1];
+      const needsSpace =
+        item.x > lastX + lastWidth + 1 &&
+        !prev.text.endsWith(" ") &&
+        !item.text.startsWith(" ");
+
+      const textToAdd = (needsSpace ? " " : "") + item.text;
+
+      if (prev.isBold === item.isBold && prev.isItalic === item.isItalic) {
+        prev.text += textToAdd;
+      } else {
+        currentRuns.push({
+          text: textToAdd,
+          isBold: item.isBold,
+          isItalic: item.isItalic,
+        });
+      }
+      lastX = item.x;
+      lastWidth = item.width;
+    }
+  }
+
+  if (currentRuns.length > 0) {
+    const fullText = currentRuns.map((r) => r.text).join("").trim();
+    const isHeading =
+      fullText.length > 0 &&
+      fullText.length < 60 &&
+      (currentRuns.every((r) => r.isBold) ||
+        fullText === fullText.toUpperCase() ||
+        /^[A-Z][A-Za-z0-9\s:,-]{3,50}$/.test(fullText));
+    lines.push({ runs: currentRuns, isHeading });
+  }
+
+  return lines;
+}
+
+function processPageItems(rawItems: any[]): TextLine[] {
+  const items: ExtractedItem[] = [];
+
+  for (const it of rawItems) {
+    if ("str" in it && it.str && it.str.trim()) {
+      items.push({
+        text: it.str,
+        x: it.transform[4],
+        y: it.transform[5],
+        width: it.width || 0,
+        height: it.height || Math.abs(it.transform[0]) || 12,
+        isBold: isBoldFont(it.fontName),
+        isItalic: isItalicFont(it.fontName),
+      });
+    }
+  }
+
+  if (items.length === 0) return [];
+
+  // Check for 2-column layout (e.g. academic papers, resumes, reports)
+  let minX = Infinity;
+  let maxX = -Infinity;
+  for (const it of items) {
+    if (it.x < minX) minX = it.x;
+    if (it.x + it.width > maxX) maxX = it.x + it.width;
+  }
+
+  const pageWidth = maxX - minX;
+  if (pageWidth > 300) {
+    const midLeft = minX + pageWidth * 0.42;
+    const midRight = minX + pageWidth * 0.58;
+    const itemsInGutter = items.filter(
+      (it) => (it.x > midLeft && it.x < midRight) || (it.x < midLeft && it.x + it.width > midRight)
+    );
+
+    // If gutter is clean (< 5% crossings) and both sides have content, process as two columns
+    if (itemsInGutter.length < items.length * 0.05) {
+      const midPoint = (minX + maxX) / 2;
+      const leftColItems = items.filter((it) => it.x + it.width / 2 < midPoint);
+      const rightColItems = items.filter((it) => it.x + it.width / 2 >= midPoint);
+
+      if (leftColItems.length > 5 && rightColItems.length > 5) {
+        const leftLines = processItemsIntoLines(leftColItems);
+        const rightLines = processItemsIntoLines(rightColItems);
+        return [...leftLines, ...rightLines];
+      }
+    }
+  }
+
+  return processItemsIntoLines(items);
+}
+
 /**
  * Extracts structured text lines with font formatting and progress notifications
  */
@@ -212,56 +350,7 @@ export async function extractFormattedPagesFromPdf(
 
     const page = await pdf.getPage(i);
     const content = await page.getTextContent();
-    const lines: TextLine[] = [];
-    let currentLineRuns: TextRun[] = [];
-    let lastY: number | null = null;
-
-    for (const item of content.items) {
-      if ("str" in item) {
-        const text = item.str;
-        if (!text) continue;
-
-        const y = item.transform[5];
-        const isBold = isBoldFont(item.fontName);
-        const isItalic = isItalicFont(item.fontName);
-
-        if (lastY !== null && Math.abs(y - lastY) > 6) {
-          if (currentLineRuns.length > 0) {
-            const lineText = currentLineRuns.map((r) => r.text).join("").trim();
-            const isHeading =
-              lineText.length < 60 &&
-              (currentLineRuns.every((r) => r.isBold) ||
-                lineText === lineText.toUpperCase() ||
-                /^[A-Z][A-Za-z0-9\s:,-]{3,50}$/.test(lineText));
-
-            lines.push({ runs: currentLineRuns, isHeading });
-            currentLineRuns = [];
-          }
-        }
-
-        const prev = currentLineRuns[currentLineRuns.length - 1];
-        if (prev && prev.isBold === isBold && prev.isItalic === isItalic) {
-          prev.text += (prev.text.endsWith(" ") || text.startsWith(" ") ? "" : " ") + text;
-        } else {
-          currentLineRuns.push({
-            text: currentLineRuns.length > 0 && !text.startsWith(" ") ? " " + text : text,
-            isBold,
-            isItalic,
-          });
-        }
-        lastY = y;
-      }
-    }
-
-    if (currentLineRuns.length > 0) {
-      const lineText = currentLineRuns.map((r) => r.text).join("").trim();
-      const isHeading =
-        lineText.length < 60 &&
-        (currentLineRuns.every((r) => r.isBold) ||
-          lineText === lineText.toUpperCase() ||
-          /^[A-Z][A-Za-z0-9\s:,-]{3,50}$/.test(lineText));
-      lines.push({ runs: currentLineRuns, isHeading });
-    }
+    const lines = processPageItems(content.items);
 
     // If page had no extractable text, record fallback notice
     if (lines.length === 0) {
