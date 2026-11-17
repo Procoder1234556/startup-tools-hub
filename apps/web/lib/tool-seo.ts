@@ -106,13 +106,13 @@ export const toolSEOMap: Record<string, ToolSEO> = {
   "pdf-to-markdown": {
     slug: "pdf-to-markdown",
     name: "PDF to Markdown",
-    title: "PDF to Markdown — Extract for ChatGPT, Claude, Notion",
+    title: "PDF to Markdown Converter — 100% In-Browser, LLM & RAG Ready",
     description:
-      "Extract PDF text with layout preserved. Paste into ChatGPT, Claude, Notion, or any LLM for sharper, more accurate AI responses. Free, server-side pdftotext.",
+      "Extract headings, bold/italic runs, and multi-column layouts into clean Markdown. 100% private in-browser AST parsing, zero server uploads. Perfect for ChatGPT, Claude, Cursor, and Notion.",
     keywords: [
       "pdf to markdown", "pdf to text", "extract pdf for ai",
       "pdf for chatgpt", "pdf for claude", "pdf to markdown converter",
-      "pdf text extraction", "rag pdf converter", "pdf to md",
+      "client side pdf to markdown", "offline pdf to markdown", "rag pdf converter", "pdf to md",
     ],
   },
   "unlock-pdf": {
@@ -154,13 +154,13 @@ export const toolSEOMap: Record<string, ToolSEO> = {
   "pdf-to-word": {
     slug: "pdf-to-word",
     name: "PDF to Word",
-    title: "PDF to Word — Convert PDF to Editable DOCX Free Online",
+    title: "PDF to Word Converter — Free, 100% In-Browser, No Uploads",
     description:
-      "Convert PDF to editable Word document (.docx). LibreOffice engine, free, no signup, no watermark. Best for text-based PDFs; scanned PDFs need OCR first.",
+      "Convert PDF to editable Word (.docx) with bold/italic styles and multi-column layouts intact. 100% private in-browser processing, zero server uploads, no watermark.",
     keywords: [
       "pdf to word", "convert pdf to word", "pdf to docx", "pdf to word converter",
-      "free pdf to word", "pdf to word free", "pdf to word online", "convert pdf to docx",
-      "pdf to doc", "pdf to word no watermark",
+      "free pdf to word", "pdf to word free", "pdf to word no upload", "convert pdf to docx",
+      "client side pdf to word", "pdf to word no watermark",
     ],
   },
   "pptx-to-pdf": {

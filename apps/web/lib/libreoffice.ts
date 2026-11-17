@@ -52,7 +52,17 @@ export async function libreofficeConvert(
       const proc = spawn(LIBREOFFICE_BIN, args, { timeout: timeoutMs });
       let stderr = "";
       proc.stderr.on("data", (d) => { stderr += d.toString(); });
-      proc.on("error", reject);
+      proc.on("error", (err: any) => {
+        if (err && err.code === "ENOENT") {
+          reject(
+            new Error(
+              `LibreOffice binary ('${LIBREOFFICE_BIN}') is not installed on this server environment. Install libreoffice or deploy via Docker to enable office conversions.`
+            )
+          );
+        } else {
+          reject(err);
+        }
+      });
       proc.on("close", (code) => {
         if (code === 0) resolve();
         else reject(new Error(stderr.slice(0, 200) || `libreoffice exit ${code}`));

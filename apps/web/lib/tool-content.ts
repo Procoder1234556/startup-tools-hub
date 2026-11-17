@@ -22,7 +22,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Combine multiple PDF files into one document. Drag to reorder, browser-side processing, no upload, no signup, no watermark.",
     intro: [
       "**Merge PDF online** is one of the most-requested PDF operations. Whether you're combining bank statements, assembling chapters of a manuscript, or stitching together signed contracts, you need a tool that just works without watermarks, signups, or a daily limit.",
-      "Pick Rack's **Merge PDF** tool runs entirely in your browser using the open-source [pdf-lib](https://github.com/Hopding/pdf-lib) library. Your files never leave your device — they are processed locally in your browser memory and discarded when you close the tab. No upload, no server-side storage, no privacy concerns for sensitive documents.",
+      "Startup Tools Hub's **Merge PDF** tool runs entirely in your browser using the open-source [pdf-lib](https://github.com/Hopding/pdf-lib) library. Your files never leave your device — they are processed locally in your browser memory and discarded when you close the tab. No upload, no server-side storage, no privacy concerns for sensitive documents.",
       "It's free with no daily limit, no file count limit (your browser memory is the only constraint), and no watermark on the output. Files up to 200MB each work smoothly on modern hardware.",
     ],
     features: [
@@ -65,7 +65,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Extract specific pages or page ranges from a PDF. Browser-side processing, no upload, no watermark.",
     intro: [
       "**Split PDF** is essential when you need only part of a long document — sending chapter 3 of a 200-page report to a colleague, extracting your name from a multi-person registration list, or breaking a book into smaller files for easier reading on a tablet.",
-      "Pick Rack's **Split PDF** tool extracts pages by range. Specify what you want with simple notation like `1-3, 5, 7-10` and the tool produces a single new PDF containing exactly those pages, in the order you specified. Processing happens entirely in your browser using [pdf-lib](https://github.com/Hopding/pdf-lib) — your file never uploads.",
+      "Startup Tools Hub's **Split PDF** tool extracts pages by range. Specify what you want with simple notation like `1-3, 5, 7-10` and the tool produces a single new PDF containing exactly those pages, in the order you specified. Processing happens entirely in your browser using [pdf-lib](https://github.com/Hopding/pdf-lib) — your file never uploads.",
       "Free, no watermark, no signup, no daily limit. Works on PDFs up to 200MB.",
     ],
     features: [
@@ -107,7 +107,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Rotate every page of a PDF by 90, 180, or 270 degrees. Fix sideways scans and upside-down pages instantly.",
     intro: [
       "**Rotate PDF** is the fix for one of the most common scanning frustrations: pages that come out sideways or upside-down. Rather than re-scan the document, you can rotate digitally in seconds — and the rotation is permanent in the saved file (not just a view setting).",
-      "Pick Rack's **Rotate PDF** tool rotates all pages of a PDF by a chosen angle (90, 180, or 270 degrees clockwise) using the [pdf-lib](https://github.com/Hopding/pdf-lib) library directly in your browser. No upload, no quality loss, no watermark, no signup.",
+      "Startup Tools Hub's **Rotate PDF** tool rotates all pages of a PDF by a chosen angle (90, 180, or 270 degrees clockwise) using the [pdf-lib](https://github.com/Hopding/pdf-lib) library directly in your browser. No upload, no quality loss, no watermark, no signup.",
       "Useful for: scans that came out wrong-way-up, mobile camera captures of receipts and contracts, multi-page documents where the orientation is inconsistent.",
     ],
     features: [
@@ -147,7 +147,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Add a custom text watermark to every page of a PDF — diagonal, with adjustable opacity, font size, and position.",
     intro: [
       "**Add a watermark to PDF** is the standard way to mark documents as DRAFT, CONFIDENTIAL, or for-distribution before sharing. Watermarks discourage unauthorized copying, label document status clearly, and add accountability to information that might leak.",
-      "Pick Rack's **Watermark PDF** tool adds custom text to every page of a PDF — your choice of text, font size, opacity, and position (diagonal across the page, centered, or at the bottom). All processing is browser-side via [pdf-lib](https://github.com/Hopding/pdf-lib): your file never uploads.",
+      "Startup Tools Hub's **Watermark PDF** tool adds custom text to every page of a PDF — your choice of text, font size, opacity, and position (diagonal across the page, centered, or at the bottom). All processing is browser-side via [pdf-lib](https://github.com/Hopding/pdf-lib): your file never uploads.",
       "Free, no signup, no watermark from us (just the one you choose), works on files up to 200MB.",
     ],
     features: [
@@ -188,7 +188,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Convert one or more JPG/PNG images into a single PDF document. Choose A4, US Letter, or fit-to-image page size.",
     intro: [
       "**Convert JPG to PDF** is essential for creating polished documents from images: receipts for expense reports, scanned ID cards for online forms, photo albums you want to share as a single file, or assembled reference sheets.",
-      "Pick Rack's **JPG to PDF** tool combines multiple images into one PDF in any order you choose. Page sizes: A4 (210×297mm), US Letter (8.5×11 inches), or fit-to-image (page exactly matches each image). Browser-side processing via [pdf-lib](https://github.com/Hopding/pdf-lib).",
+      "Startup Tools Hub's **JPG to PDF** tool combines multiple images into one PDF in any order you choose. Page sizes: A4 (210×297mm), US Letter (8.5×11 inches), or fit-to-image (page exactly matches each image). Browser-side processing via [pdf-lib](https://github.com/Hopding/pdf-lib).",
       "Supports JPG, JPEG, and PNG inputs. Each image becomes one PDF page, centered on the chosen page size. Free, no signup, no watermark.",
     ],
     features: [
@@ -230,7 +230,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Render each page of a PDF as a JPG image. Single-page → JPG, multi-page → ZIP archive. Three quality presets.",
     intro: [
       "**Convert PDF to JPG** turns every page of a PDF into an image — useful for sharing PDF content on platforms that don't support PDF (Instagram, Twitter, certain CMSs), creating thumbnails for content preview, or extracting visual reference material from a document.",
-      "Pick Rack's **PDF to JPG** tool runs entirely in your browser using [Mozilla's PDF.js](https://github.com/mozilla/pdf.js) for rendering and [JSZip](https://github.com/Stuk/jszip) for packaging multi-page output. Your file never uploads to a server.",
+      "Startup Tools Hub's **PDF to JPG** tool runs entirely in your browser using [Mozilla's PDF.js](https://github.com/mozilla/pdf.js) for rendering and [JSZip](https://github.com/Stuk/jszip) for packaging multi-page output. Your file never uploads to a server.",
       "Single-page PDFs download as a single .jpg. Multi-page PDFs are bundled into a ZIP archive named YourFile-pages.zip with one image per page.",
     ],
     features: [
@@ -272,7 +272,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Reduce PDF file size with low/medium/high compression. Server-side Ghostscript engine. Free, no signup, no watermark.",
     intro: [
       "**Compress PDF** is needed when a file is too large to email, too slow to upload, or simply taking up unnecessary space. Most PDFs — especially those with embedded images — can be compressed by 30-80% with no visible loss for screen reading.",
-      "Pick Rack's **Compress PDF** tool uses [Ghostscript](https://www.ghostscript.com), the industry-standard PostScript and PDF processor, to re-encode embedded images at lower resolution and strip redundant metadata. Three preset levels balance file size against visual quality.",
+      "Startup Tools Hub's **Compress PDF** tool uses [Ghostscript](https://www.ghostscript.com), the industry-standard PostScript and PDF processor, to re-encode embedded images at lower resolution and strip redundant metadata. Three preset levels balance file size against visual quality.",
       "Free, no daily limit, no signup, no watermark. Files up to 100MB.",
     ],
     features: [
@@ -311,43 +311,40 @@ export const toolContentMap: Record<string, ToolContent> = {
   "pdf-to-markdown": {
     slug: "pdf-to-markdown",
     h1Subtitle:
-      "Extract PDF text with layout preserved. Paste into ChatGPT, Claude, Notion, or any AI tool for sharper responses.",
+      "Extract structured headings, styles, and layouts from PDF directly to clean Markdown. Zero server uploads; 100% private in-browser AST extraction.",
     intro: [
-      "**Extract PDF to Markdown** has become a standard workflow for anyone working with AI. When you feed a PDF directly to ChatGPT or Claude through a &quot;chat with PDF&quot; feature, internal extraction often loses document structure — headings flatten into paragraphs, tables turn into mush, and the model wastes attention disambiguating layout.",
-      "**Markdown changes that.** Large language models are trained on text, including billions of pages of Markdown. They process structured headings, lists, and indentation natively. Extracting PDF to Markdown yourself, then pasting the cleaned text into your preferred AI, almost always produces sharper, more accurate responses.",
-      "Pick Rack's **PDF to Markdown** tool uses [pdftotext](https://en.wikipedia.org/wiki/Pdftotext) (Poppler) with the `-layout` flag to preserve columns and indentation. Output is plain text, valid as Markdown, ready for LLM input.",
+      "**Extract PDF to Markdown** is essential for high-precision AI and LLM workflows. When feeding raw PDFs into ChatGPT, Claude, or Cursor, automated readers flatten headings, mangle two-column layouts, and scramble tables. Extracting structured Markdown first provides direct semantic hierarchy, giving LLMs 30–50% higher accuracy on technical docs and reports.",
+      "Startup Tools Hub's **PDF to Markdown** converter operates entirely on your device using a client-side AST extraction pipeline built on Mozilla PDF.js. It detects document section headings (`## Heading`), preserves bold (`**bold**`) and italic (`*italic*`) formatting, and un-interleaves multi-column document gutters without mixing sentences.",
+      "**100% Client-Side Privacy:** Your files are parsed in browser memory and never uploaded to any remote server or third-party cloud. Confidential pitch decks, founder agreements, and proprietary source materials remain strictly on your machine.",
     ],
     features: [
-      { title: "Layout preserved", desc: "Multi-column layouts, indented lists, and table-like structures retain their relative positions." },
-      { title: "AI-ready output", desc: "Plain text that ChatGPT, Claude, Gemini all process natively. Better than PDF binary input every time." },
-      { title: "Copy or download", desc: "Click Copy to paste straight into a chat tab, or Download .md to save to your Notion / Obsidian / Git repo." },
-      { title: "Server-side speed", desc: "Poppler pdftotext is a C library — extracts a 100-page PDF in 1-3 seconds." },
-      { title: "No signup, no watermark", desc: "Output is the raw extraction. No promotional text, no quota, no daily limit." },
+      { title: "100% in-browser privacy", desc: "Zero server uploads. Your PDF never leaves your device memory, keeping confidential documents completely private." },
+      { title: "AST heading & style detection", desc: "Preserves headings (##), bold (**text**), and italic (*text*) runs directly into standard GitHub Flavored Markdown." },
+      { title: "Multi-column layout awareness", desc: "Detects two-column academic, resume, and report gutters, reading column 1 before column 2 to eliminate sentence interleaving." },
+      { title: "LLM & RAG optimized", desc: "Clean semantic markdown hierarchy maximizes token efficiency and retrieval precision in ChatGPT, Claude, Cursor, and vector stores." },
+      { title: "Instant copy & download", desc: "Real-time page progress with character/word metrics, one-click clipboard copy, and instant .md file export." },
     ],
     howTo: [
-      { title: "Step 1: Upload PDF", desc: "Drop or click to add a single PDF (up to 30MB). Text-based PDFs work; scanned image PDFs need OCR first." },
-      { title: "Step 2: Click Extract to Markdown", desc: "Server processes in 1-5 seconds for typical files." },
-      { title: "Step 3: Review the output", desc: "Output shows in a scrollable preview. Check that the structure looks right." },
-      { title: "Step 4: Copy or download", desc: "Copy to clipboard for pasting into AI chats, or Download .md to save the file." },
+      { title: "Step 1: Add your PDF", desc: "Drag and drop a PDF file into the upload zone or browse to select one from your computer." },
+      { title: "Step 2: Instant local parsing", desc: "Click Extract to Markdown. The client engine processes each page locally with live progress tracking." },
+      { title: "Step 3: Review formatted Markdown", desc: "Inspect formatted output in the preview panel, complete with detected headings and typography runs." },
+      { title: "Step 4: Copy or download .md", desc: "Copy directly to clipboard for immediate AI prompting, or download as a standalone .md file." },
     ],
     useCases: [
-      "**Feed long PDFs to ChatGPT / Claude** for accurate summaries, Q&A, and analysis",
-      "**Build RAG pipelines** — Markdown is the standard input format for chunking and embedding",
-      "**Import research papers to Obsidian or Notion** while preserving document structure",
-      "**Archive PDFs as searchable text** for command-line grep or indexed search",
-      "**Generate AI training data** from a corpus of PDF reference materials",
-      "**Translate or rewrite long PDFs** by feeding the Markdown to a translation/rewriting AI",
+      "**Feed research papers & docs to ChatGPT or Claude** with preserved heading hierarchy and clean layout",
+      "**Prepare proprietary documents for RAG pipelines** without exposing confidential text to third-party upload services",
+      "**Import PDF reports into Notion, Obsidian, or GitHub** with ready-to-use Markdown syntax",
+      "**Extract founder pitch decks and investor memos** for quick iterative summarization and editing",
+      "**Convert technical whitepapers and specifications** into documentation repos",
     ],
     faq: [
-      { q: "Why Markdown instead of just PDF chat?", a: "Most &quot;chat with PDF&quot; features use opaque internal extraction that may merge headings, fragment tables, or skip footnotes. Doing the extraction yourself with this tool, then feeding clean Markdown to your preferred AI, almost always produces 30-50% better responses on long documents." },
-      { q: "Does this output have Markdown syntax like # headers?", a: "Output is plain text with layout preserved (indentation, line breaks, columns). It does NOT add Markdown heading marks (#, ##) or list bullets — the source PDF doesn't carry that semantic information. The output IS valid Markdown (plain text always is) and works as LLM input regardless." },
-      { q: "Will scanned PDFs work?", a: "No. Scanned PDFs are images without a text layer — pdftotext returns an empty result. Use OCR first to add a text layer, then run extraction. Tesseract (free, open source) is the standard OCR for this." },
-      { q: "How much text can I extract?", a: "File size limit is 30MB, which usually covers 100-300+ page PDFs depending on density. There's no character or word limit on the output." },
-      { q: "Are tables extracted correctly?", a: "Tables become space-aligned text rows — readable for AI but not Markdown table syntax. For better table handling on complex tables, paid tools like LlamaParse can output cleaner Markdown tables." },
-      { q: "Is my PDF private during extraction?", a: "The PDF uploads over HTTPS to our server, is processed by pdftotext in a temp directory, and the temp files are deleted immediately. Nothing is logged or stored. The text output is returned and shown in your browser only." },
-      { q: "What about DOCX, XLSX, PPTX support?", a: "Currently PDF only. Multi-format extraction (Word, Excel, PowerPoint to Markdown) is planned. For those formats today, try Microsoft's open-source MarkItDown or Pandoc." },
+      { q: "Is my PDF uploaded to your servers?", a: "No. The entire extraction pipeline runs 100% in your browser using client-side JavaScript. Your PDF is loaded into local memory and never transmitted over the network." },
+      { q: "Does the output contain Markdown formatting like ## headings and **bold**?", a: "Yes! Our AST parser analyzes font metrics, sizes, and layout coordinates to detect headings and inline bold/italic typography runs, formatting them directly as GitHub Flavored Markdown." },
+      { q: "How does this handle two-column documents?", a: "The engine analyzes horizontal gutters. When two distinct columns are detected (common in research papers, whitepapers, and resumes), it processes column 1 entirely before column 2, preventing jumbled sentences." },
+      { q: "Can I use this for confidential legal and financial documents?", a: "Yes. Because zero remote requests or storage calls are made, this tool meets strict zero-retention requirements for NDAs, financials, cap tables, and contracts." },
+      { q: "Can scanned PDFs without text layers be extracted?", a: "This tool extracts text layers directly from the PDF. Scanned image-only PDFs require OCR (optical character recognition) first to create a text layer." },
     ],
-    relatedTools: ["compress-pdf", "split-pdf", "merge-pdf"],
+    relatedTools: ["pdf-to-word", "merge-pdf", "compress-pdf"],
   },
 
   "unlock-pdf": {
@@ -356,7 +353,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Remove password protection from a PDF you own. Server-side qpdf, free, no logging. You must know the password.",
     intro: [
       "**Unlock PDF** removes password protection so you can edit, copy, print, or share a PDF without entering credentials each time. This is for PDFs you protected yourself or received with the password — not for cracking unknown passwords (which this tool deliberately does not do).",
-      "Pick Rack's **Unlock PDF** tool uses [qpdf](https://qpdf.sourceforge.io), the open-source PDF transformation library, server-side. You upload over HTTPS, provide the password, and receive the unlocked PDF. The file and password are deleted immediately — nothing is logged.",
+      "Startup Tools Hub's **Unlock PDF** tool uses [qpdf](https://qpdf.sourceforge.io), the open-source PDF transformation library, server-side. You upload over HTTPS, provide the password, and receive the unlocked PDF. The file and password are deleted immediately — nothing is logged.",
       "Free, no signup, no watermark. Files up to 100MB.",
     ],
     features: [
@@ -397,7 +394,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Convert DOCX, DOC, or ODT documents to PDF using LibreOffice on the server. Preserves formatting, fonts, embedded images, and tables. Free, no watermark, no signup.",
     intro: [
       "**Convert Word to PDF** is the most-searched PDF operation worldwide in 2026 — about 100 search interest points on Google Trends, far ahead of any other format conversion. Whether you're sharing a finalized contract, submitting a CV that won't reflow on the recipient's machine, or archiving a manuscript, PDF is the universal delivery format.",
-      "Pick Rack's **Word to PDF** tool uses [LibreOffice](https://www.libreoffice.org) headless on the server — the same engine professional document workflows have used for over a decade. Output preserves formatting (fonts, headings, paragraph styles), embedded images, tables, headers/footers, page breaks, and most styling.",
+      "Startup Tools Hub's **Word to PDF** tool uses [LibreOffice](https://www.libreoffice.org) headless on the server — the same engine professional document workflows have used for over a decade. Output preserves formatting (fonts, headings, paragraph styles), embedded images, tables, headers/footers, page breaks, and most styling.",
       "Free, no signup, no watermark, no daily quota. Files up to 30MB.",
     ],
     features: [
@@ -423,8 +420,8 @@ export const toolContentMap: Record<string, ToolContent> = {
     faq: [
       { q: "Will the converted PDF look exactly like the original Word document?", a: "Very close, but not pixel-perfect 100% of the time. LibreOffice handles standard Word features (headings, paragraphs, tables, images, headers/footers) accurately. Edge cases that may shift slightly: complex SmartArt, embedded Excel charts, custom WordArt, very specific font kerning, and macro-driven content. For standard documents (95% of use cases) the conversion is indistinguishable." },
       { q: "Are my fonts preserved in the output PDF?", a: "Yes, when the fonts are embedded in the source document or available on the server. Standard Microsoft fonts (Arial, Times New Roman, Calibri, Cambria) and major Linux fonts (Liberation, DejaVu) work. If your document uses an exotic font not on the server, LibreOffice substitutes the closest match — usually unnoticeable for most readers." },
-      { q: "Can I convert .doc files (legacy Word format)?", a: "Yes. Pick Rack accepts .docx (Office 2007+), .doc (legacy Office 97-2003), and .odt (OpenDocument). All three convert to PDF via the same LibreOffice engine." },
-      { q: "What is the maximum file size?", a: "30MB per file. For larger documents (long manuscripts, image-heavy reports), split into sections, convert each, then merge the resulting PDFs using Pick Rack's Merge PDF tool." },
+      { q: "Can I convert .doc files (legacy Word format)?", a: "Yes. Startup Tools Hub accepts .docx (Office 2007+), .doc (legacy Office 97-2003), and .odt (OpenDocument). All three convert to PDF via the same LibreOffice engine." },
+      { q: "What is the maximum file size?", a: "30MB per file. For larger documents (long manuscripts, image-heavy reports), split into sections, convert each, then merge the resulting PDFs using Startup Tools Hub's Merge PDF tool." },
       { q: "Does the PDF output include hyperlinks from the Word document?", a: "Yes. Internal links (table of contents, cross-references) and external URLs are preserved as clickable hyperlinks in the output PDF, working correctly in Adobe Reader, Foxit, Preview, and browser PDF viewers." },
       { q: "Is my Word document private during conversion?", a: "The file uploads over HTTPS to the server, gets processed in a private temp directory by LibreOffice, then the temp directory and all files are deleted immediately after the response is sent. Nothing is logged or persisted. For absolute privacy, run LibreOffice locally yourself: `libreoffice --headless --convert-to pdf input.docx` produces identical output." },
       { q: "Can I convert multiple Word files at once?", a: "Currently the tool processes one file per conversion. For batch conversion, upload files individually. A batch interface may be added in the future." },
@@ -436,43 +433,39 @@ export const toolContentMap: Record<string, ToolContent> = {
   "pdf-to-word": {
     slug: "pdf-to-word",
     h1Subtitle:
-      "Convert PDF to editable Word document (.docx) using LibreOffice on the server. Best for text-based PDFs. Free, no signup, no watermark.",
+      "Convert PDF to editable Word document (.docx) directly in your browser. 100% private, zero uploads, bold/italic styles preserved.",
     intro: [
-      "**Convert PDF to Word** is the third most-searched PDF operation worldwide in 2026, just behind \"word to pdf\" itself. The use case: you received a PDF document, you need to edit it, but the source file isn't available — converting back to Word gives you an editable .docx that you can revise in Microsoft Word, LibreOffice Writer, or Google Docs.",
-      "Pick Rack's **PDF to Word** tool uses [LibreOffice](https://www.libreoffice.org) on the server to extract text, paragraphs, headings, tables, and basic formatting from PDF and write them into a fresh DOCX file. Output is a real editable Word document, not just a screenshot wrapper.",
-      "Best with **text-based PDFs** (PDFs created from Word, exported from a writing app, or saved from a browser). Scanned image PDFs (no text layer) produce empty Word files — those need OCR first.",
+      "**Convert PDF to Word** is one of the highest-demand document operations for startup founders, legal teams, and operators. When you receive a contract, vendor agreement, or pitch deck in PDF format and need to make revisions, converting back to Word gives you an editable DOCX file without starting from scratch.",
+      "Unlike legacy PDF sites that upload your sensitive documents to remote servers, Startup Tools Hub's **PDF to Word** converter runs entirely in your browser. Using client-side OpenXML generation and Mozilla PDF.js, it reconstructs paragraphs, headings, bold and italic runs, and multi-column flows directly into a compliant Word document.",
+      "**Zero Uploads, 100% Privacy:** Your contracts, financial statements, and confidential resumes never touch an external server or third-party database. Fast, secure, and completely free with no watermarks or file quotas.",
     ],
     features: [
-      { title: "Real editable Word output", desc: "Output is a genuine .docx with editable text, paragraph structure, and tables — not just an image wrapped in a Word file." },
-      { title: "LibreOffice engine", desc: "Uses the open-source LibreOffice headless converter, the same tool used in enterprise document pipelines." },
-      { title: "Preserves text and basic formatting", desc: "Headings, paragraphs, bold/italic, lists, and most tables transfer accurately. Complex layouts (multi-column, sidebars) may need manual cleanup." },
-      { title: "Encrypted PDFs flagged early", desc: "Password-protected PDFs are detected before processing — clear error message tells you to unlock first." },
-      { title: "No watermark, free forever", desc: "Output Word file has no promotional content, no daily limit, no signup wall." },
+      { title: "100% in-browser processing", desc: "Zero server uploads. Your document is processed entirely in browser memory on your device." },
+      { title: "Native OpenXML DOCX output", desc: "Generates clean, native Microsoft Word (.docx) files compatible with Word, Google Docs, and LibreOffice." },
+      { title: "Font & style preservation", desc: "Detects font weight and style from the PDF to retain bold text, italic emphasis, and section headings." },
+      { title: "Two-column layout detection", desc: "Intelligently extracts columns in natural reading order without sentence interleaving." },
+      { title: "No watermarks, no registration", desc: "Download clean, professional documents without promotional stamps, signups, or artificial limits." },
     ],
     howTo: [
-      { title: "Step 1: Upload your PDF", desc: "Drop or click to add a single PDF (up to 30MB). Encrypted PDFs need to be unlocked first." },
-      { title: "Step 2: Click Convert to Word", desc: "Server processes via LibreOffice. Most files complete in 10-30 seconds depending on length." },
-      { title: "Step 3: Download the .docx", desc: "Output Word document downloads directly. Open in Word, LibreOffice Writer, or Google Docs to edit." },
+      { title: "Step 1: Upload your PDF", desc: "Drag and drop your PDF into the upload area or click to browse. Supports files up to 50MB." },
+      { title: "Step 2: Convert on your device", desc: "Click Convert to Word (.docx). Watch real-time page progress as OpenXML runs are assembled." },
+      { title: "Step 3: Download your Word file", desc: "Click Download converted.docx to save your editable document and open it in Word or Google Docs." },
     ],
     useCases: [
-      "**Edit a contract** received as PDF when the original Word file isn't available",
-      "**Update a CV/resume** that you only have as PDF",
-      "**Adapt a template** to a new client by editing the Word version of an existing PDF",
-      "**Extract a paragraph** from a long PDF by converting the whole thing and copy/pasting",
-      "**Translate a document** by converting to Word, replacing text, then re-converting to PDF",
-      "**Repurpose academic papers** for blog posts or articles where you need editable text",
+      "**Edit vendor and customer contracts** received as static PDFs without retyping clauses",
+      "**Revise startup resumes and bios** with formatting and typography intact",
+      "**Update investor memos and term sheets** while ensuring zero server leakage of deal terms",
+      "**Repurpose published whitepapers and reports** into editable drafts for marketing and blogs",
+      "**Collaborate on PDF proposals** in Microsoft Word or Google Docs with team comments",
     ],
     faq: [
-      { q: "Will the Word output look exactly like the source PDF?", a: "Approximately, yes. Headings, paragraphs, lists, bold/italic, and most tables come through accurately for standard PDFs (those created from Word or similar tools). Complex layouts (multi-column newspapers, magazine-style design with sidebars) may require manual cleanup in Word. Plain reports and articles convert cleanly." },
-      { q: "Can I convert scanned PDFs (images of pages, no text layer)?", a: "Not directly. Scanned PDFs are images — LibreOffice produces an empty Word document because there is no text to extract. To convert a scanned PDF, run OCR (optical character recognition) first to add a text layer. Tools like Tesseract (free, open-source) or commercial OCR services do this. After OCR, the resulting PDF can be converted to Word." },
-      { q: "Does the Word output include images from the PDF?", a: "Often, yes — embedded images in the PDF are extracted and placed in the Word document. Some images (those rendered as part of a complex graphical PDF rather than embedded as bitmaps) may not transfer. Verify the output before relying on image fidelity." },
-      { q: "Why are some characters missing or wrong in my output?", a: "Two common causes: (1) the source PDF uses non-standard fonts that map ambiguously to Unicode, causing characters like ligatures (fi, fl) to appear wrong; (2) the PDF was generated from a tool that didn't embed proper font information. For best results, ensure the source PDF is from a recent version of Word, Google Docs, or a similar standard editor." },
-      { q: "Are tables preserved correctly?", a: "Simple tables (regular rows/columns, single-line cells) usually transfer well. Complex tables (merged cells across multiple rows, deeply nested tables, or tables with non-rectangular cells) may need manual cleanup. For data extraction specifically, consider Pick Rack's PDF to Markdown tool — Markdown table format is often easier to clean up." },
-      { q: "What if my PDF is password-protected?", a: "The tool detects encrypted PDFs and refuses to process them with a clear error message. Use Pick Rack's [Unlock PDF](/tools/pdf/unlock-pdf/) tool to remove the password (you must know the password), then convert the unlocked PDF to Word." },
-      { q: "Is my PDF private during conversion?", a: "Yes. The PDF uploads over HTTPS, gets processed by LibreOffice in a private temp directory, then the directory and all files are deleted immediately after the response is sent. Nothing is logged or stored. The connection is encrypted end-to-end." },
-      { q: "Can I convert just specific pages?", a: "Currently the tool converts the entire PDF. To convert only specific pages, use Pick Rack's [Split PDF](/tools/pdf/split-pdf/) tool first to extract the pages you need, then convert the smaller PDF to Word." },
+      { q: "Is my PDF uploaded to your servers during conversion?", a: "No. Unlike other converters, all processing happens locally on your machine in the browser. Zero bytes of your document are uploaded to any server." },
+      { q: "Will the Word document be editable?", a: "Yes. The generated file is a standard OpenXML (.docx) document with editable paragraphs, runs, and headings—not an image snapshot." },
+      { q: "Are bold and italic formatting preserved?", a: "Yes. The parser examines embedded font descriptors to maintain bold and italic emphasis throughout paragraphs." },
+      { q: "How are multi-column layouts handled?", a: "The engine checks for gutter separation and processes the left column completely before the right column, preventing text mixing." },
+      { q: "What if my PDF is password protected?", a: "Password-protected PDFs must first be decrypted before conversion. Use our Unlock PDF tool (with your password) prior to converting." },
     ],
-    relatedTools: ["word-to-pdf", "pdf-to-markdown", "unlock-pdf"],
+    relatedTools: ["word-to-pdf", "pdf-to-markdown", "split-pdf"],
   },
 
   "protect-pdf": {
@@ -481,7 +474,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Add AES-256 password protection to a PDF. Server-side qpdf, no logging, no signup. Compatible with all modern PDF viewers.",
     intro: [
       "**Password-protect a PDF** is the right move whenever you share confidential information by email, cloud link, or USB drive. Encrypted PDFs require the correct password before anyone — sender, recipient, or interceptor — can view the content.",
-      "Pick Rack's **Protect PDF** tool uses [qpdf](https://qpdf.sourceforge.io) with AES-256 encryption, the strongest standard supported by the PDF specification. Output works in Adobe Reader, Foxit, Preview, all browser PDF viewers, and any modern PDF software.",
+      "Startup Tools Hub's **Protect PDF** tool uses [qpdf](https://qpdf.sourceforge.io) with AES-256 encryption, the strongest standard supported by the PDF specification. Output works in Adobe Reader, Foxit, Preview, all browser PDF viewers, and any modern PDF software.",
       "Free, no signup, no watermark, no logging. Files up to 100MB.",
     ],
     features: [
@@ -523,7 +516,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Convert PowerPoint presentations to PDF online. PPTX, PPT, ODP supported. Layout and fonts preserved.",
     intro: [
       "**PowerPoint to PDF** is the standard format conversion when you need to share a presentation that opens identically on every device — no font substitution, no &quot;PowerPoint required&quot;, no Mac/Windows formatting drift.",
-      "Pick Rack's **PPTX to PDF** tool runs server-side using LibreOffice's headless engine — the same engine that powers WordPress's `wp-cli media regenerate` and most enterprise document servers. Files upload over HTTPS, get rendered to PDF, and are deleted immediately. We never log or store your file.",
+      "Startup Tools Hub's **PPTX to PDF** tool runs server-side using LibreOffice's headless engine — the same engine that powers WordPress's `wp-cli media regenerate` and most enterprise document servers. Files upload over HTTPS, get rendered to PDF, and are deleted immediately. We never log or store your file.",
       "Free, no signup, no watermark. PPTX, legacy PPT, and OpenDocument ODP files are all supported, up to 50MB. Conversion typically takes 5-15 seconds depending on slide count.",
     ],
     features: [
@@ -565,13 +558,13 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Convert PDF to PowerPoint with each page as a slide. Image-per-slide approach for layout-perfect output.",
     intro: [
       "**PDF to PowerPoint** conversion is one of the most-requested but least-reliable PDF operations. Most online tools claim to extract editable text, but the result is almost always broken: misaligned columns, scrambled paragraphs, missing fonts, and overlapping shapes. The OOXML format is too rigid to absorb arbitrary PDF layouts.",
-      "Pick Rack's **PDF to PPTX** tool takes the honest approach: each PDF page is rendered as a high-resolution PNG (144 DPI by default) and embedded as the full background of a 16:9 widescreen slide. The layout is **identical** to the original PDF — every line, every column, every graphic is exactly where it was. The tradeoff: text is not editable.",
+      "Startup Tools Hub's **PDF to PPTX** tool takes the honest approach: each PDF page is rendered as a high-resolution PNG (144 DPI by default) and embedded as the full background of a 16:9 widescreen slide. The layout is **identical** to the original PDF — every line, every column, every graphic is exactly where it was. The tradeoff: text is not editable.",
       "If you need editable text from a PDF, [PDF to Word](/tools/pdf/pdf-to-word/) gives you a much better result. Use this PDF to PPTX tool when layout fidelity matters more than editability — like when you want to use a PDF document as the base for a presentation deck without redesigning it.",
     ],
     features: [
       { title: "Layout fidelity 100%", desc: "Each PDF page renders as a sharp PNG embedded in a slide. Every column, font, color, and graphic is identical to the original." },
       { title: "16:9 widescreen output", desc: "Slides match modern PowerPoint defaults. Output works in PowerPoint, Keynote, Google Slides, LibreOffice Impress." },
-      { title: "Free, no signup, no watermark", desc: "Most online PDF→PPTX tools watermark heavily or limit to 3 pages on free tier. Pickrack is unlimited and watermark-free." },
+      { title: "Free, no signup, no watermark", desc: "Most online PDF→PPTX tools watermark heavily or limit to 3 pages on free tier. Startup Tools Hub is unlimited and watermark-free." },
       { title: "Privacy-first server processing", desc: "PDFs upload over HTTPS, get rendered, and are deleted immediately. Nothing logged, nothing stored." },
       { title: "Up to 200 pages per conversion", desc: "Suitable for converting medium-length reports, slide decks, and document handouts. Larger PDFs should be split first." },
     ],
@@ -607,7 +600,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Convert EPUB ebooks to PDF for printing or PDF readers. Calibre engine preserves chapters and TOC.",
     intro: [
       "**EPUB to PDF** is the conversion you need when an ebook needs to leave its reader and become a printable, shareable, archivable document. EPUB is brilliant for reflowable reading on Kindle, Kobo, or Apple Books — but PDF is the lingua franca for printing, university submissions, legal archives, and any system that demands fixed-page format.",
-      "Pick Rack's **EPUB to PDF** tool uses [Calibre](https://calibre-ebook.com/), the gold-standard open-source ebook converter maintained for over 15 years. Calibre handles EPUB 2 and EPUB 3, preserves your table of contents as PDF bookmarks, embeds chapter structure, and applies clean typography defaults.",
+      "Startup Tools Hub's **EPUB to PDF** tool uses [Calibre](https://calibre-ebook.com/), the gold-standard open-source ebook converter maintained for over 15 years. Calibre handles EPUB 2 and EPUB 3, preserves your table of contents as PDF bookmarks, embeds chapter structure, and applies clean typography defaults.",
       "Free, no signup, no watermark. Files up to 50MB are supported. Conversion typically takes 30-90 seconds for novel-length books due to Calibre's full text-flow analysis.",
     ],
     features: [
@@ -615,7 +608,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       { title: "Table of contents as PDF bookmarks", desc: "Your EPUB's chapter structure becomes navigable bookmarks in the PDF — clickable in any modern PDF viewer." },
       { title: "Hyperlinks preserved", desc: "Internal cross-references (footnotes, chapter links) and external URLs remain clickable in the converted PDF." },
       { title: "Cover image included", desc: "If your EPUB has a cover image, it appears as the first page of the PDF." },
-      { title: "No watermark, no signup", desc: "Output PDF has zero added marks. Most online EPUB→PDF tools watermark heavily — Pickrack is genuinely free." },
+      { title: "No watermark, no signup", desc: "Output PDF has zero added marks. Most online EPUB→PDF tools watermark heavily — Startup Tools Hub is genuinely free." },
     ],
     howTo: [
       { title: "Step 1: Upload your EPUB", desc: "Drop a single .epub file (up to 50MB) into the dropzone." },
@@ -649,14 +642,14 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Convert PDF to EPUB ebook for Kindle, Kobo, Apple Books. Reflowable text with adjustable font size.",
     intro: [
       "**PDF to EPUB** conversion gives you back the gift of reflowable text. PDFs are designed for fixed-page printing — they look fine on a 24-inch monitor but torture you on a 6-inch ebook reader where you have to pinch-zoom every page. EPUB reflows to fit any screen, with adjustable font size and dark mode.",
-      "Pick Rack's **PDF to EPUB** tool uses [Calibre](https://calibre-ebook.com/), which has spent 15+ years tuning its PDF→EPUB heuristics. It detects chapter breaks, flows text around images, and produces an EPUB you can actually read on a Kindle Paperwhite or Kobo Clara without rage-quitting.",
+      "Startup Tools Hub's **PDF to EPUB** tool uses [Calibre](https://calibre-ebook.com/), which has spent 15+ years tuning its PDF→EPUB heuristics. It detects chapter breaks, flows text around images, and produces an EPUB you can actually read on a Kindle Paperwhite or Kobo Clara without rage-quitting.",
       "Free, no signup, no watermark. Best with text-based PDFs (academic papers, novels, reports). Scanned PDFs need OCR first to extract text — without OCR, the EPUB will be empty.",
     ],
     features: [
       { title: "Calibre PDF heuristics", desc: "Detects chapter starts, drops repeated headers/footers, joins paragraphs broken across pages. Far cleaner than naive PDF→text dump." },
       { title: "Reflowable text", desc: "EPUB output adapts to any screen size and font size. No more pinch-zooming on a 6-inch e-reader." },
       { title: "Embedded cover", desc: "First page of the PDF becomes the EPUB cover (visible in the Kindle/Kobo library view)." },
-      { title: "Free, no signup, no watermark", desc: "Most online PDF→EPUB tools require signup or watermark. Pickrack is genuinely free with no daily quota." },
+      { title: "Free, no signup, no watermark", desc: "Most online PDF→EPUB tools require signup or watermark. Startup Tools Hub is genuinely free with no daily quota." },
       { title: "Privacy-first server processing", desc: "PDFs upload over HTTPS, get converted by Calibre, then deleted immediately. Nothing logged or stored." },
     ],
     howTo: [
@@ -674,7 +667,7 @@ export const toolContentMap: Record<string, ToolContent> = {
     ],
     faq: [
       { q: "How well does PDF to EPUB conversion actually work?", a: "Excellent for text-based PDFs with clear chapter structure (novels, academic papers, reports). Mixed for PDFs with complex layouts (multi-column journals, graphics-heavy magazines). Poor for scanned PDFs without OCR — the EPUB will be empty because there's no extractable text. For complex layouts, expect to spend 5-10 minutes cleaning up the EPUB in Calibre desktop afterward." },
-      { q: "Why is my converted EPUB empty or showing only blank pages?", a: "The PDF probably has scanned image content with no underlying text layer. Run the PDF through OCR first (Adobe Acrobat, ABBYY FineReader, Tesseract) to add a text layer, then convert. Pickrack's OCR tool is on the roadmap." },
+      { q: "Why is my converted EPUB empty or showing only blank pages?", a: "The PDF probably has scanned image content with no underlying text layer. Run the PDF through OCR first (Adobe Acrobat, ABBYY FineReader, Tesseract) to add a text layer, then convert. Startup Tools Hub's OCR tool is on the roadmap." },
       { q: "Will the EPUB work on Kindle?", a: "Yes. Email the .epub to your Send-to-Kindle address (settings → My Account → Devices) and Amazon auto-converts to AZW3 within minutes. Or use the Send to Kindle desktop app for direct sideloading." },
       { q: "Does it preserve images?", a: "Yes. Calibre extracts embedded PDF images and re-embeds them in the EPUB. Image positioning may shift due to reflow — they'll be inline rather than at fixed coordinates. For image-heavy content, fixed-layout EPUB or PDF is a better choice." },
       { q: "What about footnotes, citations, and cross-references?", a: "Calibre attempts to detect footnotes and convert them to EPUB-style popup footnotes (clickable, opens inline). Cross-references usually become hyperlinks. Quality varies with PDF source — academic PDFs with consistent footnote formatting work well; messy PDFs may have broken references." },
@@ -691,7 +684,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Compress JPG, PNG, WebP images with adjustable quality. Browser-side, real-time preview, no upload.",
     intro: [
       "**Image Compressor** reduces file size for web upload, email attachments, or storage savings. Modern phones produce 5-10MB photos that are massive for upload — compressed to 500KB-1MB they look identical to most viewers.",
-      "Pickrack's compressor runs entirely in your browser using the Canvas API and re-encoding via `toBlob()`. No upload, no server processing — verifiable in DevTools → Network. Quality slider lets you trade off size vs visual quality with live preview.",
+      "Startup Tools Hub's compressor runs entirely in your browser using the Canvas API and re-encoding via `toBlob()`. No upload, no server processing — verifiable in DevTools → Network. Quality slider lets you trade off size vs visual quality with live preview.",
       "Free, no signup, no watermark. Common compression result: JPG 80% quality typically reduces file size 60-75% with no visible quality loss. WebP usually beats JPG by 25-35% at equivalent visual quality.",
     ],
     features: [
@@ -715,7 +708,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "**Document attachments** — shrink images before embedding in PDF/Word/Slack",
     ],
     faq: [
-      { q: "How does this compare to TinyPNG?", a: "TinyPNG uses superior compression algorithms (custom MozJPEG-like + PNGOUT) but uploads your image to their server. Pickrack uses standard browser-canvas re-encoding which is 10-20% less efficient but never uploads. Privacy > marginal compression for most users." },
+      { q: "How does this compare to TinyPNG?", a: "TinyPNG uses superior compression algorithms (custom MozJPEG-like + PNGOUT) but uploads your image to their server. Startup Tools Hub uses standard browser-canvas re-encoding which is 10-20% less efficient but never uploads. Privacy > marginal compression for most users." },
       { q: "Why is my output not as small as TinyPNG's?", a: "Browser canvas uses standard JPEG encoder — TinyPNG runs custom MozJPEG with smarter quantization. For maximum compression, use a desktop tool like Squoosh app, ImageOptim (Mac), or run MozJPEG locally." },
       { q: "What happens to camera and GPS info during compression?", a: "Canvas re-encoding strips all EXIF — including camera model, GPS coordinates, and timestamps. This is usually a privacy benefit since photos shared online stop leaking location. If you want to keep EXIF (for photographers archiving by date), run exiftool locally to copy metadata back after compression." },
       { q: "What format compresses best?", a: "WebP usually beats JPG by 25-35% at same quality, and supports transparency unlike JPG. AVIF is even better (~50% smaller than JPG) but slower to encode/decode. JPG is most compatible (every viewer supports it)." },
@@ -733,7 +726,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Convert between PNG, JPG, WebP, AVIF formats. Batch support, browser-side processing.",
     intro: [
       "**Image Converter** changes image file format — for compatibility (a system requires JPG only), for size (WebP is ~30% smaller than JPG), or for transparency support (JPG → PNG when transparency needed).",
-      "Pickrack's converter uses the Canvas API to decode source format and `toBlob()` to encode the target. Browser-native, no server roundtrip. Supports PNG, JPG, WebP, and AVIF (where browser supports — Chrome and Firefox have full AVIF; Safari is partial).",
+      "Startup Tools Hub's converter uses the Canvas API to decode source format and `toBlob()` to encode the target. Browser-native, no server roundtrip. Supports PNG, JPG, WebP, and AVIF (where browser supports — Chrome and Firefox have full AVIF; Safari is partial).",
       "Free, no signup. Drop one image or multiple, pick the target format, download. For format-specific options (quality for JPG/WebP/AVIF, transparency for PNG), Image Compressor offers more control.",
     ],
     features: [
@@ -762,7 +755,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       { q: "Is AVIF supported everywhere?", a: "Chrome (Aug 2020+), Firefox (Oct 2021+), Edge (April 2022+) all support AVIF natively. Safari has partial support since 16.0 (Sept 2022). For broad compatibility, WebP is safer; AVIF for max compression on modern browsers." },
       { q: "Does converting JPG → WebP add visible artifacts?", a: "JPG is already lossy, so converting to WebP at high quality (90+) preserves what's in the JPG. You don't recover quality from compression but you don't add much new artifacts either. For best results, convert from the highest-quality source available (the original PNG/RAW, not a re-encoded JPG)." },
       { q: "Will it batch convert different formats together?", a: "Yes — drop a mix of JPG, PNG, HEIC, etc. and the converter outputs all in your chosen target format." },
-      { q: "Does it preserve transparency?", a: "PNG → WebP/AVIF keeps transparency. PNG → JPG fills the transparent area with white (JPG doesn't support transparency). Pickrack defaults to white fill; configurable in v2." },
+      { q: "Does it preserve transparency?", a: "PNG → WebP/AVIF keeps transparency. PNG → JPG fills the transparent area with white (JPG doesn't support transparency). Startup Tools Hub defaults to white fill; configurable in v2." },
       { q: "What's the maximum batch size?", a: "Limited by browser memory (~500MB total practical). 100 typical photos process in ~30 seconds." },
       { q: "Will conversion work without an internet connection?", a: "Yes once the page is loaded. Canvas API is built into every modern browser, and no third-party network requests are made during conversion." },
     ],
@@ -775,7 +768,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Convert iPhone HEIC photos to JPG or PNG. Browser-side — your photos stay on your device.",
     intro: [
       "**HEIC to JPG Converter** solves the iPhone photo compatibility problem. iPhones save in HEIC (High Efficiency Image Container) format since iOS 11 (2017) — smaller than JPG but unsupported by many Windows tools, web upload forms, email clients, and older software. Converting to JPG makes photos universally compatible.",
-      "Pickrack's converter runs entirely in your browser using the `heic2any` library (MIT license, ~150KB). Photos never upload — important for privacy of personal photos, family snaps, and anything you'd rather not send to a random cloud service.",
+      "Startup Tools Hub's converter runs entirely in your browser using the `heic2any` library (MIT license, ~150KB). Photos never upload — important for privacy of personal photos, family snaps, and anything you'd rather not send to a random cloud service.",
       "Free, no signup, batch supported. Output as JPG (smallest, lossy) or PNG (lossless, larger). Quality slider for JPG output. Drop a single photo or 50 at once.",
     ],
     features: [
@@ -783,7 +776,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       { title: "Batch convert (up to 50 at once)", desc: "Drop your iPhone export folder. All photos convert in parallel and download as ZIP." },
       { title: "JPG or PNG output", desc: "JPG for smaller files (recommended for photos). PNG for lossless quality (recommended when image will be edited)." },
       { title: "Adjustable JPG quality", desc: "Default 92% (high). 80% for smaller files, 95+ for archival quality." },
-      { title: "Works on Windows, Mac, Linux", desc: "Mac/iOS can natively convert HEIC, but Windows has limited support. Pickrack works the same everywhere." },
+      { title: "Works on Windows, Mac, Linux", desc: "Mac/iOS can natively convert HEIC, but Windows has limited support. Startup Tools Hub works the same everywhere." },
     ],
     howTo: [
       { title: "Step 1: Drop HEIC file(s)", desc: "Single or batch — up to 50 files, 50MB each." },
@@ -799,14 +792,14 @@ export const toolContentMap: Record<string, ToolContent> = {
       "**Convert iPhone library** for backup to a non-iCloud service",
     ],
     faq: [
-      { q: "Why does my iPhone save as HEIC instead of JPG?", a: "iOS 11+ defaults to HEIC for photos because it's ~50% smaller than JPG at same quality. To save as JPG instead: Settings → Camera → Formats → Most Compatible. Existing HEIC photos in your library can be converted with Pickrack." },
+      { q: "Why does my iPhone save as HEIC instead of JPG?", a: "iOS 11+ defaults to HEIC for photos because it's ~50% smaller than JPG at same quality. To save as JPG instead: Settings → Camera → Formats → Most Compatible. Existing HEIC photos in your library can be converted with Startup Tools Hub." },
       { q: "Is my photo uploaded to your server?", a: "No. heic2any runs entirely in your browser using a JavaScript decoder. Photos process locally — verify in DevTools → Network. Zero requests during conversion." },
       { q: "Are date, location, and camera tags kept after conversion?", a: "Partial — heic2any preserves orientation and basic metadata but may lose some Apple-specific fields like Live Photo links and depth maps. For full metadata preservation (e.g., when converting iPhone albums by date), use exiftool locally to copy EXIF from HEIC to JPG after conversion." },
       { q: "How large a HEIC photo can I convert?", a: "50MB per HEIC file. Live photos (HEIC + MOV) are typically under 5MB. Standard photos are 1-3MB. ProRAW HEIC can be 25-50MB, which fits within the limit." },
       { q: "Will quality drop converting to JPG?", a: "JPG is lossy, so technically yes — but at 92% quality, the difference is invisible to human eyes. For lossless output, choose PNG (larger files but pixel-perfect)." },
       { q: "Can I convert HEIC live photos (HEIC + MOV)?", a: "v1 converts only the HEIC still image, not the MOV video portion. You'd export the MOV separately from Photos.app or use a desktop tool." },
       { q: "Does it work on mobile browsers?", a: "Yes on Chrome and Safari mobile. Performance on iPhone is fast (heic2any is native to the platform). Useful when you need to convert photos on-the-go before emailing." },
-      { q: "Are there iPhone-side alternatives?", a: "Yes — Photos.app on iOS will export to JPG when you AirDrop to a Mac with 'Most Compatible' enabled, or when you Share → Save to Files. But for batch conversion or non-Apple devices, Pickrack is faster." },
+      { q: "Are there iPhone-side alternatives?", a: "Yes — Photos.app on iOS will export to JPG when you AirDrop to a Mac with 'Most Compatible' enabled, or when you Share → Save to Files. But for batch conversion or non-Apple devices, Startup Tools Hub is faster." },
     ],
     relatedTools: ["image-compressor", "image-converter", "image-resizer"],
   },
@@ -817,12 +810,12 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Remove image background using AI directly in your browser. No upload, no signup, no daily limit.",
     intro: [
       "**Background Remover** isolates the subject of an image, replacing the background with transparency. Used for product photography, profile pictures, social media graphics, presentation visuals, and design mockups.",
-      "Pickrack uses [@imgly/background-removal](https://github.com/imgly/background-removal-js), an open-source AI model that runs in your browser via WebAssembly + ONNX. **Your image never uploads** — the AI model (~30MB) downloads once and processes locally. Compare with remove.bg which charges $0.20/image after a tiny free tier.",
+      "Startup Tools Hub uses [@imgly/background-removal](https://github.com/imgly/background-removal-js), an open-source AI model that runs in your browser via WebAssembly + ONNX. **Your image never uploads** — the AI model (~30MB) downloads once and processes locally. Compare with remove.bg which charges $0.20/image after a tiny free tier.",
       "Free, no signup, no daily limit. First load downloads the model (~30MB, takes 10-30 seconds depending on connection); subsequent uses are instant from browser cache. Output: PNG with transparent background, ready to drop into any design.",
     ],
     features: [
       { title: "Browser-side AI (no upload)", desc: "ONNX model runs locally via WebAssembly. Verify in DevTools → Network — only the model downloads (once, cached); your image never uploads." },
-      { title: "Free, unlimited", desc: "remove.bg gives 1 free image/month and charges $0.20/image after. Pickrack is unlimited because there's no server processing." },
+      { title: "Free, unlimited", desc: "remove.bg gives 1 free image/month and charges $0.20/image after. Startup Tools Hub is unlimited because there's no server processing." },
       { title: "Works on people, products, animals", desc: "Trained on diverse imagery. Best results: clear subject-vs-background contrast. Hair edges work well; complex foliage edges work less well (industry-wide AI limitation)." },
       { title: "PNG output with transparency", desc: "Drop directly into Figma, Photoshop, Canva, Keynote — transparent areas stay transparent." },
       { title: "Privacy critical for personal photos", desc: "Profile pics, personal product shots, family photos — never leaves your device." },
@@ -843,12 +836,12 @@ export const toolContentMap: Record<string, ToolContent> = {
     faq: [
       { q: "Is this really running in my browser?", a: "Yes. Open DevTools → Network. You'll see the model files download from a CDN once (~30MB), then cached in IndexedDB. After that, processing happens locally with zero network requests. Model: ONNX format, runs via @imgly/background-removal package using WebAssembly." },
       { q: "Why is the first use slow?", a: "30MB model downloads to your browser cache. Subsequent uses load from cache — much faster. If you clear browser cache, it'll re-download." },
-      { q: "How is this different from remove.bg?", a: "remove.bg uploads your image to their servers, processes there, returns the result. Charges per image after free tier. Pickrack runs the SAME class of AI model in your browser — never uploads, no charge, no daily limit. Quality is roughly comparable for typical use cases (remove.bg may edge out for complex hair/fur, due to their proprietary model fine-tuning)." },
+      { q: "How is this different from remove.bg?", a: "remove.bg uploads your image to their servers, processes there, returns the result. Charges per image after free tier. Startup Tools Hub runs the SAME class of AI model in your browser — never uploads, no charge, no daily limit. Quality is roughly comparable for typical use cases (remove.bg may edge out for complex hair/fur, due to their proprietary model fine-tuning)." },
       { q: "Why does the edge sometimes look ragged on hair or fur?", a: "AI background removal is hardest at fine edges (hair, fur, foliage, lace). Even premium tools like Adobe Photoshop's 'Remove Background' or remove.bg struggle here. For hero images requiring perfection, manual touch-up in Photoshop or GIMP after removal is standard." },
       { q: "Does it work for transparent backgrounds (PNG with alpha channel)?", a: "Yes — input can be PNG with transparency. The model identifies the subject and outputs new transparency around it (replacing the original background, even if the original was already transparent)." },
       { q: "Maximum file size?", a: "20MB recommended. Larger images take more memory and processing time. Resize to 2000px max dimension before processing for fastest results." },
       { q: "Does it strip EXIF metadata?", a: "Yes — output is fresh PNG with no metadata. Privacy benefit. To restore, copy EXIF from original using exiftool after processing." },
-      { q: "Can I use this for commercial work?", a: "Yes — the @imgly/background-removal library is MIT licensed. The output PNG is yours. No license restrictions from Pickrack." },
+      { q: "Can I use this for commercial work?", a: "Yes — the @imgly/background-removal library is MIT licensed. The output PNG is yours. No license restrictions from Startup Tools Hub." },
     ],
     relatedTools: ["image-compressor", "image-resizer", "image-converter"],
   },
@@ -859,7 +852,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Resize JPG, PNG, WebP, AVIF images to any dimensions. Browser-side, no upload, no quality loss for downscaling.",
     intro: [
       "**Image Resizer** is the Swiss-army knife for everyday image work — uploading a profile photo to a service that demands exactly 400×400, shrinking a 4000px screenshot for an email, or matching the dimensions specified by a job application portal.",
-      "Pick Rack's **Image Resizer** runs entirely in your browser using the Canvas API. Your image is loaded into a `<canvas>`, resized with high-quality bilinear interpolation, and re-encoded — all without leaving your device. No upload, no server processing, no data retention. Free, no signup, no watermark.",
+      "Startup Tools Hub's **Image Resizer** runs entirely in your browser using the Canvas API. Your image is loaded into a `<canvas>`, resized with high-quality bilinear interpolation, and re-encoded — all without leaving your device. No upload, no server processing, no data retention. Free, no signup, no watermark.",
       "Supports JPG, PNG, WebP, and AVIF. Lock aspect ratio toggle prevents distortion. Output format can be the same as input or converted (great for swapping a heavy PNG screenshot to a light WebP).",
     ],
     features: [
@@ -902,7 +895,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Encode and decode Base64 strings instantly. Browser-side — no upload. Free, no signup.",
     intro: [
       "**Base64 Encoder/Decoder** is essential for developers working with API tokens, data URIs, JWT payloads, email attachments (MIME), or any system that transmits binary over text-only channels.",
-      "Pickrack's Base64 tool runs entirely in your browser using native `btoa()` and `atob()` (with proper Unicode handling for non-ASCII text). Tokens, secrets, and data never leave your tab — verifiable in DevTools → Network.",
+      "Startup Tools Hub's Base64 tool runs entirely in your browser using native `btoa()` and `atob()` (with proper Unicode handling for non-ASCII text). Tokens, secrets, and data never leave your tab — verifiable in DevTools → Network.",
       "Free, no signup, no rate limit. Supports text mode (paste a string) and file mode (upload up to 10MB to encode binary as Base64).",
     ],
     features: [
@@ -927,7 +920,7 @@ export const toolContentMap: Record<string, ToolContent> = {
     ],
     faq: [
       { q: "Is my text uploaded?", a: "No. btoa() and atob() are native JavaScript functions running in your browser. Verify in DevTools → Network — no requests fire during encoding/decoding." },
-      { q: "Why does it fail for some Unicode characters?", a: "Native btoa() only handles Latin-1. For Unicode text (Vietnamese, Chinese, emoji), Pickrack uses TextEncoder + btoa pattern — full UTF-8 support." },
+      { q: "Why does it fail for some Unicode characters?", a: "Native btoa() only handles Latin-1. For Unicode text (Vietnamese, Chinese, emoji), Startup Tools Hub uses TextEncoder + btoa pattern — full UTF-8 support." },
       { q: "How much data can I encode in one batch?", a: "10MB practical limit. Beyond that, browsers may slow down. Base64 inflates size by about 33%, so a 10MB file becomes roughly 13MB of text." },
       { q: "What's URL-safe Base64?", a: "Standard Base64 uses +, /, = which need percent-encoding in URLs. URL-safe variant replaces them with -, _, no padding. Used in JWT tokens." },
       { q: "Can I decode Base64-encoded files (images, PDFs)?", a: "Yes — paste the Base64 string in decode mode. Output is a binary blob; download as a file. For data URIs, paste only the part after the comma." },
@@ -944,7 +937,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Decode JWT header and payload. Inspect claims, expiry, and structure. Browser-side — tokens never leave your tab.",
     intro: [
       "**JWT Decoder** is critical for backend devs and API integrators. JWTs (JSON Web Tokens) carry claims about a user (ID, role, expiry) — when something breaks in auth, you need to inspect the payload to see what the token actually contains.",
-      "Pickrack's decoder splits the JWT on dots, Base64-decodes header and payload, parses the JSON, and shows you the claims. **All in your browser** — your tokens (which often contain user IDs, session info, or service-account secrets) never upload anywhere. Verify in DevTools → Network.",
+      "Startup Tools Hub's decoder splits the JWT on dots, Base64-decodes header and payload, parses the JSON, and shows you the claims. **All in your browser** — your tokens (which often contain user IDs, session info, or service-account secrets) never upload anywhere. Verify in DevTools → Network.",
       "Free, no signup. The tool also flags expired tokens (exp claim in past) and shows time-until-expiry. Does NOT verify signatures — that requires the secret/public key, out of scope for a decode-only tool.",
     ],
     features: [
@@ -968,12 +961,12 @@ export const toolContentMap: Record<string, ToolContent> = {
       "**Confirm key rotation** by inspecting `kid` (key ID) header field",
     ],
     faq: [
-      { q: "Does this verify the JWT signature?", a: "No — only decodes. Signature verification requires the secret (HS256) or public key (RS256/ES256), which would mean uploading or fetching keys. Pickrack stays decode-only for safety. Use jwt.io with caution (server-side) or JWT libraries in your code (jose, jsonwebtoken) for verification." },
+      { q: "Does this verify the JWT signature?", a: "No — only decodes. Signature verification requires the secret (HS256) or public key (RS256/ES256), which would mean uploading or fetching keys. Startup Tools Hub stays decode-only for safety. Use jwt.io with caution (server-side) or JWT libraries in your code (jose, jsonwebtoken) for verification." },
       { q: "Are JWTs encrypted?", a: "Standard JWTs are SIGNED but not encrypted — the payload is Base64 (not encrypted) and readable by anyone. Don't put secrets in JWT claims. JWE (JSON Web Encryption) is the encrypted variant — more rare." },
       { q: "Is my token sent to your server?", a: "No. Splitting on dots and Base64-decoding happens in your browser. Verify in DevTools → Network — zero network calls during decoding." },
       { q: "Why does my token decode to garbled text?", a: "Either it's not a real JWT (some 'tokens' are just opaque random strings) or the Base64 segments are corrupted. Check format: 3 segments separated by 2 dots, each segment is URL-safe Base64." },
       { q: "What does the alg field mean?", a: "The signing algorithm: HS256 (symmetric, shared secret), RS256/ES256 (asymmetric, public key). HS256 is common for backend services; RS256 for OAuth/OIDC providers." },
-      { q: "Can I decode JWE (encrypted JWTs)?", a: "Not without the decryption key. Pickrack handles JWS (signed) only. JWE has 5 segments instead of 3 and requires the appropriate key." },
+      { q: "Can I decode JWE (encrypted JWTs)?", a: "Not without the decryption key. Startup Tools Hub handles JWS (signed) only. JWE has 5 segments instead of 3 and requires the appropriate key." },
       { q: "What if my JWT is in the URL or auth header?", a: "Strip the `Bearer ` prefix or URL-decode first. The decoder accepts the raw 3-segment string." },
       { q: "Is exp in seconds or milliseconds?", a: "JWT spec uses Unix timestamp in SECONDS. The decoder converts to local time for display. Some libraries (looking at you, JavaScript) use milliseconds — double-check your backend." },
     ],
@@ -986,7 +979,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Generate MD5, SHA-1, SHA-256, SHA-512 hashes from text or files. Web Crypto API, browser-side.",
     intro: [
       "**Hash Generator** computes cryptographic hashes — used for file integrity verification, password hashing (with proper salt), data deduplication, and content-addressable storage like Git's SHA-1.",
-      "Pickrack uses the **Web Crypto API** (`crypto.subtle.digest`) — the same primitive that powers TLS, SSH, and disk encryption. SHA-1, SHA-256, and SHA-512 are computed natively. MD5 is provided via a small JavaScript implementation for legacy compatibility (don't use MD5 for security — only for non-cryptographic checksums).",
+      "Startup Tools Hub uses the **Web Crypto API** (`crypto.subtle.digest`) — the same primitive that powers TLS, SSH, and disk encryption. SHA-1, SHA-256, and SHA-512 are computed natively. MD5 is provided via a small JavaScript implementation for legacy compatibility (don't use MD5 for security — only for non-cryptographic checksums).",
       "Free, no signup. Text mode for instant strings. File mode for files up to 100MB — useful for verifying downloads against published checksums.",
     ],
     features: [
@@ -1011,13 +1004,13 @@ export const toolContentMap: Record<string, ToolContent> = {
     ],
     faq: [
       { q: "Is my file uploaded?", a: "No. Web Crypto API runs in your browser. File mode reads via FileReader in chunks; bytes never leave your tab. Verify in DevTools → Network." },
-      { q: "Why MD5 if it's broken?", a: "MD5 is broken for cryptographic purposes (collision attacks since 2004) but still common for non-security uses: deduplication, change detection, legacy software compatibility. Pickrack provides it labeled — you decide if it's appropriate." },
-      { q: "Why is SHA-1 still here?", a: "SHA-1 is theoretically broken (Google demonstrated a collision in 2017) but still used by Git for content addressing and some legacy systems. Pickrack provides it for those cases. For new security work, use SHA-256 or SHA-512." },
-      { q: "Are these hashes secure for password storage?", a: "NO. Plain MD5/SHA-1/SHA-256/SHA-512 are NOT for password storage. Use bcrypt, scrypt, or Argon2 with salt. Pickrack does not provide those — install bcryptjs or argon2-browser in your code." },
+      { q: "Why MD5 if it's broken?", a: "MD5 is broken for cryptographic purposes (collision attacks since 2004) but still common for non-security uses: deduplication, change detection, legacy software compatibility. Startup Tools Hub provides it labeled — you decide if it's appropriate." },
+      { q: "Why is SHA-1 still here?", a: "SHA-1 is theoretically broken (Google demonstrated a collision in 2017) but still used by Git for content addressing and some legacy systems. Startup Tools Hub provides it for those cases. For new security work, use SHA-256 or SHA-512." },
+      { q: "Are these hashes secure for password storage?", a: "NO. Plain MD5/SHA-1/SHA-256/SHA-512 are NOT for password storage. Use bcrypt, scrypt, or Argon2 with salt. Startup Tools Hub does not provide those — install bcryptjs or argon2-browser in your code." },
       { q: "Can I hash large files like ISOs or video?", a: "100MB practical limit in the browser. Beyond that, browsers may run out of memory. Files larger than 100MB should be hashed with a desktop tool (sha256sum on Linux, certUtil on Windows, Get-FileHash in PowerShell)." },
-      { q: "Why do my hashes differ from another tool?", a: "Common cause: line-ending differences (\\n vs \\r\\n), trailing whitespace, BOM markers. Pickrack hashes the bytes you paste verbatim. Match line-endings between source and Pickrack input for exact comparison." },
-      { q: "What about SHA-3 / Keccak?", a: "Web Crypto API supports SHA-256/384/512 but not SHA-3. For SHA-3, use a JavaScript library like js-sha3. Pickrack may add it later." },
-      { q: "Can I verify a Bitcoin transaction hash?", a: "Bitcoin uses double SHA-256 (SHA-256 of SHA-256). To replicate, hash with SHA-256, then hash the result again. v2 of Pickrack may add a 'double SHA-256' option." },
+      { q: "Why do my hashes differ from another tool?", a: "Common cause: line-ending differences (\\n vs \\r\\n), trailing whitespace, BOM markers. Startup Tools Hub hashes the bytes you paste verbatim. Match line-endings between source and Startup Tools Hub input for exact comparison." },
+      { q: "What about SHA-3 / Keccak?", a: "Web Crypto API supports SHA-256/384/512 but not SHA-3. For SHA-3, use a JavaScript library like js-sha3. Startup Tools Hub may add it later." },
+      { q: "Can I verify a Bitcoin transaction hash?", a: "Bitcoin uses double SHA-256 (SHA-256 of SHA-256). To replicate, hash with SHA-256, then hash the result again. v2 of Startup Tools Hub may add a 'double SHA-256' option." },
     ],
     relatedTools: ["uuid-generator", "base64-encoder", "password-generator"],
   },
@@ -1028,7 +1021,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Generate cryptographic UUID v4 — single or up to 1000 in bulk. Browser crypto.randomUUID.",
     intro: [
       "**UUID Generator** produces universally unique identifiers — used for database primary keys, distributed systems, API tracking IDs, and anything needing collision-resistant IDs without coordination.",
-      "Pickrack uses the browser's native `crypto.randomUUID()` — cryptographically random, RFC 4122 v4 compliant, and supported in all modern browsers since 2022. Generate a single UUID or bulk-generate up to 1000 at once for testing fixtures.",
+      "Startup Tools Hub uses the browser's native `crypto.randomUUID()` — cryptographically random, RFC 4122 v4 compliant, and supported in all modern browsers since 2022. Generate a single UUID or bulk-generate up to 1000 at once for testing fixtures.",
       "Free, no signup, no rate limit. Bulk-copy as a list, or download as .txt. Format: `xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx` where x is random hex and y is from {8,9,a,b}.",
     ],
     features: [
@@ -1053,11 +1046,11 @@ export const toolContentMap: Record<string, ToolContent> = {
     ],
     faq: [
       { q: "Is crypto.randomUUID secure?", a: "Yes. It uses the same CSPRNG as crypto.getRandomValues — sourced from OS-level entropy (hardware noise, kernel pool). 122 random bits. Collision probability after 1 billion UUIDs is ~10^-18." },
-      { q: "What's the difference between v4 and v1/v3/v5?", a: "v4 = random (most common). v1 = timestamp-based (leaks generation time). v3/v5 = namespace-based (deterministic from input). Pickrack outputs v4. For v5/3, use a library like uuid npm package." },
-      { q: "Are these UUIDs cryptographically random?", a: "Yes — crypto.randomUUID uses the cryptographic RNG (same as TLS). Pickrack does not generate v4 from Math.random which would be insecure." },
+      { q: "What's the difference between v4 and v1/v3/v5?", a: "v4 = random (most common). v1 = timestamp-based (leaks generation time). v3/v5 = namespace-based (deterministic from input). Startup Tools Hub outputs v4. For v5/3, use a library like uuid npm package." },
+      { q: "Are these UUIDs cryptographically random?", a: "Yes — crypto.randomUUID uses the cryptographic RNG (same as TLS). Startup Tools Hub does not generate v4 from Math.random which would be insecure." },
       { q: "Can two people generate the same UUID?", a: "Mathematically possible but astronomically unlikely (~1 in 2^122). Generate 1 billion per second on every device on Earth for a million years; collision still unlikely." },
       { q: "What's the maximum bulk count?", a: "1000 per request, capped to keep UI responsive. For larger batches, use a CLI tool (`uuidgen` on Linux/Mac, `[guid]::NewGuid()` PowerShell)." },
-      { q: "Why are some UUIDs lowercase and some uppercase?", a: "RFC 4122 specifies lowercase. Some legacy systems (especially Windows) use uppercase. Pickrack defaults to lowercase; toggle for uppercase." },
+      { q: "Why are some UUIDs lowercase and some uppercase?", a: "RFC 4122 specifies lowercase. Some legacy systems (especially Windows) use uppercase. Startup Tools Hub defaults to lowercase; toggle for uppercase." },
       { q: "Are these compatible with PostgreSQL UUID type?", a: "Yes. Postgres accepts both hyphenated and non-hyphenated formats. Insert directly: `INSERT INTO t (id) VALUES ('<uuid>')`." },
       { q: "Can I generate UUIDs without internet?", a: "Yes once the page is loaded. crypto.randomUUID is built into modern browsers (Chrome 92+, Firefox 95+, Safari 15.4+) and runs purely on local entropy." },
     ],
@@ -1070,8 +1063,8 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Test regular expressions live with match highlighting, capture groups, and JavaScript flags.",
     intro: [
       "**Regex Tester** is essential for any developer who writes regular expressions — for input validation, log parsing, search-and-replace, or scraping. Iteration speed matters: change the pattern, see matches highlight live, fix edge cases without redeploying.",
-      "Pickrack's regex tester uses native JavaScript `RegExp`. Type a pattern + flags, paste sample text, see matches highlighted in real-time with capture groups labeled. Supports all JS regex flags: `g` (global), `i` (case-insensitive), `m` (multiline), `s` (dotall), `u` (Unicode), `y` (sticky).",
-      "Free, no signup. Note: JavaScript regex differs from PCRE (Perl/PHP) and Python `re` — lookbehind, named groups, atomic groups have varying support. Pickrack reflects pure JS regex behavior (use this for browser/Node.js code).",
+      "Startup Tools Hub's regex tester uses native JavaScript `RegExp`. Type a pattern + flags, paste sample text, see matches highlighted in real-time with capture groups labeled. Supports all JS regex flags: `g` (global), `i` (case-insensitive), `m` (multiline), `s` (dotall), `u` (Unicode), `y` (sticky).",
+      "Free, no signup. Note: JavaScript regex differs from PCRE (Perl/PHP) and Python `re` — lookbehind, named groups, atomic groups have varying support. Startup Tools Hub reflects pure JS regex behavior (use this for browser/Node.js code).",
     ],
     features: [
       { title: "Live highlighting", desc: "Matches highlighted as you type. Capture groups labeled with index or name (for named captures `(?<name>...)`)." },
@@ -1094,14 +1087,14 @@ export const toolContentMap: Record<string, ToolContent> = {
       "**Find duplicate words** with backreferences (`\\b(\\w+)\\b.*\\b\\1\\b`)",
     ],
     faq: [
-      { q: "Why does my pattern from Stack Overflow not work?", a: "Stack Overflow answers often use PCRE (Perl/PHP) or Python regex. JavaScript regex has limitations: no atomic groups, no possessive quantifiers, limited lookbehind support pre-Safari 16. Test on Pickrack to confirm JS compatibility." },
-      { q: "Does this support lookbehind?", a: "Yes — modern JavaScript (ES2018+) supports `(?<=...)` positive and `(?<!...)` negative lookbehind. Older browsers may not. Pickrack runs in your browser, so Chrome/Firefox/Safari recent versions all support it." },
+      { q: "Why does my pattern from Stack Overflow not work?", a: "Stack Overflow answers often use PCRE (Perl/PHP) or Python regex. JavaScript regex has limitations: no atomic groups, no possessive quantifiers, limited lookbehind support pre-Safari 16. Test on Startup Tools Hub to confirm JS compatibility." },
+      { q: "Does this support lookbehind?", a: "Yes — modern JavaScript (ES2018+) supports `(?<=...)` positive and `(?<!...)` negative lookbehind. Older browsers may not. Startup Tools Hub runs in your browser, so Chrome/Firefox/Safari recent versions all support it." },
       { q: "What about named capture groups?", a: "Yes. `(?<year>\\d{4})` works in modern JS. Output shows the group by name." },
       { q: "Why is my regex matching fewer/more than expected?", a: "Common gotchas: `g` flag needed for all-matches (default returns first match only). Anchors `^` and `$` only work as expected with `m` (multiline) flag. `.` doesn't match newlines without `s` (dotall) flag." },
-      { q: "Can I test PCRE / Python / Go regex here?", a: "No — Pickrack uses JavaScript RegExp. For PCRE, try regex101.com (separate dropdown for flavor). For Go, RE2 has fewer features (no backreferences, no lookbehind). Pickrack reflects JS behavior only." },
-      { q: "Is there a regex security risk to be aware of?", a: "Yes — ReDoS (Regular Expression Denial of Service). Pathological patterns (e.g., `(a+)+`) can hang the engine on adversarial input. Pickrack runs your regex in YOUR browser, so a bad regex only freezes your tab. For production, validate regex performance with safe-regex npm or use RE2 engines." },
+      { q: "Can I test PCRE / Python / Go regex here?", a: "No — Startup Tools Hub uses JavaScript RegExp. For PCRE, try regex101.com (separate dropdown for flavor). For Go, RE2 has fewer features (no backreferences, no lookbehind). Startup Tools Hub reflects JS behavior only." },
+      { q: "Is there a regex security risk to be aware of?", a: "Yes — ReDoS (Regular Expression Denial of Service). Pathological patterns (e.g., `(a+)+`) can hang the engine on adversarial input. Startup Tools Hub runs your regex in YOUR browser, so a bad regex only freezes your tab. For production, validate regex performance with safe-regex npm or use RE2 engines." },
       { q: "What flags should I use most?", a: "`g` for global match (most common). `i` for case-insensitive. `m` for line-by-line anchoring. `s` if your pattern needs `.` to match newlines. `u` for proper Unicode (essential for emoji/non-Latin scripts)." },
-      { q: "Does it support multiline regex with comments?", a: "JavaScript doesn't have a `x` (extended/verbose) flag. For complex patterns, build them as a string with comments and pass to `new RegExp(pattern, flags)` in your code. Pickrack tests the final compiled pattern." },
+      { q: "Does it support multiline regex with comments?", a: "JavaScript doesn't have a `x` (extended/verbose) flag. For complex patterns, build them as a string with comments and pass to `new RegExp(pattern, flags)` in your code. Startup Tools Hub tests the final compiled pattern." },
     ],
     relatedTools: ["json-formatter", "case-converter", "slug-generator"],
   },
@@ -1112,8 +1105,8 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Format, validate, and minify JSON instantly in your browser. Detects errors with line numbers. Free, no tracking.",
     intro: [
       "**JSON Formatter** is essential for anyone working with APIs, config files, or data interchange — making minified JSON readable, validating syntax before sending a request, or minifying a payload before deployment.",
-      "Pick Rack's **JSON Formatter** is browser-side JavaScript: `JSON.parse` validates, `JSON.stringify` with indentation prettifies, and a custom error pointer shows exactly which character failed. **Your JSON never leaves your tab** — critical when debugging payloads with API tokens, user PII, or proprietary data.",
-      "Free, no signup, no rate limit. Most online JSON formatters secretly send your data to their server for analytics — verify this in DevTools → Network. Pickrack runs zero network calls during formatting.",
+      "Startup Tools Hub's **JSON Formatter** is browser-side JavaScript: `JSON.parse` validates, `JSON.stringify` with indentation prettifies, and a custom error pointer shows exactly which character failed. **Your JSON never leaves your tab** — critical when debugging payloads with API tokens, user PII, or proprietary data.",
+      "Free, no signup, no rate limit. Most online JSON formatters secretly send your data to their server for analytics — verify this in DevTools → Network. Startup Tools Hub runs zero network calls during formatting.",
     ],
     features: [
       { title: "Zero-network privacy", desc: "Formatting and validation happen entirely client-side. Open DevTools → Network tab and watch — no requests fire." },
@@ -1142,7 +1135,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       { q: "Why does it show 'Unexpected token' errors?", a: "JSON is strict: keys must be double-quoted, no trailing commas, no comments, true/false/null lowercase, no NaN/Infinity. The error message points to the failing position." },
       { q: "Can I see a tree view instead of plain text?", a: "v1 is text-only. Tree view (collapsible nested objects) is on the roadmap. For complex nested JSON, JSON5 + a desktop editor like VS Code with the JSON extension may be more comfortable." },
       { q: "Does it preserve key order?", a: "Yes by default. Toggle Sort Keys to alphabetize. JSON spec allows arbitrary order, so both are valid." },
-      { q: "What about JSON Schema validation?", a: "Out of scope for this tool — try jsonlint.com or ajv-cli for schema validation. Pickrack's tool only checks syntax." },
+      { q: "What about JSON Schema validation?", a: "Out of scope for this tool — try jsonlint.com or ajv-cli for schema validation. Startup Tools Hub's tool only checks syntax." },
       { q: "Can I beautify minified JSON like JSON.stringify(obj, null, 2)?", a: "Yes — that's the default formatting. Indent value is configurable." },
     ],
     relatedTools: [],
@@ -1154,7 +1147,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Convert between UPPERCASE, lowercase, Title Case, Sentence case, camelCase, snake_case, kebab-case, CONSTANT_CASE.",
     intro: [
       "**Case Converter** is a daily-use tool for writers, developers, and editors. Headlines need Title Case. Function names use camelCase. Database columns use snake_case. URL paths use kebab-case. Constants use CONSTANT_CASE. Manually retyping is tedious — paste once, get every variant.",
-      "Pickrack's converter shows all 8 case variants simultaneously. Live update as you type. Browser-side. Free, no signup.",
+      "Startup Tools Hub's converter shows all 8 case variants simultaneously. Live update as you type. Browser-side. Free, no signup.",
       "Unicode-aware: handles Vietnamese diacritics, accented Latin, and most non-Latin scripts. For Chinese/Japanese/Korean (no concept of case), output equals input.",
     ],
     features: [
@@ -1178,10 +1171,10 @@ export const toolContentMap: Record<string, ToolContent> = {
       "**Convert kebab-case CSS class** to camelCase for React style props: `font-size` → `fontSize`",
     ],
     faq: [
-      { q: "What's the difference between Title Case and Sentence case?", a: "Title Case capitalizes the first letter of each major word: 'My Blog Post About Cats'. Sentence case capitalizes only the first letter and proper nouns: 'My blog post about cats'. Pickrack provides both." },
+      { q: "What's the difference between Title Case and Sentence case?", a: "Title Case capitalizes the first letter of each major word: 'My Blog Post About Cats'. Sentence case capitalizes only the first letter and proper nouns: 'My blog post about cats'. Startup Tools Hub provides both." },
       { q: "How does Smart Title Case differ from naive Title Case?", a: "Naive: capitalizes EVERY word, including 'the', 'of', 'and'. Smart: keeps short conjunctions and prepositions lowercase per AP/Chicago style: 'A Tale of Two Cities' (not 'A Tale Of Two Cities')." },
       { q: "Does it preserve line breaks and formatting?", a: "Yes. Multi-line input keeps line breaks. Markdown bold/italic syntax is preserved unchanged (only the text within is case-converted)." },
-      { q: "Why is camelCase 'getUserName' but PascalCase 'GetUserName'?", a: "Convention: camelCase starts lowercase (used for variables, methods in Java/JS). PascalCase starts uppercase (used for class names, types). Pickrack provides both — pick what your codebase uses." },
+      { q: "Why is camelCase 'getUserName' but PascalCase 'GetUserName'?", a: "Convention: camelCase starts lowercase (used for variables, methods in Java/JS). PascalCase starts uppercase (used for class names, types). Startup Tools Hub provides both — pick what your codebase uses." },
       { q: "What about Vietnamese tone marks (dấu)?", a: "Tone marks are preserved through case conversion. 'tiếng việt' → 'Tiếng Việt' in Title Case. For removing diacritics, use Slug Generator instead." },
       { q: "Can I convert to alternating case (aLtErNaTiNg)?", a: "v1 has 8 case variants (no alternating). It's a common joke/spongebob style — may add as a 9th variant." },
       { q: "Does it work with HTML/Markdown formatting?", a: "Yes — only text content is converted; HTML tags and markdown syntax are preserved. Useful for converting blog post titles without breaking formatting." },
@@ -1196,7 +1189,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Generate Lorem Ipsum placeholder text — words, sentences, or paragraphs. Adjustable length.",
     intro: [
       "**Lorem Ipsum Generator** produces classic placeholder text for design mockups, content drafts, layout testing, and CMS placeholders. Lorem Ipsum has been the design industry's standard dummy text since the 1500s — its irregular word lengths and Latin origin make it visually similar to real prose without the reader being distracted by content.",
-      "Pickrack's generator outputs configurable text: by **words** (50, 100, 200), **sentences** (5, 10, 20), or **paragraphs** (1-10). Toggle the classic 'Lorem ipsum dolor sit amet, consectetur...' opener or skip it.",
+      "Startup Tools Hub's generator outputs configurable text: by **words** (50, 100, 200), **sentences** (5, 10, 20), or **paragraphs** (1-10). Toggle the classic 'Lorem ipsum dolor sit amet, consectetur...' opener or skip it.",
       "Free, no signup. Pure browser JavaScript. Generated text is randomized each click — useful when you want variation across multiple mockup sections.",
     ],
     features: [
@@ -1223,7 +1216,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       { q: "Where does 'Lorem ipsum' come from?", a: "It's a scrambled excerpt from Cicero's 'De finibus bonorum et malorum' (On the Ends of Goods and Evils, 45 BC). The original phrase 'dolorem ipsum quia dolor sit amet' was scrambled by a 16th-century printer. Used as design placeholder ever since." },
       { q: "Why use Latin instead of English?", a: "Latin word distribution mimics prose without the reader actually reading it. English placeholder ('the the the' or 'asdfasdf') is too noticeable; Latin looks like 'real text' to the eye while still being meaningless." },
       { q: "Are the generated paragraphs realistic length?", a: "Yes — 50-100 words per paragraph (matching average prose). Sentence length varies 8-20 words. Output is statistically similar to real article structure." },
-      { q: "Can I get Lorem Ipsum in Vietnamese / Spanish / etc.?", a: "Pickrack v1 outputs Latin only (the design-industry standard). Localized variants exist (Hipster Ipsum, Bacon Ipsum, Pirate Ipsum) — search for those if you want themed placeholder text." },
+      { q: "Can I get Lorem Ipsum in Vietnamese / Spanish / etc.?", a: "Startup Tools Hub v1 outputs Latin only (the design-industry standard). Localized variants exist (Hipster Ipsum, Bacon Ipsum, Pirate Ipsum) — search for those if you want themed placeholder text." },
       { q: "Does it generate the same text every time?", a: "No — words are shuffled randomly each generation. Click Generate again for a different output." },
       { q: "What's the maximum count?", a: "1000 words, 100 sentences, or 20 paragraphs. Beyond that, output gets repetitive (the source word list has only 200 unique words)." },
       { q: "Is it suitable for SEO testing?", a: "No — Lorem Ipsum is meaningless Latin and won't help with SEO simulations. For SEO testing, use real keyword-targeted content." },
@@ -1238,7 +1231,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Convert any text to URL-friendly slug. Strips Vietnamese diacritics, special chars, and spaces.",
     intro: [
       "**Slug Generator** converts a title (article headline, product name, blog post title) into a URL-friendly slug — lowercase, hyphens for spaces, no special characters, no diacritics. SEO-friendly URLs are short, readable, and stable.",
-      "Pickrack's slug generator handles **Vietnamese diacritics** (đ → d, ư → u, ê → e), accented Latin (é → e), and general Unicode normalization. The output is pure ASCII alphanumeric + hyphens, safe for any URL or filesystem.",
+      "Startup Tools Hub's slug generator handles **Vietnamese diacritics** (đ → d, ư → u, ê → e), accented Latin (é → e), and general Unicode normalization. The output is pure ASCII alphanumeric + hyphens, safe for any URL or filesystem.",
       "Free, no signup, browser-side. Common use: paste a Vietnamese blog post title, get a clean English-letter URL slug ready for WordPress/Notion/Ghost CMS.",
     ],
     features: [
@@ -1280,7 +1273,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Count words, characters, sentences, paragraphs, and reading time. Live update as you type.",
     intro: [
       "**Word Counter** is a daily-use tool for writers, editors, students, and SEO professionals. Count exact words for an essay assignment, monitor blog post length for SEO target ranges, check tweet/character limits for X/LinkedIn, or estimate reading time for a newsletter.",
-      "Pick Rack's **Word Counter** updates live as you type — no Submit button, no rate limit, no upload. Built with simple browser JavaScript: word boundaries detected via Unicode-aware regex, sentence detection by punctuation, paragraph detection by blank lines.",
+      "Startup Tools Hub's **Word Counter** updates live as you type — no Submit button, no rate limit, no upload. Built with simple browser JavaScript: word boundaries detected via Unicode-aware regex, sentence detection by punctuation, paragraph detection by blank lines.",
       "Free, no signup. Counts words, characters with spaces, characters without spaces, sentences, paragraphs, and reading time at 200 words/minute (adjustable). Useful when writing emails, articles, applications, social media, or copy.",
     ],
     features: [
@@ -1322,13 +1315,13 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Summarize articles, documents, and notes with Claude Haiku 4.5. Short, medium, or detailed bullets. Free, no signup.",
     intro: [
       "**AI Summarizer** turns long articles, research papers, meeting transcripts, or technical docs into a digestible summary. Paste your text, pick the length, get an answer in 2-5 seconds. Powered by Anthropic's Claude Haiku 4.5 — the same model used by businesses for production AI workflows.",
-      "Pickrack's summarizer is **task-focused, not chat-style**: there's no prompt to design, no &quot;please summarize&quot; nudge, no upselling to Pro. You paste text, you get a summary that matches the length you asked for. Output preserves the language of the input — Vietnamese in, Vietnamese out.",
-      "Free with a generous daily quota (10 requests per IP per day). For higher-volume use, run Claude API directly with your own key — Pickrack uses no proprietary tricks.",
+      "Startup Tools Hub's summarizer is **task-focused, not chat-style**: there's no prompt to design, no &quot;please summarize&quot; nudge, no upselling to Pro. You paste text, you get a summary that matches the length you asked for. Output preserves the language of the input — Vietnamese in, Vietnamese out.",
+      "Free with a generous daily quota (10 requests per IP per day). For higher-volume use, run Claude API directly with your own key — Startup Tools Hub uses no proprietary tricks.",
     ],
     features: [
       { title: "Three length modes", desc: "Short (2-3 sentences for tweet-length sharing), Medium (4-6 sentences for an exec brief), Long (8-12 bullet points for note-taking)." },
       { title: "Multilingual", desc: "Auto-detects language and summarizes in the same language. Tested with English, Vietnamese, Spanish, French, German, Chinese, Japanese." },
-      { title: "Privacy-respecting", desc: "Your text is sent to Anthropic's API, processed, and the response is returned. Anthropic does not use API inputs for training. Pickrack stores nothing." },
+      { title: "Privacy-respecting", desc: "Your text is sent to Anthropic's API, processed, and the response is returned. Anthropic does not use API inputs for training. Startup Tools Hub stores nothing." },
       { title: "Fact-preserving", desc: "Haiku 4.5 with temperature=0.2 keeps the summary factual to the source. No fabricated numbers, no opinions added." },
       { title: "No signup, no watermark", desc: "Just paste and click. Daily quota of 10/IP — sustainable for casual use without API key setup." },
     ],
@@ -1346,16 +1339,16 @@ export const toolContentMap: Record<string, ToolContent> = {
       "**Compare multiple sources** — summarize each separately, then read the summaries side-by-side",
     ],
     faq: [
-      { q: "Will Anthropic or Pickrack train AI on my input?", a: "No. Anthropic's commercial API agreement explicitly excludes API inputs from training data, and inputs are deleted within 30 days. Pickrack does not store or log your input, the summary, or any identifying metadata beyond a per-IP rate-limit counter." },
+      { q: "Will Anthropic or Startup Tools Hub train AI on my input?", a: "No. Anthropic's commercial API agreement explicitly excludes API inputs from training data, and inputs are deleted within 30 days. Startup Tools Hub does not store or log your input, the summary, or any identifying metadata beyond a per-IP rate-limit counter." },
       { q: "How accurate are the summaries?", a: "Claude Haiku 4.5 is among the most accurate small AI models for summarization (May 2026). For highly technical content (legal, medical, scientific), always verify critical claims against the source — AI can occasionally miss nuance or compress two ideas into one. For casual reading, summaries are reliable." },
-      { q: "Can it summarize a PDF?", a: "Not directly in this tool — paste the text. To extract PDF text first, use Pickrack's [PDF to Markdown tool](/tools/pdf/pdf-to-markdown/), then paste the result here." },
+      { q: "Can it summarize a PDF?", a: "Not directly in this tool — paste the text. To extract PDF text first, use Startup Tools Hub's [PDF to Markdown tool](/tools/pdf/pdf-to-markdown/), then paste the result here." },
       { q: "How much text can I paste in one summarization request?", a: "12,000 characters (about 3,000 tokens, 6 pages of plain text, or 2,000 English words). For longer content, summarize chapter-by-chapter, then summarize the chapter summaries — this hierarchical approach also handles full books." },
       { q: "Does it work for non-English text?", a: "Yes — Vietnamese, Spanish, French, German, Chinese, Japanese, Korean, and more. Output preserves the input language. For mixed-language input, output follows the dominant language." },
-      { q: "How is this different from ChatGPT or Gemini?", a: "ChatGPT/Gemini are open-ended chat — you have to know how to prompt. Pickrack's summarizer has the prompt baked in, length presets, and zero upselling. For more control, ChatGPT lets you iterate on the summary; Pickrack is one-shot." },
+      { q: "How is this different from ChatGPT or Gemini?", a: "ChatGPT/Gemini are open-ended chat — you have to know how to prompt. Startup Tools Hub's summarizer has the prompt baked in, length presets, and zero upselling. For more control, ChatGPT lets you iterate on the summary; Startup Tools Hub is one-shot." },
       { q: "What's the daily quota?", a: "10 summaries per IP per 24 hours, free tier. For higher volume, use the Anthropic API directly with your own key (~$0.002 per summary)." },
       { q: "Can I summarize a YouTube video?", a: "Not directly. Use a transcript service first (e.g., kome.ai, summarize.tech for YouTube), then paste the transcript here. Native YouTube transcript support is on the roadmap." },
     ],
-    relatedTools: ["ai-translator", "ai-grammar-checker", "pdf-to-markdown"],
+    relatedTools: ["word-counter", "find-replace", "pdf-to-markdown"],
   },
 
   "ai-translator": {
@@ -1372,7 +1365,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       { title: "20 languages supported", desc: "English, Vietnamese, Spanish, French, German, Chinese (simplified + traditional), Japanese, Korean, Portuguese, Italian, Russian, Arabic, Hindi, Thai, Indonesian, Dutch, Polish, Turkish, Swedish." },
       { title: "Tone-aware", desc: "Maintains the source register (formal/casual/technical) rather than defaulting to one neutral style. A casual Twitter post stays casual; a legal disclaimer stays formal." },
       { title: "No signup, no watermark", desc: "Free with daily quota. Daily quota lets casual users translate without paying or signing up anywhere." },
-      { title: "Privacy-first", desc: "Anthropic does not use API inputs for training. Pickrack does not log or store your text or translations." },
+      { title: "Privacy-first", desc: "Anthropic does not use API inputs for training. Startup Tools Hub does not log or store your text or translations." },
     ],
     howTo: [
       { title: "Step 1: Paste your source text", desc: "Up to 8,000 characters. Markdown formatting is preserved — paste raw markdown for documentation translation." },
@@ -1388,8 +1381,8 @@ export const toolContentMap: Record<string, ToolContent> = {
       "**Turn a Twitter thread** into Spanish/Vietnamese/Japanese while keeping the line breaks per tweet",
     ],
     faq: [
-      { q: "How is this different from Google Translate or DeepL?", a: "Google Translate is excellent for casual sentences and supports 130+ languages but often mangles markdown formatting and over-literalizes idioms. DeepL is more natural for European languages but doesn't always preserve markdown well. Pickrack's Claude-based translator excels at preserving format and choosing tone, with the tradeoff of fewer languages (20) and a daily quota." },
-      { q: "Does Anthropic train models on translation requests?", a: "No. Anthropic's commercial API explicitly excludes API inputs from training, with deletion within 30 days. Pickrack passes only the source text and target language to Anthropic — no IP, no user account, no identifying metadata. We do not log inputs or translations on our side either." },
+      { q: "How is this different from Google Translate or DeepL?", a: "Google Translate is excellent for casual sentences and supports 130+ languages but often mangles markdown formatting and over-literalizes idioms. DeepL is more natural for European languages but doesn't always preserve markdown well. Startup Tools Hub's Claude-based translator excels at preserving format and choosing tone, with the tradeoff of fewer languages (20) and a daily quota." },
+      { q: "Does Anthropic train models on translation requests?", a: "No. Anthropic's commercial API explicitly excludes API inputs from training, with deletion within 30 days. Startup Tools Hub passes only the source text and target language to Anthropic — no IP, no user account, no identifying metadata. We do not log inputs or translations on our side either." },
       { q: "How long can the source text be per translation?", a: "8,000 characters per request — about 1,500-2,000 English words, or 3-4 pages. For longer documents, translate paragraph-by-paragraph (the model produces consistent terminology across paragraphs since the rate limit allows multiple back-to-back requests)." },
       { q: "Does it work for technical content (code, APIs, math)?", a: "Yes — Claude is trained on technical content and handles code blocks, API names, and math notation gracefully (it leaves identifiers untranslated, translates only comments and prose). For very specialized domains (legal, medical, pharmaceutical), have a domain expert review before publishing." },
       { q: "Can I translate a Word document or PDF?", a: "Not directly — extract the text first ([PDF to Markdown](/tools/pdf/pdf-to-markdown/), [Word to PDF](/tools/pdf/word-to-pdf/) → markdown extract), then paste. Native document translation is on the roadmap." },
@@ -1397,7 +1390,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       { q: "How accurate is it?", a: "For everyday content (blog posts, marketing copy, casual messages), output is usually publication-ready. For high-stakes content (contracts, medical advice, court filings), always have a human translator review. AI translation, even from Claude, can occasionally miss legal nuance." },
       { q: "How many translations can I run per day?", a: "10 translations per IP per 24 hours. Reset is rolling — if you used 5 yesterday at 3pm, those slots free up at 3pm today. Tighter than ChatGPT's quota but free, with no signup, and doesn't degrade based on time of day." },
     ],
-    relatedTools: ["ai-summarizer", "ai-grammar-checker", "pdf-to-markdown"],
+    relatedTools: ["word-counter", "find-replace", "pdf-to-markdown"],
   },
 
   "ai-grammar-checker": {
@@ -1405,7 +1398,7 @@ export const toolContentMap: Record<string, ToolContent> = {
     h1Subtitle:
       "Fix grammar, spelling, and punctuation without changing your voice. See exactly what changed and why.",
     intro: [
-      "**AI Grammar Checker** fixes objective errors — grammar, spelling, punctuation, capitalization — without rewriting your voice. The biggest complaint about Grammarly and similar tools is that they suggest style changes you didn't ask for, slowly homogenizing your writing. Pickrack's checker is the opposite: it fixes only what's wrong, leaves voice and style alone.",
+      "**AI Grammar Checker** fixes objective errors — grammar, spelling, punctuation, capitalization — without rewriting your voice. The biggest complaint about Grammarly and similar tools is that they suggest style changes you didn't ask for, slowly homogenizing your writing. Startup Tools Hub's checker is the opposite: it fixes only what's wrong, leaves voice and style alone.",
       "Powered by Claude Haiku 4.5 with a strict system prompt: only flag spelling errors, missing articles, subject-verb mismatches, punctuation mistakes. Style preferences (Oxford comma, sentence length, word choice) are NOT changed unless they're objectively wrong.",
       "Output: corrected text + a list of every issue with the original phrase, the fix, and a brief reason. Verify the changes before accepting — AI can occasionally over-correct in domain-specific writing.",
     ],
@@ -1414,7 +1407,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       { title: "Issue-by-issue diff", desc: "Every change shown with original → fix + reason (&quot;subject-verb agreement&quot;, &quot;missing article&quot;, &quot;misspelling&quot;). Decide which to accept." },
       { title: "Multilingual", desc: "Works for English, Vietnamese, Spanish, French, German, and other major languages. For Vietnamese, catches diacritic errors, sai chính tả, and pronoun confusion." },
       { title: "Free, no signup", desc: "10 checks per IP per day. Sustainable for casual writing without paying for Grammarly Premium ($12/mo) or ProWritingAid ($10/mo)." },
-      { title: "Privacy-first", desc: "Your draft is sent to Anthropic for processing, then the response is returned. Anthropic does not use API inputs for training. Pickrack stores nothing." },
+      { title: "Privacy-first", desc: "Your draft is sent to Anthropic for processing, then the response is returned. Anthropic does not use API inputs for training. Startup Tools Hub stores nothing." },
     ],
     howTo: [
       { title: "Step 1: Paste your text", desc: "Up to 6,000 characters per check. For longer pieces, run paragraph-by-paragraph." },
@@ -1430,7 +1423,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "**Check translated text** that came from another tool (DeepL, Google Translate) for grammar quality",
     ],
     faq: [
-      { q: "How does this compare to Grammarly?", a: "Grammarly does grammar + style + tone + clarity + plagiarism on a paid tier. Pickrack does grammar + spelling + punctuation only, free with a daily quota. The narrower focus means fewer noisy suggestions — Grammarly users often disable style/tone hints because they over-correct. If you want full editing assistance, use Grammarly. If you want errors fixed without rewriting, use Pickrack." },
+      { q: "How does this compare to Grammarly?", a: "Grammarly does grammar + style + tone + clarity + plagiarism on a paid tier. Startup Tools Hub does grammar + spelling + punctuation only, free with a daily quota. The narrower focus means fewer noisy suggestions — Grammarly users often disable style/tone hints because they over-correct. If you want full editing assistance, use Grammarly. If you want errors fixed without rewriting, use Startup Tools Hub." },
       { q: "Will it change my word choice?", a: "Only if the word is objectively wrong. &quot;Affect&quot; vs &quot;effect&quot; will be fixed if used wrongly. &quot;Buy&quot; will not be changed to &quot;purchase&quot; — that's a style preference, not an error." },
       { q: "Does it work in Vietnamese?", a: "Yes. Catches dấu (diacritic) errors, common chính tả mistakes (&quot;dấu&quot; vs &quot;giấu&quot;, &quot;chính&quot; vs &quot;chánh&quot;), and basic grammar issues. Less aggressive on style — Vietnamese style varies by region and audience." },
       { q: "Will it preserve markdown / formatting?", a: "Yes — bullets, paragraphs, bold, italic, code blocks are kept intact. Code blocks are NOT checked (they're not prose)." },
@@ -1439,7 +1432,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       { q: "What about plagiarism or AI-detection?", a: "Out of scope — this tool is grammar only. For plagiarism, try Copyscape or Quetext. For AI-detection (which is unreliable in 2026 anyway), see GPTZero or Originality.ai." },
       { q: "Is there a usage limit for the grammar checker?", a: "10 checks per IP per 24 hours. Reset is rolling, not midnight-based — slots free up exactly 24 hours after each use. For heavier use, install a desktop alternative (LanguageTool open-source server is the closest free equivalent with no quota)." },
     ],
-    relatedTools: ["ai-summarizer", "ai-translator", "word-counter"],
+    relatedTools: ["case-converter", "find-replace", "word-counter"],
   },
 
   "qr-generator": {
@@ -1447,19 +1440,19 @@ export const toolContentMap: Record<string, ToolContent> = {
     h1Subtitle:
       "Free & unlimited — 10 content types incl. crypto + VietQR, 6 dot shapes, gradient, logo, scan-me frame. Browser-side. No tracker.",
     intro: [
-      "Create a **free QR code** for any URL, WiFi network, vCard, email, phone, SMS, location, calendar event (iCal), or **payment request** (Bitcoin, Ethereum, Lightning, PayPal, VietQR) — fully customized with your brand colors, dot shape, logo overlay, and a caption frame, then downloaded as PNG or SVG in one click. Pickrack covers 10 content types and runs entirely in your browser — no signup, no scan tracking, no expiring links.",
+      "Create a **free QR code** for any URL, WiFi network, vCard, email, phone, SMS, location, calendar event (iCal), or **payment request** (Bitcoin, Ethereum, Lightning, PayPal, VietQR) — fully customized with your brand colors, dot shape, logo overlay, and a caption frame, then downloaded as PNG or SVG in one click. Startup Tools Hub covers 10 content types and runs entirely in your browser — no signup, no scan tracking, no expiring links.",
       "Customize the QR like a paid generator without paying: pick from 6 dot shapes (square / rounded / dots / classy / classy-rounded / extra-rounded), 3 eye-frame styles + 2 eye-ball styles, switch the foreground to a 2-color linear or radial gradient, drop in a logo overlay, and wrap the QR in a frame with a 'SCAN ME' caption or arrow banner. Same visual depth as $5–$25/month tools.",
-      "Pickrack uses the open-source `qr-code-styling` library running entirely on your device. The QR is generated locally and never sent to any tracking service — no shortener, no redirect, no analytics, no expiring URLs. Anyone scanning gets the data you encoded directly. Download as PNG (raster) or SVG (vector); error correction levels L (7%) / M (15%) / Q (25%) / H (30%) trade capacity for damage tolerance, and uploading a logo auto-forces High.",
+      "Startup Tools Hub uses the open-source `qr-code-styling` library running entirely on your device. The QR is generated locally and never sent to any tracking service — no shortener, no redirect, no analytics, no expiring URLs. Anyone scanning gets the data you encoded directly. Download as PNG (raster) or SVG (vector); error correction levels L (7%) / M (15%) / Q (25%) / H (30%) trade capacity for damage tolerance, and uploading a logo auto-forces High.",
     ],
     features: [
       { title: "9 content types", desc: "URL, text, WiFi (auto-connect), vCard (contact), email, tel (auto-dial), SMS, geo location (opens Maps), and iCal calendar event (add to calendar on scan)." },
       { title: "6 dot shapes + custom eyes", desc: "Square, rounded, dots, classy, classy-rounded, extra-rounded. Three eye-frame styles and two eye-ball styles you can mix-and-match — same visual depth as paid generators." },
       { title: "Gradient colors", desc: "Linear or radial 2-stop gradient on the QR modules. Rotation slider 0–360° for linear. Pair with a solid background or invert for contrast." },
-      { title: "Logo overlay built-in", desc: "Upload a PNG or SVG; Pickrack centers it on the QR at ~30% size, hides background dots behind it, and auto-forces High error correction so the QR still scans." },
+      { title: "Logo overlay built-in", desc: "Upload a PNG or SVG; Startup Tools Hub centers it on the QR at ~30% size, hides background dots behind it, and auto-forces High error correction so the QR still scans." },
       { title: "Frame with caption", desc: "Wrap the QR in a clean border, a colored caption banner, or a 'scan-me' arrow banner pointing up at the code. Custom caption text (default 'SCAN ME') and frame color." },
       { title: "PNG + SVG download", desc: "PNG for screen / printing at known size; SVG for design tools, business cards, vinyl. Logo and frame are embedded in both formats." },
       { title: "Adjustable size 100-1000px", desc: "100px for inline use; 500px for posters; 1000px for high-DPI prints." },
-      { title: "No tracking, no shortener", desc: "Most online QR generators bake in their own URL shortener (and analytics). Pickrack encodes your URL DIRECTLY — no redirect, no tracking, no scan analytics." },
+      { title: "No tracking, no shortener", desc: "Most online QR generators bake in their own URL shortener (and analytics). Startup Tools Hub encodes your URL DIRECTLY — no redirect, no tracking, no scan analytics." },
     ],
     howTo: [
       { title: "Step 1: Pick a content type", desc: "URL is most common. For WiFi, fill SSID + password + encryption. For events, pick start/end datetimes. For geo, paste latitude/longitude from Google Maps." },
@@ -1479,15 +1472,15 @@ export const toolContentMap: Record<string, ToolContent> = {
       "**Product packaging** — link to instructions, registration, or warranty page",
     ],
     faq: [
-      { q: "Does the QR code track who scans it?", a: "No. Pickrack encodes your URL (or other payload) directly into the QR pattern — no shortener, no redirect, no analytics. When someone scans, they go straight to your destination. Their device doesn't ping anything Pickrack-related." },
-      { q: "How does the logo overlay work?", a: "Upload a logo (PNG, SVG, JPG) and Pickrack centers it on the QR at ~22% size with a clean background pad. Error correction is auto-forced to High (~30%) so the QR still scans with the central pixels obscured by your logo. Logo is embedded in both PNG (raster) and SVG (via the `<image>` element with the logo data URL inlined)." },
+      { q: "Does the QR code track who scans it?", a: "No. Startup Tools Hub encodes your URL (or other payload) directly into the QR pattern — no shortener, no redirect, no analytics. When someone scans, they go straight to your destination. Their device doesn't ping anything Startup Tools Hub-related." },
+      { q: "How does the logo overlay work?", a: "Upload a logo (PNG, SVG, JPG) and Startup Tools Hub centers it on the QR at ~22% size with a clean background pad. Error correction is auto-forced to High (~30%) so the QR still scans with the central pixels obscured by your logo. Logo is embedded in both PNG (raster) and SVG (via the `<image>` element with the logo data URL inlined)." },
       { q: "How do I pick QR colors that scan reliably?", a: "Keep strong contrast: a dark foreground on a light background. Most scanners use a luminance threshold around 50%, so very pale foregrounds (light blue, yellow) on white will fail. If in doubt, test with your phone camera at the actual print size — if it doesn't scan in <2 seconds, increase contrast or switch back to black-on-white." },
       { q: "Why use SVG over PNG?", a: "SVG scales infinitely — print at 1cm or 1m without pixelation. Best for business cards, posters, vinyl signs. PNG is fine for fixed-size screen or document use. Logos in the SVG are embedded as inline data URLs so the file is fully self-contained." },
       { q: "What's the maximum data length?", a: "QR can hold up to 4,296 alphanumeric characters or 2,953 bytes. Higher error correction reduces capacity. For long URLs, consider a URL shortener (your own, not embedded by us)." },
       { q: "Does the calendar event QR add to all phone calendars?", a: "It uses the iCal VEVENT standard. iPhone (Calendar app) and Android (Google Calendar) prompt 'Add to calendar' on scan. Some Samsung scanners ignore VCALENDAR — test with the target device if it matters. Format requires title + start + end at minimum." },
       { q: "What error correction level should I use?", a: "L (7%) — clean prints, no logo. M (15%) — default, most common. Q (25%) — outdoor poster, some weathering. H (30%) — logo overlay (auto-set), vinyl that'll get scratched, rough surfaces." },
-      { q: "Can I generate WiFi QR for guests?", a: "Yes — WiFi format: `WIFI:S:<SSID>;T:<WPA|WEP|nopass>;P:<password>;;`. Pickrack's WiFi mode formats this for you. iPhone (iOS 11+) and Android 10+ auto-connect on scan." },
-      { q: "Will my QR work on all phones?", a: "Yes — QR is a 1994 standard with universal support. iOS Camera app (iOS 11+), Google Lens, and any QR scanner app all read standard QR. Pickrack uses standard QR (not Micro QR or rMQR), which is the only format with universal scanner support." },
+      { q: "Can I generate WiFi QR for guests?", a: "Yes — WiFi format: `WIFI:S:<SSID>;T:<WPA|WEP|nopass>;P:<password>;;`. Startup Tools Hub's WiFi mode formats this for you. iPhone (iOS 11+) and Android 10+ auto-connect on scan." },
+      { q: "Will my QR work on all phones?", a: "Yes — QR is a 1994 standard with universal support. iOS Camera app (iOS 11+), Google Lens, and any QR scanner app all read standard QR. Startup Tools Hub uses standard QR (not Micro QR or rMQR), which is the only format with universal scanner support." },
       { q: "Is there a size minimum for printing?", a: "QR should be at least 2cm × 2cm for reliable phone scan from 30cm distance. For poster-size (scan from 1m+), use 10cm × 10cm. Higher data density = needs larger physical size. With a logo overlay, bump physical size 20-30% to compensate for reduced scan margin." },
     ],
     relatedTools: ["qr-scanner", "password-generator", "uuid-generator"],
@@ -1500,7 +1493,7 @@ export const toolContentMap: Record<string, ToolContent> = {
     intro: [
       "**QR Code Scanner** decodes any standard QR code from a photo, screenshot, or live camera feed — then parses the payload into readable fields with one-click actions: open the URL, connect to the WiFi, save the contact card to your phone, add the event to your calendar, dial the number, or open the location in Maps.",
       "Use it when you receive a QR code on a poster, business card, or product packaging and don't want to install a separate scanner app — or when your phone's camera can't focus on a QR code at the size it's printed.",
-      "Pickrack uses the open-source `jsQR` library running entirely in your browser. Your image or camera feed never leaves your device — no upload, no server processing, no scan analytics. The decoded payload is parsed in your tab and discarded when you close it.",
+      "Startup Tools Hub uses the open-source `jsQR` library running entirely in your browser. Your image or camera feed never leaves your device — no upload, no server processing, no scan analytics. The decoded payload is parsed in your tab and discarded when you close it.",
     ],
     features: [
       { title: "Image upload + live camera", desc: "Drag-and-drop a PNG/JPG/GIF/WebP, or click 'Use camera' to scan with your webcam. Mobile camera defaults to the rear lens." },
@@ -1524,16 +1517,16 @@ export const toolContentMap: Record<string, ToolContent> = {
       "**Event poster** — scan the calendar QR, download `.ics`, add to your calendar in one click",
       "**Mystery QR from email** — paste a screenshot, see what URL it actually goes to BEFORE clicking (safer than scanning with your phone)",
       "**Product packaging QR** — scan from a photo when the printed QR is too small for your phone to focus on",
-      "**Audit a QR you generated** — scan your own QR (from Pickrack's QR Generator) to verify it decodes correctly",
+      "**Audit a QR you generated** — scan your own QR (from Startup Tools Hub's QR Generator) to verify it decodes correctly",
     ],
     faq: [
       { q: "Does scanning work offline?", a: "Yes — the decoder runs entirely in your browser using the `jsQR` library. After the page loads once, you can scan without an internet connection. Camera access doesn't require internet either." },
       { q: "Is the camera feed sent anywhere?", a: "No. Frames are drawn to an off-screen canvas in your tab, scanned for QR pattern in JavaScript, then discarded. No upload, no logging, no third-party scan service." },
       { q: "Why does my image scan fail?", a: "Common causes: (1) the QR is too small / low-resolution — try a sharper photo; (2) the image is blurry or has motion blur; (3) the QR has reflections or shadows that obscure the pattern; (4) the QR is rotated more than 30° — the decoder handles small rotations but not extreme ones; (5) the image is heavily compressed and the QR modules are pixelated. Try a different angle, better lighting, or a clearer photo." },
-      { q: "Camera doesn't work — why?", a: "Three checks: (1) you granted camera permission (the browser prompts on first use); (2) you're on HTTPS — camera access requires HTTPS, which Pickrack uses; (3) another app/tab isn't already using the camera (close other tabs with active camera streams). If still failing, try a different browser or the upload mode instead." },
+      { q: "Camera doesn't work — why?", a: "Three checks: (1) you granted camera permission (the browser prompts on first use); (2) you're on HTTPS — camera access requires HTTPS, which Startup Tools Hub uses; (3) another app/tab isn't already using the camera (close other tabs with active camera streams). If still failing, try a different browser or the upload mode instead." },
       { q: "Can it scan multiple QR codes in one image?", a: "v1 detects only the first QR found in the image. Multi-QR detection in a single image is on the roadmap. For now, crop the image to one QR at a time or use upload mode multiple times." },
       { q: "Can it scan Micro QR or rMQR (Rectangular)?", a: "Not currently — `jsQR` supports only standard QR codes (Versions 1-40). Micro QR (M1-M4) and rMQR are different formats with limited scanner support anyway, so they're rare in the wild." },
-      { q: "What about barcode 1D formats like UPC, EAN, Code 128?", a: "Pickrack's QR Scanner is QR-only. 1D barcodes need a different library (`@zxing/library` or similar). A general barcode scanner is on the roadmap." },
+      { q: "What about barcode 1D formats like UPC, EAN, Code 128?", a: "Startup Tools Hub's QR Scanner is QR-only. 1D barcodes need a different library (`@zxing/library` or similar). A general barcode scanner is on the roadmap." },
       { q: "Why is the WiFi password hidden by default?", a: "If you're sharing your screen or scanning in public, you may not want the password visible. Click 'Show' to reveal it once you're ready. The Copy button works without revealing." },
       { q: "How accurate is the scanner?", a: "`jsQR` decodes the same QR codes your phone camera does — it's the de-facto JavaScript QR decoder used in many production apps (Stripe, GitHub Codespaces, etc.). Standard well-formed QR codes scan at near 100% on good images." },
       { q: "Does this work on mobile browsers?", a: "Yes — works on Safari iOS 11+, Chrome Android, Firefox mobile. Camera permission UX matches what native apps show. On iOS Safari, the camera feed appears inline (no fullscreen takeover)." },
@@ -1548,7 +1541,7 @@ export const toolContentMap: Record<string, ToolContent> = {
     intro: [
       "**Bulk QR Code Generator** turns a CSV into a downloadable ZIP of QR codes — useful when you need 50 table-tent menus, 200 inventory labels, a stack of conference name-tag vCards, or any other batch of QRs that would take an hour to make one at a time. Paste your CSV, click Generate, get a ZIP.",
       "CSV format is flexible: one column = each row's content (filenames auto-numbered `qr-001` `qr-002`); two columns = `filename,content`. Output is your choice of PNG (raster), SVG (vector), or both formats per row. Up to **500 rows per batch** to keep browser memory predictable — split bigger lists.",
-      "Pickrack runs the entire batch in your browser using the open-source `qr-code-styling` library + `JSZip` for archiving. Your CSV — which may contain customer names, internal URLs, or other data you don't want logged — never leaves your tab. There's no daily quota, no signup, and the ZIP downloads directly with no email-gate.",
+      "Startup Tools Hub runs the entire batch in your browser using the open-source `qr-code-styling` library + `JSZip` for archiving. Your CSV — which may contain customer names, internal URLs, or other data you don't want logged — never leaves your tab. There's no daily quota, no signup, and the ZIP downloads directly with no email-gate.",
     ],
     features: [
       { title: "Up to 500 QRs per batch", desc: "Enough for a restaurant menu rollout, conference badges, or inventory labels. Larger batches: split the CSV." },
@@ -1569,7 +1562,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "**Conference badges** — CSV of vCard payloads, one per attendee, scanned by other attendees for instant contact",
       "**Inventory / asset tags** — `asset-001,https://internal/asset/001` for each item, printed on durable stickers",
       "**WiFi guest network at multi-room venue** — each room gets its own WiFi QR (e.g., hotels, co-working spaces)",
-      "**Marketing campaign A/B test** — generate 100 unique URLs with UTM params, each on a different physical placement, measure scan-through later via your own analytics (Pickrack adds no tracking)",
+      "**Marketing campaign A/B test** — generate 100 unique URLs with UTM params, each on a different physical placement, measure scan-through later via your own analytics (Startup Tools Hub adds no tracking)",
       "**Self-checkout / contactless payment per product** — payment-link QR per SKU",
       "**Product packaging serials** — `SN-12345,https://verify.example/sn=12345` for each unit",
     ],
@@ -1581,7 +1574,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       { q: "What goes in the 'content' column?", a: "Any QR payload — URL, WiFi string (`WIFI:T:WPA;S:Net;P:pass;;`), vCard (`BEGIN:VCARD...END:VCARD`), tel: link, geo: link, or any text. The same formats as the single QR Generator." },
       { q: "What if some rows fail?", a: "v1 continues generating other rows and skips invalid ones silently. (Invalid = empty content, or content too long for QR's 4,296-character limit.) A row-level error log is on the roadmap." },
       { q: "What error correction level is used?", a: "M (Medium, ~15% damage tolerance) — the same default as the single-QR Generator. Good for clean print + decent damage resistance. If you need higher tolerance for outdoor / vinyl, generate single QRs with H correction instead." },
-      { q: "Filename conflicts?", a: "If two rows have the same filename, the second overwrites the first in the ZIP. Make sure filenames are unique, or use 1-column CSV and let Pickrack auto-number." },
+      { q: "Filename conflicts?", a: "If two rows have the same filename, the second overwrites the first in the ZIP. Make sure filenames are unique, or use 1-column CSV and let Startup Tools Hub auto-number." },
     ],
     relatedTools: ["qr-generator", "qr-scanner", "password-generator"],
   },
@@ -1592,7 +1585,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Calculate exact age in years, months, days, hours, minutes from a birth date. Browser-side, instant.",
     intro: [
       "**Age Calculator** computes precise age from a birth date — useful for forms requiring exact age in years/months/days, age-verification flows, anniversary calculations, retirement planning, or curiosity about exactly how many days you've been alive.",
-      "Pickrack handles edge cases naturally: leap-year birthdays (Feb 29), end-of-month wraparound, time zones (uses local time consistent with the user). Calculation is browser-side using JavaScript Date — instant, no upload, no signup.",
+      "Startup Tools Hub handles edge cases naturally: leap-year birthdays (Feb 29), end-of-month wraparound, time zones (uses local time consistent with the user). Calculation is browser-side using JavaScript Date — instant, no upload, no signup.",
       "Free, no signup. Outputs: years + months + days breakdown, total days, total hours, total minutes lived, and next birthday countdown. Optionally compare two arbitrary dates (not just birth → today).",
     ],
     features: [
@@ -1617,7 +1610,7 @@ export const toolContentMap: Record<string, ToolContent> = {
     ],
     faq: [
       { q: "How is age computed when birthday hasn't happened this year?", a: "If today is May 1 and birthday is Dec 1, you've completed Year-1, not Year. So someone born Dec 1, 1990 on May 1, 2026 is 35 years, 5 months, 0 days old (not 36)." },
-      { q: "What about Feb 29 (leap-year birthdays)?", a: "Pickrack computes age based on calendar months. Someone born Feb 29, 2000 on Feb 28, 2026 is shown as 25 years, 11 months, 27 days — they technically 'celebrate' Mar 1 in non-leap years, but legal/calendar age varies by jurisdiction. Pickrack provides the strict calendar number." },
+      { q: "What about Feb 29 (leap-year birthdays)?", a: "Startup Tools Hub computes age based on calendar months. Someone born Feb 29, 2000 on Feb 28, 2026 is shown as 25 years, 11 months, 27 days — they technically 'celebrate' Mar 1 in non-leap years, but legal/calendar age varies by jurisdiction. Startup Tools Hub provides the strict calendar number." },
       { q: "Is the calculation in my time zone?", a: "Yes — uses the browser's local time zone. If you were born in a different time zone and care about exact hour, adjust the birth time accordingly." },
       { q: "What's the maximum date range?", a: "JavaScript Date supports ±100,000,000 days from Jan 1, 1970 (so years -271,821 to +275,760). For practical use, any human lifespan works." },
       { q: "Can I calculate age in dog years?", a: "v1 doesn't include species-specific conversions (dog/cat 'years' formulas vary by source). Calculate total days lived, then apply your preferred formula manually (common: dog 1 year = human 7 years is a myth; first 2 years are ~10 human, then ~4 per dog year)." },
@@ -1634,7 +1627,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Generate strong, random, cryptographically-secure passwords. Length and character set fully configurable.",
     intro: [
       "**Password Generator** creates strong random passwords for new accounts, password rotations, or replacing weak ones identified by your password manager. The crypto-strength matters: weak generators (using Math.random or PHP rand()) are crackable in seconds.",
-      "Pick Rack's **Password Generator** uses `crypto.getRandomValues()` — the browser's cryptographically-secure random API, the same primitive that powers HTTPS handshakes. Each character is independently random, drawn from your selected character pool. **No network call, no logging** — passwords are generated locally and never leave your tab.",
+      "Startup Tools Hub's **Password Generator** uses `crypto.getRandomValues()` — the browser's cryptographically-secure random API, the same primitive that powers HTTPS handshakes. Each character is independently random, drawn from your selected character pool. **No network call, no logging** — passwords are generated locally and never leave your tab.",
       "Free, no signup, no daily limit. Use it as a one-shot tool or generate dozens for testing. Pair with a password manager (1Password, Bitwarden, KeePass) — never reuse passwords across accounts.",
     ],
     features: [
@@ -1655,7 +1648,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "**Rotate passwords** after a service breach (Have I Been Pwned alert)",
       "**Create test credentials** for staging environments — generate 100 in a row",
       "**Set strong WiFi passwords** when configuring a new router (24+ chars, no symbols if router doesn't support)",
-      "**Protect a PDF** before emailing — pair with Pickrack's Protect PDF tool",
+      "**Protect a PDF** before emailing — pair with Startup Tools Hub's Protect PDF tool",
     ],
     faq: [
       { q: "Is my generated password sent to your server?", a: "No. Password is generated using crypto.getRandomValues() entirely in your browser. Verify in DevTools → Network — zero requests when you click Generate. The password exists only in your browser memory until you copy or refresh." },
@@ -1676,7 +1669,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Split a bill, add a tip, round up the total — fast math for restaurants, taxis, and group meals across 7 currencies.",
     intro: [
       "**Tip Calculator** is one of those tools you only need three times a year but always need *right now* — at a restaurant table, in a taxi at the airport, splitting a bar tab with friends. Pulling out a calculator app, typing the bill, multiplying by 0.18, dividing by 4 people — it's a 30-second exercise that this tool turns into 5 seconds.",
-      "Pickrack's **Tip Calculator** runs entirely in your browser. It supports 7 currencies (USD, EUR, GBP, VND, JPY, AUD, CAD) with currency-appropriate decimal handling (VND and JPY have no fractional currency, the rest use 2 decimals). Five preset tip percentages (10/15/18/20/25%) plus a 0-50% slider. A people-counter (1-50) for splitting. And a 'round up to whole' toggle for tidy totals.",
+      "Startup Tools Hub's **Tip Calculator** runs entirely in your browser. It supports 7 currencies (USD, EUR, GBP, VND, JPY, AUD, CAD) with currency-appropriate decimal handling (VND and JPY have no fractional currency, the rest use 2 decimals). Five preset tip percentages (10/15/18/20/25%) plus a 0-50% slider. A people-counter (1-50) for splitting. And a 'round up to whole' toggle for tidy totals.",
       "Free, no signup, no ads on this page above the fold. The whole tool fits in one viewport on mobile.",
     ],
     features: [
@@ -1708,7 +1701,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       { q: "Why does this calculator support VND and JPY without decimals?", a: "Vietnamese Dong and Japanese Yen have no smaller subunit — there's no 0.5 VND or 0.5 JPY. Showing 'Tip: ₫9,234.56' would be wrong. The tool detects these and displays whole numbers." },
       { q: "What's the difference between rounding the total up vs. rounding the tip up?", a: "This tool rounds the *total* (bill + tip) up. So if your total is $23.40 and you check the round-up box, it becomes $24, increasing your tip slightly. Some people prefer rounding the tip itself to a nice number (e.g., $4.50 → $5). Both are valid; this tool implements the former for consistent totals." },
       { q: "Can I save my tip preferences for next time?", a: "Not currently — v1 is stateless to keep privacy simple. localStorage-based preferences (default tip %, default people, default currency) are on the roadmap." },
-      { q: "What if my bill is in a currency not listed?", a: "Pick the closest 'shape' (USD if your currency uses 2 decimals, JPY if it has no decimals). The math is the same regardless of currency — only the symbol changes. The 7 currencies are the ones most-searched by Pickrack visitors." },
+      { q: "What if my bill is in a currency not listed?", a: "Pick the closest 'shape' (USD if your currency uses 2 decimals, JPY if it has no decimals). The math is the same regardless of currency — only the symbol changes. The 7 currencies are the ones most-searched by Startup Tools Hub visitors." },
     ],
     relatedTools: ["currency-converter", "bmi-calculator", "password-generator"],
   },
@@ -1719,7 +1712,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Body Mass Index from height and weight, with a healthy weight-range estimate. Metric and imperial supported.",
     intro: [
       "**BMI Calculator** computes Body Mass Index — the ratio of weight (kg) to height squared (m²). It's a rough screening tool used by clinicians to flag who might be underweight, overweight, or obese for further evaluation. Not a diagnosis, but useful as one data point.",
-      "Pickrack's **BMI Calculator** supports both metric (cm/kg) and imperial (ft+in / lb). It shows your BMI value, the category band (underweight under 18.5, healthy 18.5-24.9, overweight 25-29.9, obese 30+), and the *healthy weight range for your specific height* — often more actionable than the BMI number itself.",
+      "Startup Tools Hub's **BMI Calculator** supports both metric (cm/kg) and imperial (ft+in / lb). It shows your BMI value, the category band (underweight under 18.5, healthy 18.5-24.9, overweight 25-29.9, obese 30+), and the *healthy weight range for your specific height* — often more actionable than the BMI number itself.",
       "Browser-side. Free, no signup. No data leaves your device — BMI is sensitive information and we treat it that way (no logging, no analytics on the input fields).",
     ],
     features: [
@@ -1761,12 +1754,12 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Convert between 28 major currencies with live mid-market rates. Cached for an hour, no signup, no ads on this page above the fold.",
     intro: [
       "**Currency Converter** is the kind of tool you reach for 5 times a year — checking a hotel price abroad, comparing salaries across countries, deciding whether a SaaS subscription priced in EUR is reasonable for your USD budget. The 'official' tools (Google's, your bank's) are fine, but they often show only one direction or pull from a delayed feed.",
-      "Pickrack's **Currency Converter** uses live mid-market rates from [exchangerate-api.com](https://www.exchangerate-api.com/), sourced from major banks. Pickrack's server holds the API key and proxies requests through `/api/currency/rates` — your browser never sees the key, the upstream domain isn't even in the page's allowed Content-Security-Policy. The server caches rates in memory for 60 minutes; your browser additionally caches them in localStorage so repeat conversions are instant.",
+      "Startup Tools Hub's **Currency Converter** uses live mid-market rates from [exchangerate-api.com](https://www.exchangerate-api.com/), sourced from major banks. Startup Tools Hub's server holds the API key and proxies requests through `/api/currency/rates` — your browser never sees the key, the upstream domain isn't even in the page's allowed Content-Security-Policy. The server caches rates in memory for 60 minutes; your browser additionally caches them in localStorage so repeat conversions are instant.",
       "Free, no signup, no ads on this page. The CSV/Excel-style precision matches what banks quote internally — your *actual* transaction rate will be 1-4% worse (banks pocket the spread), so use this for estimation, not for trading.",
     ],
     features: [
       { title: "28 major currencies", desc: "USD, EUR, GBP, JPY, CNY, VND, AUD, CAD, CHF, HKD, SGD, INR, KRW, THB, MYR, IDR, PHP, TWD, BRL, MXN, NZD, SEK, NOK, DKK, PLN, TRY, ZAR, AED." },
-      { title: "Live rates, hourly cache", desc: "Rates come from exchangerate-api.com via Pickrack's server proxy (API key stays server-side). Cached on the server for 60 minutes and in your browser localStorage so repeat conversions are instant." },
+      { title: "Live rates, hourly cache", desc: "Rates come from exchangerate-api.com via Startup Tools Hub's server proxy (API key stays server-side). Cached on the server for 60 minutes and in your browser localStorage so repeat conversions are instant." },
       { title: "Swap currencies in one click", desc: "Click the swap button to invert from→to (USD→VND becomes VND→USD instantly)." },
       { title: "Decimal handling per currency", desc: "VND, JPY, KRW, IDR display without decimals (those currencies don't have subunits); USD, EUR, GBP, etc. show 2 decimals." },
       { title: "Force refresh button", desc: "If you suspect a rate changed (e.g., during major news), click the timestamp to fetch fresh data immediately." },
@@ -1789,11 +1782,11 @@ export const toolContentMap: Record<string, ToolContent> = {
     faq: [
       { q: "How accurate are these rates?", a: "Rates come from exchangerate-api.com which sources from major banks and central bank feeds. They're updated hourly. Mid-market rates (the rate banks use to trade with each other) typically match Google's quoted rate within 0.1%. Your *transaction* rate at a bank or credit card will be 1-4% worse — that's the bank's spread." },
       { q: "Why don't the rates match my bank's exchange rate?", a: "Your bank quotes you a retail rate that includes their margin (usually 2-4%). Credit cards typically charge 1-3% currency conversion fee + a markup. Wire transfers can be 4-7% all-in. Use mid-market rates (this tool) to know the *fair* rate; subtract 2-4% to estimate what you'll actually get." },
-      { q: "Are the rates cached?", a: "Two layers: Pickrack's server caches in memory for 60 minutes per source currency; your browser additionally caches in localStorage. After 1 hour, the next conversion fetches fresh rates. Click the timestamp text to force-refresh." },
-      { q: "Where does the rate data come from?", a: "Pickrack's server fetches mid-market rates from exchangerate-api.com using a server-held API key, caches them in memory for 60 minutes, and serves them to your browser through /api/currency/rates. The API key never leaves our server. If the upstream is down, we serve the last cached rates. Source code: github.com/pickrack/pickrack." },
+      { q: "Are the rates cached?", a: "Two layers: Startup Tools Hub's server caches in memory for 60 minutes per source currency; your browser additionally caches in localStorage. After 1 hour, the next conversion fetches fresh rates. Click the timestamp text to force-refresh." },
+      { q: "Where does the rate data come from?", a: "Startup Tools Hub's server fetches mid-market rates from exchangerate-api.com using a server-held API key, caches them in memory for 60 minutes, and serves them to your browser through /api/currency/rates. The API key never leaves our server. If the upstream is down, we serve the last cached rates. Source code: github.com/pickrack/pickrack." },
       { q: "Can I convert cryptocurrency (BTC, ETH)?", a: "Not in this tool. Crypto rates move every second and require a different data source. For BTC↔USD, use a dedicated exchange (Coinbase, Kraken) or a crypto-aware tool. Adding BTC/ETH to this tool is on the roadmap but not yet shipped." },
-      { q: "What if exchangerate-api.com is down?", a: "Pickrack's server serves the last cached rates (within 60 minutes old) automatically. If both the upstream and the server cache are unavailable, the browser falls back to its own localStorage cache. Extended outages are rare; the cache covers most." },
-      { q: "Why these 28 currencies and not more?", a: "These cover ~95% of remote work, travel, and SaaS pricing for Pickrack's audience based on search data. Adding all 167 ISO currencies clutters the dropdown without adding value for most users. Open an issue at github.com/pickrack/pickrack if a specific currency you need is missing." },
+      { q: "What if exchangerate-api.com is down?", a: "Startup Tools Hub's server serves the last cached rates (within 60 minutes old) automatically. If both the upstream and the server cache are unavailable, the browser falls back to its own localStorage cache. Extended outages are rare; the cache covers most." },
+      { q: "Why these 28 currencies and not more?", a: "These cover ~95% of remote work, travel, and SaaS pricing for Startup Tools Hub's audience based on search data. Adding all 167 ISO currencies clutters the dropdown without adding value for most users. Open an issue at github.com/pickrack/pickrack if a specific currency you need is missing." },
     ],
     relatedTools: ["tip-calculator", "bmi-calculator", "age-calculator"],
   },
@@ -1804,7 +1797,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Crop images with preset aspect ratios (1:1, 4:3, 16:9, 9:16) or freeform drag handles. Browser-side, no upload, instant export.",
     intro: [
       "**Image Cropper** is for the daily task of trimming an image to a specific aspect ratio — Instagram square, YouTube thumbnail 16:9, profile photo 1:1, story 9:16, blog hero 3:2. Most online croppers add watermarks or require signup. Most desktop tools (Photoshop, GIMP) take 30 seconds to launch.",
-      "Pickrack's **Image Cropper** runs entirely in your browser. Drop an image, pick a preset ratio or go freeform, drag to position the crop box, drag the corner handle to resize, click Download. The whole interaction takes 8-15 seconds. PNG and JPG output supported.",
+      "Startup Tools Hub's **Image Cropper** runs entirely in your browser. Drop an image, pick a preset ratio or go freeform, drag to position the crop box, drag the corner handle to resize, click Download. The whole interaction takes 8-15 seconds. PNG and JPG output supported.",
       "Free, no signup, no watermark on output. No upload — your image stays in your browser memory and is gone the moment you close the tab.",
     ],
     features: [
@@ -1832,8 +1825,8 @@ export const toolContentMap: Record<string, ToolContent> = {
       { q: "Will my image be uploaded to your server?", a: "No. The crop happens entirely in your browser using the Canvas API. You can verify in DevTools → Network: zero requests when you crop and download. Your image never leaves your device." },
       { q: "What's the maximum image size I can crop?", a: "Up to 30 MB input. Browser canvas has a practical limit around 16384×16384 pixels (Chrome) or 11000×11000 (Safari). For typical photos (under 8000px on the long edge), there's no issue." },
       { q: "Does cropping cause quality loss?", a: "PNG output is lossless — no quality loss vs. the cropped region of the source. JPG output uses 92% quality (default), which is visually indistinguishable from lossless for most photos but produces files 4-8× smaller. For maximum quality, choose PNG; for upload-friendly file size, choose JPG." },
-      { q: "Can I crop multiple images at once?", a: "Not in v1 — the tool is single-image. For batch cropping (e.g., 50 product photos to 1:1), use a desktop tool like ImageMagick CLI or batch features in Affinity Photo. Batch cropping is on Pickrack's roadmap." },
-      { q: "How do I crop to a specific pixel size (e.g., 1080×1080 exactly)?", a: "Crop with the right aspect ratio first (1:1 for 1080×1080), then use Pickrack's Image Resizer on the result to scale to exact pixel dimensions. Two-step process, but clean." },
+      { q: "Can I crop multiple images at once?", a: "Not in v1 — the tool is single-image. For batch cropping (e.g., 50 product photos to 1:1), use a desktop tool like ImageMagick CLI or batch features in Affinity Photo. Batch cropping is on Startup Tools Hub's roadmap." },
+      { q: "How do I crop to a specific pixel size (e.g., 1080×1080 exactly)?", a: "Crop with the right aspect ratio first (1:1 for 1080×1080), then use Startup Tools Hub's Image Resizer on the result to scale to exact pixel dimensions. Two-step process, but clean." },
       { q: "Why is freeform mode useful when there are presets?", a: "Freeform is for when you don't care about the ratio — just trim the empty space around a subject. Or when you want a custom ratio not in the presets (e.g., 21:9 ultrawide)." },
       { q: "Does the crop box snap to image edges?", a: "It's constrained to the image bounds (you can't drag the crop outside the image). It doesn't snap to specific positions like image center — that's a feature on the roadmap." },
     ],
@@ -1846,7 +1839,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Enlarge images 2×, 3×, or 4× with smooth stepped bicubic resampling. Browser-side, no upload. Best for moderate enlargements of clean source images.",
     intro: [
       "**Image Upscaler** enlarges an image while keeping it as smooth as possible. The naive approach (single big resize) produces blocky output. This tool uses **stepped 1.5× resampling** — enlarging in incremental hops with high-quality bicubic interpolation at each step. That gives smoother gradients and softer edges than a single 4× jump.",
-      "Important honesty: this is **not** an AI super-resolution model. It won't invent missing detail the way Real-ESRGAN, SwinIR, or Topaz Gigapixel AI do. Those tools use neural networks trained on millions of images to *hallucinate* plausible detail when enlarging. Pickrack's upscaler uses traditional bicubic — best for moderate enlargements (2-3×) of already-clean source images. A WASM Real-ESRGAN version is on the roadmap but not yet shipped (the model is ~30 MB to download).",
+      "Important honesty: this is **not** an AI super-resolution model. It won't invent missing detail the way Real-ESRGAN, SwinIR, or Topaz Gigapixel AI do. Those tools use neural networks trained on millions of images to *hallucinate* plausible detail when enlarging. Startup Tools Hub's upscaler uses traditional bicubic — best for moderate enlargements (2-3×) of already-clean source images. A WASM Real-ESRGAN version is on the roadmap but not yet shipped (the model is ~30 MB to download).",
       "Free, no signup, no upload. Output is PNG (lossless). Up to 30 MB input.",
     ],
     features: [
@@ -1871,13 +1864,13 @@ export const toolContentMap: Record<string, ToolContent> = {
       "**Pre-AI prep** — for AI super-resolution tools that need a minimum input size, upscale 2× first to meet that floor",
     ],
     faq: [
-      { q: "Will this upscaler add detail like Real-ESRGAN does?", a: "No. This is bicubic upscaling — smooth, but it cannot invent detail. Real-ESRGAN, SwinIR, and Topaz Gigapixel use neural networks trained on millions of images to hallucinate plausible detail (extra hair strands, clearer eyes, sharper text). They're 10-100× more compute-expensive and require model files of 20-200 MB. A WASM Real-ESRGAN tool is on Pickrack's roadmap for when the model can be small enough." },
+      { q: "Will this upscaler add detail like Real-ESRGAN does?", a: "No. This is bicubic upscaling — smooth, but it cannot invent detail. Real-ESRGAN, SwinIR, and Topaz Gigapixel use neural networks trained on millions of images to hallucinate plausible detail (extra hair strands, clearer eyes, sharper text). They're 10-100× more compute-expensive and require model files of 20-200 MB. A WASM Real-ESRGAN tool is on Startup Tools Hub's roadmap for when the model can be small enough." },
       { q: "Why 'stepped' instead of single-pass upscale?", a: "Bicubic interpolation introduces some smoothing each time it runs. Stepping in 1.5× hops applies the smoothing across multiple passes, producing softer gradients and less ringing at sharp edges than a single 4× pass. The tradeoff is slightly more compute (about 2× slower than single-pass) — a few seconds vs. instant." },
       { q: "What sources work best?", a: "Clean, low-noise images: digital screenshots, vector exports as PNG, professionally lit photos. The upscaler can't fix JPG compression artifacts or sensor noise; it'll smooth them but they remain visible." },
       { q: "What's the max output size?", a: "8192 pixels on the longest edge, regardless of source × scale. So a 3000×2000 source at 4× would *want* 12000×8000 but gets capped to 8192×5461 to avoid browser memory crashes." },
-      { q: "Why PNG output, not JPG?", a: "Upscaled images are typically used for further editing or print. JPG re-encoding at this stage would discard quality you just paid compute time to preserve. If you need a smaller file, run the PNG through Pickrack's Image Compressor afterward." },
+      { q: "Why PNG output, not JPG?", a: "Upscaled images are typically used for further editing or print. JPG re-encoding at this stage would discard quality you just paid compute time to preserve. If you need a smaller file, run the PNG through Startup Tools Hub's Image Compressor afterward." },
       { q: "Does this work offline?", a: "Yes once the page loads. The entire upscale is JavaScript + Canvas API, both built into the browser. No network call after the page is cached." },
-      { q: "Can I upscale to a specific pixel dimension instead of 2×/3×/4×?", a: "Not directly in this tool — only the 3 multipliers are supported. For an exact dimension target, upscale to the nearest multiplier that overshoots, then use Pickrack's Image Resizer to scale down to the exact target. Two steps." },
+      { q: "Can I upscale to a specific pixel dimension instead of 2×/3×/4×?", a: "Not directly in this tool — only the 3 multipliers are supported. For an exact dimension target, upscale to the nearest multiplier that overshoots, then use Startup Tools Hub's Image Resizer to scale down to the exact target. Two steps." },
     ],
     relatedTools: ["image-resizer", "image-compressor", "image-cropper"],
   },
@@ -1888,7 +1881,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Extract dominant colors from any image using median-cut quantization. Hex + RGB output, CSS array export, browser-side.",
     intro: [
       "**Color Palette Extractor** pulls the dominant colors out of an image so you can recreate a brand palette, find the colors of a stock photo before designing around it, or generate a Tailwind palette from a moodboard. Designers do this manually with the Photoshop eyedropper — this tool does it in 2 seconds for any image.",
-      "Pickrack's **Color Palette Extractor** uses the **median-cut algorithm** — the same quantization technique that GIF encoding and most palette extractors use. It samples the image at moderate resolution (240px max edge), recursively splits the color space along the channel with the largest range, and averages each bucket. Output: 3 to 12 dominant colors with hex codes, RGB values, and a CSS-array copy button.",
+      "Startup Tools Hub's **Color Palette Extractor** uses the **median-cut algorithm** — the same quantization technique that GIF encoding and most palette extractors use. It samples the image at moderate resolution (240px max edge), recursively splits the color space along the channel with the largest range, and averages each bucket. Output: 3 to 12 dominant colors with hex codes, RGB values, and a CSS-array copy button.",
       "Free, no signup, no upload. The image stays in your browser memory. All processing is JavaScript + Canvas, no server roundtrip.",
     ],
     features: [
@@ -1916,7 +1909,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       { q: "Why median-cut vs. k-means?", a: "Median-cut is fast (O(n log k)) and deterministic — same image always produces same palette. K-means is slightly higher quality but slower (multiple iterations) and non-deterministic (different runs can give different palettes). For palette extraction the speed/determinism tradeoff favors median-cut, which is also why GIF, PNG-8, and most palette tools use it." },
       { q: "Why does the tool resize to 240px before sampling?", a: "Sampling all 1080p = 2 million pixels takes 3-5 seconds and the result is identical to sampling 240px = ~50k pixels. Median-cut on 50k pixels is instant and produces statistically identical buckets. The visible output palette is the same regardless of source size." },
       { q: "Why are my palette colors sorted by frequency, not by hue?", a: "By default, larger buckets (more pixels) come first — these are the *dominant* colors that visually define the image. If you want them sorted by hue or by lightness instead, that's on the roadmap. Workaround: copy the array and sort it in your IDE." },
-      { q: "Can I extract colors from a specific region instead of the whole image?", a: "Not in v1 — the whole image is sampled. For region-specific palettes, crop the image first with Pickrack's Image Cropper, then run this tool on the crop." },
+      { q: "Can I extract colors from a specific region instead of the whole image?", a: "Not in v1 — the whole image is sampled. For region-specific palettes, crop the image first with Startup Tools Hub's Image Cropper, then run this tool on the crop." },
       { q: "Why doesn't the palette include pure white or pure black?", a: "Because pure white/black are typically background or shadow, not 'dominant brand colors'. Median-cut averages within each bucket, so a bucket of mostly-white pixels with a few off-whites averages to a near-white shade like #F8F8F8, not exact #FFFFFF. This is usually what you want for branding." },
       { q: "Are JPG vs PNG inputs treated differently?", a: "No. Both are decoded to RGB and sampled identically. JPG compression artifacts may introduce slight color noise that affects the bucket boundaries — for highest-fidelity palettes use PNG sources." },
       { q: "Can I download the palette as an image?", a: "Not in v1. For now, copy the hex codes and use a tool like Coolors.co or Adobe Color to render a palette swatch image. PNG palette export is on the roadmap." },
@@ -1930,7 +1923,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Paste a YouTube URL and get a Claude Haiku summary of the transcript. Short, medium, or bullet-structured output.",
     intro: [
       "**YouTube Summarizer** is for when you find a 45-minute YouTube interview, podcast, or lecture and want to know if it's worth your time before committing. Or you want the key points to reference later without rewatching. Or you're researching and need quick coverage of 5-10 videos in an hour.",
-      "Pickrack's **YouTube Summarizer** reads YouTube's public caption track, sends the transcript to **Claude Haiku 4.5**, and returns a structured summary. Three length presets: short (3-4 sentences), medium (6-10 sentences), or long (bullet-structured with thesis + main points + takeaway).",
+      "Startup Tools Hub's **YouTube Summarizer** reads YouTube's public caption track, sends the transcript to **Claude Haiku 4.5**, and returns a structured summary. Three length presets: short (3-4 sentences), medium (6-10 sentences), or long (bullet-structured with thesis + main points + takeaway).",
       "Requires the video to have captions (auto-generated or manual — both work). Free, no signup, daily quota of 10 videos/IP. The video binary is never downloaded — only the transcript metadata and caption XML feed.",
     ],
     features: [
@@ -1960,11 +1953,11 @@ export const toolContentMap: Record<string, ToolContent> = {
       { q: "Is the summary always accurate?", a: "It's as accurate as the transcript. Auto-generated captions mishear technical terms, accented speech, and overlapping voices — those errors propagate to the summary. Manual captions are much better. For high-stakes summaries (legal, medical, academic), verify against the original video." },
       { q: "What's sent to Anthropic?", a: "Only the transcript text and the optional video title — no metadata, no IP, no identifying info beyond what's in the transcript itself. Anthropic's API does not use prompt content for model training and deletes it within 30 days per their data policy." },
       { q: "Does this work with private or unlisted videos?", a: "Unlisted videos with public captions: yes (anyone with the URL can access). Truly private videos: no — YouTube blocks the watch page. The tool relies on public data only." },
-      { q: "Why the 10/day daily quota?", a: "Each summary costs Pickrack ~$0.005-0.02 in Claude API charges (depending on length). 10/day per IP keeps the tool freely usable for individuals while bounding the daily cost. If you self-host the project (github.com/pickrack/pickrack) with your own Anthropic key, the limit is configurable." },
+      { q: "Why the 10/day daily quota?", a: "Each summary costs Startup Tools Hub ~$0.005-0.02 in Claude API charges (depending on length). 10/day per IP keeps the tool freely usable for individuals while bounding the daily cost. If you self-host the project (github.com/pickrack/pickrack) with your own Anthropic key, the limit is configurable." },
       { q: "Can I summarize multiple videos at once?", a: "Not in v1 — single video per request. Batch summarization is on the roadmap but lower-priority because of the per-call cost." },
       { q: "Will this work on YouTube Music or Shorts?", a: "Shorts: yes, if they have captions (many auto-gen). YouTube Music: not supported — those URLs route to music.youtube.com which has a different page structure." },
     ],
-    relatedTools: ["ai-summarizer", "ai-translator", "translate-document"],
+    relatedTools: ["word-counter", "case-converter", "find-replace"],
   },
 
   "chat-with-pdf": {
@@ -1973,8 +1966,8 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Ask questions about a PDF and get answers from Claude. PDF parsed in your browser — only extracted text reaches our server.",
     intro: [
       "**Chat with PDF** is for the moment when you have a 40-page research paper, a 200-page legal contract, or a manual full of dense tables and you just want the answer to one specific question. Reading the whole thing is not an option; CTRL+F often fails because the question is conceptual ('what's the main finding?', 'is this term liable for X?', 'where are the salary numbers?').",
-      "Pickrack's **Chat with PDF** parses the PDF **entirely in your browser** using pdf.js — the same library that powers Firefox's built-in PDF viewer. Only the *extracted text* is sent to Anthropic's Claude API along with your question. The binary PDF never reaches our server. You can verify this in DevTools → Network: the `/api/ai/chat-pdf` call sends `{ documentText, question }` as JSON, not the file.",
-      "Free, no signup. Daily quota: 30 chat turns per IP (generous because chat is per-turn, not per-document). Best for text-based PDFs (research papers, contracts, manuals). Scanned PDFs without OCR won't work — for those, use Pickrack's PDF to Markdown tool first to OCR the document, then paste the result.",
+      "Startup Tools Hub's **Chat with PDF** parses the PDF **entirely in your browser** using pdf.js — the same library that powers Firefox's built-in PDF viewer. Only the *extracted text* is sent to Anthropic's Claude API along with your question. The binary PDF never reaches our server. You can verify this in DevTools → Network: the `/api/ai/chat-pdf` call sends `{ documentText, question }` as JSON, not the file.",
+      "Free, no signup. Daily quota: 30 chat turns per IP (generous because chat is per-turn, not per-document). Best for text-based PDFs (research papers, contracts, manuals). Scanned PDFs without OCR won't work — for those, use Startup Tools Hub's PDF to Markdown tool first to OCR the document, then paste the result.",
     ],
     features: [
       { title: "Browser-side PDF parsing", desc: "pdf.js extracts text from your PDF in your browser. The binary PDF never uploads to our server — only the extracted text + your question." },
@@ -2000,15 +1993,15 @@ export const toolContentMap: Record<string, ToolContent> = {
     ],
     faq: [
       { q: "Is my PDF uploaded to your server?", a: "No. The PDF is parsed entirely in your browser using pdf.js. Only the extracted plain text and your question are sent to our /api/ai/chat-pdf endpoint, which forwards to Anthropic's Claude API. The binary PDF stays in your browser memory and is discarded when you close the tab. Verify in DevTools → Network: the request body is JSON text, not a file upload." },
-      { q: "Does Anthropic train on my document?", a: "No. Anthropic's API data policy: API inputs are not used for model training and are deleted within 30 days. Pickrack stores nothing — no database, no logs of question content. The only thing we record is anonymous rate-limit counts per IP." },
+      { q: "Does Anthropic train on my document?", a: "No. Anthropic's API data policy: API inputs are not used for model training and are deleted within 30 days. Startup Tools Hub stores nothing — no database, no logs of question content. The only thing we record is anonymous rate-limit counts per IP." },
       { q: "What's the max PDF size?", a: "30 MB binary, 80,000 characters of extracted text. That's typically 30-50 pages of dense text-based PDF (research papers, legal contracts). Image-heavy PDFs (presentations, marketing brochures) extract very little text and may need only a few MB to hit the cap." },
-      { q: "Does it work on scanned PDFs?", a: "Not directly — pdf.js extracts text from the PDF's text layer, which scanned PDFs lack. For scanned documents, first run them through Pickrack's PDF to Markdown tool (which has OCR), then paste the OCR result into a text-based chat tool. Native OCR in this Chat with PDF tool is on the roadmap." },
-      { q: "Why is the daily quota 30 turns vs 10 for other AI tools?", a: "Chat is per-turn, not per-document — one document might lead to 5-10 follow-up questions. 30 turns/day supports about 5-6 substantial chat sessions per IP. Pickrack's hosting costs scale with token usage and 30 is the sweet spot between generous and bounded." },
+      { q: "Does it work on scanned PDFs?", a: "Not directly — pdf.js extracts text from the PDF's text layer, which scanned PDFs lack. For scanned documents, first run them through Startup Tools Hub's PDF to Markdown tool (which has OCR), then paste the OCR result into a text-based chat tool. Native OCR in this Chat with PDF tool is on the roadmap." },
+      { q: "Why is the daily quota 30 turns vs 10 for other AI tools?", a: "Chat is per-turn, not per-document — one document might lead to 5-10 follow-up questions. 30 turns/day supports about 5-6 substantial chat sessions per IP. Startup Tools Hub's hosting costs scale with token usage and 30 is the sweet spot between generous and bounded." },
       { q: "Does Claude remember the document across sessions?", a: "No. Each chat turn re-sends the full document text + chat history because the API is stateless. If you close and reopen the page, you must re-upload the PDF. This is by design — no server-side document storage means no privacy worry." },
       { q: "What if my question has nothing to do with the PDF?", a: "Claude is instructed to answer only from the document. If you ask 'what's the capital of France?' on a contract PDF, it'll say 'this is not in the document — please ask about the contract content.' This grounding behavior keeps the tool focused." },
       { q: "Can I share my PDF chat with someone?", a: "Not in v1. Chat history lives in your browser memory until you refresh. To share, copy the chat content and paste into a document. Persistent shareable chats are on the roadmap but raise privacy questions we want to think through carefully." },
     ],
-    relatedTools: ["ai-summarizer", "pdf-to-markdown", "translate-document"],
+    relatedTools: ["word-counter", "pdf-to-markdown", "case-converter"],
   },
 
   "translate-document": {
@@ -2017,7 +2010,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Translate text, markdown, HTML, CSV, JSON, or PDF documents into 20 languages while preserving formatting. Powered by Claude Haiku 4.5.",
     intro: [
       "**Translate Document** is for translating files where structure matters — a markdown blog post (keep the headings, lists, code blocks intact), a CSV (translate cell values, not headers, preserve commas), an HTML email (keep tags, translate text nodes), or a PDF report (extract text in browser, translate, output plain text). Google Translate handles plain text well but mangles markdown and inline code; DeepL is similar.",
-      "Pickrack's **Translate Document** uses **Claude Haiku 4.5** with explicit format-preservation instructions. The tool splits long documents into ~3500-character chunks at paragraph or sentence boundaries, translates each chunk with consistent system prompt (locked tone, locked terminology), then concatenates the result. Markdown structure (`# headings`, `**bold**`, ``` code blocks ```), HTML tags, JSON keys, and CSV delimiters are preserved.",
+      "Startup Tools Hub's **Translate Document** uses **Claude Haiku 4.5** with explicit format-preservation instructions. The tool splits long documents into ~3500-character chunks at paragraph or sentence boundaries, translates each chunk with consistent system prompt (locked tone, locked terminology), then concatenates the result. Markdown structure (`# headings`, `**bold**`, ``` code blocks ```), HTML tags, JSON keys, and CSV delimiters are preserved.",
       "20 target languages including Vietnamese, English, Spanish, French, German, Chinese (simplified and traditional), Japanese, Korean, Portuguese, Italian, Russian, Arabic, Hindi, Thai, Indonesian, Dutch, Polish, Turkish, Swedish. Free, daily quota of 5 documents/IP (heavier than text-only translation — uses more tokens).",
     ],
     features: [
@@ -2049,11 +2042,11 @@ export const toolContentMap: Record<string, ToolContent> = {
       { q: "Will the same word always translate the same way across chunks?", a: "Usually yes — Claude's training gives it strong terminology consistency. For technical documents with specialized vocabulary, the first chunk often establishes the term and subsequent chunks follow. For inconsistency-sensitive translations (legal, medical), review the output." },
       { q: "Is the PDF uploaded?", a: "No. PDF text extraction happens in your browser using pdf.js. Only the extracted plain text reaches our server. The PDF binary stays in your browser memory and is discarded when you close the tab. Verify in DevTools → Network." },
       { q: "Why the 5/day quota?", a: "Document translation runs multiple Claude calls (one per chunk). A 50,000-char document is ~14 chunks → 14 API calls. At ~$0.01-0.05 per chunk depending on output length, that's $0.15-0.70 per document. 5 documents/day per IP keeps the tool free without unbounded cost." },
-      { q: "Can I translate Word (.docx) or PowerPoint (.pptx) files directly?", a: "Not in v1. Workaround: convert the .docx to .pdf or .md first (Pickrack has Word to PDF, and you can paste DOCX text by copying it from Word). Native .docx parsing in this tool is on the roadmap but lower-priority because the conversion-then-translate workflow already works." },
+      { q: "Can I translate Word (.docx) or PowerPoint (.pptx) files directly?", a: "Not in v1. Workaround: convert the .docx to .pdf or .md first (Startup Tools Hub has Word to PDF, and you can paste DOCX text by copying it from Word). Native .docx parsing in this tool is on the roadmap but lower-priority because the conversion-then-translate workflow already works." },
       { q: "What if my document is bigger than 50,000 chars?", a: "It'll be truncated to 50,000 chars with a notice. For longer documents, split into multiple translations (chapter 1, chapter 2, ...) and concatenate the outputs. The chunking system handles boundaries cleanly so no sentence is split across translations." },
-      { q: "How does this compare to Google Translate or DeepL for the same document?", a: "For plain text: Google/DeepL are faster (sub-second), Claude is slower (10-30s for long documents) but often more natural. For markdown/HTML/structured input: Pickrack with format preservation usually wins — Google often breaks markdown links and code blocks. For maximum quality on natural prose, professional human translators still beat all three." },
+      { q: "How does this compare to Google Translate or DeepL for the same document?", a: "For plain text: Google/DeepL are faster (sub-second), Claude is slower (10-30s for long documents) but often more natural. For markdown/HTML/structured input: Startup Tools Hub with format preservation usually wins — Google often breaks markdown links and code blocks. For maximum quality on natural prose, professional human translators still beat all three." },
     ],
-    relatedTools: ["ai-translator", "ai-summarizer", "chat-with-pdf"],
+    relatedTools: ["pdf-to-markdown", "word-counter", "case-converter"],
   },
 
   "screenshot-to-pdf": {
@@ -2062,7 +2055,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Paste screenshots with Ctrl/Cmd+V and combine them into a single PDF. Browser-side, drag to reorder, fit-to-image or A4 pages.",
     intro: [
       "**Screenshot to PDF** solves a workflow most online PDF tools handle awkwardly: you took 5-10 screenshots (browser windows, error dialogs, app states, receipts) and need to send them to someone as a single document. JPG-to-PDF tools work but require saving each screenshot to disk first, then uploading. This tool lets you **paste directly with Ctrl+V** (or ⌘V on Mac) — no file system step.",
-      "Pickrack's **Screenshot to PDF** runs entirely in your browser using [pdf-lib](https://github.com/Hopding/pdf-lib). The clipboard listener captures any image you paste anywhere on the page, queues it, lets you reorder with up/down arrows, and combines all queued screenshots into one PDF with one click. Three page modes: fit-to-image (page = image native size, no margin), A4, or US Letter (image fit to page with 20pt margins).",
+      "Startup Tools Hub's **Screenshot to PDF** runs entirely in your browser using [pdf-lib](https://github.com/Hopding/pdf-lib). The clipboard listener captures any image you paste anywhere on the page, queues it, lets you reorder with up/down arrows, and combines all queued screenshots into one PDF with one click. Three page modes: fit-to-image (page = image native size, no margin), A4, or US Letter (image fit to page with 20pt margins).",
       "Free, no signup, no watermark. Up to 30 screenshots per PDF, 30 MB per image. Output PDF is downloaded directly — never uploaded.",
     ],
     features: [
@@ -2091,8 +2084,8 @@ export const toolContentMap: Record<string, ToolContent> = {
       { q: "Does Ctrl+V paste work in every browser?", a: "Yes in Chrome, Edge, Firefox, Safari, and any Chromium-based browser. The tool uses the standard ClipboardEvent API which has been supported since 2018. The browser asks for permission the first time you paste an image — accept it." },
       { q: "Can I paste from the Snipping Tool or other screenshot apps?", a: "Yes. As long as the screenshot ends up on your system clipboard (which is the default behavior of Snipping Tool, ShareX, Greenshot, ⌘+Shift+5 with 'Copy to clipboard' option), pasting works." },
       { q: "What's the difference between fit-to-image and A4 modes?", a: "Fit-to-image: each page is sized exactly to its image (e.g., 1920×1080 image → 1920×1080 page at 1px=1pt scale). Best for viewing on screen, no whitespace. A4/Letter: each page is the standard print size with the image scaled to fit inside with a 20-point margin. Best for printing or formal documents." },
-      { q: "Is there a size limit?", a: "Each screenshot up to 30 MB. Up to 30 screenshots per PDF. Total PDF output is usually 5-50 MB depending on image resolution and content. For larger batches, split into multiple PDFs and merge with Pickrack's Merge PDF tool." },
-      { q: "Is the PDF compressed?", a: "Images are embedded losslessly into the PDF (PNG → PNG, JPG → JPG). For a smaller file size, run the output through Pickrack's Compress PDF tool afterward (typical 50-80% reduction)." },
+      { q: "Is there a size limit?", a: "Each screenshot up to 30 MB. Up to 30 screenshots per PDF. Total PDF output is usually 5-50 MB depending on image resolution and content. For larger batches, split into multiple PDFs and merge with Startup Tools Hub's Merge PDF tool." },
+      { q: "Is the PDF compressed?", a: "Images are embedded losslessly into the PDF (PNG → PNG, JPG → JPG). For a smaller file size, run the output through Startup Tools Hub's Compress PDF tool afterward (typical 50-80% reduction)." },
       { q: "Can I paste screenshots from a phone?", a: "Mobile browsers don't expose clipboard images through the paste event reliably. On phone, use the file upload zone instead — tap, pick from camera roll, multi-select supported." },
       { q: "Does the page leak my screenshots?", a: "No. The clipboard handler runs in your browser. Pasted images become Blob URLs that exist only in memory. PDF generation also happens in browser. Verify in DevTools → Network: zero requests when you paste or combine." },
       { q: "Why does pasting sometimes paste text instead of the image?", a: "If you copied text *after* taking a screenshot, the clipboard now holds the text. Re-take the screenshot or use ⌘+Shift+5 (Mac) / Snipping Tool (Win) which explicitly puts the image on the clipboard. Some apps (Slack, Discord) auto-strip clipboard images on copy — paste them as files instead." },
@@ -2106,7 +2099,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Convert Markdown to clean HTML with GitHub-Flavored extensions. Live preview, copy HTML, download as .html.",
     intro: [
       "**Markdown to HTML** is the tool you reach for when you need to publish a markdown-authored document somewhere that doesn't render markdown natively — pasting into a CMS that only accepts HTML, creating an email signature, generating a static HTML page for an old-school upload, or just inspecting how a markdown snippet will render.",
-      "Pickrack's **Markdown to HTML** runs entirely in your browser using the [marked](https://marked.js.org/) library — battle-tested, MIT-licensed, GitHub-Flavored Markdown compliant. The tool gives you a live split view: type or paste markdown on the left, see rendered HTML preview (or raw HTML source) on the right. Copy the HTML to clipboard or download as a complete `.html` file.",
+      "Startup Tools Hub's **Markdown to HTML** runs entirely in your browser using the [marked](https://marked.js.org/) library — battle-tested, MIT-licensed, GitHub-Flavored Markdown compliant. The tool gives you a live split view: type or paste markdown on the left, see rendered HTML preview (or raw HTML source) on the right. Copy the HTML to clipboard or download as a complete `.html` file.",
       "Free, no signup, no upload. Supports GFM extensions: tables, task lists, strikethrough, autolinks, fenced code blocks. Browser-side — your markdown content never leaves your tab.",
     ],
     features: [
@@ -2148,7 +2141,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Convert between Unix timestamp (seconds or milliseconds), ISO 8601, and human-readable dates across timezones.",
     intro: [
       "**Timestamp Converter** is for the very common developer chore: a log file shows `1715774400`, you need to know what real-world date that is, in your timezone. Or you're constructing an API request that needs an ISO 8601 timestamp for a specific moment. Or comparing two timestamps to see how far apart they are.",
-      "Pickrack's **Timestamp Converter** does both directions in one view: Unix timestamp → date (in any timezone), and date → Unix timestamp (interpreting the input as wall-clock in a chosen timezone). Both panels update live. Live current Unix time is shown at the top with a 'use now' button. All formats are one-click copyable.",
+      "Startup Tools Hub's **Timestamp Converter** does both directions in one view: Unix timestamp → date (in any timezone), and date → Unix timestamp (interpreting the input as wall-clock in a chosen timezone). Both panels update live. Live current Unix time is shown at the top with a 'use now' button. All formats are one-click copyable.",
       "Free, no signup, browser-side. Uses the standard `Intl.DateTimeFormat` API for accurate timezone handling — including daylight saving transitions and historical DST rules.",
     ],
     features: [
@@ -2190,7 +2183,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Compare two text blocks line-by-line with an LCS-based diff. Color-coded additions, deletions, and unchanged lines.",
     intro: [
       "**Text Diff Checker** is the everyday 'what changed between these two versions?' tool. You have an old config file and a new one and want to know what changed. You're comparing two versions of an email draft. You're checking whether a translation kept the original structure. You're spot-checking AI output against the source.",
-      "Pickrack's **Diff Checker** uses the classic [LCS](https://en.wikipedia.org/wiki/Longest_common_subsequence_problem) (longest common subsequence) algorithm to compute a line-by-line diff. Common lines stay aligned; differences are marked with `+` (added in B) or `−` (deleted from A) and color-coded green/red. Optional 'ignore whitespace' and 'ignore case' toggles for fuzzy comparisons.",
+      "Startup Tools Hub's **Diff Checker** uses the classic [LCS](https://en.wikipedia.org/wiki/Longest_common_subsequence_problem) (longest common subsequence) algorithm to compute a line-by-line diff. Common lines stay aligned; differences are marked with `+` (added in B) or `−` (deleted from A) and color-coded green/red. Optional 'ignore whitespace' and 'ignore case' toggles for fuzzy comparisons.",
       "Free, no signup, browser-side. Inputs and the diff result never leave your tab. Works on inputs up to a few thousand lines (LCS is O(n*m) — fine for typical config files, slow for novels).",
     ],
     features: [
@@ -2234,7 +2227,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Build linear, radial, or conic CSS gradients with live preview. Multi-color stops, angle slider, presets, Tailwind v4 output.",
     intro: [
       "**CSS Gradient Generator** is for the 30-second task of getting a CSS gradient just right — pick two or three colors, set an angle, copy the CSS. No more digging through Chrome DevTools to manually edit a gradient on a live page.",
-      "Pickrack's **Gradient Generator** supports all three CSS gradient types (linear, radial, conic), 2-6 color stops, an angle slider (0-360°) for linear and conic gradients, and 5 starter presets (Sunset, Ocean, Mojito, Cosmic, Aurora). Live preview updates as you drag any slider or change any color. Output includes plain CSS plus a Tailwind v4 arbitrary-value snippet for direct paste into JSX.",
+      "Startup Tools Hub's **Gradient Generator** supports all three CSS gradient types (linear, radial, conic), 2-6 color stops, an angle slider (0-360°) for linear and conic gradients, and 5 starter presets (Sunset, Ocean, Mojito, Cosmic, Aurora). Live preview updates as you drag any slider or change any color. Output includes plain CSS plus a Tailwind v4 arbitrary-value snippet for direct paste into JSX.",
       "Free, no signup, browser-side. The generator is pure JavaScript — your color choices and the output CSS never leave your tab.",
     ],
     features: [
@@ -2306,7 +2299,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       { q: "How is WCAG contrast calculated?", a: "WCAG uses relative luminance (gamma-corrected sRGB) then `(L1 + 0.05) / (L2 + 0.05)` where L1 is the lighter color. AAA ≥ 7:1, AA ≥ 4.5:1 (body text), AA Large ≥ 3:1 (18pt+ regular or 14pt+ bold). The chip shows the worst-passing tier." },
       { q: "Can I enter colors with alpha (e.g., #FF0000AA)?", a: "v1 supports 3-digit and 6-digit HEX only — alpha (8-digit hex or rgba/hsla) is on the roadmap. For now, drop alpha and convert the base color." },
       { q: "Does this support OKLCH or LAB color spaces?", a: "Not yet. OKLCH is on the roadmap — it's the new CSS Color Level 4 space that gives perceptually uniform lightness. For now, stick with HSL for intuitive lightness adjustments." },
-      { q: "Why does HEX → HSL → HEX sometimes change the HEX by 1?", a: "Floating-point rounding during conversion. RGB is integer (0-255), HSL channels are integer percentages. Going RGB(120, 200, 100) → HSL → RGB might round to RGB(120, 199, 100). Pickrack rounds only on display; internal math is full precision, so successive edits don't drift." },
+      { q: "Why does HEX → HSL → HEX sometimes change the HEX by 1?", a: "Floating-point rounding during conversion. RGB is integer (0-255), HSL channels are integer percentages. Going RGB(120, 200, 100) → HSL → RGB might round to RGB(120, 199, 100). Startup Tools Hub rounds only on display; internal math is full precision, so successive edits don't drift." },
       { q: "Does the color picker support transparent / no-color?", a: "No — the picker is HTML5 native `<input type=\"color\">` which always returns an opaque RGB. For transparency, see the alpha FAQ above (roadmap)." },
       { q: "Can I convert a CSS color name like 'cornflowerblue'?", a: "Not directly in v1. Workaround: open browser DevTools, set `body { color: cornflowerblue }`, read the computed value as `rgb(...)`, paste here. A name dictionary is on the roadmap." },
     ],
@@ -2318,8 +2311,8 @@ export const toolContentMap: Record<string, ToolContent> = {
     h1Subtitle:
       "Percent-encode URL parameters or decode them. Toggle encodeURIComponent (full) vs encodeURI (URL-safe). Browser-side.",
     intro: [
-      "**URL Encoder / Decoder** percent-encodes characters that would break a URL — spaces, `&`, `?`, `=`, `#`, non-ASCII — or decodes a percent-encoded string back to readable text. Pickrack exposes both `encodeURIComponent` (encodes everything reserved, for individual query values) and `encodeURI` (preserves `/`, `?`, `=`, `&`, for whole URLs), so you can pick the right semantics for your use case.",
-      "Common pain point: a developer uses `encodeURI` when they need `encodeURIComponent`, then their `&` and `=` in query values get treated as separators. Pickrack shows both side-by-side in seconds so you don't ship a broken URL.",
+      "**URL Encoder / Decoder** percent-encodes characters that would break a URL — spaces, `&`, `?`, `=`, `#`, non-ASCII — or decodes a percent-encoded string back to readable text. Startup Tools Hub exposes both `encodeURIComponent` (encodes everything reserved, for individual query values) and `encodeURI` (preserves `/`, `?`, `=`, `&`, for whole URLs), so you can pick the right semantics for your use case.",
+      "Common pain point: a developer uses `encodeURI` when they need `encodeURIComponent`, then their `&` and `=` in query values get treated as separators. Startup Tools Hub shows both side-by-side in seconds so you don't ship a broken URL.",
       "Free, no signup, browser-side. Input strings never leave your tab. Errors (e.g., malformed `%XX` sequences in decode mode) display inline with the failing position.",
     ],
     features: [
@@ -2360,7 +2353,7 @@ export const toolContentMap: Record<string, ToolContent> = {
     intro: [
       "**HTML Entity Encoder / Decoder** converts characters that would break HTML markup (`<`, `>`, `&`, `\"`, `'`) into safe entity references — and decodes them back. Use it to escape user content before injection, to display HTML source code inside HTML, or to make non-ASCII text portable across templates.",
       "Three encode modes: **Named** (use `&amp;` / `&lt;` / `&copy;` etc. where possible — most readable), **Numeric** (use `&#38;` / `&#60;` — most portable, no entity list dependency), or **All** (force every non-ASCII char to its entity, preferring named when available — most defensive for legacy systems).",
-      "Free, no signup, browser-side. Pickrack handles the ~40 most common named entities (HTML5 has 2,231 named — full list is on the roadmap) and full decimal / hex numeric entities for the entire Unicode range.",
+      "Free, no signup, browser-side. Startup Tools Hub handles the ~40 most common named entities (HTML5 has 2,231 named — full list is on the roadmap) and full decimal / hex numeric entities for the entire Unicode range.",
     ],
     features: [
       { title: "Encode + Decode in one tool", desc: "Toggle modes. Swap button moves output back to input — useful for round-tripping or comparing encodings." },
@@ -2385,7 +2378,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       { q: "Should I use named or numeric entities?", a: "Named (`&amp;`) for readability when humans will see the source. Numeric (`&#38;`) for maximum compatibility — every parser understands them, no entity-list lookup needed. Default to Named in normal web work, Numeric for embedded systems or older XML pipelines." },
       { q: "Which characters MUST be escaped in HTML body?", a: "`<` and `&` always (they have syntactic meaning). `>` is technically optional but defensive. Inside attribute values, also `\"` and `'` matching the quote you use. Don't escape what doesn't need it — bloated HTML hurts readability and gzip slightly." },
       { q: "Does this protect against XSS?", a: "Entity encoding is the foundational mechanism — but use it via your framework's auto-escape (React's JSX, Vue's `{{ }}`, Django templates, etc.), not by hand. Manual escaping is error-prone. This tool is for cases where you need the raw entity form (e.g., a static site generator)." },
-      { q: "Does this encode `&nbsp;`?", a: "Pickrack's Named mode preserves a regular space as-is (it's printable ASCII). If you have a non-breaking space char `\\u00A0` in your input, encoding it produces `&nbsp;`. Decoding `&nbsp;` always produces a non-breaking space (U+00A0), not a regular space." },
+      { q: "Does this encode `&nbsp;`?", a: "Startup Tools Hub's Named mode preserves a regular space as-is (it's printable ASCII). If you have a non-breaking space char `\\u00A0` in your input, encoding it produces `&nbsp;`. Decoding `&nbsp;` always produces a non-breaking space (U+00A0), not a regular space." },
       { q: "What about hex entities like &#x2014;?", a: "Decoding handles both `&#NN;` (decimal) and `&#xHH;` (hex) entities — pickrack parses both. Encoding always uses decimal for compactness; hex is on the roadmap." },
       { q: "How is this different from URL encoding?", a: "Different alphabets and goals. URL encoding uses `%XX` (`%26` for `&`) inside URLs. HTML entity encoding uses `&NAME;` or `&#NN;` inside HTML markup. Wrong tool for the job → broken output. If you need both (e.g., a URL inside an HTML attribute), apply URL encoding first, then HTML entity encoding." },
     ],
@@ -2397,7 +2390,7 @@ export const toolContentMap: Record<string, ToolContent> = {
     h1Subtitle:
       "Pretty-print SQL across 11 dialects with indent + keyword case options. Browser-side parsing — no upload, no signup.",
     intro: [
-      "**SQL Formatter** takes a one-line minified query and pretty-prints it into readable, indented SQL — across 11 dialects. Pickrack uses the open-source `sql-formatter` library (15k+ GitHub stars) and exposes the most-asked-for options: dialect (MySQL, PostgreSQL, SQLite, MS SQL, BigQuery, Snowflake, Redshift, Oracle PL/SQL, MariaDB, Spark, standard SQL), indent width (2/4/8 spaces), and keyword case (UPPER, lower, preserve).",
+      "**SQL Formatter** takes a one-line minified query and pretty-prints it into readable, indented SQL — across 11 dialects. Startup Tools Hub uses the open-source `sql-formatter` library (15k+ GitHub stars) and exposes the most-asked-for options: dialect (MySQL, PostgreSQL, SQLite, MS SQL, BigQuery, Snowflake, Redshift, Oracle PL/SQL, MariaDB, Spark, standard SQL), indent width (2/4/8 spaces), and keyword case (UPPER, lower, preserve).",
       "Use it when you need to drop a 300-character `SELECT ... WHERE ... GROUP BY ...` into a Notion doc, a code review comment, or a blog post — and the inline editor doesn't format SQL for you. Or when you inherit a legacy query and want to actually read it before changing anything.",
       "Free, no signup, browser-side. Your SQL never leaves your tab — important for queries that contain literal customer IDs, internal table names, or other data you don't want in some random web service's logs. Errors during parsing display inline with the position so you can spot syntax issues fast.",
     ],
@@ -2440,7 +2433,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Convert YAML to JSON or JSON to YAML with adjustable indent. Inline error reporting, browser-side.",
     intro: [
       "**YAML ↔ JSON Converter** parses YAML into a JS object and serializes it as JSON (or vice versa). Use it when you're translating Kubernetes manifests, GitHub Actions workflows, Docker Compose files, or any config that arrives in the 'wrong' format for your tooling. Two-way, instant, browser-side.",
-      "Pickrack uses `js-yaml` (the de-facto YAML 1.2 implementation, 6k+ stars). It handles anchors and aliases, multi-document YAML (`---` separators), block + flow styles, and YAML's full type set (strings, numbers, booleans, null, lists, maps, dates). JSON serialization uses the browser's native `JSON.stringify` with adjustable indent.",
+      "Startup Tools Hub uses `js-yaml` (the de-facto YAML 1.2 implementation, 6k+ stars). It handles anchors and aliases, multi-document YAML (`---` separators), block + flow styles, and YAML's full type set (strings, numbers, booleans, null, lists, maps, dates). JSON serialization uses the browser's native `JSON.stringify` with adjustable indent.",
       "Free, no signup. Your config files never leave your tab — important for YAML that contains secrets, internal service URLs, or other data you don't want in some random conversion service's logs. Parse errors show line + column so you can fix them in place.",
     ],
     features: [
@@ -2449,7 +2442,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       { title: "Adjustable indent", desc: "2 or 4 spaces for both YAML and JSON output. Matches your project's style guide." },
       { title: "Anchor + alias support", desc: "YAML anchors (`&anchor`) and aliases (`*anchor`) are resolved during YAML → JSON conversion (JSON has no anchor concept, so the values get inlined)." },
       { title: "Browser-side parsing", desc: "Configs never leave your tab. Safe for YAML/JSON containing real secrets, internal hostnames, or other sensitive data." },
-      { title: "Load sample button", desc: "Pre-loaded Pickrack config example showing nested maps, lists, and mixed types." },
+      { title: "Load sample button", desc: "Pre-loaded Startup Tools Hub config example showing nested maps, lists, and mixed types." },
     ],
     howTo: [
       { title: "Step 1: Pick direction", desc: "YAML → JSON or JSON → YAML." },
@@ -2468,7 +2461,7 @@ export const toolContentMap: Record<string, ToolContent> = {
     faq: [
       { q: "Does it support YAML 1.2?", a: "Yes — js-yaml is YAML 1.2-compliant by default. That includes the strict boolean parsing (only `true`/`false` are booleans; `yes`/`no`/`on`/`off` are strings, unlike YAML 1.1)." },
       { q: "What happens to YAML anchors when converted to JSON?", a: "Anchors and aliases get **inlined** — JSON has no anchor concept, so each `*alias` reference becomes a copy of the anchored value. This may bloat the JSON if you had many references to the same large block." },
-      { q: "What about JSON → YAML reverse — does it create anchors?", a: "No — Pickrack's JSON → YAML output doesn't auto-detect repeated structures to create anchors. You get straight YAML serialization. Anchor creation is on the roadmap." },
+      { q: "What about JSON → YAML reverse — does it create anchors?", a: "No — Startup Tools Hub's JSON → YAML output doesn't auto-detect repeated structures to create anchors. You get straight YAML serialization. Anchor creation is on the roadmap." },
       { q: "Does it handle multi-document YAML (`---` separators)?", a: "v1 parses only the first document. Multi-doc support is on the roadmap. For now, split your YAML by `---` and convert each document separately." },
       { q: "Why does my number become a string in JSON?", a: "If your YAML had quotes around it (`'42'` vs `42`), YAML treats it as a string. JSON preserves that string type. Remove the quotes in YAML if you want it as a number." },
       { q: "Are comments preserved?", a: "**No** — both directions lose comments. YAML supports `# comment`, JSON has no comment syntax. JS-YAML doesn't expose comments via its parser. This is a fundamental limitation of converting between the two formats." },
@@ -2484,12 +2477,12 @@ export const toolContentMap: Record<string, ToolContent> = {
     intro: [
       "**AI-Art QR Generator** uses Stable Diffusion with a ControlNet model trained on QR patterns to merge your QR code with any artwork you can describe — a misty mountain landscape, a cyberpunk street, a watercolor of cherry blossoms. The result still scans like a normal QR (verified in the browser before you download), but looks like a piece of art instead of a black-and-white square.",
       "Use it for restaurant menu boards, music album covers, marketing posters, branded business cards, or any place where a generic QR would look ugly. The QR pattern is built into the image at the right structural points so phone cameras detect it, but the visual design is fully customizable.",
-      "Pickrack proxies your request to Replicate (a managed Stable Diffusion service). Each generation costs roughly $0.02-0.05 (charged to whoever's Replicate account is used). By default, the tool may use Pickrack's shared key with a hard cap of **5 generations per IP per day**. For unlimited use, paste your own Replicate API token in Advanced — it's stored only in your browser's localStorage and never logged on our server.",
+      "Startup Tools Hub proxies your request to Replicate (a managed Stable Diffusion service). Each generation costs roughly $0.02-0.05 (charged to whoever's Replicate account is used). By default, the tool may use Startup Tools Hub's shared key with a hard cap of **5 generations per IP per day**. For unlimited use, paste your own Replicate API token in Advanced — it's stored only in your browser's localStorage and never logged on our server.",
     ],
     features: [
       { title: "ControlNet QR blending", desc: "Uses the open-source QR-Monster ControlNet model (well-known for QR illusions). The QR pattern guides the diffusion process so the final art is scannable." },
       { title: "8 style presets + custom prompt", desc: "One-click presets for mountain sunrise, cyberpunk city, watercolor, forest, vintage botanical, art deco, ocean sunset, autumn cabin. Or write your own free-form prompt." },
-      { title: "Scan verification built-in", desc: "After the AI generates the image, Pickrack runs it through jsQR (the same scanner used by /tools/calc/qr-scanner/) to verify the QR still decodes. Green check = safe to print, amber = bump the QR weight up." },
+      { title: "Scan verification built-in", desc: "After the AI generates the image, Startup Tools Hub runs it through jsQR (the same scanner used by /tools/calc/qr-scanner/) to verify the QR still decodes. Green check = safe to print, amber = bump the QR weight up." },
       { title: "QR weight slider", desc: "Trade artistic freedom against scannability. 0.5-2.5 range; 1.2-1.6 is the sweet spot for most art. Higher = more visible QR; lower = more painterly but harder to scan." },
       { title: "Bring your own Replicate token", desc: "Free signup at replicate.com gives you ~$1 free credit. Your token stays in your browser localStorage and is forwarded to Replicate via our proxy without ever being logged." },
       { title: "Quality + cost controls", desc: "Inference steps slider (10-50) trades generation time + cost against quality. 30 steps is the balanced default." },
@@ -2499,7 +2492,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       { title: "Step 2: Describe the art", desc: "Pick a preset or write a free-form prompt. More detail = better result: subject + style + lighting + mood. e.g., 'misty mountain at sunrise, peaceful, photorealistic'." },
       { title: "Step 3 (optional): Tune QR weight", desc: "Open Advanced. 1.4 is default. Decrease for more painterly look, increase if the scan check fails." },
       { title: "Step 4: Generate", desc: "Click Generate. Wait 10-30 seconds (longer if the queue is busy). Result + scan-check appears on the right." },
-      { title: "Step 5: Verify + download", desc: "Test the scan in your phone before printing (also use Pickrack's QR Scanner tool to verify). Click Download to save PNG." },
+      { title: "Step 5: Verify + download", desc: "Test the scan in your phone before printing (also use Startup Tools Hub's QR Scanner tool to verify). Click Download to save PNG." },
     ],
     useCases: [
       "**Restaurant menu board** — a watercolor of the dish surrounding a scan-to-menu QR",
@@ -2513,15 +2506,15 @@ export const toolContentMap: Record<string, ToolContent> = {
     ],
     faq: [
       { q: "How does this differ from the regular QR Generator?", a: "The regular Generator outputs a clean black-and-white (or color) QR pattern with optional dot styling, gradient, logo, and frame. The AI-Art QR Generator uses Stable Diffusion + ControlNet to DRAW an entire artwork that IS the QR — the modules of the QR pattern become elements of the picture. Same scan reliability when set up right; very different aesthetic." },
-      { q: "Why does it cost money? Other Pickrack tools are free.", a: "Stable Diffusion needs GPU compute — Replicate charges roughly $0.0002 per GPU-second, so a 30-step generation at 512×512 costs around $0.02-0.05. Pickrack runs the rest of its tools without paid APIs (browser-side, or Anthropic's small Haiku tier). For this tool we either consume small free quotas or you bring your own Replicate token (signup gives ~$1 free credit = ~20-50 generations)." },
-      { q: "Is my QR content sent to Replicate?", a: "Yes — the QR content and prompt are sent through Pickrack's proxy to Replicate's API for image generation. The QR content shows up in Replicate's logs (similar to how Anthropic logs API calls). If your QR contains sensitive data (private URL, personal contact), generate a public QR first and use the URL alone." },
-      { q: "Is my Replicate API token safe?", a: "It's stored in your browser's localStorage (visible to JavaScript on Pickrack only). When you click Generate, the token is sent in the POST body to Pickrack's server, which forwards it to Replicate as the Authorization header. Pickrack does NOT log the token in any server-side log. You can revoke any leaked token instantly in your Replicate dashboard." },
+      { q: "Why does it cost money? Other Startup Tools Hub tools are free.", a: "Stable Diffusion needs GPU compute — Replicate charges roughly $0.0002 per GPU-second, so a 30-step generation at 512×512 costs around $0.02-0.05. Startup Tools Hub runs the rest of its tools without paid APIs (browser-side, or Anthropic's small Haiku tier). For this tool we either consume small free quotas or you bring your own Replicate token (signup gives ~$1 free credit = ~20-50 generations)." },
+      { q: "Is my QR content sent to Replicate?", a: "Yes — the QR content and prompt are sent through Startup Tools Hub's proxy to Replicate's API for image generation. The QR content shows up in Replicate's logs (similar to how Anthropic logs API calls). If your QR contains sensitive data (private URL, personal contact), generate a public QR first and use the URL alone." },
+      { q: "Is my Replicate API token safe?", a: "It's stored in your browser's localStorage (visible to JavaScript on Startup Tools Hub only). When you click Generate, the token is sent in the POST body to Startup Tools Hub's server, which forwards it to Replicate as the Authorization header. Startup Tools Hub does NOT log the token in any server-side log. You can revoke any leaked token instantly in your Replicate dashboard." },
       { q: "Why does the scan check sometimes say 'hard to scan'?", a: "The QR weight slider controls the trade-off between art quality and scannability. Low weight (0.5-1.0) produces beautiful art but the QR pattern fades — scanners can't detect it. Bump to 1.4-1.8 and regenerate. Also: print at large size (≥4cm × 4cm), high contrast paper, and avoid printing on tiny screens." },
-      { q: "Can I use this commercially?", a: "Yes — the underlying QR-Monster ControlNet model is OpenRAIL licensed, allowing commercial use. Generated images are yours to use. Replicate's terms also allow commercial use of model outputs. Pickrack adds no additional restrictions." },
+      { q: "Can I use this commercially?", a: "Yes — the underlying QR-Monster ControlNet model is OpenRAIL licensed, allowing commercial use. Generated images are yours to use. Replicate's terms also allow commercial use of model outputs. Startup Tools Hub adds no additional restrictions." },
       { q: "Why is it sometimes slow?", a: "Two causes: (1) cold start — Replicate's GPU may need to load the model into memory if it's been idle (adds 30-60s the first time), subsequent requests are faster; (2) high traffic on Replicate's queue. Inference itself is 5-15s once it starts. The progress timer keeps you informed." },
       { q: "Can I save my favorite prompts?", a: "v1 has 8 preset buttons. Custom prompt saving is on the roadmap. Workaround: keep your favorite prompts in a separate notes file and paste them when needed." },
     ],
-    relatedTools: ["qr-generator", "qr-scanner", "ai-summarizer"],
+    relatedTools: ["qr-generator", "qr-scanner", "qr-batch"],
   },
 
   "mortgage-calculator": {
@@ -2538,7 +2531,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       { title: "Full amortization schedule", desc: "Year-by-year breakdown of payment / interest / principal / remaining balance. Expandable from a single click." },
       { title: "Extra-payment what-if", desc: "Add an extra amount to each monthly payment — see how many months and how many dollars in interest you save." },
       { title: "Principal vs interest split", desc: "Live percentage bar showing how much of your total payments goes to principal vs interest over the life of the loan." },
-      { title: "Browser-side only", desc: "Loan amount, rate, term — all stay in your browser tab. Pickrack never sees your numbers." },
+      { title: "Browser-side only", desc: "Loan amount, rate, term — all stay in your browser tab. Startup Tools Hub never sees your numbers." },
     ],
     howTo: [
       { title: "Step 1: Enter loan amount + interest rate", desc: "E.g., $300,000 at 7.0% APR. Use the current rate quoted by your lender." },
@@ -2561,7 +2554,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       { q: "Why is the balance still positive after the term ends?", a: "If your interest rate is very high (>20%) or term very short, the standard payment formula might not fully pay off the loan within the term. This rarely happens with realistic inputs. If it does, increase the term or the payment manually." },
       { q: "Adjustable-rate (ARM) mortgage support?", a: "Not in v1 — this is fixed-rate only. ARM calculations need adjustment caps, periodic caps, and lifetime caps. Use the bank's official ARM calculator or assume a worst-case fixed rate after the initial period." },
       { q: "Is bi-weekly payment supported?", a: "Not directly. Workaround: multiply your monthly payment by 26/12 and use that as an 'extra monthly' equivalent (since bi-weekly = 26 payments/year = 13 monthly equivalents). Native bi-weekly support is on the roadmap." },
-      { q: "Are these numbers tax-deductible advice?", a: "No — Pickrack provides math, not financial or tax advice. Mortgage interest deduction rules vary by US state, year, and loan size (TCJA capped at $750k for primary residences post-2017). Consult a tax professional." },
+      { q: "Are these numbers tax-deductible advice?", a: "No — Startup Tools Hub provides math, not financial or tax advice. Mortgage interest deduction rules vary by US state, year, and loan size (TCJA capped at $750k for primary residences post-2017). Consult a tax professional." },
     ],
     relatedTools: ["percentage-calculator", "tip-calculator", "currency-converter"],
   },
@@ -2612,7 +2605,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "Drop your list, pick N at random. Crypto-secure RNG. With/without replacement. Animated reveal.",
     intro: [
       "**Random Picker** randomly selects N items from a list you provide. Useful for: raffle winner draws, deciding which restaurant to eat at, picking the next person to present, classroom name calls, giveaway selections, or any decision where you want unbiased random selection.",
-      "Pickrack uses `crypto.getRandomValues()` — the browser's cryptographically-secure RNG, the same source used for password generation. This is meaningfully better than `Math.random()` for any context where fairness matters (raffles, giveaways) because the output is unpredictable even if someone knows when you clicked.",
+      "Startup Tools Hub uses `crypto.getRandomValues()` — the browser's cryptographically-secure RNG, the same source used for password generation. This is meaningfully better than `Math.random()` for any context where fairness matters (raffles, giveaways) because the output is unpredictable even if someone knows when you clicked.",
       "Free, no signup, browser-side. Your list and the picks stay in your tab. No upload, no server, no tracking — important when picking giveaway winners (you don't want a third-party knowing the result before you announce).",
     ],
     features: [
@@ -2640,7 +2633,7 @@ export const toolContentMap: Record<string, ToolContent> = {
     ],
     faq: [
       { q: "Is this truly random?", a: "It's cryptographically random via `crypto.getRandomValues()` — the same RNG used for password generation and TLS session keys. Unpredictable. Not gameable from outside. Truly uniform distribution (no bias toward any item)." },
-      { q: "Why use this instead of writing names on paper?", a: "Paper drawing requires you to physically write and shuffle. Pickrack is faster, more transparent (everyone watching can see the same screen), and the result is copyable for posting. For very serious raffles (lottery-level), you may still want notary-witnessed physical drawing." },
+      { q: "Why use this instead of writing names on paper?", a: "Paper drawing requires you to physically write and shuffle. Startup Tools Hub is faster, more transparent (everyone watching can see the same screen), and the result is copyable for posting. For very serious raffles (lottery-level), you may still want notary-witnessed physical drawing." },
       { q: "Can the result be biased toward earlier items in the list?", a: "No. The algorithm uses uniform integer selection via `crypto.getRandomValues` then array splicing. Every item has equal probability." },
       { q: "Max list size?", a: "1000 items practical max for UI smoothness. Larger lists (10,000+) work mathematically but the textarea gets slow. For huge lists, prefer a server-side tool." },
       { q: "Can I weight items differently?", a: "Not in v1 — all items have equal probability. Weighted random (e.g., raffle entries by ticket count) is on the roadmap. Workaround: duplicate the item N times in the list to give it weight N." },
@@ -2655,7 +2648,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       "25-min focus + 5-min break loops. Long break every 4 cycles. Browser tab title updates with countdown.",
     intro: [
       "**Pomodoro Timer** runs the [Pomodoro Technique](https://en.wikipedia.org/wiki/Pomodoro_Technique) — 25 minutes of focused work followed by a 5-minute break, repeated 4 times before a longer 15-30 minute break. The technique was developed by Francesco Cirillo in the late 1980s and has become a cornerstone of productivity practice for knowledge workers, students, and writers.",
-      "Pickrack's timer customizes everything: focus duration (1-120 min), short break (1-30), long break (1-60), cycles before long break (1-10). It rings a sound when the phase changes, optionally sends a browser notification (with permission), and updates the browser tab title with the countdown so you can see remaining time at a glance even when the tab is in the background.",
+      "Startup Tools Hub's timer customizes everything: focus duration (1-120 min), short break (1-30), long break (1-60), cycles before long break (1-10). It rings a sound when the phase changes, optionally sends a browser notification (with permission), and updates the browser tab title with the countdown so you can see remaining time at a glance even when the tab is in the background.",
       "Free, no signup, browser-side. Session stats (cycles completed, total focus minutes) are kept in this tab only — refresh resets them. No tracking, no account, no analytics on your focus sessions.",
     ],
     features: [
@@ -2746,7 +2739,7 @@ export const toolContentMap: Record<string, ToolContent> = {
     h1Subtitle:
       "Find and replace text with full regex + capture groups. Live preview, match count, browser-side.",
     intro: [
-      "**Find & Replace** is the classic text editing operation — find every occurrence of a pattern and replace it with another string. Pickrack supports plain-text search and full JavaScript regex with capture groups, case-insensitive matching, multiline mode, and global vs single-replace options.",
+      "**Find & Replace** is the classic text editing operation — find every occurrence of a pattern and replace it with another string. Startup Tools Hub supports plain-text search and full JavaScript regex with capture groups, case-insensitive matching, multiline mode, and global vs single-replace options.",
       "Use it for: data cleaning (trim email addresses, normalize phone numbers), bulk URL updates, CSV transformations, code refactors that don't need a real IDE, removing tracking parameters from URL lists, swapping placeholders in email templates.",
       "Free, no signup, browser-side. Your input never leaves your tab — important when working with private data (customer emails, internal URLs, log files that may contain PII).",
     ],
@@ -2774,7 +2767,7 @@ export const toolContentMap: Record<string, ToolContent> = {
     ],
     faq: [
       { q: "What regex flavor does this use?", a: "JavaScript regex — the same engine browsers use for `String.replace()`. Supports character classes, quantifiers, lookahead, lookbehind (in modern browsers), Unicode properties (\\p{...}). Does NOT support some PCRE features like recursive patterns. Most use cases work identically." },
-      { q: "How do I escape special characters in plain mode?", a: "You don't have to — when Regex is OFF, Pickrack auto-escapes all regex special chars. So searching for `(test)` in plain mode finds the literal text `(test)`, not a capture group." },
+      { q: "How do I escape special characters in plain mode?", a: "You don't have to — when Regex is OFF, Startup Tools Hub auto-escapes all regex special chars. So searching for `(test)` in plain mode finds the literal text `(test)`, not a capture group." },
       { q: "What's $1 $2 in replace?", a: "Capture group backreferences. In regex mode, parentheses in 'Find' create capture groups. `$1` in 'Replace' inserts the first group's match, `$2` the second, etc. Up to `$9`, plus `$&` for the entire match. Example: find `(\\w+) (\\w+)` + replace `$2 $1` swaps two words." },
       { q: "Why no preview highlighting?", a: "v1 doesn't highlight matches in-place (would require a code editor component, ~100KB extra). Workaround: read the match count + diff input vs output visually. Highlighted preview is on the roadmap." },
       { q: "How does Multiline mode change behavior?", a: "By default, `^` matches only the start of the entire string and `$` only the end. Multiline mode makes them match start/end of each line. Useful for line-based patterns like 'comment out every line starting with TODO': find `^TODO` (multiline ON) → replace `// TODO`." },
@@ -2832,7 +2825,7 @@ export const toolContentMap: Record<string, ToolContent> = {
     h1Subtitle:
       "Dedupe lines while preserving order. Case-sensitive option, whitespace trim, keep-first vs keep-last.",
     intro: [
-      "**Remove Duplicate Lines** scans your text line-by-line and outputs each unique line once. Unlike Excel's 'Remove duplicates' or a SQL `DISTINCT`, Pickrack preserves the original order — first (or last) occurrence stays where it was. Configurable: case sensitivity, whitespace trimming, keep-first vs keep-last, and optional blank-line removal.",
+      "**Remove Duplicate Lines** scans your text line-by-line and outputs each unique line once. Unlike Excel's 'Remove duplicates' or a SQL `DISTINCT`, Startup Tools Hub preserves the original order — first (or last) occurrence stays where it was. Configurable: case sensitivity, whitespace trimming, keep-first vs keep-last, and optional blank-line removal.",
       "Use it for: cleaning up email lists, deduping URL lists, removing repeated log entries, simplifying tag dumps, cleaning copy-pasted spreadsheet rows, or any list that's been concatenated from multiple sources.",
       "Free, no signup, browser-side. Up to ~100,000 lines processed instantly. Privacy-friendly: your list never leaves the browser tab.",
     ],
@@ -2861,7 +2854,7 @@ export const toolContentMap: Record<string, ToolContent> = {
     ],
     faq: [
       { q: "How is this different from Sort Lines with dedup?", a: "Sort Lines with dedup REORDERS your data (by alpha, numeric, etc.). Remove Duplicates PRESERVES the original order. Use Remove Duplicates when order matters (e.g., chronological log), Sort with dedup when you want alphabetized + unique." },
-      { q: "What if I want to dedupe by a specific column (CSV)?", a: "Not in v1 — Pickrack dedupes by exact line match. For CSV column dedup: (1) extract the column with Find & Replace, dedupe, then merge back. Or use a CLI tool like `awk -F, '!seen[$2]++'`. CSV column awareness is on the roadmap." },
+      { q: "What if I want to dedupe by a specific column (CSV)?", a: "Not in v1 — Startup Tools Hub dedupes by exact line match. For CSV column dedup: (1) extract the column with Find & Replace, dedupe, then merge back. Or use a CLI tool like `awk -F, '!seen[$2]++'`. CSV column awareness is on the roadmap." },
       { q: "Why is whitespace trim a separate option from case-insensitive?", a: "They're independent. You might want case-sensitive but whitespace-insensitive (e.g., dedup IDs that may have stray spaces). Toggle each per your data." },
       { q: "What's the difference between keep-first and keep-last?", a: "If your data has 5 duplicate rows of 'Alice', keep-first keeps row #1 of those 5 (and the position of #1 in the output). Keep-last keeps row #5 (at row #5's original position). The position of the kept row is preserved either way." },
       { q: "Are blank lines treated as duplicates?", a: "Yes by default — multiple consecutive blank lines collapse to one. Toggle 'Drop blank lines' to remove all blanks entirely. Untoggle to keep blanks 1:1." },
@@ -2909,7 +2902,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       { q: "Why are some short words missing?", a: "Either the Min Length filter is dropping them (try 1 or 2), or they're in the English stopwords list (toggle off). Both are common defaults — turn off if you want raw counts." },
       { q: "What's the stopwords list?", a: "~175 English words — articles (the, a), prepositions (of, in, on), pronouns (he, she, it), auxiliary verbs (is, are, was), and very-common conjunctions (and, but). Standard NLTK English stopwords. Non-English stopword lists are on the roadmap." },
       { q: "Can I count bi-grams or n-grams?", a: "Not in v1 — single words only. For n-gram analysis use a Python NLTK script or `cmder ngrams.py`. n-gram support is on the roadmap." },
-      { q: "How is this different from a regular word counter?", a: "Word counter (also a Pickrack tool) tells you TOTAL count of words. Word Frequency tells you how often EACH word appears. Different jobs." },
+      { q: "How is this different from a regular word counter?", a: "Word counter (also a Startup Tools Hub tool) tells you TOTAL count of words. Word Frequency tells you how often EACH word appears. Different jobs." },
       { q: "How big can my input be?", a: "Tested to 1MB of text (~150,000 English words). Above that the tokenizer slows but works. For book-length analysis (10MB+) use a Python script." },
     ],
     relatedTools: ["word-counter", "sort-lines", "find-replace"],
@@ -2952,7 +2945,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       { q: "How are letters beyond Z handled?", a: "Like Excel columns: a, b, ..., z, aa, ab, ..., az, ba, bb, etc. So 27th item is 'aa'." },
       { q: "Can I have a different prefix per item?", a: "Not in v1 — same template applies to all lines. For per-item custom prefixes, use Find & Replace with regex." },
       { q: "What if I want numbers to skip blank lines but still count?", a: "Default behavior: blank lines are skipped AND not counted (so the next non-blank line continues numbering as if no blank was there). To number blanks too, untoggle 'Skip blank lines'." },
-      { q: "How do I un-number a list (strip prefixes)?", a: "Use Pickrack's Find & Replace with regex pattern `^\\d+\\. ` (or whatever your prefix is) replaced with empty. Pickrack doesn't have a 'reverse Line Numberer' button, but Find & Replace handles it in one step." },
+      { q: "How do I un-number a list (strip prefixes)?", a: "Use Startup Tools Hub's Find & Replace with regex pattern `^\\d+\\. ` (or whatever your prefix is) replaced with empty. Startup Tools Hub doesn't have a 'reverse Line Numberer' button, but Find & Replace handles it in one step." },
       { q: "Max input size?", a: "10,000 lines processed in <100ms. Above 100,000 may briefly stutter while typing. Use a script for bigger." },
     ],
     relatedTools: ["sort-lines", "find-replace", "case-converter"],
@@ -2990,7 +2983,7 @@ export const toolContentMap: Record<string, ToolContent> = {
     ],
     faq: [
       { q: "Will optimization break my SVG?", a: "Very rarely. The 'Remove default attributes' option assumes SVG defaults (fill=black, stroke=none, opacity=1) — if you rely on inheriting `fill=black` from a parent group, toggle this off. 'Remove empty groups' is safe. Decimal rounding past 2 places can shift coordinates visibly — preview to check." },
-      { q: "How is this different from SVGO?", a: "SVGO is the Node.js CLI standard with 30+ plugins. Pickrack covers the most impactful 90% (the optimizations that fire on every SVG) in a browser-side tool. For build pipelines, use SVGO CLI. For one-off cleanups + clipboard work, Pickrack is faster." },
+      { q: "How is this different from SVGO?", a: "SVGO is the Node.js CLI standard with 30+ plugins. Startup Tools Hub covers the most impactful 90% (the optimizations that fire on every SVG) in a browser-side tool. For build pipelines, use SVGO CLI. For one-off cleanups + clipboard work, Startup Tools Hub is faster." },
       { q: "Does it preserve animations / interactions?", a: "Yes — SMIL animations, CSS animations, and interactivity attributes are preserved by default. Only purely-cosmetic metadata is stripped." },
       { q: "What about removing unused IDs and CSS?", a: "Not in v1 — that requires full SVG parsing (not regex). On the roadmap. For now, those optimizations are best done via SVGO CLI." },
       { q: "Can I undo a change if I don't like it?", a: "Toggle the option off and the output updates. Original input is preserved on the left." },
@@ -3078,7 +3071,7 @@ export const toolContentMap: Record<string, ToolContent> = {
       { q: "What size should my source image be?", a: "**512×512 pixel PNG with transparency** is the sweet spot. SVG also works (vector → crisp at all sizes). Smaller than 256×256 → the 384 and 512 outputs will be blurry. Non-square → output will be cropped or padded based on your fit-mode choice." },
       { q: "Why so many sizes?", a: "Different platforms expect different sizes. Modern Chrome uses 32×32. iOS home screen uses 180×180. Android PWA uses 192×192 + 512×512. Old IE/Edge still reads .ico (16/32/48). Legacy mobile Safari uses 152 or 167. Covering all 12 sizes means no platform shows a blurry icon." },
       { q: "Do I need all 12 PNG files?", a: "For maximum compatibility yes. For minimum: 32×32 + 180×180 + 192×192 + favicon.ico cover ~95% of users. Upload all 17 files anyway — they're tiny and prevent edge-case ugliness." },
-      { q: "What's in the favicon.ico?", a: "16×16, 32×32, and 48×48 PNG-format images stacked inside a single .ico container. Modern format (PNG-in-ICO) supported since Vista. Older Windows would need BMP-format inside — Pickrack uses PNG-in-ICO for crispness." },
+      { q: "What's in the favicon.ico?", a: "16×16, 32×32, and 48×48 PNG-format images stacked inside a single .ico container. Modern format (PNG-in-ICO) supported since Vista. Older Windows would need BMP-format inside — Startup Tools Hub uses PNG-in-ICO for crispness." },
       { q: "Manifest.json — what's it for?", a: "PWA (Progressive Web App) installation. When a user 'Add to Home Screen' on Chrome/Edge mobile, the browser reads the manifest to pick an icon, set the theme color, and choose display mode. Optional but recommended for any modern site." },
       { q: "Can I preview before downloading?", a: "Yes — the right-side panel shows 16/32/96/192 previews after Generate. Click Download once satisfied." },
       { q: "Does this support SVG favicons?", a: "Source upload accepts SVG. Output is rasterized to PNG at each size (favicons need PNG/ICO for cross-browser support). SVG-favicon `<link rel=\"icon\" type=\"image/svg+xml\">` is on the roadmap but only works in Chrome+Firefox+Safari latest." },
@@ -3136,7 +3129,7 @@ export const toolContentMap: Record<string, ToolContent> = {
     h1Subtitle:
       "Read camera + GPS metadata from photos. Strip metadata before sharing for privacy. Browser-side.",
     intro: [
-      "**EXIF Reader & Stripper** displays the metadata embedded in any photo: camera make/model, lens, capture settings (shutter, aperture, ISO), date/time taken, and (most importantly for privacy) embedded GPS coordinates. Strip the metadata with one click before sharing online — Pickrack re-encodes the photo via Canvas API to produce a clean copy with zero metadata.",
+      "**EXIF Reader & Stripper** displays the metadata embedded in any photo: camera make/model, lens, capture settings (shutter, aperture, ISO), date/time taken, and (most importantly for privacy) embedded GPS coordinates. Strip the metadata with one click before sharing online — Startup Tools Hub re-encodes the photo via Canvas API to produce a clean copy with zero metadata.",
       "Use it for: forensic analysis of a photo's origin, verifying a photographer's claimed equipment, debugging your own camera settings, auditing a vendor's promotional photo, and **most importantly**: removing GPS data before posting photos online. By default, smartphones embed GPS into every photo. Posting on Twitter/Reddit/Discord WITHOUT stripping → you've published your home/office/wherever-you-were location to strangers.",
       "Free, no signup, fully browser-side. Photo never leaves your tab. EXIF parsing uses the [exifreader](https://github.com/mattiasw/ExifReader) library; the strip operation uses Canvas API which writes no metadata.",
     ],
@@ -3152,7 +3145,7 @@ export const toolContentMap: Record<string, ToolContent> = {
     howTo: [
       { title: "Step 1: Upload photo", desc: "Drop or click. JPG / HEIC / PNG / TIFF supported. Smartphone photos always have EXIF; web-downloaded images usually don't." },
       { title: "Step 2: Read the metadata", desc: "All fields shown, grouped by category (Camera, Capture, Date, Location, File info, Other)." },
-      { title: "Step 3 (privacy): Strip metadata", desc: "If GPS or sensitive data is present, click 'Strip metadata + download clean copy'. Pickrack re-encodes the image with zero metadata." },
+      { title: "Step 3 (privacy): Strip metadata", desc: "If GPS or sensitive data is present, click 'Strip metadata + download clean copy'. Startup Tools Hub re-encodes the image with zero metadata." },
       { title: "Step 4: Use the cleaned copy", desc: "Download the stripped version. Use it anywhere — no one can extract GPS or camera info from the cleaned copy." },
     ],
     useCases: [
@@ -3168,10 +3161,10 @@ export const toolContentMap: Record<string, ToolContent> = {
       { q: "What is EXIF metadata exactly?", a: "Exchangeable Image File Format — a standard for embedding metadata in image files. Smartphones write camera model, exposure settings, timestamps, GPS coordinates, and sometimes software fingerprints into every JPG/HEIC. PNG occasionally has EXIF too (less common). WebP can have EXIF." },
       { q: "Is GPS in every smartphone photo?", a: "Default on most iOS + Android phones unless you disable location for the Camera app. iPhone: Settings → Privacy → Location Services → Camera → 'Never'. Android: Camera app settings → Location → off. For photos already taken, you have to strip metadata after the fact (e.g., with this tool)." },
       { q: "Does social media strip EXIF automatically?", a: "Twitter/X strips most EXIF including GPS (since 2014). Facebook strips most. Instagram strips most. Reddit strips. BUT: Discord embeds, direct messages, image-hosting sites (Imgur, Catbox), and email attachments often DON'T strip — and even on platforms that strip, you usually can't verify in advance. Best practice: strip before upload." },
-      { q: "How is 'strip metadata' implemented?", a: "Pickrack loads the photo via Canvas API, then re-exports it via `canvas.toBlob('image/jpeg')` or `image/png`. Canvas writes no EXIF — only raw pixel data. Pixel data is preserved (no quality loss for PNG, default 95% quality JPEG). All metadata is dropped." },
+      { q: "How is 'strip metadata' implemented?", a: "Startup Tools Hub loads the photo via Canvas API, then re-exports it via `canvas.toBlob('image/jpeg')` or `image/png`. Canvas writes no EXIF — only raw pixel data. Pixel data is preserved (no quality loss for PNG, default 95% quality JPEG). All metadata is dropped." },
       { q: "Does strip change image quality?", a: "PNG output: lossless, identical pixels. JPEG output: re-encoded at 95% quality — typically indistinguishable from the original by eye, though pixel-level diff will show ~0.1% differences. If quality is critical (large prints, scientific imaging), keep the original + share the stripped copy." },
       { q: "What if my image has copyright info I want to keep?", a: "Stripping removes EVERYTHING including copyright + author tags. v1 doesn't have selective strip (e.g., 'remove GPS only, keep copyright'). On the roadmap. For now: write down the copyright info before stripping, then re-embed it with a tool like exiftool after." },
-      { q: "Is this tool itself privacy-safe?", a: "Yes. All EXIF reading + stripping happens in your browser tab via JavaScript. The photo + metadata never reach any server. Pickrack has zero logs about what you uploaded. Verify in DevTools → Network → no upload requests during the operation." },
+      { q: "Is this tool itself privacy-safe?", a: "Yes. All EXIF reading + stripping happens in your browser tab via JavaScript. The photo + metadata never reach any server. Startup Tools Hub has zero logs about what you uploaded. Verify in DevTools → Network → no upload requests during the operation." },
       { q: "What about HEIC files from iPhone?", a: "HEIC is supported. The metadata reads correctly. Note: HEIC strip → JPG output (since Canvas can't write HEIC). To keep HEIC format AND strip metadata, use exiftool CLI on macOS." },
     ],
     relatedTools: ["image-compressor", "image-converter", "background-remover"],
@@ -3212,12 +3205,12 @@ export const toolContentMap: Record<string, ToolContent> = {
     faq: [
       { q: "How does Swin2SR compare to RealESRGAN or DALL-E HD?", a: "Swin2SR is a transformer-based super-resolution model. RealESRGAN is GAN-based. In general: Swin2SR is more conservative (preserves real structure but adds less synthetic detail), RealESRGAN is more aggressive (sharper output but occasional 'hallucinated' features). DALL-E HD or Topaz Photo AI use larger more complex models with even more detail synthesis. Swin2SR is a good middle ground for everyday photo upscaling." },
       { q: "Is the upscale lossless?", a: "Output is a lossless PNG. But the upscaling process is NOT lossless — the model invents detail. A 200×200 image upscaled to 800×800 is 16× more pixels, and the model fills the new 15/16 of pixels with predicted values. They're plausible, not the 'true' detail (which can't be recovered)." },
-      { q: "Why does the result look soft / lacks expected sharpness?", a: "Swin2SR is conservative by design — it doesn't aggressively over-sharpen. If you want crisper output, run the result through a sharpening filter (or use Pickrack's image-compressor at high quality to apply a mild sharpen). For maximum sharpening at the cost of artifacts, try Real-ESRGAN externally." },
+      { q: "Why does the result look soft / lacks expected sharpness?", a: "Swin2SR is conservative by design — it doesn't aggressively over-sharpen. If you want crisper output, run the result through a sharpening filter (or use Startup Tools Hub's image-compressor at high quality to apply a mild sharpen). For maximum sharpening at the cost of artifacts, try Real-ESRGAN externally." },
       { q: "Does it work for text / screenshots?", a: "Yes but the model is trained on photos. Text in screenshots upscales OK but can show slight blur at edges. For pure text/diagram upscaling, vector formats (SVG) or raster-with-anti-alias-off scaling work better." },
-      { q: "What about faces?", a: "General Swin2SR handles faces decently. For face-specific upscaling (skin texture, eye detail, lip shape), specialized face models like GFPGAN or CodeFormer beat Swin2SR. Not currently in Pickrack — on the roadmap." },
+      { q: "What about faces?", a: "General Swin2SR handles faces decently. For face-specific upscaling (skin texture, eye detail, lip shape), specialized face models like GFPGAN or CodeFormer beat Swin2SR. Not currently in Startup Tools Hub — on the roadmap." },
       { q: "Why is my image pre-resized?", a: "GPU VRAM is finite. Input images larger than ~1500×1500 are pre-resized to fit. After 4× upscale they'd produce 6000×6000+ output which is 100MB+ raw. If you need true ultra-resolution, split image into tiles externally and upscale each tile separately." },
       { q: "Why does the badge sometimes say 'GPU offline'?", a: "The Swin2SR model runs on the operator's home PC GPU. If the PC is asleep / shut down / network down, the badge shows offline and the Upscale button is disabled. The PC is the operator's daily-use machine, so availability varies. Status refreshes every 60s." },
-      { q: "Is my image uploaded anywhere?", a: "Your image is uploaded to the operator's home PC via Pickrack's server, processed locally by the GPU, output returned as base64. The Pickrack server doesn't log image content or store the file. The operator's PC GPU sees the image briefly during inference but writes nothing to disk." },
+      { q: "Is my image uploaded anywhere?", a: "Your image is uploaded to the operator's home PC via Startup Tools Hub's server, processed locally by the GPU, output returned as base64. The Startup Tools Hub server doesn't log image content or store the file. The operator's PC GPU sees the image briefly during inference but writes nothing to disk." },
     ],
     relatedTools: ["image-upscaler", "image-compressor", "qr-art-generator"],
   },
@@ -3260,16 +3253,16 @@ export const toolContentMap: Record<string, ToolContent> = {
     faq: [
       { q: "How does img2img differ from txt2img?", a: "Txt2img generates from text only (random noise → denoised image guided by prompt). Img2img starts from YOUR image, partially noises it (per strength slider), then denoises guided by the prompt. Result: composition/subject from input photo, style from text prompt. Best of both: precise control over what's in the image (input) AND how it looks (prompt)." },
       { q: "What's the strength slider actually doing?", a: "Strength controls noise level. 0.3 = lightly noised input, denoised back with prompt influence — light stylization. 0.7 = heavily noised, mostly regenerated under prompt guidance — bold transformation. 1.0 would be pure txt2img (no input influence). Sweet spot 0.5-0.7 for most cases." },
-      { q: "Why does my face look different / weird?", a: "SD 1.5 wasn't specifically trained on faces. Faces often distort slightly, especially at higher strengths (0.7+). For face-preserving stylization, lower strength to 0.4-0.5, OR run the output through a face-restoration model afterward (GFPGAN / CodeFormer — not in Pickrack yet)." },
+      { q: "Why does my face look different / weird?", a: "SD 1.5 wasn't specifically trained on faces. Faces often distort slightly, especially at higher strengths (0.7+). For face-preserving stylization, lower strength to 0.4-0.5, OR run the output through a face-restoration model afterward (GFPGAN / CodeFormer — not in Startup Tools Hub yet)." },
       { q: "Which model for which style?", a: "**Photo realism** → Realistic Vision V6. **Anime/illustration** → Anything V5. **Mixed media / creative** → DreamShaper 8. **Unknown / general** → Default SD 1.5. Try the same prompt across all 4 models to see massive aesthetic differences — that's part of the fun." },
       { q: "Can I keep the exact composition?", a: "img2img preserves composition reasonably well at lower strengths (0.3-0.5). For STRICT composition preservation (exact pose, exact face position), look into ControlNet-based tools. img2img alone allows the model some freedom — fingers may relocate, hair may change, etc. at higher strengths." },
       { q: "What happens to image dimensions?", a: "Input is resized so longest edge = your chosen max-side (default 768px), with both dimensions multiples of 8 (SD UNet requirement). Aspect ratio preserved. Larger max-side = more detail, more VRAM, more time. 768 is the sweet spot for 12GB VRAM." },
       { q: "Does it work for non-photo inputs (drawings, sketches)?", a: "Yes — img2img works on any RGB input. A pencil sketch + prompt 'detailed oil painting' will return a painted version of your sketch. A 3D render + 'cinematic photo' style → photo-realistic-looking variant. Etc." },
-      { q: "How is this different from the AI-Art QR Generator?", a: "AI-Art QR uses ControlNet (QR-Monster) to lock the QR pattern + generate art around it. AI Img2img uses Img2Img mode (no ControlNet) to transform an EXISTING image. Different pipelines, same underlying SD weights (Pickrack shares them in VRAM — zero extra memory cost). Different use cases — QR generation vs photo stylization." },
+      { q: "How is this different from the AI-Art QR Generator?", a: "AI-Art QR uses ControlNet (QR-Monster) to lock the QR pattern + generate art around it. AI Img2img uses Img2Img mode (no ControlNet) to transform an EXISTING image. Different pipelines, same underlying SD weights (Startup Tools Hub shares them in VRAM — zero extra memory cost). Different use cases — QR generation vs photo stylization." },
       { q: "Why are results sometimes random?", a: "Seed is unset by default (random). Same prompt + same input + same settings gives different output each click. This is intentional — multiple shots let you pick the best. Fixed seed is on the roadmap for reproducible iteration." },
       { q: "Can I batch-style multiple images?", a: "Not in v1. One at a time. For 10-50 images: hand-process each (still faster than commissioning an artist). Batch endpoint is on the roadmap." },
     ],
-    relatedTools: ["qr-art-generator", "ai-image-upscaler", "background-remover"],
+    relatedTools: ["image-compressor", "image-converter", "image-resizer"],
   },
 };
 

@@ -363,14 +363,14 @@ export default function PipelineLessonsGrid() {
             </p>
             <div className="flex items-center gap-3 pt-1">
               <Link
-                href="/tools/ai/chat"
+                href="/tools/pdf/pdf-to-markdown/"
                 className="inline-flex items-center gap-2 rounded-lg bg-gray-100 px-3 py-1.5 font-mono text-xs font-semibold text-gray-800 hover:bg-gray-200 transition-colors"
               >
                 <Terminal className="h-3.5 w-3.5 text-sky-600" />
                 <span>$ /local-ai</span>
               </Link>
               <Link
-                href="/tools/ai/chat"
+                href="/tools/pdf/pdf-to-markdown/"
                 className="text-xs font-semibold text-sky-600 hover:text-sky-800 flex items-center gap-1"
               >
                 <span>Launch Tool</span> →

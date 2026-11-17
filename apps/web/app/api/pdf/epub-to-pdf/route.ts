@@ -49,11 +49,12 @@ export async function POST(req: NextRequest) {
     const outputBuf = await calibreConvert(inputBuf, "epub", "pdf");
 
     const outputName = file.name.replace(/\.epub$/i, ".pdf") || "converted.pdf";
+    const safeOutputName = outputName.replace(/[^a-zA-Z0-9._-]/g, "_");
     return new NextResponse(new Uint8Array(outputBuf), {
       status: 200,
       headers: {
         "Content-Type": "application/pdf",
-        "Content-Disposition": `attachment; filename="${outputName}"`,
+        "Content-Disposition": `attachment; filename="${safeOutputName}"`,
         "Cache-Control": "no-store",
       },
     });
@@ -61,7 +62,7 @@ export async function POST(req: NextRequest) {
     const msg = e instanceof Error ? e.message : String(e);
     console.error("[epub-to-pdf] Error:", msg);
     return NextResponse.json(
-      { error: `Conversion failed: ${msg.slice(0, 150)}` },
+      { error: "Conversion failed. Please verify the EPUB file and try again." },
       { status: 500 }
     );
   }

@@ -1,7 +1,7 @@
 "use client";
 
 // ponytail: Production-grade client-first PDF-to-Markdown conversion.
-// Zero remote uploads; instant in-browser AST parsing with headings, bold/italic, and optional server fallback.
+// Zero remote uploads; instant in-browser AST parsing with headings, bold/italic, and privacy guarantees.
 import { useState, useCallback } from "react";
 import {
   Loader2,
@@ -11,7 +11,6 @@ import {
   FileCode,
   Shield,
   AlertCircle,
-  CloudUpload,
 } from "lucide-react";
 import ToolUploadZone, { type UploadedFile } from "@/components/ToolUploadZone";
 import { convertPdfToMarkdown } from "@/lib/pdf-to-markdown";
@@ -20,10 +19,8 @@ export default function PDFtoMarkdownPage() {
   const [files, setFiles] = useState<UploadedFile[]>([]);
   const [content, setContent] = useState<string | null>(null);
   const [processing, setProcessing] = useState(false);
-  const [serverProcessing, setServerProcessing] = useState(false);
   const [progress, setProgress] = useState<{ current: number; total: number } | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [canServerFallback, setCanServerFallback] = useState(false);
   const [copied, setCopied] = useState(false);
   const [pageCount, setPageCount] = useState<number | null>(null);
 
@@ -32,7 +29,6 @@ export default function PDFtoMarkdownPage() {
     setContent(null);
     setError(null);
     setProgress(null);
-    setCanServerFallback(false);
     setPageCount(null);
   }, []);
 
@@ -45,12 +41,11 @@ export default function PDFtoMarkdownPage() {
     setError(null);
     setContent(null);
     setProgress(null);
-    setCanServerFallback(false);
 
     const f = files[0].file;
 
     try {
-      // 1. In-browser client extraction (100% private, zero server uploads)
+      // In-browser client extraction (100% private, zero server uploads)
       const res = await convertPdfToMarkdown(f, (current, total) => {
         setProgress({ current, total });
       });
@@ -67,33 +62,10 @@ export default function PDFtoMarkdownPage() {
       console.warn("Client-side markdown extraction failed:", clientErr);
       setError(
         clientErr.message ||
-          "Client conversion could not extract text. The file might be scanned or image-only."
+          "Could not extract text from this PDF. The document may be scanned, image-only, or encrypted."
       );
-      setCanServerFallback(true);
     } finally {
       setProcessing(false);
-    }
-  };
-
-  const extractServerSideFallback = async () => {
-    if (files.length === 0) return;
-    setServerProcessing(true);
-    setError(null);
-
-    const f = files[0].file;
-
-    try {
-      const fd = new FormData();
-      fd.append("file", f);
-      const res = await fetch("/api/pdf/extract-markdown/", { method: "POST", body: fd });
-      const data = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(data.error || `Server error ${res.status}`);
-      setContent(data.content);
-      setCanServerFallback(false);
-    } catch (serverErr: any) {
-      setError(serverErr.message || "Server extraction failed.");
-    } finally {
-      setServerProcessing(false);
     }
   };
 
@@ -171,7 +143,7 @@ export default function PDFtoMarkdownPage() {
 
           <button
             onClick={extractClientSide}
-            disabled={processing || serverProcessing}
+            disabled={processing}
             className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold py-3.5 transition disabled:opacity-70 shadow-sm cursor-pointer"
           >
             {processing ? (
@@ -192,35 +164,9 @@ export default function PDFtoMarkdownPage() {
       )}
 
       {error && (
-        <div className="mt-4 rounded-xl border border-rose-200 bg-rose-50 p-4 text-sm text-rose-700 space-y-3">
-          <div className="flex items-center gap-3">
-            <AlertCircle className="w-5 h-5 shrink-0" />
-            <p>{error}</p>
-          </div>
-          {canServerFallback && (
-            <div className="pt-2 border-t border-rose-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-              <p className="text-xs text-rose-800">
-                Want to try server conversion (Poppler engine)? This will upload your PDF securely.
-              </p>
-              <button
-                onClick={extractServerSideFallback}
-                disabled={serverProcessing}
-                className="inline-flex items-center justify-center gap-2 px-3 py-1.5 rounded-lg bg-rose-700 hover:bg-rose-800 text-white text-xs font-semibold shrink-0 cursor-pointer disabled:opacity-50"
-              >
-                {serverProcessing ? (
-                  <>
-                    <Loader2 className="w-3.5 h-3.5 animate-spin" />
-                    Uploading & Extracting…
-                  </>
-                ) : (
-                  <>
-                    <CloudUpload className="w-3.5 h-3.5" />
-                    Try Server Fallback
-                  </>
-                )}
-              </button>
-            </div>
-          )}
+        <div className="mt-4 rounded-xl border border-rose-200 bg-rose-50 p-4 text-sm text-rose-700 flex items-center gap-3">
+          <AlertCircle className="w-5 h-5 shrink-0" />
+          <p>{error}</p>
         </div>
       )}
 

@@ -60,11 +60,12 @@ export async function POST(req: NextRequest) {
     });
 
     const outputName = file.name.replace(/\.pdf$/i, ".docx") || "converted.docx";
+    const safeOutputName = outputName.replace(/[^a-zA-Z0-9._-]/g, "_");
     return new NextResponse(new Uint8Array(outputBuf), {
       status: 200,
       headers: {
         "Content-Type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-        "Content-Disposition": `attachment; filename="${outputName}"`,
+        "Content-Disposition": `attachment; filename="${safeOutputName}"`,
         "Cache-Control": "no-store",
       },
     });
@@ -72,7 +73,7 @@ export async function POST(req: NextRequest) {
     const msg = e instanceof Error ? e.message : String(e);
     console.error("[pdf-to-word] Error:", msg);
     return NextResponse.json(
-      { error: `Conversion failed: ${msg.slice(0, 150)}` },
+      { error: "Conversion failed. Please verify the PDF file and try again." },
       { status: 500 }
     );
   }

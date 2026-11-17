@@ -132,7 +132,6 @@ export const CATEGORY_ORDER: CategoryId[] = [
   "finance",
   "pdf",
   "image",
-  "ai",
   "dev",
   "text",
   "calc",

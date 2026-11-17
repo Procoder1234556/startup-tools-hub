@@ -26,8 +26,8 @@
   --color-input: var(--color-border);
   --color-ring: #111111;
 
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-hanken), "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-hanken), "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
 }
 
 html, body {
@@ -50,8 +50,8 @@ a {
 }
 
 ::selection {
-  background: #d8ff42;
-  color: #111111;
+  background: #ff4a1f;
+  color: #18191b;
 }
 
 .prose :where(a):not(:where([class~="not-prose"] *)) {

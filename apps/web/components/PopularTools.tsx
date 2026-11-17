@@ -10,7 +10,7 @@ const POPULAR_SLUGS = [
   "compress-pdf",
   "image-compressor",
   "qr-generator",
-  "ai-summarizer",
+  "pdf-to-markdown",
   "background-remover",
 ];
 

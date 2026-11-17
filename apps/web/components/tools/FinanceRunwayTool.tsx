@@ -7,7 +7,6 @@ import { InputPanel } from "@/components/tools/runway/InputPanel";
 import { RunwayChart } from "@/components/tools/runway/RunwayChart";
 import { MetricsCards } from "@/components/tools/runway/MetricsCards";
 import { ScenarioToggle } from "@/components/tools/runway/ScenarioToggle";
-import { AIPanel } from "@/components/tools/runway/AIPanel";
 
 const DEFAULT_INPUTS: InputState = {
   startingCash: 500_000,
@@ -46,7 +45,7 @@ export default function FinanceRunwayTool() {
           >
             fozankhana/startup-runway-calculator
           </a>
-          : burn trends, three revenue scenarios, chart, metrics, and optional AI assist (your keys stay in the browser).
+          : burn trends, three revenue scenarios, chart, metrics, and scenario simulations.
           Not legal or tax advice.
         </p>
       </header>
@@ -61,7 +60,7 @@ export default function FinanceRunwayTool() {
         </div>
 
         <main className="bg-slate-900 px-4 sm:px-6 py-6 flex flex-col gap-6">
-          <AIPanel onApply={handleChange} modelOutput={output} inputs={inputs} />
+          
 
           <div className="grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-6">
             <InputPanel inputs={inputs} onChange={handleChange} />

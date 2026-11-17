@@ -69,7 +69,7 @@ export default function PipelineSerpentineMap() {
       name: "Local browser AI",
       desc: "WebGPU on-device models, 0 API fees",
       command: "/local-ai",
-      route: "/tools/ai/chat",
+      route: "/tools/pdf/pdf-to-markdown/",
       details: "Execute Web-LLM models directly in your browser. Draft marketing copy without cloud token bills.",
     },
     {

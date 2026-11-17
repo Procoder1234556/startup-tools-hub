@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { Loader2, Download, Presentation, AlertTriangle } from "lucide-react";
 import ToolUploadZone, { type UploadedFile } from "@/components/ToolUploadZone";
 
@@ -11,9 +11,19 @@ export default function PPTXtoPDFPage() {
   const [downloadName, setDownloadName] = useState<string>("converted.pdf");
   const [error, setError] = useState<string | null>(null);
 
+  // Revoke blob URL on unmount to prevent browser memory leaks
+  useEffect(() => {
+    return () => {
+      if (downloadUrl) URL.revokeObjectURL(downloadUrl);
+    };
+  }, [downloadUrl]);
+
   const handleFilesSelected = useCallback((uploaded: UploadedFile[]) => {
     setFiles(uploaded);
-    setDownloadUrl(null);
+    setDownloadUrl((prev) => {
+      if (prev) URL.revokeObjectURL(prev);
+      return null;
+    });
     setError(null);
   }, []);
 
@@ -24,7 +34,10 @@ export default function PPTXtoPDFPage() {
     }
     setProcessing(true);
     setError(null);
-    setDownloadUrl(null);
+    setDownloadUrl((prev) => {
+      if (prev) URL.revokeObjectURL(prev);
+      return null;
+    });
 
     try {
       const fd = new FormData();

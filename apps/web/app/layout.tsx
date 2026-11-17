@@ -1,23 +1,22 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
-import { DM_Serif_Display, Inter } from "next/font/google";
-import AnnouncementBar from "@/components/landing/editorial/AnnouncementBar";
-import EditorialNavbar from "@/components/landing/editorial/Navbar";
-import EditorialFooter from "@/components/landing/editorial/EditorialFooter";
+import { Inter, JetBrains_Mono } from "next/font/google";
+import ToolboxAnnouncementBar from "@/components/landing/ToolboxAnnouncementBar";
+import ToolboxNavbar from "@/components/landing/ToolboxNavbar";
+import ToolboxFooter from "@/components/landing/ToolboxFooter";
 import { TOOLS } from "@/lib/tools";
 import { SITE_URL, SITE_NAME, SITE_TAGLINE, SITE_DESCRIPTION, GA_ID, ADSENSE_CLIENT } from "@/lib/site-config";
 import "./globals.css";
 
-const dmSerif = DM_Serif_Display({
+const inter = Inter({
   subsets: ["latin"],
-  weight: "400",
-  variable: "--font-serif",
+  variable: "--font-sans",
   display: "swap",
 });
 
-const inter = Inter({
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-mono",
   display: "swap",
 });
 
@@ -95,15 +94,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   };
 
   return (
-    <html lang="en" className={`h-full ${dmSerif.variable} ${inter.variable}`}>
+    <html lang="en" className={`h-full ${inter.variable} ${jetbrainsMono.variable} scroll-smooth`}>
       <head>
         <link rel="alternate" type="application/rss+xml" title={`${SITE_NAME} blog feed`} href="/blog/feed.xml" />
       </head>
-      <body className="min-h-full flex flex-col bg-[#E8E7EB] text-[#111111] font-[family-name:var(--font-inter)] antialiased">
-        <AnnouncementBar toolCount={totalTools} />
-        <EditorialNavbar />
+      <body className="min-h-full flex flex-col bg-[#F8FAFC] text-[#0F172A] font-sans antialiased selection:bg-[#2563EB] selection:text-white">
+        <ToolboxAnnouncementBar />
+        <ToolboxNavbar />
         <main className="flex-1">{children}</main>
-        <EditorialFooter />
+        <ToolboxFooter />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
         {GA_ID ? (

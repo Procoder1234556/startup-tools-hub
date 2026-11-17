@@ -32,7 +32,17 @@ async function pdftotext(pdfPath: string): Promise<string> {
     let stderr = "";
     proc.stdout.on("data", (d) => { stdout += d.toString(); });
     proc.stderr.on("data", (d) => { stderr += d.toString(); });
-    proc.on("error", reject);
+    proc.on("error", (err: any) => {
+      if (err && err.code === "ENOENT") {
+        reject(
+          new Error(
+            "Poppler pdftotext utility is not installed on this server environment. Install poppler-utils or deploy via Docker."
+          )
+        );
+      } else {
+        reject(err);
+      }
+    });
     proc.on("close", (code) => {
       if (code === 0) resolve(stdout);
       else reject(new Error(stderr.slice(0, 200) || `pdftotext exit ${code}`));

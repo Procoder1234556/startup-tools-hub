@@ -41,7 +41,17 @@ export async function calibreConvert(
       let stderr = "";
       proc.stderr.on("data", (d) => { stderr += d.toString(); });
       proc.stdout.on("data", () => {}); // drain progress lines
-      proc.on("error", reject);
+      proc.on("error", (err: any) => {
+        if (err && err.code === "ENOENT") {
+          reject(
+            new Error(
+              `Calibre binary ('${CALIBRE_BIN}') is not installed on this server environment. Install calibre or deploy via Docker to enable ebook conversions.`
+            )
+          );
+        } else {
+          reject(err);
+        }
+      });
       proc.on("close", (code) => {
         if (code === 0) resolve();
         else reject(new Error(stderr.slice(0, 200) || `ebook-convert exit ${code}`));

@@ -44,3 +44,12 @@ slice0.png
 scratch_*.html
 
 scratch/
+
+# Local agent & IDE configuration caches
+.agents/
+.claude/
+.cursor/
+.gemini/
+.superstack/
+.taste-skill/
+

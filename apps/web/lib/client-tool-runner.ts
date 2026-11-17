@@ -73,6 +73,18 @@ export async function processPdfTool(
     };
   }
 
+  // 0c. PDF to PowerPoint (.pptx)
+  if (slug === "pdf-to-pptx" || slug.includes("to-pptx") || slug.includes("pdf-to-powerpoint")) {
+    const { convertPdfToPptxClient } = await import("@/lib/pdf-to-pptx-client");
+    const pptxResult = await convertPdfToPptxClient(file);
+    return {
+      blob: pptxResult.blob,
+      filename: pptxResult.filename,
+      mimeType: "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      stats: { pagesConverted: pptxResult.pageCount, format: "Microsoft PowerPoint (.pptx)" },
+    };
+  }
+
   // 1. PDF N-Up (Pages per Sheet)
   if (slug === "pdf-n-up" || slug.includes("n-up")) {
     const n = options.nUp || 4; // default 4-up

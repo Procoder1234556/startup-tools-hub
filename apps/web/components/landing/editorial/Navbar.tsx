@@ -2,86 +2,72 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Github, Menu } from "lucide-react";
 import { SITE_NAME, SOCIAL } from "@/lib/site-config";
-import { EditorialButton, EditorialContainer } from "./shared";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const NAV = [
   { href: "/tools", label: "Tools" },
-  { href: "/tools/finance", label: "Startup Finance" },
+  { href: "/tools/finance", label: "Finance" },
   { href: "/tools/pdf", label: "PDF" },
-  { href: "/tools/dev", label: "Developer" },
   { href: "/blog", label: "Blog" },
-  { href: "/about", label: "About" },
 ];
-
-function LogoMark() {
-  return (
-    <span className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-[#111111] text-[#D8FF42]">
-      <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden>
-        <path fill="currentColor" d="M4 8h6v8H4V8zm10 0h6v5h-6V8zm0 7h6v5h-6v-5z" />
-      </svg>
-    </span>
-  );
-}
 
 export default function EditorialNavbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 bg-[#E8E7EB]/80 backdrop-blur-md border-b border-[#D7D5DA]/80">
-      <EditorialContainer className="flex h-14 sm:h-16 items-center justify-between gap-4">
-        <Link href="/" className="flex items-center gap-2.5 shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#111111] rounded-md">
-          <LogoMark />
-          <span className="text-sm sm:text-[15px] font-medium tracking-tight text-[#111111]">{SITE_NAME}</span>
+    <header className="sticky top-0 z-40 bg-[#18191b] text-[#eff0f1]">
+      <div className="mx-auto flex h-16 w-full items-center justify-between gap-4 px-8">
+        <Link
+          href="/"
+          className="text-[15px] font-medium tracking-tight focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#ff4a1f]"
+        >
+          {SITE_NAME}
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-[13px] text-[#57565B]" aria-label="Primary">
+        <nav className="hidden lg:flex items-center gap-8 text-[15px]" aria-label="Primary">
           {NAV.map((item) => (
-            <Link key={item.href} href={item.href} className="hover:text-[#111111] transition-colors">
+            <Link key={item.href} href={item.href} className="hover:text-[#ff4a1f]">
               {item.label}
             </Link>
           ))}
-        </nav>
-
-        <div className="flex items-center gap-2 sm:gap-3">
           {SOCIAL.github ? (
-            <a
-              href={SOCIAL.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden sm:inline-flex h-9 w-9 items-center justify-center rounded-full border border-[#D7D5DA] bg-white text-[#57565B] hover:text-[#111111] transition"
-              aria-label="GitHub"
-            >
-              <Github className="w-4 h-4" />
+            <a href={SOCIAL.github} target="_blank" rel="noopener noreferrer" className="hover:text-[#ff4a1f]">
+              GitHub
             </a>
           ) : null}
-          <EditorialButton href="/tools" className="hidden sm:inline-flex !py-2.5 !px-5 !text-xs">
-            Explore tools
-          </EditorialButton>
+        </nav>
 
+        <div className="flex items-center gap-3">
+          <Link
+            href="/tools"
+            className="hidden sm:inline-flex h-10 items-center px-4 text-[15px] font-medium hover:bg-[#ff643f]"
+            style={{ background: "#ff4a1f", color: "#18191b" }}
+          >
+            Open tools
+          </Link>
           <Sheet open={open} onOpenChange={setOpen}>
-            <SheetTrigger className="lg:hidden inline-flex h-9 w-9 items-center justify-center rounded-md border border-[#D7D5DA] bg-white text-[#111111]">
-              <Menu className="w-4 h-4" />
-              <span className="sr-only">Open menu</span>
+            <SheetTrigger className="lg:hidden inline-flex h-10 items-center bg-[#222427] px-3 text-[15px] text-[#eff0f1]">
+              Menu
             </SheetTrigger>
-            <SheetContent side="right" className="bg-[#E8E7EB]">
-              <p className="font-medium text-[#111111] pt-2">{SITE_NAME}</p>
-              <nav className="flex flex-col gap-3 mt-6 text-[15px]" aria-label="Mobile">
+            <SheetContent side="right" className="bg-[#18191b] text-[#eff0f1] border-0">
+              <p className="pt-2 text-[15px]">{SITE_NAME}</p>
+              <nav className="mt-6 flex flex-col gap-4 text-[17px]" aria-label="Mobile">
                 {NAV.map((item) => (
-                  <Link key={item.href} href={item.href} onClick={() => setOpen(false)} className="text-[#111111]">
+                  <Link key={item.href} href={item.href} onClick={() => setOpen(false)}>
                     {item.label}
                   </Link>
                 ))}
+                {SOCIAL.github ? (
+                  <a href={SOCIAL.github} target="_blank" rel="noopener noreferrer">
+                    GitHub
+                  </a>
+                ) : null}
               </nav>
-              <Link href="/tools" onClick={() => setOpen(false)} className="inline-flex w-full items-center justify-center rounded-full bg-[#111111] px-6 py-3 text-[13px] font-medium text-white">
-                Explore tools
-              </Link>
             </SheetContent>
           </Sheet>
         </div>
-      </EditorialContainer>
+      </div>
     </header>
   );
 }
