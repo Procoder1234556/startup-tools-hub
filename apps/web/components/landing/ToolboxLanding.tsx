@@ -228,99 +228,8 @@ export default function ToolboxLanding() {
 
   return (
     <div className="min-h-screen bg-[#F8EEE8] text-[#171717] font-sans antialiased selection:bg-[#FF5400] selection:text-white relative overflow-x-hidden">
-      {/* ── Top Announcement Banner ─────────────────────────────────── */}
-      <div className="bg-[#171717] text-[#F8EEE8] px-4 py-2 text-xs font-mono tracking-wider flex items-center justify-between border-b border-[#262626]">
-        <div className="flex items-center gap-2">
-          <span className="inline-block w-2 h-2 rounded-full bg-[#FF5400] animate-pulse" />
-          <span className="font-semibold text-white">STARTUP TOOLS HUB</span>
-          <span className="hidden sm:inline text-neutral-400">
-            • 100+ Free Online Tools • 100% In-Browser Privacy
-          </span>
-        </div>
-        <div className="flex items-center gap-4 text-[11px]">
-          <span className="hidden md:inline-flex items-center gap-1.5 text-neutral-400">
-            <Clock className="w-3 h-3 text-[#FF5400]" />
-            Local: <strong className="text-white">{currentTime || "12:30:00"}</strong>
-          </span>
-          <span className="text-emerald-400 font-medium">● 0 Remote Uploads</span>
-          <a
-            href="#all-tools"
-            className="text-neutral-400 hover:text-white transition flex items-center gap-1 underline underline-offset-2"
-          >
-            Directory (100+)
-          </a>
-        </div>
-      </div>
-
-      {/* ── Sticky Floating Capsule Navigation ───────────────────────── */}
-      <header className="sticky top-4 z-40 px-4 sm:px-8 max-w-7xl mx-auto">
-        <nav className="rounded-full bg-[#F8EEE8]/90 backdrop-blur-md border border-[#171717]/15 px-4 sm:px-6 py-3 flex items-center justify-between shadow-xs transition-all">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-1.5 group">
-            <span className="text-xl sm:text-2xl font-black tracking-tighter text-[#171717]">
-              TOOLBOX
-            </span>
-            <span className="text-[10px] font-extrabold uppercase px-1.5 py-0.5 rounded bg-[#FF5400] text-white tracking-widest">
-              HUB
-            </span>
-          </Link>
-
-          {/* Desktop Nav Links */}
-          <div className="hidden md:flex items-center gap-7 text-xs font-bold uppercase tracking-wider text-[#171717]">
-            <a
-              href="#popular"
-              className="hover:text-[#FF5400] transition relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#FF5400] hover:after:w-full after:transition-all"
-            >
-              Popular
-            </a>
-            <a
-              href="#all-tools"
-              className="hover:text-[#FF5400] transition relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#FF5400] hover:after:w-full after:transition-all"
-            >
-              All Tools (100+)
-            </a>
-            <a
-              href="#playground"
-              className="hover:text-[#FF5400] transition relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#FF5400] hover:after:w-full after:transition-all"
-            >
-              Playground
-            </a>
-            <a
-              href="#philosophy"
-              className="hover:text-[#FF5400] transition relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#FF5400] hover:after:w-full after:transition-all"
-            >
-              Philosophy
-            </a>
-          </div>
-
-          {/* Right Action: Search Shortcut or Quick Jump */}
-          <div className="flex items-center gap-3">
-            <button
-              onClick={() => {
-                searchInputRef.current?.focus();
-                document.getElementById("hero-search-box")?.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="inline-flex items-center gap-2 rounded-full border border-[#171717]/20 bg-white hover:border-[#171717] px-3.5 py-1.5 text-xs font-mono font-medium text-[#171717] shadow-xs cursor-pointer transition"
-            >
-              <Search className="w-3.5 h-3.5 text-neutral-500" />
-              <span className="hidden sm:inline">Search Tools</span>
-              <kbd className="px-1.5 py-0.5 text-[10px] bg-neutral-100 rounded border border-neutral-300">
-                /
-              </kbd>
-            </button>
-            <a
-              href="#all-tools"
-              className="inline-flex items-center gap-1.5 rounded-full bg-[#171717] hover:bg-[#FF5400] text-white px-4 sm:px-5 py-2 text-xs font-bold uppercase tracking-wider transition shadow-xs group"
-            >
-              <span>Explore</span>
-              <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition" />
-            </a>
-          </div>
-        </nav>
-      </header>
-
       {/* ── HERO SECTION (Two26 Studio Aesthetic) ────────────────────── */}
-      <section className="relative pt-12 sm:pt-20 pb-16 sm:pb-24 px-4 sm:px-8 max-w-7xl mx-auto">
+      <section className="relative pt-8 sm:pt-16 pb-16 sm:pb-24 px-4 sm:px-8 max-w-7xl mx-auto">
         {/* Decorative Background Curved Ribbon SVG */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-full pointer-events-none opacity-20 -z-10">
           <svg viewBox="0 0 1000 600" fill="none" className="w-full h-full">
@@ -548,10 +457,10 @@ export default function ToolboxLanding() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16">
           <div>
             <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#FF5400] bg-[#FF5400]/10 px-3 py-1 rounded-md border border-[#FF5400]/20">
-              COMMUNITY ESSENTIALS
+              FEATURED SUITES
             </span>
             <h2 className="text-4xl sm:text-6xl font-black uppercase tracking-tight text-[#171717] mt-3">
-              POPULAR TOOLS
+              PRECISION WORKBENCHES
             </h2>
           </div>
           <a
@@ -561,6 +470,161 @@ export default function ToolboxLanding() {
             <span>View All 100+ Tools</span>
             <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition" />
           </a>
+        </div>
+
+        {/* Curated Two26 Studio Featured Showcase */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          {/* Card 1: PDF Studio Workbench */}
+          <div className="rounded-3xl border-2 border-[#171717] bg-[#FEECE3] text-[#381E11] p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden group shadow-lg hover:shadow-2xl transition-all">
+            <div className="relative z-10">
+              <div className="flex items-center justify-between mb-6">
+                <span className="text-xs font-mono font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-white text-[#FF5400] border border-[#FF5400]/30">
+                  01 / DOCUMENT ENGINE
+                </span>
+                <span className="text-xs font-mono font-bold text-[#FF5400] flex items-center gap-1">
+                  ✦ 100% Client-Side
+                </span>
+              </div>
+              <h3 className="text-3xl sm:text-4xl font-black uppercase tracking-tight text-[#171717]">
+                PDF Studio Workbench
+              </h3>
+              <p className="mt-3 text-sm sm:text-base text-[#381E11]/85 leading-relaxed font-medium">
+                Split, merge, sign, convert, and compress confidential PDFs in your browser without uploading a single byte to remote servers.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-2 text-xs font-mono">
+                <span className="px-2.5 py-1 rounded-md bg-white/80 border border-black/10">Merge &amp; Split</span>
+                <span className="px-2.5 py-1 rounded-md bg-white/80 border border-black/10">Sign &amp; Annotate</span>
+                <span className="px-2.5 py-1 rounded-md bg-white/80 border border-black/10">PDF to PPTX</span>
+                <span className="px-2.5 py-1 rounded-md bg-white/80 border border-black/10">PDF to Word</span>
+              </div>
+            </div>
+            <div className="mt-8 pt-6 border-t border-black/10 flex items-center justify-between">
+              <span className="text-xs font-mono text-emerald-800 font-bold">● 19+ In-Browser Tools</span>
+              <Link
+                href="/tools/pdf/merge-pdf"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#171717] hover:bg-[#FF5400] text-white text-xs font-bold uppercase tracking-wider transition shadow-sm"
+              >
+                <span>Open Suite</span>
+                <ArrowUpRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Card 2: Founder Runway & SAFE Engine */}
+          <div className="rounded-3xl border-2 border-[#171717] bg-[#0F111A] text-[#F1F5F9] p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden group shadow-lg hover:shadow-2xl transition-all">
+            <div className="relative z-10">
+              <div className="flex items-center justify-between mb-6">
+                <span className="text-xs font-mono font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-white/10 text-[#818CF8] border border-[#818CF8]/30">
+                  02 / VENTURE MATH
+                </span>
+                <span className="text-xs font-mono font-bold text-[#818CF8] flex items-center gap-1">
+                  ✦ IEEE 754 Precision
+                </span>
+              </div>
+              <h3 className="text-3xl sm:text-4xl font-black uppercase tracking-tight text-white">
+                Runway &amp; SAFE Engine
+              </h3>
+              <p className="mt-3 text-sm sm:text-base text-neutral-300 leading-relaxed font-medium">
+                High-precision financial runway forecasts, post-money SAFE dilution curves, and founder cap table scenarios.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-2 text-xs font-mono">
+                <span className="px-2.5 py-1 rounded-md bg-white/10 border border-white/10">Runway Forecast</span>
+                <span className="px-2.5 py-1 rounded-md bg-white/10 border border-white/10">SAFE Dilution</span>
+                <span className="px-2.5 py-1 rounded-md bg-white/10 border border-white/10">Burn Rate</span>
+                <span className="px-2.5 py-1 rounded-md bg-white/10 border border-white/10">Cap Table</span>
+              </div>
+            </div>
+            <div className="mt-8 pt-6 border-t border-white/10 flex items-center justify-between">
+              <span className="text-xs font-mono text-[#818CF8] font-bold">● Zero Spreadsheets Needed</span>
+              <Link
+                href="/tools/finance/startup-runway-calculator"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#818CF8] hover:bg-white hover:text-[#0F111A] text-white text-xs font-bold uppercase tracking-wider transition shadow-sm"
+              >
+                <span>Launch Modeler</span>
+                <ArrowUpRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Card 3: Developer Utilities & WASM Sandbox */}
+          <div className="rounded-3xl border-2 border-[#171717] bg-[#F3EDE5] text-[#2B1A12] p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden group shadow-lg hover:shadow-2xl transition-all">
+            <div className="relative z-10">
+              <div className="flex items-center justify-between mb-6">
+                <span className="text-xs font-mono font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-white text-[#C25927] border border-[#C25927]/30">
+                  03 / DEVELOPER UTILITIES
+                </span>
+                <span className="text-xs font-mono font-bold text-[#C25927] flex items-center gap-1">
+                  ✦ &lt;2ms Latency
+                </span>
+              </div>
+              <h3 className="text-3xl sm:text-4xl font-black uppercase tracking-tight text-[#171717]">
+                Developer WASM Workbench
+              </h3>
+              <p className="mt-3 text-sm sm:text-base text-[#2B1A12]/85 leading-relaxed font-medium">
+                Instant JSON formatting, JWT token inspection, Base64 codecs, UUID generators, and cryptographic SHA-256 / MD5 hashing.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-2 text-xs font-mono">
+                <span className="px-2.5 py-1 rounded-md bg-white/80 border border-black/10">JSON Formatter</span>
+                <span className="px-2.5 py-1 rounded-md bg-white/80 border border-black/10">JWT Parser</span>
+                <span className="px-2.5 py-1 rounded-md bg-white/80 border border-black/10">Base64 Codec</span>
+                <span className="px-2.5 py-1 rounded-md bg-white/80 border border-black/10">UUID / Hasher</span>
+              </div>
+            </div>
+            <div className="mt-8 pt-6 border-t border-black/10 flex items-center justify-between">
+              <span className="text-xs font-mono text-emerald-800 font-bold">● Offline &amp; Telemetry-Free</span>
+              <Link
+                href="/tools/dev/json-formatter"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#171717] hover:bg-[#FF5400] text-white text-xs font-bold uppercase tracking-wider transition shadow-sm"
+              >
+                <span>Open Dev Suite</span>
+                <ArrowUpRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Card 4: Client Image & Vector Lab */}
+          <div className="rounded-3xl border-2 border-[#171717] bg-[#141517] text-[#F4F4F5] p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden group shadow-lg hover:shadow-2xl transition-all">
+            <div className="relative z-10">
+              <div className="flex items-center justify-between mb-6">
+                <span className="text-xs font-mono font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-white/10 text-[#CCFF00] border border-[#CCFF00]/30">
+                  04 / GRAPHICS &amp; MEDIA
+                </span>
+                <span className="text-xs font-mono font-bold text-[#CCFF00] flex items-center gap-1">
+                  ✦ Canvas &amp; WebGL
+                </span>
+              </div>
+              <h3 className="text-3xl sm:text-4xl font-black uppercase tracking-tight text-white">
+                Client Image &amp; Vector Lab
+              </h3>
+              <p className="mt-3 text-sm sm:text-base text-neutral-300 leading-relaxed font-medium">
+                Lossless in-memory image compression, SVG optimization, WebP conversion, and automated brand color palette extraction.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-2 text-xs font-mono">
+                <span className="px-2.5 py-1 rounded-md bg-white/10 border border-white/10">Compressor</span>
+                <span className="px-2.5 py-1 rounded-md bg-white/10 border border-white/10">Color Palette</span>
+                <span className="px-2.5 py-1 rounded-md bg-white/10 border border-white/10">Favicon Gen</span>
+                <span className="px-2.5 py-1 rounded-md bg-white/10 border border-white/10">QR Code</span>
+              </div>
+            </div>
+            <div className="mt-8 pt-6 border-t border-white/10 flex items-center justify-between">
+              <span className="text-xs font-mono text-[#CCFF00] font-bold">● High Fidelity Compression</span>
+              <Link
+                href="/tools/image/image-compressor"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#CCFF00] hover:bg-white text-[#141517] text-xs font-black uppercase tracking-wider transition shadow-sm"
+              >
+                <span>Launch Lab</span>
+                <ArrowUpRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Popular Essentials Subtitle */}
+        <div className="mb-6">
+          <h3 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-[#171717]">
+            COMMUNITY FAVORITES
+          </h3>
+          <p className="text-xs text-neutral-500 font-mono">Most frequently used utilities this week</p>
         </div>
 
         {/* Popular Grid */}
@@ -943,8 +1007,8 @@ export default function ToolboxLanding() {
         </div>
       </section>
 
-      {/* ── CALL TO ACTION & FOOTER (Two26 Studio Dark Mode) ────────── */}
-      <footer className="bg-[#141414] text-[#F8EEE8] pt-20 sm:pt-32 pb-12 px-4 sm:px-8 border-t border-[#262626]">
+      {/* ── CALL TO ACTION (Two26 Studio Dark Mode) ────────── */}
+      <section className="bg-[#141414] text-[#F8EEE8] pt-20 sm:pt-32 pb-12 px-4 sm:px-8 border-t border-[#262626]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center space-y-6">
             <span className="text-xs font-mono uppercase tracking-widest text-[#FF5400] bg-[#FF5400]/15 px-3 py-1.5 rounded-full border border-[#FF5400]/30 inline-block">
@@ -981,84 +1045,8 @@ export default function ToolboxLanding() {
               </a>
             </div>
           </div>
-
-          {/* Directory Links Grid */}
-          <div className="mt-20 sm:mt-28 pt-12 border-t border-[#262626] grid grid-cols-2 sm:grid-cols-4 gap-8 text-xs font-mono">
-            <div>
-              <span className="text-neutral-500 uppercase block mb-3 font-bold">Categories</span>
-              <ul className="space-y-2 text-neutral-300">
-                {CATEGORIES_LIST.map((cat) => (
-                  <li key={cat.id}>
-                    <button
-                      onClick={() => {
-                        setSelectedCategory(cat.id);
-                        document.getElementById("all-tools")?.scrollIntoView({ behavior: "smooth" });
-                      }}
-                      className="hover:text-[#FF5400] transition cursor-pointer"
-                    >
-                      {cat.title}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <span className="text-neutral-500 uppercase block mb-3 font-bold">Top Utilities</span>
-              <ul className="space-y-2 text-neutral-300">
-                <li>
-                  <Link href="/tools/pdf/pdf-to-word/" className="hover:text-[#FF5400] transition">
-                    PDF to Word Converter
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/tools/pdf/pdf-to-pptx/" className="hover:text-[#FF5400] transition">
-                    PDF to PowerPoint
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/tools/finance/runway-calculator/" className="hover:text-[#FF5400] transition">
-                    Startup Runway Model
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/tools/image/image-compressor/" className="hover:text-[#FF5400] transition">
-                    Client Image Compressor
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/tools/dev/json-formatter/" className="hover:text-[#FF5400] transition">
-                    JSON Formatter
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <span className="text-neutral-500 uppercase block mb-3 font-bold">Privacy & Spec</span>
-              <p className="text-neutral-400 leading-relaxed">
-                Zero telemetry on your uploaded files. All processing executes in WebAssembly sandboxes
-                isolated from network boundaries.
-              </p>
-              <div className="mt-3 text-emerald-400">● 100% Client-Side Engine</div>
-            </div>
-
-            <div>
-              <span className="text-neutral-500 uppercase block mb-3 font-bold">Design Reference</span>
-              <p className="text-neutral-400">
-                Inspired by Two26 Studio & tactile engineering aesthetic.
-              </p>
-              <Link href="/two26" className="mt-2 inline-block text-[#FF5400] hover:underline font-bold">
-                View Two26 Agency Case Study →
-              </Link>
-            </div>
-          </div>
-
-          <div className="mt-12 text-center text-[11px] text-neutral-600 font-mono">
-            © {new Date().getFullYear()} Startup Tools Hub. Free & private forever.
-          </div>
         </div>
-      </footer>
+      </section>
 
       {/* ── QUICK TOOL PREVIEW DIALOG ─────────────────────────────────── */}
       {quickToolModal && (

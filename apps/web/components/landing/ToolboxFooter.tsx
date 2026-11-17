@@ -1,89 +1,185 @@
 "use client";
 
 import Link from "next/link";
-import { Wrench, ShieldCheck, Heart, Github, Twitter, Disc as Discord, Rss, ArrowUpRight } from "lucide-react";
-import { SITE_NAME, SOCIAL } from "@/lib/site-config";
+import { ArrowUpRight, ShieldCheck, Clock, Github, Twitter } from "lucide-react";
+import { SITE_NAME } from "@/lib/site-config";
 
 export default function ToolboxFooter() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full bg-[#0F172A] text-slate-300 border-t border-slate-800 text-sm">
-      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+    <footer className="w-full bg-[#141414] text-[#F8EEE8] border-t border-[#262626] text-xs">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         
-        {/* Top Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10 lg:gap-8 pb-12 border-b border-slate-800">
+        {/* Main Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10 lg:gap-8 pb-16 border-b border-[#262626]">
           
-          {/* Brand Info (2 columns on large) */}
-          <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="inline-flex items-center gap-2.5 group">
-              <div className="w-8 h-8 rounded-lg bg-[#2563EB] flex items-center justify-center text-white shadow-xs">
-                <Wrench className="w-4 h-4 transform -rotate-12 group-hover:rotate-0 transition-transform" />
-              </div>
-              <span className="text-xl font-bold tracking-tight text-white font-sans">
-                ToolBox<span className="text-blue-400">Hub</span>
+          {/* Brand & Manifesto Column (2 cols) */}
+          <div className="lg:col-span-2 space-y-5">
+            <Link href="/" className="inline-flex items-center gap-2 group">
+              <span className="text-2xl font-black uppercase tracking-tight text-white group-hover:text-[#FF5400] transition-colors">
+                STARTUP TOOLS
+              </span>
+              <span className="text-[10px] font-black uppercase px-2 py-0.5 rounded bg-[#FF5400] text-white tracking-widest">
+                HUB
               </span>
             </Link>
 
-            <p className="text-slate-400 text-sm leading-relaxed max-w-sm">
-              Simple online tools for work, business, development, and everyday tasks. High performance, 100% free, and zero signups required.
+            <p className="text-neutral-400 text-xs sm:text-sm leading-relaxed max-w-sm">
+              Precision browser-based developer utilities, PDF workflows, image processors, and financial calculators. Free forever, zero accounts required, 100% private.
             </p>
 
-            {/* Privacy Guarantee Pill */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700/80 text-xs text-slate-300">
-              <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
-              <span>All browser processing happens locally on your device.</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-neutral-900 border border-neutral-800 text-[11px] font-mono text-neutral-300">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              <span>In-browser WASM sandbox • Zero server uploads</span>
+            </div>
+
+            <div className="pt-2 text-neutral-500 font-mono text-[11px]">
+              Bucharest &amp; Global Studio Architecture
             </div>
           </div>
 
-          {/* Col 1: Tools */}
+          {/* Col 1: PDF Workflows */}
           <div className="space-y-3">
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-white">
-              Tools
+            <h4 className="text-[11px] font-mono font-bold uppercase tracking-widest text-[#FF5400]">
+              PDF Suite
             </h4>
-            <ul className="space-y-2 text-sm text-slate-400">
+            <ul className="space-y-2 text-xs font-medium text-neutral-400">
               <li>
-                <Link href="#all-tools" className="hover:text-white transition-colors">
-                  PDF Tools
+                <Link href="/tools/pdf/merge-pdf" className="hover:text-white transition-colors">
+                  Merge PDF
                 </Link>
               </li>
               <li>
-                <Link href="#all-tools" className="hover:text-white transition-colors">
-                  Developer Tools
+                <Link href="/tools/pdf/split-pdf" className="hover:text-white transition-colors">
+                  Split PDF
                 </Link>
               </li>
               <li>
-                <Link href="#all-tools" className="hover:text-white transition-colors">
-                  Image Tools
+                <Link href="/tools/pdf/sign-pdf" className="hover:text-white transition-colors">
+                  Sign &amp; Annotate PDF
                 </Link>
               </li>
               <li>
-                <Link href="#all-tools" className="hover:text-white transition-colors">
-                  Text Tools
+                <Link href="/tools/pdf/compress-pdf" className="hover:text-white transition-colors">
+                  Compress PDF
                 </Link>
               </li>
               <li>
-                <Link href="#all-tools" className="hover:text-white transition-colors">
-                  Generators
+                <Link href="/tools/pdf/pdf-to-pptx" className="hover:text-white transition-colors">
+                  PDF to PowerPoint
                 </Link>
               </li>
               <li>
-                <Link href="#all-tools" className="hover:text-white transition-colors">
-                  Calculators &amp; Finance
+                <Link href="/tools/pdf/pdf-to-word" className="hover:text-white transition-colors">
+                  PDF to Word
+                </Link>
+              </li>
+              <li>
+                <Link href="/tools/pdf/stirling-suite" className="hover:text-white transition-colors">
+                  Stirling In-Browser Suite
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Col 2: Popular */}
+          {/* Col 2: Developer & WASM */}
           <div className="space-y-3">
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-white">
-              Popular
+            <h4 className="text-[11px] font-mono font-bold uppercase tracking-widest text-[#FF5400]">
+              Developer Tools
             </h4>
-            <ul className="space-y-2 text-sm text-slate-400">
+            <ul className="space-y-2 text-xs font-medium text-neutral-400">
               <li>
-                <Link href="/tools/pdf/merge-pdf" className="hover:text-white transition-colors">
-                  PDF Editor &amp; Merger
+                <Link href="/tools/dev/json-formatter" className="hover:text-white transition-colors">
+                  JSON Formatter &amp; Validator
+                </Link>
+              </li>
+              <li>
+                <Link href="/tools/dev/base64-encoder" className="hover:text-white transition-colors">
+                  Base64 Encoder / Decoder
+                </Link>
+              </li>
+              <li>
+                <Link href="/tools/dev/jwt-debugger" className="hover:text-white transition-colors">
+                  JWT Debugger &amp; Parser
+                </Link>
+              </li>
+              <li>
+                <Link href="/tools/dev/regex-tester" className="hover:text-white transition-colors">
+                  Regex Tester
+                </Link>
+              </li>
+              <li>
+                <Link href="/tools/dev/uuid-generator" className="hover:text-white transition-colors">
+                  UUID / GUID Generator
+                </Link>
+              </li>
+              <li>
+                <Link href="/tools/dev/hash-generator" className="hover:text-white transition-colors">
+                  SHA-256 / MD5 Hasher
+                </Link>
+              </li>
+              <li>
+                <Link href="/tools/dev/sql-formatter" className="hover:text-white transition-colors">
+                  SQL Formatter
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Col 3: Finance & Runway */}
+          <div className="space-y-3">
+            <h4 className="text-[11px] font-mono font-bold uppercase tracking-widest text-[#FF5400]">
+              Founder Finance
+            </h4>
+            <ul className="space-y-2 text-xs font-medium text-neutral-400">
+              <li>
+                <Link href="/tools/finance/startup-runway-calculator" className="hover:text-white transition-colors">
+                  Runway Calculator
+                </Link>
+              </li>
+              <li>
+                <Link href="/tools/finance/safe-note-calculator" className="hover:text-white transition-colors">
+                  SAFE Note Dilution
+                </Link>
+              </li>
+              <li>
+                <Link href="/tools/finance/cap-table-modeler" className="hover:text-white transition-colors">
+                  Cap Table Modeler
+                </Link>
+              </li>
+              <li>
+                <Link href="/tools/finance/burn-rate-calculator" className="hover:text-white transition-colors">
+                  Burn Rate Calculator
+                </Link>
+              </li>
+              <li>
+                <Link href="/tools/finance/saas-metrics-calculator" className="hover:text-white transition-colors">
+                  SaaS Metrics (LTV/CAC)
+                </Link>
+              </li>
+              <li>
+                <Link href="/tools/calc/mortgage-calculator" className="hover:text-white transition-colors">
+                  Mortgage &amp; Loan
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Col 4: Image & Utility */}
+          <div className="space-y-3">
+            <h4 className="text-[11px] font-mono font-bold uppercase tracking-widest text-[#FF5400]">
+              Media &amp; Utils
+            </h4>
+            <ul className="space-y-2 text-xs font-medium text-neutral-400">
+              <li>
+                <Link href="/tools/image/image-compressor" className="hover:text-white transition-colors">
+                  Image Compressor
+                </Link>
+              </li>
+              <li>
+                <Link href="/tools/image/color-palette" className="hover:text-white transition-colors">
+                  Color Palette Extractor
                 </Link>
               </li>
               <li>
@@ -92,143 +188,42 @@ export default function ToolboxFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="/tools/dev/json-formatter" className="hover:text-white transition-colors">
-                  JSON Formatter
-                </Link>
-              </li>
-              <li>
-                <Link href="/tools/image" className="hover:text-white transition-colors">
-                  Image Compressor
-                </Link>
-              </li>
-              <li>
                 <Link href="/tools/calc/password-generator" className="hover:text-white transition-colors">
                   Password Generator
                 </Link>
               </li>
               <li>
-                <Link href="/tools/dev/uuid-generator" className="hover:text-white transition-colors">
-                  UUID Generator
+                <Link href="/two26" className="hover:text-[#FF5400] transition-colors flex items-center gap-1 font-bold">
+                  <span>Two26 Studio Case</span>
+                  <ArrowUpRight className="w-3 h-3" />
                 </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Col 3: Company */}
-          <div className="space-y-3">
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-white">
-              Company
-            </h4>
-            <ul className="space-y-2 text-sm text-slate-400">
-              <li>
-                <Link href="/about" className="hover:text-white transition-colors">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="hover:text-white transition-colors">
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link href="/privacy" className="hover:text-white transition-colors">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="/terms" className="hover:text-white transition-colors">
-                  Terms of Service
-                </Link>
-              </li>
-              <li>
-                <a 
-                  href="https://github.com/Procoder1234556/startup-tools-hub" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="hover:text-white transition-colors inline-flex items-center gap-1"
-                >
-                  GitHub Project
-                  <ArrowUpRight className="w-3 h-3 text-slate-500" />
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Col 4: Resources */}
-          <div className="space-y-3">
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-white">
-              Resources
-            </h4>
-            <ul className="space-y-2 text-sm text-slate-400">
-              <li>
-                <Link href="/blog" className="hover:text-white transition-colors">
-                  Tool Guides &amp; Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="#faq" className="hover:text-white transition-colors">
-                  FAQs
-                </Link>
-              </li>
-              <li>
-                <Link href="/methodology" className="hover:text-white transition-colors">
-                  Methodology
-                </Link>
-              </li>
-              <li>
-                <a 
-                  href="/sitemap.xml" 
-                  className="hover:text-white transition-colors"
-                >
-                  Sitemap
-                </a>
               </li>
             </ul>
           </div>
         </div>
 
-        {/* Bottom Row */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-          <div className="flex items-center gap-3 flex-wrap justify-center sm:justify-start">
-            <p>© {currentYear} ToolBox Hub. Built for productivity.</p>
-            <span className="hidden sm:inline text-slate-700">•</span>
-            {/* Small No Login Required label */}
-            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-blue-900/60 text-blue-300 border border-blue-700/50 font-medium">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-              No Login Required
-            </span>
+        {/* Bottom Bar */}
+        <div className="mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-neutral-500">
+          <div className="flex items-center gap-2">
+            <span>© {currentYear} STARTUP TOOLS HUB.</span>
+            <span>All rights reserved.</span>
           </div>
 
-          {/* Social Links */}
-          <div className="flex items-center gap-4 text-slate-400">
-            <a 
-              href="https://github.com/Procoder1234556/startup-tools-hub" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              aria-label="GitHub Repository" 
-              className="p-1 hover:text-white transition-colors"
-            >
-              <Github className="w-4 h-4" />
-            </a>
-            <a 
-              href="https://twitter.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              aria-label="Twitter / X" 
-              className="p-1 hover:text-white transition-colors"
-            >
-              <Twitter className="w-4 h-4" />
-            </a>
-            <Link 
-              href="/blog/feed.xml" 
-              aria-label="RSS Feed" 
-              className="p-1 hover:text-white transition-colors"
-            >
-              <Rss className="w-4 h-4" />
+          <div className="flex items-center gap-6">
+            <Link href="/about" className="hover:text-white transition">
+              About
+            </Link>
+            <Link href="/privacy" className="hover:text-white transition">
+              Privacy
+            </Link>
+            <Link href="/terms" className="hover:text-white transition">
+              Terms
+            </Link>
+            <Link href="/sitemap.xml" className="hover:text-white transition">
+              Sitemap
             </Link>
           </div>
         </div>
-
       </div>
     </footer>
   );

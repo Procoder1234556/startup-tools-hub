@@ -98,7 +98,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="alternate" type="application/rss+xml" title={`${SITE_NAME} blog feed`} href="/blog/feed.xml" />
       </head>
-      <body className="min-h-full flex flex-col bg-[#F8FAFC] text-[#0F172A] font-sans antialiased selection:bg-[#2563EB] selection:text-white">
+      <body className="min-h-full flex flex-col bg-[#F8EEE8] text-[#171717] font-sans antialiased selection:bg-[#FF5400] selection:text-white">
         <ToolboxAnnouncementBar />
         <ToolboxNavbar />
         <main className="flex-1">{children}</main>

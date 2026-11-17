@@ -1,23 +1,20 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
-import { 
-  Wrench, 
-  Search, 
-  PlusCircle, 
-  Info, 
-  Menu, 
-  X, 
-  Sparkles, 
-  Layers, 
-  Flame, 
-  ArrowRight,
-  ExternalLink,
+import {
+  Search,
+  PlusCircle,
+  Menu,
+  X,
+  ArrowUpRight,
   ShieldCheck,
-  Check
+  Check,
+  Layers,
+  Sparkles,
+  Zap,
 } from "lucide-react";
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 
 interface ToolboxNavbarProps {
@@ -36,10 +33,13 @@ export default function ToolboxNavbar({ onSearchClick }: ToolboxNavbarProps) {
     if (onSearchClick) {
       onSearchClick();
     } else {
-      const searchInput = document.getElementById("marketplace-search-input") || document.getElementById("hero-search-input");
+      const searchBox = document.getElementById("hero-search-box") || document.getElementById("all-tools");
+      const searchInput = (document.querySelector('input[type="text"]') as HTMLInputElement) || document.getElementById("marketplace-search-input");
+      if (searchBox) {
+        searchBox.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
       if (searchInput) {
-        searchInput.focus();
-        searchInput.scrollIntoView({ behavior: "smooth", block: "center" });
+        setTimeout(() => searchInput.focus(), 300);
       }
     }
   };
@@ -58,113 +58,102 @@ export default function ToolboxNavbar({ onSearchClick }: ToolboxNavbarProps) {
   };
 
   return (
-    <header className="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-md border-b border-[#E2E8F0] transition-shadow duration-200">
-      <div className="max-w-[1280px] mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-40 w-full bg-[#F8EEE8]/90 backdrop-blur-md border-b border-[#171717]/10 transition-all duration-200">
+      <div className="max-w-7xl mx-auto flex h-16 sm:h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
         
-        {/* Left: Brand Logo */}
-        <div className="flex items-center gap-8">
-          <Link 
-            href="/" 
-            className="flex items-center gap-2.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 rounded-lg p-1"
+        {/* Left: Brand Identity (Two26 Studio Wordmark) */}
+        <div className="flex items-center gap-6 sm:gap-8">
+          <Link
+            href="/"
+            className="flex items-center gap-2 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5400] rounded-lg"
           >
-            <div className="w-9 h-9 rounded-xl bg-[#2563EB] flex items-center justify-center text-white shadow-sm shadow-blue-500/20 group-hover:bg-[#1D4ED8] transition-colors">
-              <Wrench className="w-5 h-5 text-white transform -rotate-12 group-hover:rotate-0 transition-transform duration-200" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-extrabold tracking-tight text-[#0F172A] flex items-center gap-1.5 font-sans">
-                ToolBox
-                <span className="text-xs px-1.5 py-0.5 font-semibold bg-blue-50 text-blue-600 border border-blue-200 rounded-md">
-                  Hub
-                </span>
+            <div className="flex items-center gap-1.5">
+              <span className="text-xl sm:text-2xl font-black tracking-tighter uppercase text-[#171717] group-hover:text-[#FF5400] transition-colors">
+                STARTUP TOOLS
+              </span>
+              <span className="text-[10px] font-black uppercase px-2 py-0.5 rounded bg-[#FF5400] text-white tracking-widest shadow-xs">
+                HUB
               </span>
             </div>
           </Link>
 
-          {/* Center: Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-1 lg:gap-2 text-[14px] font-medium text-[#64748B]" aria-label="Main Navigation">
-            <Link 
-              href="#all-tools" 
-              className="px-3 py-2 rounded-lg hover:text-[#0F172A] hover:bg-slate-100 transition-colors"
+          {/* Desktop Navigation Links */}
+          <nav
+            className="hidden lg:flex items-center gap-6 text-xs font-bold uppercase tracking-wider text-[#171717]"
+            aria-label="Main Navigation"
+          >
+            <Link
+              href="/#all-tools"
+              className="hover:text-[#FF5400] transition relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#FF5400] hover:after:w-full after:transition-all"
             >
-              All Tools
+              All Tools (100+)
             </Link>
-            <Link 
-              href="#categories" 
-              className="px-3 py-2 rounded-lg hover:text-[#0F172A] hover:bg-slate-100 transition-colors"
+            <Link
+              href="/#all-tools"
+              className="hover:text-[#FF5400] transition relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#FF5400] hover:after:w-full after:transition-all"
             >
-              Categories
+              PDF Suite
             </Link>
-            <Link 
-              href="#popular" 
-              className="px-3 py-2 rounded-lg hover:text-[#0F172A] hover:bg-slate-100 transition-colors inline-flex items-center gap-1"
+            <Link
+              href="/#popular"
+              className="hover:text-[#FF5400] transition relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#FF5400] hover:after:w-full after:transition-all"
             >
-              <Flame className="w-4 h-4 text-amber-500" />
               Popular
             </Link>
-            <Link 
-              href="#new-tools" 
-              className="px-3 py-2 rounded-lg hover:text-[#0F172A] hover:bg-slate-100 transition-colors inline-flex items-center gap-1"
+            <Link
+              href="/#playground"
+              className="hover:text-[#FF5400] transition relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#FF5400] hover:after:w-full after:transition-all"
             >
-              <Sparkles className="w-4 h-4 text-purple-600" />
-              New Tools
+              Playground
             </Link>
-            <Link 
-              href="#dev-tools" 
-              className="px-3 py-2 rounded-lg hover:text-[#0F172A] hover:bg-slate-100 transition-colors"
+            <Link
+              href="/#philosophy"
+              className="hover:text-[#FF5400] transition relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#FF5400] hover:after:w-full after:transition-all"
             >
-              For Developers
+              Philosophy
             </Link>
           </nav>
         </div>
 
-        {/* Right: Actions (No Login Required!) */}
-        <div className="flex items-center gap-2.5 sm:gap-3">
-          {/* Quick Search Button */}
+        {/* Right: Actions */}
+        <div className="flex items-center gap-2.5 sm:gap-4">
+          {/* Quick Search Trigger */}
           <button
             type="button"
             onClick={handleFocusSearch}
-            className="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 text-xs text-slate-500 bg-slate-50 border border-slate-200 rounded-lg hover:border-slate-300 hover:bg-white hover:text-slate-800 transition-all shadow-xs"
+            className="hidden sm:inline-flex items-center gap-2 px-3.5 py-1.5 text-xs font-mono font-medium text-[#171717] bg-white border border-[#171717]/20 rounded-full hover:border-[#171717] hover:shadow-sm transition cursor-pointer"
             aria-label="Search tools"
           >
-            <Search className="w-3.5 h-3.5 text-slate-400" />
-            <span>Search tools...</span>
-            <kbd className="inline-flex items-center justify-center px-1.5 py-0.5 text-[10px] font-mono font-medium text-slate-400 bg-white border border-slate-200 rounded">
+            <Search className="w-3.5 h-3.5 text-neutral-400" />
+            <span>Search 100+ tools...</span>
+            <kbd className="inline-flex items-center justify-center px-1.5 py-0.5 text-[10px] font-mono font-bold text-neutral-500 bg-neutral-100 border border-neutral-300 rounded">
               /
             </kbd>
           </button>
 
-          {/* Submit a Tool */}
+          {/* Submit Tool Trigger */}
           <button
             type="button"
             onClick={() => setSubmitModalOpen(true)}
-            className="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 text-[13px] font-medium text-slate-700 hover:text-blue-600 hover:bg-blue-50/50 rounded-lg transition-colors"
+            className="hidden xl:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-[#171717] hover:text-[#FF5400] transition cursor-pointer"
           >
-            <PlusCircle className="w-4 h-4 text-blue-600" />
-            <span>Submit a Tool</span>
+            <PlusCircle className="w-4 h-4 text-[#FF5400]" />
+            <span>Suggest Tool</span>
           </button>
 
-          {/* About link */}
-          <Link
-            href="/about"
-            className="hidden xl:inline-flex items-center gap-1 px-2.5 py-1.5 text-[13px] font-medium text-slate-600 hover:text-slate-900 rounded-lg transition-colors"
-          >
-            <Info className="w-3.5 h-3.5 text-slate-400" />
-            <span>About</span>
-          </Link>
-
-          {/* No Login Pill Badge */}
-          <div className="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-semibold">
-            <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
-            <span>No Login</span>
+          {/* Privacy Pill Badge */}
+          <div className="hidden md:flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#171717] text-white text-[11px] font-mono font-medium shadow-xs">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+            <span>0 Uploads • WASM</span>
           </div>
 
           {/* Direct CTA */}
           <Link
-            href="#all-tools"
-            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-[13px] sm:text-[14px] font-semibold shadow-xs transition-all active:scale-95"
+            href="/#all-tools"
+            className="inline-flex items-center gap-1.5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-[#171717] hover:bg-[#FF5400] text-white text-xs font-black uppercase tracking-wider transition-all shadow-xs group cursor-pointer"
           >
-            <span>Browse Tools</span>
-            <ArrowRight className="w-4 h-4 hidden sm:inline" />
+            <span>Explore</span>
+            <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition" />
           </Link>
 
           {/* Mobile Menu Hamburger */}
@@ -172,220 +161,210 @@ export default function ToolboxNavbar({ onSearchClick }: ToolboxNavbarProps) {
             <SheetTrigger asChild>
               <button
                 type="button"
-                className="md:hidden inline-flex items-center justify-center w-9 h-9 rounded-lg border border-slate-200 text-slate-700 hover:bg-slate-100 transition-colors"
+                className="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-[#171717]/20 bg-white text-[#171717] hover:bg-[#171717] hover:text-white transition cursor-pointer"
                 aria-label="Open mobile navigation"
               >
                 <Menu className="w-5 h-5" />
               </button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[360px] bg-white border-l border-slate-200 p-6 flex flex-col justify-between">
+            <SheetContent
+              side="right"
+              className="w-[300px] sm:w-[360px] bg-[#F8EEE8] border-l border-[#171717]/20 p-6 flex flex-col justify-between"
+            >
               <div>
-                <div className="flex items-center justify-between pb-4 border-b border-slate-100">
-                  <div className="flex items-center gap-2 text-lg font-bold text-slate-900">
-                    <div className="w-7 h-7 rounded-lg bg-blue-600 flex items-center justify-center text-white">
-                      <Wrench className="w-4 h-4" />
-                    </div>
-                    ToolBox Hub
+                <div className="flex items-center justify-between pb-4 border-b border-[#171717]/15">
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-xl font-black uppercase tracking-tight text-[#171717]">
+                      STARTUP TOOLS
+                    </span>
+                    <span className="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-[#FF5400] text-white">
+                      HUB
+                    </span>
                   </div>
                 </div>
 
-                {/* Mobile Search button */}
-                <div className="mt-5">
+                {/* Mobile Search Button */}
+                <div className="mt-6">
                   <button
                     type="button"
                     onClick={() => {
                       setMobileOpen(false);
                       setTimeout(handleFocusSearch, 200);
                     }}
-                    className="w-full flex items-center justify-between px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-500 hover:bg-slate-100"
+                    className="w-full flex items-center justify-between px-4 py-3 bg-white border border-[#171717]/20 rounded-2xl text-xs font-mono text-[#171717] hover:border-[#171717] transition shadow-xs cursor-pointer"
                   >
                     <span className="flex items-center gap-2">
-                      <Search className="w-4 h-4 text-blue-600" />
-                      Search all 100+ tools...
+                      <Search className="w-4 h-4 text-neutral-400" />
+                      Search 100+ tools...
                     </span>
-                    <kbd className="px-1.5 py-0.5 text-[11px] bg-white border border-slate-200 rounded text-slate-400">
+                    <kbd className="px-2 py-0.5 text-[10px] bg-neutral-100 rounded border border-neutral-300">
                       /
                     </kbd>
                   </button>
                 </div>
 
-                {/* Navigation Links */}
-                <nav className="mt-6 flex flex-col gap-1 text-[15px] font-medium text-slate-700" aria-label="Mobile Navigation">
+                {/* Mobile Links */}
+                <nav className="mt-6 flex flex-col space-y-1 text-sm font-bold uppercase tracking-wider text-[#171717]">
                   <Link
-                    href="#all-tools"
+                    href="/#all-tools"
                     onClick={() => setMobileOpen(false)}
-                    className="flex items-center justify-between px-3 py-2.5 rounded-lg hover:bg-slate-50"
+                    className="flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-[#171717]/5 transition"
                   >
-                    <span className="flex items-center gap-2.5">
-                      <Layers className="w-4 h-4 text-blue-600" />
-                      All Tools
-                    </span>
-                    <span className="text-xs text-slate-400">100+</span>
+                    <span>All Tools Catalog</span>
+                    <span className="text-xs font-mono font-normal text-neutral-500">100+</span>
                   </Link>
-
                   <Link
-                    href="#categories"
+                    href="/#popular"
                     onClick={() => setMobileOpen(false)}
-                    className="flex items-center justify-between px-3 py-2.5 rounded-lg hover:bg-slate-50"
+                    className="flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-[#171717]/5 transition"
                   >
-                    <span className="flex items-center gap-2.5">
-                      <Wrench className="w-4 h-4 text-slate-600" />
-                      Categories
-                    </span>
-                    <span className="text-xs text-slate-400">12</span>
+                    <span>Popular Tools</span>
+                    <span className="text-xs font-mono text-[#FF5400]">✦ TOP</span>
                   </Link>
-
                   <Link
-                    href="#popular"
+                    href="/#playground"
                     onClick={() => setMobileOpen(false)}
-                    className="flex items-center justify-between px-3 py-2.5 rounded-lg hover:bg-slate-50"
+                    className="flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-[#171717]/5 transition"
                   >
-                    <span className="flex items-center gap-2.5">
-                      <Flame className="w-4 h-4 text-amber-500" />
-                      Popular Tools
-                    </span>
-                    <span className="text-xs font-semibold text-amber-600 bg-amber-50 px-1.5 py-0.5 rounded">Hot</span>
+                    <span>Interactive Playground</span>
+                    <span className="text-xs font-mono text-emerald-600">LIVE</span>
                   </Link>
-
                   <Link
-                    href="#new-tools"
+                    href="/#philosophy"
                     onClick={() => setMobileOpen(false)}
-                    className="flex items-center justify-between px-3 py-2.5 rounded-lg hover:bg-slate-50"
+                    className="flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-[#171717]/5 transition"
                   >
-                    <span className="flex items-center gap-2.5">
-                      <Sparkles className="w-4 h-4 text-purple-600" />
-                      New Releases
-                    </span>
-                    <span className="text-xs font-semibold text-purple-600 bg-purple-50 px-1.5 py-0.5 rounded">New</span>
+                    <span>Manifesto &amp; Privacy</span>
+                    <ShieldCheck className="w-4 h-4 text-emerald-600" />
                   </Link>
-
                   <Link
-                    href="#dev-tools"
+                    href="/about"
                     onClick={() => setMobileOpen(false)}
-                    className="flex items-center gap-2.5 px-3 py-2.5 rounded-lg hover:bg-slate-50"
+                    className="flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-[#171717]/5 transition"
                   >
-                    <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                    Developer Utilities
+                    <span>About &amp; Principles</span>
                   </Link>
+                  <Link
+                    href="/two26"
+                    onClick={() => setMobileOpen(false)}
+                    className="flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-[#171717]/5 transition text-[#FF5400]"
+                  >
+                    <span>Two26 Studio Case</span>
+                    <ArrowUpRight className="w-4 h-4" />
+                  </Link>
+                </nav>
 
-                  <div className="h-px bg-slate-100 my-2" />
-
+                <div className="mt-6 pt-6 border-t border-[#171717]/15">
                   <button
                     type="button"
                     onClick={() => {
                       setMobileOpen(false);
                       setSubmitModalOpen(true);
                     }}
-                    className="flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-left text-blue-600 hover:bg-blue-50"
+                    className="w-full flex items-center justify-center gap-2 py-3 rounded-full border-2 border-[#171717] bg-white text-xs font-black uppercase tracking-wider text-[#171717] hover:bg-[#171717] hover:text-white transition cursor-pointer"
                   >
-                    <PlusCircle className="w-4 h-4" />
-                    Submit a Tool
+                    <PlusCircle className="w-4 h-4 text-[#FF5400]" />
+                    <span>Suggest a Tool</span>
                   </button>
-
-                  <Link
-                    href="/about"
-                    onClick={() => setMobileOpen(false)}
-                    className="flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50"
-                  >
-                    <Info className="w-4 h-4 text-slate-400" />
-                    About Platform
-                  </Link>
-                </nav>
+                </div>
               </div>
 
-              {/* Bottom Info */}
-              <div className="pt-6 border-t border-slate-100">
-                <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 text-xs text-slate-600 flex items-start gap-2.5">
-                  <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-slate-900">Zero Signups Required</p>
-                    <p className="text-[11px] text-slate-500 mt-0.5">Use every tool freely without an account, subscription, or watermark.</p>
-                  </div>
+              {/* Mobile Drawer Footer */}
+              <div className="pt-6 border-t border-[#171717]/15 space-y-3">
+                <div className="flex items-center gap-2 text-xs font-mono text-neutral-600">
+                  <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span>100% Client-Side • Zero Uploads</span>
                 </div>
+                <p className="text-[11px] text-neutral-500 font-mono">
+                  © {new Date().getFullYear()} Startup Tools Hub
+                </p>
               </div>
             </SheetContent>
           </Sheet>
         </div>
       </div>
 
-      {/* Submit a Tool Dialog */}
+      {/* ── SUBMIT / SUGGEST TOOL MODAL ──────────────────────────────── */}
       <Dialog open={submitModalOpen} onOpenChange={setSubmitModalOpen}>
-        <DialogContent className="sm:max-w-md bg-white border border-slate-200 text-slate-900">
+        <DialogContent className="max-w-md bg-[#F8EEE8] border-2 border-[#171717] rounded-3xl p-6 sm:p-8">
           <DialogHeader>
-            <DialogTitle className="text-xl font-bold flex items-center gap-2 text-slate-900">
-              <PlusCircle className="w-5 h-5 text-blue-600" />
-              Submit a New Tool
+            <div className="flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#FF5400]">
+              <Sparkles className="w-4 h-4" />
+              <span>Community Contrib</span>
+            </div>
+            <DialogTitle className="text-2xl font-black uppercase tracking-tight text-[#171717] mt-1">
+              Suggest a Tool
             </DialogTitle>
-            <DialogDescription className="text-sm text-slate-500">
-              Recommend an open-source or free utility to add to our browser collection. No account needed.
+            <DialogDescription className="text-xs text-neutral-600">
+              Know an open-source or in-browser utility that belongs in Startup Tools Hub? Tell us below.
             </DialogDescription>
           </DialogHeader>
 
           {submitted ? (
-            <div className="py-8 text-center flex flex-col items-center justify-center gap-3">
-              <div className="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center">
+            <div className="py-8 text-center space-y-3 animate-in fade-in">
+              <div className="w-12 h-12 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center mx-auto">
                 <Check className="w-6 h-6" />
               </div>
-              <h4 className="text-base font-semibold text-slate-900">Thank you for your suggestion!</h4>
-              <p className="text-xs text-slate-500 max-w-xs">
-                Our team reviews submissions weekly. Free, browser-friendly utilities are prioritized.
+              <h4 className="text-lg font-bold text-[#171717]">Suggestion Received!</h4>
+              <p className="text-xs text-neutral-600">
+                Thank you. We review every suggestion for privacy and in-browser WASM compliance.
               </p>
             </div>
           ) : (
-            <form onSubmit={handleSubmitTool} className="space-y-4 mt-2">
+            <form onSubmit={handleSubmitTool} className="space-y-4 mt-4">
               <div>
-                <label className="block text-xs font-semibold text-slate-700 mb-1">
-                  Tool Name <span className="text-red-500">*</span>
+                <label className="block text-xs font-mono font-bold uppercase text-[#171717] mb-1">
+                  Tool Name *
                 </label>
                 <input
                   type="text"
                   required
-                  placeholder="e.g. SVG to CSS Converter"
+                  placeholder="e.g. SvgOMG or Excalidraw"
                   value={toolName}
                   onChange={(e) => setToolName(e.target.value)}
-                  className="w-full px-3 py-2 text-sm bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#171717]/20 bg-white text-xs text-[#171717] focus:outline-none focus:border-[#FF5400]"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-slate-700 mb-1">
+                <label className="block text-xs font-mono font-bold uppercase text-[#171717] mb-1">
                   Tool URL or GitHub Repository
                 </label>
                 <input
                   type="url"
-                  placeholder="https://..."
+                  placeholder="https://github.com/..."
                   value={toolUrl}
                   onChange={(e) => setToolUrl(e.target.value)}
-                  className="w-full px-3 py-2 text-sm bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#171717]/20 bg-white text-xs text-[#171717] focus:outline-none focus:border-[#FF5400]"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-slate-700 mb-1">
-                  What does this tool do?
+                <label className="block text-xs font-mono font-bold uppercase text-[#171717] mb-1">
+                  Brief Description &amp; Why It Fits
                 </label>
                 <textarea
                   rows={3}
-                  placeholder="Short description of the tool workflow..."
+                  placeholder="What does it do and why is it useful for founders?"
                   value={toolDesc}
                   onChange={(e) => setToolDesc(e.target.value)}
-                  className="w-full px-3 py-2 text-sm bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 resize-none"
+                  className="w-full px-3.5 py-2 rounded-xl border border-[#171717]/20 bg-white text-xs text-[#171717] focus:outline-none focus:border-[#FF5400] resize-none"
                 />
               </div>
 
-              <div className="flex items-center justify-end gap-2 pt-2">
+              <div className="pt-2 flex items-center justify-end gap-3">
                 <button
                   type="button"
                   onClick={() => setSubmitModalOpen(false)}
-                  className="px-3.5 py-2 text-xs font-medium text-slate-600 hover:text-slate-800 rounded-lg"
+                  className="px-4 py-2 text-xs font-bold uppercase text-neutral-600 hover:text-[#171717] transition cursor-pointer"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-2 text-xs font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors shadow-xs"
+                  className="px-5 py-2.5 rounded-full bg-[#171717] hover:bg-[#FF5400] text-white text-xs font-bold uppercase tracking-wider transition shadow-sm cursor-pointer"
                 >
-                  Send Submission
+                  Submit Suggestion
                 </button>
               </div>
             </form>
